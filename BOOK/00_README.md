@@ -39,17 +39,17 @@
 
 | # | Книга | Файл | Размер | Статус | Конспект |
 |---|-------|------|--------|--------|----------|
-| 4 | **URP Cookbook** | `URP_cookbook_shaders_and_visual_effects_Unity_6_final.pdf` | 20.5 MB | ✅ Stable | [`02_UNITY/URP_COOKBOOK.md`](./02_UNITY/URP_COOKBOOK.md) |
-| 5 | **URP Introduction** | `Introduction_to_the_Universal_Render_Pipeline_for_advanced_Unity_creators_Unity_6_edition.pdf` | 8.7 MB | ✅ Stable | [`02_UNITY/URP_INTRODUCTION.md`](./02_UNITY/URP_INTRODUCTION.md) |
-| 6 | **2D Art & Animation** | `2022_2DGameArtAnimationLightingforArtists_EBook_USE_3.pdf` | 16.9 MB | ✅ Stable | [`02_UNITY/2D_ART_ANIMATION.md`](./02_UNITY/2D_ART_ANIMATION.md) |
+| 4 | **URP Cookbook** | `URP_cookbook_shaders_and_visual_effects_Unity_6_final.pdf` | 20.5 MB | ✅ Stable | ✅ [`02_UNITY/URP_COOKBOOK.md`](./../KNOWLEDGE_BASE/02_UNITY/URP_COOKBOOK.md) |
+| 5 | **URP Introduction** | `Introduction_to_the_Universal_Render_Pipeline_for_advanced_Unity_creators_Unity_6_edition.pdf` | 8.7 MB | ✅ Stable | ❌ Требуется конспект |
+| 6 | **2D Art & Animation** | `2022_2DGameArtAnimationLightingforArtists_EBook_USE_3.pdf` | 16.9 MB | ✅ Stable | ✅ [`02_UNITY/2D_ANIMATION_UNITY6.md`](./../KNOWLEDGE_BASE/02_UNITY/2D_ANIMATION_UNITY6.md) |
 
 ---
 
-### 🔹 DOTs и Производительность
+### 🔹 DOTS и Производительность
 
 | # | Книга | Файл | Размер | Статус | Конспект |
 |---|-------|------|--------|--------|----------|
-| 7 | **DOTS Introduction** | `Introduction_to_the_Data-Oriented_Technology_Stack_for_advanced_Unity_developers_Unity_2022_LTS.pdf` | 11.7 MB | ✅ Stable | [`02_UNITY/DOTS_INTRODUCTION.md`](./02_UNITY/DOTS_INTRODUCTION.md) |
+| 7 | **DOTS Introduction** | `Introduction_to_the_Data-Oriented_Technology_Stack_for_advanced_Unity_developers_Unity_2022_LTS.pdf` | 11.7 MB | ✅ Stable | ❌ Требуется конспект |
 
 ---
 
@@ -57,7 +57,7 @@
 
 | # | Книга | Файл | Размер | Статус | Конспект |
 |---|-------|------|--------|--------|----------|
-| 8 | **UI Toolkit Unity 6** | `UI_Toolkit_for_advanced_Unity_developers_Unity_6_2025.pdf` | ~10 MB | ✅ Скачано | [`02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md`](./02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md) |
+| 8 | **UI Toolkit Unity 6** | `UI_Toolkit_for_advanced_Unity_developers_Unity_6_2025.pdf` | ~10 MB | ✅ Скачано | ✅ [`02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md`](./../KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md) (черновик) |
 
 ---
 
@@ -66,10 +66,10 @@
 | Категория | Книг | Общий размер | Конспекты |
 |-----------|------|--------------|-----------|
 | **C# и Архитектура** | 3 | 16.2 MB | ✅ 3/3 (100%) |
-| **Unity и Графика** | 4 | 46.1 MB | ✅ 3/4 (75%) |
+| **Unity и Графика** | 4 | 46.1 MB | ✅ 2/4 (50%) |
 | **DOTS** | 1 | 11.7 MB | ❌ 0/1 (0%) |
 | **UI Toolkit** | 1 | ~10 MB | ✅ 1/1 (100%) |
-| **Итого** | **9** | **~84 MB** | **7/9 (78%)** |
+| **Итого** | **9** | **~84 MB** | **6/9 (67%)** |
 
 ---
 
@@ -111,10 +111,10 @@
 - [x] Создать конспект для UI Toolkit Unity 6 (черновик)
 - [x] Создать конспект для C# Style Guide
 - [x] Создать конспект для Scriptable Objects
-- [ ] Создать конспект для URP Cookbook
+- [x] Создать конспект для URP Cookbook
 - [x] Создать конспект для Design Patterns
 - [ ] Создать конспект для DOTS Introduction
-- [ ] Создать конспект для 2D Art & Animation
+- [x] Создать конспект для 2D Art & Animation (2D_ANIMATION_UNITY6.md)
 - [ ] Создать конспект для URP Introduction
 - [x] Создать конспект для UI Toolkit: Basic Menus (Статья)
 - [x] Создать конспект для Три подхода к UI (Статья)
