@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &100000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: GameConfig, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: DragRace.Core.GameConfig
+  supportedResolutions:
+  - width: 640
+    height: 480
+    displayName: 640x480
+  - width: 800
+    height: 600
+    displayName: 800x600
+  - width: 1024
+    height: 768
+    displayName: 1024x768
+  - width: 1280
+    height: 720
+    displayName: 1280x720 (HD)
+  - width: 1920
+    height: 1080
+    displayName: 1920x1080 (Full HD)
+  - width: 2560
+    height: 1440
+    displayName: 2560x1440 (2K)
+  autoSaveIntervalMinutes: 5
+  maxAutoSaveSlots: 5
+  maxSaveSlots: 5
+  defaultMasterVolume: 80
+  defaultMusicVolume: 60
+  defaultSfxVolume: 70
+  startMoney: 10000
+  xpMultiplier: 1
+  moneyMultiplier: 1
+  careerPrizeMultiplier: 1.5
+  averageRaceTimeSeconds: 10
+  minRacesForCarPurchase: 8
+  maxRacesForCarPurchase: 15
+  raceDistances:
+  - name: 1/8 Mile
+    distanceMeters: 201
+    displayName: 1/8 мили
+  - name: 1/4 Mile
+    distanceMeters: 402
+    displayName: 1/4 мили
+  - name: 1/2 Mile
+    distanceMeters: 804
+    displayName: 1/2 мили
+  - name: Full Mile
+    distanceMeters: 1609
+    displayName: 1 миля
+  baseReactionTime: 0.5
+  baseShiftSpeed: 0.3
+  maxUpgradePointsPerLevel: 5

@@ -1,0 +1,193 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "Car",
+            "id": "car-map",
+            "actions": [
+                {
+                    "name": "Gas",
+                    "type": "Value",
+                    "id": "gas-action",
+                    "expectedControlType": "Axis",
+                    "bindings": [
+                        {
+                            "path": "<Keyboard>/w",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "gas-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/upArrow",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "gas-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Brake",
+                    "type": "Value",
+                    "id": "brake-action",
+                    "expectedControlType": "Axis",
+                    "bindings": [
+                        {
+                            "path": "<Keyboard>/s",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "brake-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/downArrow",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "brake-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Steer",
+                    "type": "Value",
+                    "id": "steer-action",
+                    "expectedControlType": "Axis",
+                    "bindings": [
+                        {
+                            "path": "<Keyboard>/a",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "steer-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/d",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "steer-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/leftArrow",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "steer-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/rightArrow",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "steer-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        }
+                    ]
+                },
+                {
+                    "name": "GearUp",
+                    "type": "Button",
+                    "id": "gear-up-action",
+                    "expectedControlType": "Button",
+                    "bindings": [
+                        {
+                            "path": "<Keyboard>/1",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "gear-up-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/2",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "gear-up-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/3",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "gear-up-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/4",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "gear-up-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "ui-map",
+            "actions": [
+                {
+                    "name": "Navigate",
+                    "type": "Value",
+                    "id": "navigate-action",
+                    "expectedControlType": "Vector2",
+                    "bindings": [
+                        {
+                            "path": "<Keyboard>/upArrow",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "navigate-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/downArrow",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "navigate-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        },
+                        {
+                            "path": "<Keyboard>/enter",
+                            "interactions": "",
+                            "processors": "",
+                            "groups": "",
+                            "action": "navigate-action",
+                            "isComposite": false,
+                            "isPartOfComposite": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

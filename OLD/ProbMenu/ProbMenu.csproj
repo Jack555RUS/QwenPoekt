@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Включает сборку Windows-проекта на Linux (для Docker/CI/CD) -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Исключаем папки Unity и временные файлы из сборки -->
+    <Compile Remove="UnityProject\**" />
+    <Compile Remove="DragRaceUnity\**" />
+    <Compile Remove="TEMP\**" />
+    <Compile Remove="UnityBuild\**" />
+    <Compile Remove="Backup_WinForms\**" />
+    <Compile Remove="obj\**" />
+    <Compile Remove="ProbMenu.Tests\**" />
+
+    <EmbeddedResource Remove="UnityProject\**" />
+    <EmbeddedResource Remove="DragRaceUnity\**" />
+    <EmbeddedResource Remove="TEMP\**" />
+    <EmbeddedResource Remove="UnityBuild\**" />
+    <EmbeddedResource Remove="Backup_WinForms\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <EmbeddedResource Remove="ProbMenu.Tests\**" />
+
+    <None Remove="UnityProject\**" />
+    <None Remove="DragRaceUnity\**" />
+    <None Remove="TEMP\**" />
+    <None Remove="UnityBuild\**" />
+    <None Remove="Backup_WinForms\**" />
+    <None Remove="obj\**" />
+    <None Remove="ProbMenu.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Roslynator.Analyzers" Version="4.12.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.CodeAnalysis.Analyzers" Version="4.12.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.12.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

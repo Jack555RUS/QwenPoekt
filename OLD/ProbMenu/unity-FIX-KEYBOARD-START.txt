@@ -1,0 +1,1004 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.10f1 (e35f0c77bd8e) revision 14901004'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Core' Language: 'ru' Physical Memory: 97879 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Jackal" at "2026-02-27T10:56:35.6719461Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-02-27T10:56:35Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Unity.exe
+-batchmode
+-nographics
+-projectPath
+D:\QwenPoekt\ProbMenu\DragRaceUnity
+-executeMethod
+ProbMenu.Editor.AutoBuildScript.BuildWindowsX64
+-quit
+-logFile
+D:\QwenPoekt\ProbMenu\unity-FIX-KEYBOARD-START.txt
+Successfully changed project path to: D:\QwenPoekt\ProbMenu\DragRaceUnity
+D:/QwenPoekt/ProbMenu/DragRaceUnity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [22936]  Target information:
+
+Player connection [22936]  * "[IP] 192.168.1.55 [Port] 55504 [Flags] 2 [Guid] 4152712802 [EditorId] 4152712802 [Version] 1048832 [Id] WindowsEditor(7,Jack555RUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [22936]  * "[IP] 172.22.240.1 [Port] 55504 [Flags] 2 [Guid] 4152712802 [EditorId] 4152712802 [Version] 1048832 [Id] WindowsEditor(7,Jack555RUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [22936] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [22936] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-22712" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              e742fc37187c4074907133b95bc1ace5
+  Correlation Id:          c8f56707b2d9c9b613ac531cd225f2b3
+  External correlation Id: 1681642087682960194
+  Machine Id:              wTNuMscgIsteLhB1ZaG5hheeEFY=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Jackal" (connect: 0.00s, validation: 0.00s, handshake: 0.50s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Jackal-notifications" at "2026-02-27T10:56:36.1721854Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-CTDG-AVTA-VCWT-WSXN-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10171566036743-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-CTDG-AVTA-VCWT-WSXN-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10171566036743-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Module] Licensing Background thread has ended after 0.50s
+[Licensing::Module] Licensing is initialized (took 0.20s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-CTDG-AVTA-VCWT-WSXN-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10171566036743-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.03 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.10f1 (e35f0c77bd8e)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/QwenPoekt/ProbMenu/DragRaceUnity/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-CTDG-AVTA-VCWT-WSXN-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10171566036743-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.001983 seconds.
+- Loaded All Assemblies, in  0.217 seconds
+Native extension for LinuxStandalone target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Licensing::Client] Successfully resolved entitlement details
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.797 seconds
+Domain Reload Profiling: 1013ms
+	BeginReloadAssembly (64ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (15ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (96ms)
+		LoadAssemblies (49ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (94ms)
+			TypeCache.Refresh (93ms)
+				TypeCache.ScanAssembly (85ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (797ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (777ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (50ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (46ms)
+			ProcessInitializeOnLoadAttributes (91ms)
+			ProcessInitializeOnLoadMethodAttributes (588ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-CTDG-AVTA-VCWT-WSXN-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10171566036743-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Package Manager] Registered 15 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.7.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.inputsystem@a74895ba9436)
+  Built-in packages:
+    com.unity.modules.animation@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.ui@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.test-framework@1.6.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d)
+    com.unity.modules.uielements@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.physics2d@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.ugui@2.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.ugui@bb329a87fcdc)
+    com.unity.modules.physics@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.audio@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.0.5 (location: D:\QwenPoekt\ProbMenu\DragRaceUnity\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.00 seconds
+The GUID inside 'Assets/Prefabs/Prefabs.meta' cannot be extracted by the YAML Parser. Attempting to extract it via string matching instead. Please verify the file does not contain unexpected data.
+The .meta file Assets/Prefabs/Prefabs.meta does not have a valid GUID and its corresponding Asset file will be ignored. If this file is not malformed, please add a GUID, or delete the .meta file and it will be recreated correctly
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/QwenPoekt/ProbMenu/DragRaceUnity
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s918ms
+[250/256    0s] Csc Library/Bee/artifacts/1900b0aE.dag/DragRaceUnity.dll (+2 others)
+Assets\Scripts\Input\InputManager.cs(21,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\MainMenuController.cs(47,31): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Scripts\Core\EventBus.cs(20,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\SaveSystem\SaveManager.cs(23,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\Settings\SettingsManager.cs(22,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\TuningUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\DashboardUI.cs(47,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\GameMenuController.cs(54,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Scripts\UI\GarageUI.cs(49,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\MainMenuController.cs(83,31): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\MainMenuController.cs(97,17): warning CS0618: 'StandaloneInputModule.allowActivationOnMobileDevice' is obsolete: 'allowActivationOnMobileDevice has been deprecated. Use forceModuleActive instead (UnityUpgradable) -> forceModuleActive'
+
+Assets\Scripts\UI\ShopUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\GameMenuController.cs(106,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\MainMenuController.cs(381,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\Racing\RaceCamera.cs(32,40): warning CS0414: The field 'RaceCamera.maxRotationAngle' is assigned but its value is never used
+
+Assets\Scripts\Effects\CarEffects.cs(20,40): warning CS0414: The field 'CarEffects.smokeThreshold' is assigned but its value is never used
+
+Assets\Scripts\Audio\TireSound.cs(22,40): warning CS0414: The field 'TireSound.screechThreshold' is assigned but its value is never used
+
+Assets\Scripts\Settings\SettingsManager.cs(40,21): warning CS0414: The field 'SettingsManager._settingsAppliedCount' is assigned but its value is never used
+[251/256    0s] CopyFiles Library/ScriptAssemblies/DragRaceUnity.pdb
+[252/256    0s] CopyFiles Library/ScriptAssemblies/DragRaceUnity.dll
+[253/256    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Editor\SceneSetupHelper.cs(21,17): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Editor\SceneSetupHelper.cs(40,17): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Editor\AddSaveSlotsUI.cs(22,26): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Editor\FixAllUI.cs(44,32): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Editor\FixAllUI.cs(68,28): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Editor\FixAllUI.cs(84,27): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Editor\FixUIButtons.cs(39,31): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Editor\FixUIButtons.cs(58,26): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Editor\AutoSetupButtonReferences.cs(34,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Editor\AutoSetupButtonReferences.cs(42,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Editor\FixEventSystemInputModule.cs(51,32): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Editor\FixEventSystemInputModule.cs(94,28): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Editor\AutoSetupButtonReferences.cs(85,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Editor\AutoSetupButtonReferences.cs(93,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+[254/256    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[255/256    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (0.90 seconds), 6 items updated, 256 evaluated
+[ApiUpdater] Total time: 384ms, Parse response file: 32ms, Collect updater configs: 59ms, Update: 292ms, Save: 1ms Files: 1 modified / 1 visited / 24 total (Library/Bee/artifacts/1900b0aE.dag/DragRaceUnity.dll).
+[API Updater] Updated Files:
+Skipping ScriptUpdater consent dialog. Consent declined based on command line parameters.
+Finished running ScriptUpdaters
+Assets\Scripts\Input\InputManager.cs(21,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\MainMenuController.cs(47,31): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Scripts\Core\EventBus.cs(20,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\SaveSystem\SaveManager.cs(23,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\Settings\SettingsManager.cs(22,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\TuningUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\DashboardUI.cs(47,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\GameMenuController.cs(54,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Scripts\UI\GarageUI.cs(49,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\MainMenuController.cs(83,31): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\MainMenuController.cs(97,17): warning CS0618: 'StandaloneInputModule.allowActivationOnMobileDevice' is obsolete: 'allowActivationOnMobileDevice has been deprecated. Use forceModuleActive instead (UnityUpgradable) -> forceModuleActive'
+Assets\Scripts\UI\ShopUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\GameMenuController.cs(106,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\MainMenuController.cs(381,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\Racing\RaceCamera.cs(32,40): warning CS0414: The field 'RaceCamera.maxRotationAngle' is assigned but its value is never used
+Assets\Scripts\Effects\CarEffects.cs(20,40): warning CS0414: The field 'CarEffects.smokeThreshold' is assigned but its value is never used
+Assets\Scripts\Audio\TireSound.cs(22,40): warning CS0414: The field 'TireSound.screechThreshold' is assigned but its value is never used
+Assets\Scripts\Settings\SettingsManager.cs(40,21): warning CS0414: The field 'SettingsManager._settingsAppliedCount' is assigned but its value is never used
+Assets\Editor\SceneSetupHelper.cs(21,17): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Editor\SceneSetupHelper.cs(40,17): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Editor\AddSaveSlotsUI.cs(22,26): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Editor\FixAllUI.cs(44,32): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Editor\FixAllUI.cs(68,28): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Editor\FixAllUI.cs(84,27): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Editor\FixUIButtons.cs(39,31): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Editor\FixUIButtons.cs(58,26): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Editor\AutoSetupButtonReferences.cs(34,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Editor\AutoSetupButtonReferences.cs(42,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Editor\FixEventSystemInputModule.cs(51,32): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Editor\FixEventSystemInputModule.cs(94,28): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Editor\AutoSetupButtonReferences.cs(85,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Editor\AutoSetupButtonReferences.cs(93,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+AssetDatabase: script compilation time: 1.492026s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.463 seconds
+Refreshing native plugins compatible for Editor in 0.12 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.259 seconds
+Domain Reload Profiling: 721ms
+	BeginReloadAssembly (187ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (124ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (235ms)
+		LoadAssemblies (249ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (20ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (11ms)
+			BuildScriptInfoCaches (4ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (259ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (198ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (1ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (85ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 0.14 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bc5bcf531eb191942aaaa05c412d327d): Total: 2.340 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=335 ms
+		Asset DB Callback time: managed=38 ms, native=3 ms
+		Scripting: domain reloads=1, domain reload time=463 ms, compile time=1493 ms, other=6 ms
+		Project Asset Count: scripts=265, non-scripts=237
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 2.201ms
+	ApplyChangesToAssetFolders: 0.164ms
+	Scan: 22.774ms
+	OnSourceAssetsModified: 0.473ms
+	CategorizeAssetsWithTransientArtifact: 3.567ms
+	ProcessAssetsWithTransientArtifactChanges: 7.916ms
+	CategorizeAssets: 2.586ms
+	ImportOutOfDateAssets: 260.271ms (-1233.032ms without children)
+		CompileScripts: 1493.048ms
+		ReloadNativeAssets: 0.000ms
+		UnloadImportedAssets: 0.072ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.046ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.136ms
+	PostProcessAllAssets: 38.911ms
+	Hotreload: 0.545ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.001ms
+	UnloadStreamsBegin: 0.862ms
+	PersistCurrentRevisions: 0.011ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 0.619ms
+	Untracked: 1999.836ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 7.081ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-DragRace
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1168 unused Assets / (1.8 MB). Loaded Objects now: 1791.
+Memory consumption went from 102.3 MB to 100.5 MB.
+Total: 3.947000 ms (FindLiveObjects: 0.065600 ms CreateObjectMapping: 0.022600 ms MarkObjects: 3.099400 ms  DeleteObjects: 0.758600 ms)
+
+=== НАЧАЛО СБОРКИ: WINDOWS X64 ===
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:20)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 20)
+
+📊 Найдено 6 сцен:
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:36)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 36)
+
+  📄 Assets/Scenes/MainMenu.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:39)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 39)
+
+  📄 Assets/Scenes/GameMenu.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:39)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 39)
+
+  📄 Assets/Scenes/Race.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:39)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 39)
+
+  📄 Assets/Scenes/Garage.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:39)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 39)
+
+  📄 Assets/Scenes/Tuning.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:39)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 39)
+
+  📄 Assets/Scenes/Shop.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:39)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 39)
+
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aESkipCompile.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: D:/QwenPoekt/ProbMenu/DragRaceUnity
+ExitCode: 0 Duration: 0s222ms
+[2/3        0s] BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json
+*** Tundra build success (0.21 seconds), 1 items updated, 3 evaluated
+Asset Pipeline Refresh (id=cb50531dc134743488108dbdbe7fdb31): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[ScriptCompilation] Requested script compilation because: Recompiling scripts for player build.
+BuildPlayer: start building target 19
+Total cache size 133110340
+Total cache size after purge 133110340, took 00:00:00.0482845
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aP.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: D:/QwenPoekt/ProbMenu/DragRaceUnity
+[ApiUpdater] Total time: 367ms, Parse response file: 31ms, Collect updater configs: 56ms, Update: 279ms, Save: 1ms Files: 1 modified / 1 visited / 24 total (Library/Bee/artifacts/1900b0aP.dag/DragRaceUnity.dll).
+ExitCode: 0 Duration: 0s793ms
+[ 93/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll
+[ 94/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.InternalAPIEngineBridge.004.pdb
+[ 95/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.InternalAPIEngineBridge.004.dll
+[ 96/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll
+[ 97/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb
+[ 98/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll
+[ 99/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb
+[100/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll
+[101/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.pdb
+[102/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.pdb
+[103/108    0s] Csc Library/Bee/artifacts/1900b0aP.dag/DragRaceUnity.dll (+2 others)
+Assets\Scripts\Core\EventBus.cs(20,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\MainMenuController.cs(47,31): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Scripts\UI\MainMenuController.cs(83,31): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\MainMenuController.cs(97,17): warning CS0618: 'StandaloneInputModule.allowActivationOnMobileDevice' is obsolete: 'allowActivationOnMobileDevice has been deprecated. Use forceModuleActive instead (UnityUpgradable) -> forceModuleActive'
+
+Assets\Scripts\Input\InputManager.cs(21,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\SaveSystem\SaveManager.cs(23,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\Settings\SettingsManager.cs(22,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\TuningUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\GameMenuController.cs(54,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Scripts\UI\DashboardUI.cs(47,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\GameMenuController.cs(106,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\MainMenuController.cs(381,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\ShopUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\UI\GarageUI.cs(49,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+
+Assets\Scripts\Settings\SettingsManager.cs(40,21): warning CS0414: The field 'SettingsManager._settingsAppliedCount' is assigned but its value is never used
+
+Assets\Scripts\Effects\CarEffects.cs(20,40): warning CS0414: The field 'CarEffects.smokeThreshold' is assigned but its value is never used
+
+Assets\Scripts\Audio\TireSound.cs(22,40): warning CS0414: The field 'TireSound.screechThreshold' is assigned but its value is never used
+
+Assets\Scripts\Racing\RaceCamera.cs(32,40): warning CS0414: The field 'RaceCamera.maxRotationAngle' is assigned but its value is never used
+[104/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/DragRaceUnity.pdb
+[105/108    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/DragRaceUnity.dll
+[107/108    0s] BuildPlayerDataGenerator Library/BuildPlayerData/Player/RuntimeInitializeOnLoads.json (+1 other)
+*** Tundra build success (0.78 seconds), 14 items updated, 108 evaluated
+[API Updater] Updated Files:
+Skipping ScriptUpdater consent dialog. Consent declined based on command line parameters.
+Finished running ScriptUpdaters
+Assets\Scripts\Core\EventBus.cs(20,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\MainMenuController.cs(47,31): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Scripts\UI\MainMenuController.cs(83,31): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\MainMenuController.cs(97,17): warning CS0618: 'StandaloneInputModule.allowActivationOnMobileDevice' is obsolete: 'allowActivationOnMobileDevice has been deprecated. Use forceModuleActive instead (UnityUpgradable) -> forceModuleActive'
+Assets\Scripts\Input\InputManager.cs(21,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\SaveSystem\SaveManager.cs(23,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\Settings\SettingsManager.cs(22,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\TuningUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\GameMenuController.cs(54,35): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Scripts\UI\DashboardUI.cs(47,30): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\GameMenuController.cs(106,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\MainMenuController.cs(381,29): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\ShopUI.cs(55,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\UI\GarageUI.cs(49,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'
+Assets\Scripts\Settings\SettingsManager.cs(40,21): warning CS0414: The field 'SettingsManager._settingsAppliedCount' is assigned but its value is never used
+Assets\Scripts\Effects\CarEffects.cs(20,40): warning CS0414: The field 'CarEffects.smokeThreshold' is assigned but its value is never used
+Assets\Scripts\Audio\TireSound.cs(22,40): warning CS0414: The field 'TireSound.screechThreshold' is assigned but its value is never used
+Assets\Scripts\Racing\RaceCamera.cs(32,40): warning CS0414: The field 'RaceCamera.maxRotationAngle' is assigned but its value is never used
+Total cache size 133110340
+Total cache size after purge 133110340, took 00:00:00.0444527
+Not rebuilding Data files -- no changes
+
+
+Mono dependencies included in the build
+Dependency assembly - System.ComponentModel.DataAnnotations.dll
+Dependency assembly - System.Reactive.Debugger.dll
+Dependency assembly - System.Reactive.Linq.dll
+Dependency assembly - System.Web.Abstractions.dll
+Dependency assembly - System.ComponentModel.Composition.dll
+Dependency assembly - I18N.CJK.dll
+Dependency assembly - System.Runtime.InteropServices.dll
+Dependency assembly - System.IdentityModel.dll
+Dependency assembly - System.Threading.Tasks.Parallel.dll
+Dependency assembly - System.Net.Http.dll
+Dependency assembly - System.Xml.Linq.dll
+Dependency assembly - Unity.InternalAPIEngineBridge.004.dll
+Dependency assembly - System.Xml.Serialization.dll
+Dependency assembly - System.Json.Microsoft.dll
+Dependency assembly - System.Xaml.dll
+Dependency assembly - System.Net.AuthenticationManager.dll
+Dependency assembly - System.Runtime.CompilerServices.VisualC.dll
+Dependency assembly - System.Net.Ping.dll
+Dependency assembly - System.Collections.dll
+Dependency assembly - Microsoft.Build.Framework.dll
+Dependency assembly - System.Web.RegularExpressions.dll
+Dependency assembly - System.ComponentModel.Annotations.dll
+Dependency assembly - System.ServiceModel.Web.dll
+Dependency assembly - Accessibility.dll
+Dependency assembly - System.Linq.dll
+Dependency assembly - System.Security.Cryptography.Encryption.dll
+Dependency assembly - System.Net.Utilities.dll
+Dependency assembly - System.Diagnostics.Tools.dll
+Dependency assembly - Mono.C5.dll
+Dependency assembly - mscorlib.dll
+Dependency assembly - System.Runtime.Remoting.dll
+Dependency assembly - System.Security.Cryptography.Hashing.Algorithms.dll
+Dependency assembly - System.Net.WebSockets.dll
+Dependency assembly - Microsoft.Build.Engine.dll
+Dependency assembly - System.Web.Http.WebHost.dll
+Dependency assembly - Commons.Xml.Relaxng.dll
+Dependency assembly - System.ComponentModel.TypeConverter.dll
+Dependency assembly - System.Runtime.Numerics.dll
+Dependency assembly - System.Reflection.Primitives.dll
+Dependency assembly - System.IO.Compression.FileSystem.dll
+Dependency assembly - System.Data.Entity.dll
+Dependency assembly - System.Data.SqlClient.dll
+Dependency assembly - System.Net.Primitives.dll
+Dependency assembly - System.Reactive.Core.dll
+Dependency assembly - Mono.Data.Sqlite.dll
+Dependency assembly - System.Threading.Timer.dll
+Dependency assembly - Mono.Profiler.Log.dll
+Dependency assembly - System.Reactive.Runtime.Remoting.dll
+Dependency assembly - System.Diagnostics.TextWriterTraceListener.dll
+Dependency assembly - Mono.WebBrowser.dll
+Dependency assembly - System.Web.Mobile.dll
+Dependency assembly - Mono.Security.Win32.dll
+Dependency assembly - Mono.Parallel.dll
+Dependency assembly - System.IdentityModel.Selectors.dll
+Dependency assembly - I18N.Other.dll
+Dependency assembly - System.Runtime.Serialization.Primitives.dll
+Dependency assembly - System.Reactive.Experimental.dll
+Dependency assembly - System.Net.dll
+Dependency assembly - System.ComponentModel.Primitives.dll
+Dependency assembly - System.ServiceModel.Discovery.dll
+Dependency assembly - System.Linq.Expressions.dll
+Dependency assembly - System.Net.Http.Rtc.dll
+Dependency assembly - System.Security.Cryptography.Primitives.dll
+Dependency assembly - System.Security.AccessControl.dll
+Dependency assembly - System.Diagnostics.StackTrace.dll
+Dependency assembly - System.Net.Cache.dll
+Dependency assembly - System.ServiceModel.Http.dll
+Dependency assembly - System.ServiceModel.dll
+Dependency assembly - System.Net.HttpListener.dll
+Dependency assembly - System.Numerics.dll
+Dependency assembly - System.Security.Cryptography.Hashing.dll
+Dependency assembly - System.Security.SecureString.dll
+Dependency assembly - System.Design.dll
+Dependency assembly - System.Web.Http.SelfHost.dll
+Dependency assembly - System.Web.Routing.dll
+Dependency assembly - WindowsBase.dll
+Dependency assembly - System.Reflection.Extensions.dll
+Dependency assembly - Mono.XBuild.Tasks.dll
+Dependency assembly - System.Xml.dll
+Dependency assembly - System.Runtime.Serialization.Xml.dll
+Dependency assembly - System.Deployment.dll
+Dependency assembly - System.Web.WebPages.Deployment.dll
+Dependency assembly - System.Web.Mvc.dll
+Dependency assembly - System.Security.Cryptography.DeriveBytes.dll
+Dependency assembly - System.Diagnostics.TraceEvent.dll
+Dependency assembly - System.Threading.ThreadPool.dll
+Dependency assembly - Microsoft.Win32.Registry.AccessControl.dll
+Dependency assembly - Novell.Directory.Ldap.dll
+Dependency assembly - System.Net.Http.WebRequest.dll
+Dependency assembly - System.Security.Claims.dll
+Dependency assembly - System.Web.DynamicData.dll
+Dependency assembly - System.Threading.Tasks.Dataflow.dll
+Dependency assembly - CustomMarshalers.dll
+Dependency assembly - System.AppContext.dll
+Dependency assembly - System.ComponentModel.dll
+Dependency assembly - System.Data.Linq.dll
+Dependency assembly - System.Net.ServicePoint.dll
+Dependency assembly - Microsoft.Win32.Primitives.dll
+Dependency assembly - System.IO.FileSystem.dll
+Dependency assembly - System.IO.UnmanagedMemoryStream.dll
+Dependency assembly - ICSharpCode.SharpZipLib.dll
+Dependency assembly - Microsoft.Build.Tasks.v4.0.dll
+Dependency assembly - System.EnterpriseServices.dll
+Dependency assembly - System.Web.Extensions.Design.dll
+Dependency assembly - System.Reactive.Interfaces.dll
+Dependency assembly - System.Diagnostics.FileVersionInfo.dll
+Dependency assembly - System.Runtime.InteropServices.WindowsRuntime.dll
+Dependency assembly - System.Diagnostics.Process.dll
+Dependency assembly - System.Net.Requests.dll
+Dependency assembly - System.Net.Sockets.dll
+Dependency assembly - System.Text.Encoding.Extensions.dll
+Dependency assembly - System.Collections.Concurrent.dll
+Dependency assembly - System.Runtime.Extensions.dll
+Dependency assembly - System.Security.Principal.dll
+Dependency assembly - System.Resources.Writer.dll
+Dependency assembly - System.Threading.Tasks.Extensions.dll
+Dependency assembly - System.Drawing.Primitives.dll
+Dependency assembly - System.Resources.Reader.dll
+Dependency assembly - System.ServiceModel.Security.dll
+Dependency assembly - System.Diagnostics.Debug.dll
+Dependency assembly - System.Xml.Xsl.Primitives.dll
+Dependency assembly - IBM.Data.DB2.dll
+Dependency assembly - Mono.Tasklets.dll
+Dependency assembly - SMDiagnostics.dll
+Dependency assembly - System.Threading.Tasks.dll
+Dependency assembly - System.Net.NetworkInformation.dll
+Dependency assembly - System.Security.Cryptography.Cng.dll
+Dependency assembly - System.Web.Http.dll
+Dependency assembly - System.Runtime.Serialization.dll
+Dependency assembly - System.Web.Extensions.dll
+Dependency assembly - System.ComponentModel.EventBasedAsync.dll
+Dependency assembly - System.IO.Pipes.dll
+Dependency assembly - System.Security.Cryptography.Algorithms.dll
+Dependency assembly - System.Diagnostics.Tracing.dll
+Dependency assembly - I18N.dll
+Dependency assembly - monodoc.dll
+Dependency assembly - System.Net.WebSockets.Client.dll
+Dependency assembly - System.Xml.XDocument.dll
+Dependency assembly - Mono.Data.Tds.dll
+Dependency assembly - PEAPI.dll
+Dependency assembly - System.Reactive.Windows.Forms.dll
+Dependency assembly - System.Threading.dll
+Dependency assembly - I18N.West.dll
+Dependency assembly - System.IO.MemoryMappedFiles.dll
+Dependency assembly - System.Buffers.dll
+Dependency assembly - System.Core.dll
+Dependency assembly - System.Reactive.Providers.dll
+Dependency assembly - System.Data.dll
+Dependency assembly - System.Net.NameResolution.dll
+Dependency assembly - System.IO.FileSystem.Primitives.dll
+Dependency assembly - System.dll
+Dependency assembly - System.Security.Cryptography.Encoding.dll
+Dependency assembly - System.Security.Cryptography.OpenSsl.dll
+Dependency assembly - System.ServiceModel.Internals.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDiffieHellman.dll
+Dependency assembly - System.ServiceModel.NetTcp.dll
+Dependency assembly - System.Xml.XPath.XDocument.dll
+Dependency assembly - Mono.Simd.dll
+Dependency assembly - System.Web.Razor.dll
+Dependency assembly - Microsoft.Web.Infrastructure.dll
+Dependency assembly - System.IO.dll
+Dependency assembly - System.Security.Cryptography.Pkcs.dll
+Dependency assembly - System.Management.dll
+Dependency assembly - System.Resources.ReaderWriter.dll
+Dependency assembly - System.Reactive.Windows.Threading.dll
+Dependency assembly - System.Windows.dll
+Dependency assembly - Microsoft.CSharp.dll
+Dependency assembly - RabbitMQ.Client.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.Soap.dll
+Dependency assembly - System.Messaging.dll
+Dependency assembly - System.Workflow.ComponentModel.dll
+Dependency assembly - System.ServiceModel.Duplex.dll
+Dependency assembly - Mono.Security.dll
+Dependency assembly - Mono.Options.dll
+Dependency assembly - System.Xml.XPath.XmlDocument.dll
+Dependency assembly - I18N.Rare.dll
+Dependency assembly - Mono.Btls.Interface.dll
+Dependency assembly - System.Reactive.Observable.Aliases.dll
+Dependency assembly - System.Security.Principal.Windows.dll
+Dependency assembly - UnityEngine.UI.dll
+Dependency assembly - Mono.CompilerServices.SymbolWriter.dll
+Dependency assembly - System.Security.Cryptography.Csp.dll
+Dependency assembly - System.Runtime.dll
+Dependency assembly - System.Xml.XPath.dll
+Dependency assembly - System.Web.WebPages.dll
+Dependency assembly - System.Net.WebHeaderCollection.dll
+Dependency assembly - System.ServiceModel.Primitives.dll
+Dependency assembly - System.Security.dll
+Dependency assembly - System.ServiceProcess.ServiceController.dll
+Dependency assembly - System.ServiceProcess.dll
+Dependency assembly - System.ObjectModel.dll
+Dependency assembly - System.Web.ApplicationServices.dll
+Dependency assembly - System.Runtime.Loader.dll
+Dependency assembly - System.Security.Cryptography.ProtectedData.dll
+Dependency assembly - System.Web.Services.dll
+Dependency assembly - DragRaceUnity.dll
+Dependency assembly - System.Drawing.Design.dll
+Dependency assembly - System.Globalization.Extensions.dll
+Dependency assembly - System.Globalization.dll
+Dependency assembly - System.IO.Compression.dll
+Dependency assembly - Unity.TextMeshPro.dll
+Dependency assembly - System.DirectoryServices.Protocols.dll
+Dependency assembly - System.ServiceModel.Routing.dll
+Dependency assembly - System.Net.Http.Formatting.dll
+Dependency assembly - Unity.InputSystem.ForUI.dll
+Dependency assembly - System.Workflow.Activities.dll
+Dependency assembly - System.Runtime.InteropServices.RuntimeInformation.dll
+Dependency assembly - System.Configuration.Install.dll
+Dependency assembly - System.Xml.XmlDocument.dll
+Dependency assembly - Mono.Posix.dll
+Dependency assembly - System.Dynamic.dll
+Dependency assembly - Microsoft.VisualC.dll
+Dependency assembly - System.Transactions.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDsa.dll
+Dependency assembly - System.Workflow.Runtime.dll
+Dependency assembly - Mono.Messaging.dll
+Dependency assembly - System.IO.FileSystem.DriveInfo.dll
+Dependency assembly - System.IO.FileSystem.AccessControl.dll
+Dependency assembly - System.ValueTuple.dll
+Dependency assembly - System.Xml.XmlSerializer.dll
+Dependency assembly - System.DirectoryServices.dll
+Dependency assembly - System.Reflection.dll
+Dependency assembly - Microsoft.Win32.Registry.dll
+Dependency assembly - System.Collections.NonGeneric.dll
+Dependency assembly - System.Security.Cryptography.Encryption.Aes.dll
+Dependency assembly - System.Reflection.Context.dll
+Dependency assembly - System.Xml.ReaderWriter.dll
+Dependency assembly - Microsoft.Build.dll
+Dependency assembly - System.Data.Common.dll
+Dependency assembly - System.Drawing.dll
+Dependency assembly - System.Runtime.Caching.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.dll
+Dependency assembly - Mono.CSharp.dll
+Dependency assembly - System.Threading.Thread.dll
+Dependency assembly - System.Numerics.Vectors.dll
+Dependency assembly - System.Memory.dll
+Dependency assembly - System.Runtime.Handles.dll
+Dependency assembly - System.Text.RegularExpressions.dll
+Dependency assembly - System.Reactive.PlatformServices.dll
+Dependency assembly - System.Diagnostics.Contracts.dll
+Dependency assembly - Mono.Cairo.dll
+Dependency assembly - System.Security.Cryptography.RandomNumberGenerator.dll
+Dependency assembly - System.Json.dll
+Dependency assembly - System.Runtime.DurableInstancing.dll
+Dependency assembly - System.Runtime.Serialization.Json.dll
+Dependency assembly - WebMatrix.Data.dll
+Dependency assembly - System.Collections.Specialized.dll
+Dependency assembly - System.IO.FileSystem.Watcher.dll
+Dependency assembly - System.Reflection.TypeExtensions.dll
+Dependency assembly - System.Linq.Queryable.dll
+Dependency assembly - System.Security.Cryptography.X509Certificates.dll
+Dependency assembly - Mono.Http.dll
+Dependency assembly - System.Reflection.Emit.dll
+Dependency assembly - System.Data.Services.Client.dll
+Dependency assembly - Microsoft.Build.Utilities.v4.0.dll
+Dependency assembly - System.Reflection.DispatchProxy.dll
+Dependency assembly - System.Console.dll
+Dependency assembly - System.Reflection.Emit.Lightweight.dll
+Dependency assembly - System.Globalization.Calendars.dll
+Dependency assembly - System.Web.WebPages.Razor.dll
+Dependency assembly - System.Linq.Parallel.dll
+Dependency assembly - System.IO.Compression.ZipFile.dll
+Dependency assembly - System.Text.Encoding.CodePages.dll
+Dependency assembly - System.Data.DataSetExtensions.dll
+Dependency assembly - System.Data.OracleClient.dll
+Dependency assembly - System.Dynamic.Runtime.dll
+Dependency assembly - System.Data.Services.dll
+Dependency assembly - System.Web.dll
+Dependency assembly - I18N.MidEast.dll
+Dependency assembly - System.Diagnostics.TraceSource.dll
+Dependency assembly - System.Threading.Overlapped.dll
+Dependency assembly - System.ServiceModel.Activation.dll
+Dependency assembly - netstandard.dll
+Dependency assembly - System.Security.Cryptography.RSA.dll
+Dependency assembly - System.Configuration.dll
+Dependency assembly - cscompmgd.dll
+Dependency assembly - Unity.InputSystem.dll
+Dependency assembly - System.Windows.Forms.dll
+Dependency assembly - System.Net.Mail.dll
+Dependency assembly - System.Text.Encoding.dll
+Dependency assembly - System.Reflection.Emit.ILGeneration.dll
+Dependency assembly - System.Net.Security.dll
+Dependency assembly - System.Resources.ResourceManager.dll
+Dependency assembly - System.Threading.AccessControl.dll
+Dependency assembly - System.Windows.Forms.DataVisualization.dll
+Dependency assembly - System.IO.IsolatedStorage.dll
+Dependency assembly - Mono.Management.dll
+Dependency assembly - SystemWebTestShim.dll
+Dependency assembly - Mono.Messaging.RabbitMQ.dll
+
+Asset Pipeline Refresh (id=ad10a4d53418d0f45a0f53ee64e9fbac): Total: 0.018 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --dagfile="Library/Bee/Playera9682b97.dag" --profile="Library/Bee/backend1.traceevents" Player
+WorkingDir: D:/QwenPoekt/ProbMenu/DragRaceUnity
+DisplayProgressbar: Incremental Player Build
+ExitCode: 4 Duration: 0s902ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\WinPlayerBuildProgram.exe" "C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Bee;C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/Tools/BuildPipeline" "Library/Bee/Playera9682b97.dag.json" "Library/Bee/Playera9682b97-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/QwenPoekt/ProbMenu/DragRaceUnity
+ExitCode: 0 Duration: 0s186ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --dagfile="Library/Bee/Playera9682b97.dag" --dagfilejson="Library\Bee\Playera9682b97.dag.json" --profile="Library/Bee/backend2.traceevents" Player
+WorkingDir: D:/QwenPoekt/ProbMenu/DragRaceUnity
+ExitCode: 0 Duration: 0s46ms
+Refreshing native plugins compatible for Editor in 0.13 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+
+-------------------------------------------------------------------------------
+Build Report
+Information on used Assets is not available, since player data was not rebuilt.
+Do a clean build to view the Asset build report information.
+-------------------------------------------------------------------------------
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (0.7 MB). Loaded Objects now: 1838.
+Memory consumption went from 101.0 MB to 100.3 MB.
+Total: 3.551100 ms (FindLiveObjects: 0.055500 ms CreateObjectMapping: 0.012800 ms MarkObjects: 3.265800 ms  DeleteObjects: 0.216400 ms)
+
+DisplayProgressNotification: Build Successful
+Build Finished, Result: Success.
+Total cache size 133110340
+Total cache size after purge 133110340, took 00:00:00.0472450
+##utp:{"type":"PlayerBuildInfo","version":2,"phase":"Immediate","time":1772189802548,"processId":22712,"steps":[{"description":"Preprocess Player","duration":6},{"description":"Prepare For Build","duration":5},{"description":"ProducePlayerScriptAssemblies","duration":1258},{"description":"Verify Build setup","duration":41},{"description":"Prepare assets for target platform","duration":2},{"description":"Prepare splash screen","duration":0},{"description":"Run script only build","duration":18},{"description":"Postprocess built player","duration":1288}],"duration":2618}
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.297 ms
+	Integration:            3.575 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   3.882 ms
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 1838.
+Memory consumption went from 100.2 MB to 100.2 MB.
+Total: 3.328500 ms (FindLiveObjects: 0.049000 ms CreateObjectMapping: 0.013000 ms MarkObjects: 3.263000 ms  DeleteObjects: 0.002900 ms)
+
+✅ СБОРКА УСПЕШНА: Windows X64
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:HandleBuildResult (UnityEditor.Build.Reporting.BuildReport,string) (at Assets/Editor/AutoBuildScript.cs:120)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:52)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 120)
+
+📊 Размер: 86,19 MB
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:HandleBuildResult (UnityEditor.Build.Reporting.BuildReport,string) (at Assets/Editor/AutoBuildScript.cs:121)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:52)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 121)
+
+⏱️ Время: 00:00:02
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:HandleBuildResult (UnityEditor.Build.Reporting.BuildReport,string) (at Assets/Editor/AutoBuildScript.cs:122)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:52)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 122)
+
+📁 Путь: D:/QwenPoekt/ProbMenu/DragRaceUnity/Builds/DragRacing-WinX64.exe
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ProbMenu.Editor.AutoBuildScript:HandleBuildResult (UnityEditor.Build.Reporting.BuildReport,string) (at Assets/Editor/AutoBuildScript.cs:123)
+ProbMenu.Editor.AutoBuildScript:BuildWindowsX64 () (at Assets/Editor/AutoBuildScript.cs:52)
+
+(Filename: Assets/Editor/AutoBuildScript.cs Line: 123)
+
+Batchmode quit successfully invoked - shutting down!
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Jackal-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Jackal channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

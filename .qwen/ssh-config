@@ -1,0 +1,6 @@
+Host vm-win11
+    HostName 192.168.137.44
+    User Admin
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+    StrictHostKeyChecking no

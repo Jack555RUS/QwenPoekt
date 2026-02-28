@@ -1,0 +1,16 @@
+{
+  "name": "RacingGame.Input",
+  "rootNamespace": "RacingGame.InputSystem",
+  "references": [
+    "RacingGame"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "characterSet": 0,
+  "versionDefines": [],
+  "noEngineReferences": false
+}

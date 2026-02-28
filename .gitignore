@@ -1,0 +1,73 @@
+# ============================================
+# .gitignore для всего проекта
+# ============================================
+
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Logs/
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.tar.gz
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.userprefs
+*.pidb
+*.booproj
+*.swp
+*.swo
+*~
+
+# Unity Analytics
+unity-analytics-data/
+
+# Incredibuild
+ib_*.log
+
+# PowerShell
+*.ps1xml
+
+# ============================================
+# ИГНОРИРОВАТЬ ВРЕМЕННЫЕ ФАЙЛЫ
+# ============================================
+
+# Логи
+*.log
+build.log
+compile.log
+autofix.log
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Черновики и архив (опционально)
+_drafts/
+_archive/
+
+# Downloads
+downloads/
+
+# ============================================
+# НЕ ИГНОРИРОВАТЬ ВАЖНОЕ
+# ============================================
+
+# !*.md
+# !*.ps1
+# !PROJECTS/
+# !KNOWLEDGE_BASE/
+# !BOOK/
+# !.qwen/

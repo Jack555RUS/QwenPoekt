@@ -1,0 +1,180 @@
+# =============================================================================
+# Docker Compose для ProbMenu
+# =============================================================================
+# Оркестрация всех сервисов проекта:
+# - WinForms приложение (меню)
+# - Unity Builder (сборка игры)
+# - Redis (кэш для сохранений)
+# - PostgreSQL (база данных для статистики)
+# - Adminer (веб-интерфейс для БД)
+# =============================================================================
+
+services:
+  # -------------------------------------------------------------------------
+  # WinForms Меню
+  # -------------------------------------------------------------------------
+  probmenu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: probmenu-app
+    image: probmenu:latest
+    environment:
+      - DOTNET_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Host=postgres;Database=probmenu;Username=postgres;Password=postgres123
+      - Redis__Connection=redis:6379
+    depends_on:
+      - redis
+      - postgres
+    networks:
+      - probmenu-network
+    volumes:
+      # Монтирование для горячей перезагрузки при разработке
+      - ./bin:/app/bin
+      - ./appdata:/app/data
+    profiles:
+      - app
+      - dev
+
+  # -------------------------------------------------------------------------
+  # Unity Builder - сборка игры в Docker (Unity 6000.x)
+  # -------------------------------------------------------------------------
+  # Используем существующий локальный образ lachee/unity-runner
+  unity-builder:
+    image: lachee/unity-runner:ubuntu-6000.0.35f1-webgl-runner
+    container_name: unity-builder-6000
+    platform: linux/amd64
+    environment:
+      - UNITY_EMAIL=${UNITY_EMAIL}
+      - UNITY_PASSWORD=${UNITY_PASSWORD}
+      - UNITY_LICENSE=/unity-license.ulf
+      - BUILD_PATH=/builds
+    volumes:
+      - ./DragRaceUnity:/project
+      - ./Builds:/builds
+      - ${UNITY_LICENSE_FILE:-./Unity_lic.ulf}:/unity-license.ulf:ro
+    working_dir: /project
+    entrypoint: ["/bin/bash", "-c"]
+    command: >
+      "
+        echo '=== Unity 6000.x Docker Build ===' &&
+        echo 'Image: lachee/unity-runner:ubuntu-6000.0.35f1-webgl-runner' &&
+        echo 'License file:' && ls -la /unity-license.ulf &&
+        echo '=== Step 1: Activate License ===' &&
+        unity-editor -batchmode -nographics -quit -username '${UNITY_EMAIL}' -password '${UNITY_PASSWORD}' &&
+        echo '=== Step 2: Build Project ===' &&
+        unity-editor -batchmode -nographics -projectPath /project -executeMethod DragRaceUnity.EditorTools.BuildScript.PerformBuild -buildPath /builds -buildName DragRace -logFile /builds/unity-docker-build.log &&
+        echo '=== Build Complete ==='
+      "
+    networks:
+      - probmenu-network
+    profiles:
+      - build
+      - unity
+
+  # -------------------------------------------------------------------------
+  # Redis - кэш для сессий и временных данных
+  # -------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: probmenu-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - probmenu-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    profiles:
+      - app
+      - dev
+      - full
+
+  # -------------------------------------------------------------------------
+  # PostgreSQL - база данных для сохранений и статистики
+  # -------------------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: probmenu-postgres
+    environment:
+      - POSTGRES_DB=probmenu
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - probmenu-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    profiles:
+      - app
+      - dev
+      - full
+
+  # -------------------------------------------------------------------------
+  # Adminer - веб-интерфейс для управления БД
+  # -------------------------------------------------------------------------
+  adminer:
+    image: adminer:latest
+    container_name: probmenu-adminer
+    ports:
+      - "8080:8080"
+    environment:
+      - ADMINER_DEFAULT_SERVER=postgres
+    depends_on:
+      - postgres
+    networks:
+      - probmenu-network
+    profiles:
+      - dev
+      - full
+
+  # -------------------------------------------------------------------------
+  # Test Runner - запуск тестов в изолированной среде
+  # -------------------------------------------------------------------------
+  test-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: build
+    container_name: probmenu-test
+    environment:
+      - DOTNET_ENVIRONMENT=Test
+      - ConnectionStrings__Default=Host=postgres;Database=probmenu_test;Username=postgres;Password=postgres123
+    depends_on:
+      - postgres
+    command: dotnet test --logger "console;verbosity=detailed" --results-directory /test-results
+    volumes:
+      - ./TestResults:/test-results
+    networks:
+      - probmenu-network
+    profiles:
+      - test
+
+# =============================================================================
+# Сети
+# =============================================================================
+networks:
+  probmenu-network:
+    driver: bridge
+    name: probmenu-network
+
+# =============================================================================
+# Тома для постоянных данных
+# =============================================================================
+volumes:
+  redis-data:
+    name: probmenu-redis-data
+  postgres-data:
+    name: probmenu-postgres-data

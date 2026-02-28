@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML xmlns="UnityEngine.UIElements" xmlns:uie="UnityEngine.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" xs="http://www.w3.org/2001/XMLSchema">
+  <VisualElement name="SettingsMenuRoot" class="root settings-background" style="flex-direction: column; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.85);">
+
+    <!-- Заголовок -->
+    <Label name="SettingsTitle" class="subtitle" text="НАСТРОЙКИ" style="font-size: 48px; color: rgb(255, 255, 255); margin-bottom: 40px; -unity-font-style: bold;"/>
+
+    <!-- Контейнер настроек -->
+    <VisualElement name="SettingsContainer" class="settings-container" style="flex-direction: column; gap: 25px; width: 450px; background-color: rgba(50, 50, 50, 0.8); padding: 35px; border-radius: 15px;">
+
+      <!-- Громкость музыки -->
+      <VisualElement name="MusicVolumeContainer" class="setting-item" style="flex-direction: column; gap: 10px;">
+        <Label name="MusicVolumeLabel" class="setting-label" text="Громкость музыки" style="font-size: 20px; color: rgb(220, 220, 220); -unity-font-style: bold;"/>
+        <Slider name="MusicVolumeSlider" value="0.6" low-value="0" high-value="1" style="width: 100%;"/>
+        <Label name="MusicVolumeValue" text="60%" style="font-size: 14px; color: rgb(180, 180, 180); text-align: right;"/>
+      </VisualElement>
+
+      <!-- Громкость звуковых эффектов -->
+      <VisualElement name="SFXVolumeContainer" class="setting-item" style="flex-direction: column; gap: 10px;">
+        <Label name="SFXVolumeLabel" class="setting-label" text="Громкость эффектов" style="font-size: 20px; color: rgb(220, 220, 220); -unity-font-style: bold;"/>
+        <Slider name="SFXVolumeSlider" value="0.7" low-value="0" high-value="1" style="width: 100%;"/>
+        <Label name="SFXVolumeValue" text="70%" style="font-size: 14px; color: rgb(180, 180, 180); text-align: right;"/>
+      </VisualElement>
+
+      <!-- Разрешение экрана -->
+      <VisualElement name="ResolutionContainer" class="setting-item" style="flex-direction: column; gap: 10px;">
+        <Label name="ResolutionLabel" class="setting-label" text="Разрешение экрана" style="font-size: 20px; color: rgb(220, 220, 220); -unity-font-style: bold;"/>
+        <DropdownField name="ResolutionDropdown" choices="800x600, 1024x768, 1280x720, 1920x1080" value="1920x1080" style="width: 100%; height: 40px; font-size: 16px;"/>
+      </VisualElement>
+
+      <!-- Полноэкранный режим -->
+      <VisualElement name="FullscreenContainer" style="flex-direction: row; justify-content: space-between; align-items: center; margin-top: 10px;">
+        <Label name="FullscreenLabel" class="setting-label" text="Полноэкранный режим" style="font-size: 20px; color: rgb(220, 220, 220); -unity-font-style: bold;"/>
+        <Toggle name="FullscreenToggle" value="true" style="width: 60px; height: 30px;"/>
+      </VisualElement>
+
+      <!-- Качество графики -->
+      <VisualElement name="QualityContainer" class="setting-item" style="flex-direction: column; gap: 10px; margin-top: 15px;">
+        <Label name="QualityLabel" class="setting-label" text="Качество графики" style="font-size: 20px; color: rgb(220, 220, 220); -unity-font-style: bold;"/>
+        <DropdownField name="QualityDropdown" choices="Низкое, Среднее, Высокое, Ультра" value="Высокое" style="width: 100%; height: 40px; font-size: 16px;"/>
+      </VisualElement>
+
+    </VisualElement>
+
+    <!-- Кнопка Назад -->
+    <Button name="BackButton" class="settings-button hover-effect" text="НАЗАД" style="margin-top: 35px; height: 50px; width: 250px; font-size: 22px; background-color: rgb(100, 100, 100); color: white; -unity-font-style: bold; border-radius: 8px;"/>
+
+  </VisualElement>
+</UXML>

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://start123"]
+
+[ext_resource type="Script" path="res://scripts/StartButton.gd" id="1_start"]
+
+[node name="Start" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="TitleText" type="Label" parent="."]
+offset_left = 760.0
+offset_top = 200.0
+offset_right = 1160.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 72
+text = "DRAG RACE"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 860.0
+offset_top = 500.0
+offset_right = 1060.0
+offset_bottom = 560.0
+theme_override_font_sizes/font_size = 24
+text = "START"
+script = ExtResource("1_start")

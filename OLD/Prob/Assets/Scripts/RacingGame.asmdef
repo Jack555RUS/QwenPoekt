@@ -1,0 +1,18 @@
+{
+  "name": "RacingGame",
+  "rootNamespace": "RacingGame",
+  "references": [
+    "Unity.TextMeshPro",
+    "Unity.UI",
+    "Unity.RenderPipelines.Universal.Runtime"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "characterSet": 0,
+  "versionDefines": [],
+  "noEngineReferences": false
+}

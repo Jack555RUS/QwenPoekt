@@ -1,0 +1,87 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout code
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore ProbMenu.csproj
+
+    - name: Build
+      run: dotnet build ProbMenu.csproj --no-restore --configuration Release
+
+    - name: Run tests
+      run: dotnet test ProbMenu.Tests/ProbMenu.Tests.csproj --no-build --configuration Release --verbosity normal --logger trx --results-directory TestResults
+
+    - name: Publish test results
+      uses: dorny/test-reporter@v1
+      if: always()
+      with:
+        name: Test Results
+        path: TestResults/*.trx
+        reporter: dotnet-trx
+
+  code-analysis:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout code
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Install Roslynator CLI
+      run: dotnet tool install --global roslynator.dotnet.cli
+
+    - name: Restore dependencies
+      run: dotnet restore ProbMenu.csproj
+
+    - name: Build with analyzers
+      run: dotnet build ProbMenu.csproj --no-restore --configuration Release -warnaserror
+
+    - name: Run Roslynator analysis
+      run: roslynator analyze "ProbMenu.csproj" --severity-level warning
+
+  publish:
+    runs-on: windows-latest
+    needs: [build, code-analysis]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout code
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore ProbMenu.csproj
+
+    - name: Publish release
+      run: dotnet publish ProbMenu.csproj -c Release -o ./publish --self-contained false
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ProbMenu-Release
+        path: ./publish

@@ -1,0 +1,93 @@
+/* Стили диалога подтверждения выхода */
+
+.dialog-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog-box {
+    width: 500px;
+    padding: 30px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    border: 2px solid rgb(100, 100, 100);
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialog-title {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    unity-font-style: bold;
+}
+
+.dialog-message {
+    font-size: 18px;
+    color: rgb(200, 200, 200);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.button-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dialog-button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid rgb(80, 80, 80);
+}
+
+.save-button {
+    background-color: rgb(40, 120, 40);
+    color: rgb(255, 255, 255);
+}
+
+.save-button:hover {
+    background-color: rgb(60, 150, 60);
+}
+
+.save-button:active {
+    background-color: rgb(30, 90, 30);
+}
+
+.exit-button {
+    background-color: rgb(120, 40, 40);
+    color: rgb(255, 255, 255);
+}
+
+.exit-button:hover {
+    background-color: rgb(150, 60, 60);
+}
+
+.exit-button:active {
+    background-color: rgb(90, 30, 30);
+}
+
+.cancel-button {
+    background-color: rgb(80, 80, 80);
+    color: rgb(255, 255, 255);
+}
+
+.cancel-button:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.cancel-button:active {
+    background-color: rgb(60, 60, 60);
+}

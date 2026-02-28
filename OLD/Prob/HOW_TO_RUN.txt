@@ -1,0 +1,66 @@
+===============================================================================
+                    RACING GAME - HOW TO RUN
+===============================================================================
+
+OPTION 1: Quick Test in Unity Editor
+-------------------------------------
+Run: QuickTest.bat
+
+This opens Unity Editor. Then:
+  1. Open Assets/Scenes/MainMenu.unity
+  2. Press Play
+  3. Test the menu
+
+
+OPTION 2: Build and Run EXE
+---------------------------
+Run: BuildAndRun.bat
+
+This will:
+  - Build the game
+  - Create Build/RacingGame.exe
+  - Ask if you want to run it
+
+
+OPTION 3: PowerShell Build
+--------------------------
+Run: .\build.ps1 -BuildOnly
+
+
+OPTIONS:
+--------
+  -RunTests    Run UI tests before build
+  -BuildOnly   Build only, no tests
+  -Help        Show help
+
+
+MANUAL BUILD (in Unity Editor):
+-------------------------------
+  1. Open Unity Editor
+  2. File -> Build Settings
+  3. Click "Build"
+  4. Choose "Build" folder
+  5. Wait for build to complete
+
+
+REQUIREMENTS:
+-------------
+  - Unity 6000.3.10f1
+  - Windows 10/11 x64
+
+
+OUTPUT:
+-------
+  Build/RacingGame.exe
+
+
+LOGS:
+-----
+  Build/Build.log
+
+
+FOR MORE INFO:
+--------------
+  See BUILD_INSTRUCTIONS.md
+
+===============================================================================

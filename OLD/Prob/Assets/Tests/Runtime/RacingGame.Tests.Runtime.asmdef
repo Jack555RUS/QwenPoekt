@@ -1,0 +1,20 @@
+{
+    "name": "RacingGame.Tests",
+    "rootNamespace": "RacingGame.Tests",
+    "references": [
+        "RacingGame"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "StandaloneWindows",
+        "StandaloneWindows64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "characterSet": 0,
+    "versionDefines": [],
+    "noEngineReferences": false
+}

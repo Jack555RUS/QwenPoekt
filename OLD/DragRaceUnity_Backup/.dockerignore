@@ -1,0 +1,52 @@
+# =============================================================================
+# .dockerignore для Unity проекта
+# =============================================================================
+# Исключает ненужные файлы из Docker-контекста Unity сборки
+# =============================================================================
+
+# --- Git ---
+.git/
+.gitignore
+
+# --- Unity generated ---
+Library/
+Temp/
+obj/
+Logs/
+
+# --- Build outputs ---
+Build/
+Builds/
+*.exe
+*.dll
+*.pdb
+
+# --- IDE ---
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.suo.user
+*.unityproj
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Documentation ---
+*.md
+README*
+
+# --- Assets (тяжёлые файлы, не нужные для сборки) ---
+# Раскомментируйте если нужно исключить большие ассеты
+# Assets/Textures/*.png
+# Assets/Models/*.fbx
+# Assets/Audio/*.wav
+
+# --- Packages cache ---
+Packages/cache/
+
+# --- Test results ---
+TestResults/
