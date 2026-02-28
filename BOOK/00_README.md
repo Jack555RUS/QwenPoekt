@@ -57,7 +57,7 @@
 
 | # | Книга | Файл | Размер | Статус | Конспект |
 |---|-------|------|--------|--------|----------|
-| 8 | **UI Toolkit Unity 6** | [Скачать](https://unity.com/resources/scalable-performant-ui-uitoolkit-unity-6) | ~10 MB | ⏳ Скачать | [`02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md`](./02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md) |
+| 8 | **UI Toolkit Unity 6** | `UI_Toolkit_for_advanced_Unity_developers_Unity_6_2025.pdf` | ~10 MB | ✅ Скачано | [`02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md`](./02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md) |
 
 ---
 
@@ -68,7 +68,7 @@
 | **C# и Архитектура** | 3 | 16.2 MB | ✅ 3/3 (100%) |
 | **Unity и Графика** | 4 | 46.1 MB | ✅ 3/4 (75%) |
 | **DOTS** | 1 | 11.7 MB | ❌ 0/1 (0%) |
-| **UI Toolkit** | 1 | ~10 MB (надо скачать) | ⏳ 1/1 (черновик) |
+| **UI Toolkit** | 1 | ~10 MB | ✅ 1/1 (100%) |
 | **Итого** | **9** | **~84 MB** | **7/9 (78%)** |
 
 ---
@@ -101,7 +101,7 @@
 
 ### Прочитано:
 
-- [ ] UI Toolkit Unity 6 (скачать и прочитать)
+- [x] UI Toolkit Unity 6 (скачано)
 - [x] C# Style Guide (конспект готов)
 - [x] Scriptable Objects (конспект готов)
 - [x] Design Patterns (конспект готов)
