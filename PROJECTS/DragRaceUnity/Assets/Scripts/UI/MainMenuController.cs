@@ -21,19 +21,22 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
+        // 🔴 DEBUG: Проверка инициализации меню
         Logger.Info("Главное меню загружено. Ожидание ввода...", this);
-        
+
         // Находим все кнопки
+        // 🔴 DEBUG: Проверить _buttons.Length > 0
         _buttons = GetComponentsInChildren<Button>(true);
-        
+
         if (_buttons.Length > 0)
         {
             // Выделяем первую кнопку
+            // 🔴 WATCH: firstButton, lastButton
             firstButton = _buttons[0];
             lastButton = _buttons[_buttons.Length - 1];
-            
+
             EventSystem.current?.SetSelectedGameObject(firstButton.gameObject);
-            
+
             Logger.Info($"Найдено кнопок: {_buttons.Length}", this);
         }
     }
