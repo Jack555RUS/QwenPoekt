@@ -1,13 +1,15 @@
 # ============================================
-# Auto-Commit Knowledge Base — Авто-коммит изменений
+# Commit Local — Локальный коммит (без push)
 # ============================================
+# Назначение: Быстрый коммит изменений KNOWLEDGE_BASE
+# GitHub: НЕ пушит! Только локальный коммит.
 
 param(
     [string]$message = ""  # Сообщение коммита
 )
 
 Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "📦 AUTO-COMMIT KNOWLEDGE BASE" -ForegroundColor Cyan
+Write-Host "📦 COMMIT LOCAL — Локальный коммит" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -69,8 +71,11 @@ Write-Host "3️⃣ Статус репозитория..." -ForegroundColor Yel
 
 Write-Host ""
 Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "AUTO-COMMIT ЗАВЕРШЁН" -ForegroundColor Cyan
+Write-Host "ЛОКАЛЬНЫЙ КОММИТ ЗАВЕРШЁН" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
+Write-Host ""
+Write-Host "⚠️  Изменения сохранены ТОЛЬКО локально!" -ForegroundColor Yellow
+Write-Host "💡 Для отправки на GitHub используйте: /backup" -ForegroundColor Cyan
 Write-Host ""
 
 # Возвращаем результат
