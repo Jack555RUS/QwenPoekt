@@ -1,0 +1,50 @@
+# ===========================================
+# .gitignore для БАЗЫ (System)
+# ===========================================
+
+# Исключаем PROJECTS (это отдельный репозиторий, хранится вне Base)
+PROJECTS/
+
+# Исключаем OLD/RELEASE (библиотека наработок, хранится вне Base)
+OLD/
+RELEASE/
+
+# Исключаем локальный архив
+_LOCAL_ARCHIVE/
+
+# Исключаем черновики
+_drafts/
+
+# Исключаем книги (тяжёлые PDF)
+BOOK/
+
+# Исключаем временные файлы
+*.tmp
+*.log
+logs/
+
+# Исключаем сборки Unity
+PROJECTS/*/Build/
+PROJECTS/*/Library/
+PROJECTS/*/Temp/
+PROJECTS/*/Obj/
+PROJECTS/*/*.csproj.user
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Qwen
+.qwen/tmp/
+
+# ===========================================
+# Игнорирование ВНЕШНИХ папок (уровнем выше)
+# ===========================================
+# Эти папки хранятся в D:\QwenPoekt\ (вне репозитория)
+../Projects/
+../OLD/
+../RELEASE/
+../_TEST_ENV/
+../_LOCAL_ARCHIVE/
+../_drafts/
+../BOOK/

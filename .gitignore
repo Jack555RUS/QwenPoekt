@@ -1,93 +1,44 @@
-# ============================================
-# .gitignore для всего проекта
-# ============================================
-# 
-# ПРИНЦИП: Git только для важного (~100 KB)
-# - KNOWLEDGE_BASE/, .qwen/, scripts/, _templates/
-# - PROJECTS/, BOOK/, OLD/, ARCHIVE — локально
-# ============================================
+﻿# ===========================================
+# .gitignore для БАЗЫ (System)
+# ===========================================
 
-# Unity
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-Logs/
-*.pidb.meta
-*.pdb.meta
-*.mdb.meta
-sysinfo.txt
-*.apk
-*.aab
-*.unitypackage
-*.tar.gz
+# Исключаем PROJECTS (это отдельный репозиторий)
+Projects/
 
-# Visual Studio / VS Code
-.vs/
-.vscode/
-*.user
-*.suo
-*.userosscache
-*.userprefs
-*.pidb
-*.booproj
-*.swp
-*.swo
-*~
+# Исключаем OLD/RELEASE (библиотека наработок)
+Base/OLD/
+Base/RELEASE/
 
-# Unity Analytics
-unity-analytics-data/
+# Исключаем локальный архив
+Base/_LOCAL_ARCHIVE/
 
-# Incredibuild
-ib_*.log
+# Исключаем черновики
+Base/_drafts/
 
-# PowerShell
-*.ps1xml
+# Исключаем книги (тяжёлые PDF)
+Base/BOOK/
 
-# ============================================
-# ИГНОРИРОВАТЬ ВРЕМЕННЫЕ ФАЙЛЫ
-# ============================================
-
-# Логи
-*.log
-build.log
-compile.log
-autofix.log
-
-# Временные файлы
+# Исключаем временные файлы
 *.tmp
-*.temp
+*.log
+logs/
 
-# ============================================
-# ИГНОРИРОВАТЬ ЛОКАЛЬНЫЕ ПАПКИ
-# ============================================
+# Исключаем сборки Unity
+Projects/*/Build/
+Projects/*/Library/
+Projects/*/Temp/
+Projects/*/Obj/
+Projects/*/*.csproj.user
 
-# Проекты (локально, не коммитить)
-PROJECTS/
+# VS Code
+.vscode/
+*.code-workspace
 
-# Книги (тяжёлые, локально)
-BOOK/*.pdf
+# Qwen
+.qwen/tmp/
 
-# Архивы и черновики
-OLD/
-_archive/
-_drafts/
-_LOCAL_ARCHIVE/
+# Тестовая среда (после миграции будет удалена)
+_TEST_ENV/
 
-# RELEASE (готовые проекты, локально)
-# RELEASE/
-
-# Downloads
-downloads/
-
-# ============================================
-# НЕ ИГНОРИРОВАТЬ ВАЖНОЕ
-# ============================================
-
-# ✅ Коммитить:
-# - KNOWLEDGE_BASE/
-# - .qwen/
-# - scripts/
-# - _templates/
-# - *.md (корневые файлы)
+# Резервные копии
+*.backup
