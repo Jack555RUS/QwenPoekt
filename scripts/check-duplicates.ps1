@@ -1,113 +1,285 @@
-# ============================================
-# Check Duplicates — Проверка дубликатов в базе знаний
-# ============================================
+# ============================================================================
+# CHECK DUPLICATES
+# Автоматическая проверка дубликатов в базе знаний
+# ============================================================================
+# Использование: .\scripts\check-duplicates.ps1 [-Path <путь>] [-Threshold <процент>]
+# ============================================================================
 
 param(
-    [string]$keyword = "",          # Ключевое слово для поиска
-    [string]$path = "KNOWLEDGE_BASE" # Путь к базе знаний
+    [string]$Path = ".",
+    [int]$Threshold = 80,  # Порог схожести (80% = высокий риск дубликата)
+    [switch]$AutoFix
 )
 
-Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "🔍 ПРОВЕРКА НА ДУБЛИКАТЫ" -ForegroundColor Cyan
-Write-Host "============================================" -ForegroundColor Cyan
+Write-Host "============================================================================" -ForegroundColor Cyan
+Write-Host "                    CHECK DUPLICATES                                        " -ForegroundColor Cyan
+Write-Host "============================================================================" -ForegroundColor Cyan
+Write-Host ""
+Write-Host "Параметры:" -ForegroundColor Yellow
+Write-Host "   Путь: $Path"
+Write-Host "   Порог схожести: $Threshold%"
+Write-Host "   Автоисправление: $($AutoFix ? 'Да' : 'Нет')"
 Write-Host ""
 
-# Проверка входных данных
-if ([string]::IsNullOrEmpty($keyword)) {
-    $keyword = Read-Host "Введите ключевое слово для поиска"
-}
+# ============================================================================
+# 1. ПРОВЕРКА НА ДУБЛИКАТЫ ПО ИМЕНИ
+# ============================================================================
 
-Write-Host "🔑 Ключевое слово: $keyword" -ForegroundColor Yellow
-Write-Host "📁 Путь к базе: $path" -ForegroundColor Yellow
-Write-Host ""
+Write-Host "1. Проверка дубликатов по имени..." -ForegroundColor Yellow
 
-# Поиск по файлам
-Write-Host "1️⃣ Поиск по файлам..." -ForegroundColor Yellow
+$files = Get-ChildItem -Path $Path -Recurse -Filter "*.md" -File
+$fileNameGroups = $files | Group-Object Name | Where-Object { $_.Count -gt 1 }
 
-$files = Get-ChildItem -Path $path -Recurse -Filter "*.md" -ErrorAction SilentlyContinue
-$matches = @()
-
-foreach ($file in $files) {
-    try {
-        $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
-        if ($content -match $keyword) {
-            $matches += $file.FullName
+if ($fileNameGroups.Count -gt 0) {
+    Write-Host "   ⚠️  Найдены дубликаты имён файлов:" -ForegroundColor Red
+    foreach ($group in $fileNameGroups) {
+        Write-Host "   - $($group.Name) ($($group.Count) файлов)" -ForegroundColor Red
+        foreach ($file in $group.Group) {
+            Write-Host "     • $($file.FullName)" -ForegroundColor Gray
         }
-    } catch {
-        Write-Host "  ⚠️  Ошибка чтения: $($file.Name)" -ForegroundColor Red
     }
-}
-
-Write-Host ""
-
-if ($matches.Count -gt 0) {
-    Write-Host "✅ Найдено совпадений: $($matches.Count)" -ForegroundColor Green
-    Write-Host ""
-    Write-Host "Файлы:" -ForegroundColor Cyan
-    
-    $i = 1
-    $matches | ForEach-Object {
-        Write-Host "  $i. $_" -ForegroundColor White
-        $i++
-    }
-    
-    Write-Host ""
-    Write-Host "💡 Рекомендация: Проверьте эти файлы на дублирование информации." -ForegroundColor Yellow
 } else {
-    Write-Host "❌ Совпадений не найдено" -ForegroundColor Red
-    Write-Host ""
-    Write-Host "💡 Информация новая! Можно добавлять в базу." -ForegroundColor Green
+    Write-Host "   ✅ Дубликатов имён не найдено" -ForegroundColor Green
 }
 
 Write-Host ""
 
-# Поиск по заголовкам
-Write-Host "2️⃣ Поиск по заголовкам..." -ForegroundColor Yellow
+# ============================================================================
+# 2. ПРОВЕРКА НА ДУБЛИКАТЫ ПО СОДЕРЖИМОМУ (хэши)
+# ============================================================================
 
-$headerMatches = @()
+Write-Host "2. Проверка дубликатов по содержимому (хэши)..." -ForegroundColor Yellow
 
+$fileHashGroups = @{}
 foreach ($file in $files) {
-    try {
-        $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
-        # Поиск по заголовкам (# Заголовок)
-        $headers = [regex]::Matches($content, "^#+\s+(.+)$", [System.Text.RegularExpressions.RegexOptions]::Multiline)
+    $hash = Get-FileHash $file.FullName -Algorithm SHA256
+    if ($fileHashGroups.ContainsKey($hash.Hash)) {
+        $fileHashGroups[$hash.Hash] += $file
+    } else {
+        $fileHashGroups[$hash.Hash] = @($file)
+    }
+}
+
+$duplicateHashes = $fileHashGroups.GetEnumerator() | Where-Object { $_.Value.Count -gt 1 }
+
+if ($duplicateHashes.Count -gt 0) {
+    Write-Host "   ⚠️  Найдены точные дубликаты содержимого:" -ForegroundColor Red
+    foreach ($hashGroup in $duplicateHashes) {
+        Write-Host "   Хэш: $($hashGroup.Key.Substring(0, 16))..." -ForegroundColor Red
+        foreach ($file in $hashGroup.Value) {
+            Write-Host "     • $($file.FullName)" -ForegroundColor Gray
+        }
+    }
+} else {
+    Write-Host "   ✅ Точных дубликатов содержимого не найдено" -ForegroundColor Green
+}
+
+Write-Host ""
+
+# ============================================================================
+# 3. ПРОВЕРКА НА ДУБЛИКАТЫ ПРАВИЛ (ключевые фразы)
+# ============================================================================
+
+Write-Host "3. Проверка дубликатов правил (ключевые фразы)..." -ForegroundColor Yellow
+
+$rulePatterns = @(
+    "Правило:",
+    "**Правило:**",
+    "### Правило",
+    "ПРОВЕРКА ПЕРЕД",
+    "перед перемещением",
+    "перед внесением",
+    "Матрица подтверждений",
+    "🟢🟡🔴",
+    "TDD",
+    "verify-complete",
+    "OLD/RELEASE",
+    "OLD/_INBOX",
+    "OLD/_ANALYZED",
+    "OLD/_IDEAS",
+    "OLD/_CODE_SNIPPETS",
+    "OLD/_ARCHIVE_60D",
+    "срок хранения",
+    "45 дней",
+    "60 дней",
+    "7 дней",
+    "snake_case",
+    "kebab-case",
+    "именование файлов"
+)
+
+$ruleDuplicates = @{}
+foreach ($pattern in $rulePatterns) {
+    $matches = Get-ChildItem -Path $Path -Recurse -Filter "*.md" -File |
+        Select-String -Pattern $pattern -CaseSensitive:$false |
+        Group-Object Path |
+        Where-Object { $_.Count -gt 3 }  # Более 3 упоминаний в разных файлах
+    
+    if ($matches.Count -gt 0) {
+        $ruleDuplicates[$pattern] = $matches
+    }
+}
+
+if ($ruleDuplicates.Count -gt 0) {
+    Write-Host "   ⚠️  Возможные дубликаты правил:" -ForegroundColor Yellow
+    foreach ($pattern in $ruleDuplicates.Keys) {
+        Write-Host "   Паттерн: '$pattern'" -ForegroundColor Yellow
+        foreach ($match in $ruleDuplicates[$pattern]) {
+            $count = ($match.Group | Measure-Object).Count
+            Write-Host "     • $($match.Name) ($count упоминаний)" -ForegroundColor Gray
+        }
+    }
+    Write-Host ""
+    Write-Host "   💡 Совет: Проверьте эти файлы на дублирование правил" -ForegroundColor Cyan
+    Write-Host "      Возможно, стоит оставить только в QWEN.md и AI_START_HERE.md" -ForegroundColor Cyan
+} else {
+    Write-Host "   ✅ Подозрительных дубликатов правил не найдено" -ForegroundColor Green
+}
+
+Write-Host ""
+
+# ============================================================================
+# 4. ПРОВЕРКА ССЫЛОК НА НЕСУЩЕСТВУЮЩИЕ ФАЙЛЫ
+# ============================================================================
+
+Write-Host "4. Проверка ссылок на несуществующие файлы..." -ForegroundColor Yellow
+
+$brokenLinks = @()
+foreach ($file in $files) {
+    $content = Get-Content $file.FullName -Raw
+    $links = [regex]::Matches($content, '\[.*?\]\((.*?)\)') | ForEach-Object { $_.Groups[1].Value }
+    
+    foreach ($link in $links) {
+        if ($link -match "^https?://") { continue }  # Пропускаем внешние ссылки
+        if ($link -match "^#") { continue }  # Пропускаем якоря
         
-        foreach ($header in $headers) {
-            if ($header.Groups[1].Value -match $keyword) {
-                $headerMatches += "$($file.FullName) :: $($header.Groups[1].Value)"
+        $targetPath = Join-Path (Split-Path $file.DirectoryName) $link
+        if (!(Test-Path $targetPath)) {
+            $brokenLinks += [PSCustomObject]@{
+                File = $file.FullName
+                Link = $link
+                Target = $targetPath
             }
         }
-    } catch {
-        # Игнорируем ошибки
     }
 }
 
-Write-Host ""
-
-if ($headerMatches.Count -gt 0) {
-    Write-Host "✅ Найдено заголовков: $($headerMatches.Count)" -ForegroundColor Green
-    Write-Host ""
-    
-    $i = 1
-    $headerMatches | ForEach-Object {
-        Write-Host "  $i. $_" -ForegroundColor White
-        $i++
+if ($brokenLinks.Count -gt 0) {
+    Write-Host "   ⚠️  Найдены битые ссылки:" -ForegroundColor Red
+    $brokenLinks | Group-Object File | ForEach-Object {
+        Write-Host "   Файл: $($_.Name)" -ForegroundColor Red
+        foreach ($link in $_.Group) {
+            Write-Host "     • $($link.Link) → $($link.Target)" -ForegroundColor Gray
+        }
     }
 } else {
-    Write-Host "❌ Заголовков не найдено" -ForegroundColor Red
+    Write-Host "   ✅ Битых ссылок не найдено" -ForegroundColor Green
 }
 
 Write-Host ""
-Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "ПРОВЕРКА ЗАВЕРШЕНА" -ForegroundColor Cyan
-Write-Host "============================================" -ForegroundColor Cyan
+
+# ============================================================================
+# 5. СТАТИСТИКА
+# ============================================================================
+
+Write-Host "5. Статистика:" -ForegroundColor Cyan
+
+$totalFiles = $files.Count
+$totalSize = ($files | Measure-Object -Property Length -Sum).Sum / 1KB
+$duplicateFiles = ($fileNameGroups | Measure-Object -Property Count -Sum).Sum
+$exactDuplicates = ($duplicateHashes | ForEach-Object { $_.Value.Count }).MeasureObject -Sum
+
+Write-Host "   Всего файлов: $totalFiles" -ForegroundColor White
+Write-Host "   Общий размер: $([math]::Round($totalSize, 2)) KB" -ForegroundColor White
+Write-Host "   Дубликаты имён: $duplicateFiles" -ForegroundColor $(if ($duplicateFiles -gt 0) { "Red" } else { "Green" })
+Write-Host "   Точные дубликаты: $exactDuplicates" -ForegroundColor $(if ($exactDuplicates -gt 0) { "Red" } else { "Green" })
+Write-Host "   Битые ссылки: $($brokenLinks.Count)" -ForegroundColor $(if ($brokenLinks.Count -gt 0) { "Red" } else { "Green" })
+
+Write-Host ""
+Write-Host "============================================================================" -ForegroundColor Cyan
+
+# ============================================================================
+# 6. ОТЧЁТ
+# ============================================================================
+
+$reportPath = "reports\DUPLICATE_CHECK_$(Get-Date -Format 'yyyy-MM-dd_HH-mm').md"
+$report = @()
+$report += "# 📊 CHECK DUPLICATES REPORT"
+$report += ""
+$report += "**Дата:** $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
+$report += "**Путь:** $Path"
+$report += "**Порог:** $Threshold%"
+$report += ""
+$report += "## Статистика"
+$report += ""
+$report += "- Всего файлов: $totalFiles"
+$report += "- Общий размер: $([math]::Round($totalSize, 2)) KB"
+$report += "- Дубликаты имён: $duplicateFiles"
+$report += "- Точные дубликаты: $exactDuplicates"
+$report += "- Битые ссылки: $($brokenLinks.Count)"
+$report += ""
+
+if ($fileNameGroups.Count -gt 0) {
+    $report += "## Дубликаты имён"
+    $report += ""
+    foreach ($group in $fileNameGroups) {
+        $report += "### $($group.Name)"
+        $report += ""
+        foreach ($file in $group.Group) {
+            $report += "- $($file.FullName)"
+        }
+        $report += ""
+    }
+}
+
+if ($duplicateHashes.Count -gt 0) {
+    $report += "## Точные дубликаты содержимого"
+    $report += ""
+    foreach ($hashGroup in $duplicateHashes) {
+        foreach ($file in $hashGroup.Value) {
+            $report += "- $($file.FullName)"
+        }
+    }
+    $report += ""
+}
+
+if ($brokenLinks.Count -gt 0) {
+    $report += "## Битые ссылки"
+    $report += ""
+    foreach ($link in $brokenLinks) {
+        $report += "- $($link.File) → $($link.Link)"
+    }
+    $report += ""
+}
+
+$report | Out-File $reportPath -Encoding UTF8
+Write-Host "📄 Отчёт сохранён: $reportPath" -ForegroundColor Cyan
 Write-Host ""
 
-# Возвращаем результат
-return @{
-    Keyword = $keyword
-    TotalFiles = $files.Count
-    Matches = $matches.Count
-    HeaderMatches = $headerMatches.Count
-    HasDuplicates = ($matches.Count -gt 0)
+# ============================================================================
+# 7. РЕКОМЕНДАЦИИ
+# ============================================================================
+
+Write-Host "💡 РЕКОМЕНДАЦИИ:" -ForegroundColor Cyan
+Write-Host ""
+
+if ($duplicateFiles -gt 0 -or $exactDuplicates -gt 0) {
+    Write-Host "   1. Удалите или объедините дубликаты файлов" -ForegroundColor Yellow
 }
+
+if ($ruleDuplicates.Count -gt 0) {
+    Write-Host "   2. Проверьте файлы с дубликатами правил" -ForegroundColor Yellow
+    Write-Host "      Оставьте только в QWEN.md и AI_START_HERE.md" -ForegroundColor Yellow
+}
+
+if ($brokenLinks.Count -gt 0) {
+    Write-Host "   3. Исправьте битые ссылки" -ForegroundColor Yellow
+}
+
+if ($duplicateFiles -eq 0 -and $exactDuplicates -eq 0 -and $ruleDuplicates.Count -eq 0 -and $brokenLinks.Count -eq 0) {
+    Write-Host "   ✅ Всё чисто! Дубликатов не найдено" -ForegroundColor Green
+}
+
+Write-Host ""
+Write-Host "✅ CHECK DUPLICATES COMPLETE" -ForegroundColor Green
+Write-Host ""
