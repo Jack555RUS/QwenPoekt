@@ -18,7 +18,7 @@ Write-Host ""
 Write-Host "Параметры:" -ForegroundColor Yellow
 Write-Host "   Путь: $Path"
 Write-Host "   Порог схожести: $Threshold%"
-Write-Host "   Автоисправление: $($AutoFix ? 'Да' : 'Нет')"
+Write-Host "   Автоисправление: $(if ($AutoFix) { 'Да' } else { 'Нет' })"
 Write-Host ""
 
 # ============================================================================
@@ -187,7 +187,10 @@ Write-Host "5. Статистика:" -ForegroundColor Cyan
 $totalFiles = $files.Count
 $totalSize = ($files | Measure-Object -Property Length -Sum).Sum / 1KB
 $duplicateFiles = ($fileNameGroups | Measure-Object -Property Count -Sum).Sum
-$exactDuplicates = ($duplicateHashes | ForEach-Object { $_.Value.Count }).MeasureObject -Sum
+$exactDuplicates = 0
+foreach ($hashGroup in $duplicateHashes) {
+    $exactDuplicates += $hashGroup.Value.Count
+}
 
 Write-Host "   Всего файлов: $totalFiles" -ForegroundColor White
 Write-Host "   Общий размер: $([math]::Round($totalSize, 2)) KB" -ForegroundColor White
