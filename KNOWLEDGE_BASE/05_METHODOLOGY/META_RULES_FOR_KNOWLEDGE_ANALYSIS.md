@@ -178,7 +178,7 @@ topic: AI Meta-Rules for Knowledge Analysis
 
 **Правила:**
 - ✅ Добавить перекрёстные ссылки
-- ✅ Название в kebab-case
+- ✅ Название в snake_case (см. [`01_RULES/file_naming_rule.md`](../01_RULES/file_naming_rule.md))
 - ✅ Статус и дата в начале файла
 - ✅ Относительные пути для ссылок
 
