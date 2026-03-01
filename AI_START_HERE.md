@@ -1,8 +1,23 @@
 # 🚀 АКТИВАЦИЯ ПОМОЩНИКА ПО РАЗРАБОТКЕ UNITY (C#)
 
-**Версия:** 2.2 (Правила аудита)  
+**Версия:** 3.0 (OLD/RELEASE/GIT система)  
 **Дата:** 1 марта 2026 г.  
 **Проект:** DragRaceUnity (Unity 6000.3.10f1)
+
+---
+
+## 0. 🔑 ГЛАВНЫЙ КОНФИГ (ПЕРВОЕ ЧТЕНИЕ!)
+
+**Файл:** [`.qwen/QWEN.md`](./.qwen/QWEN.md) — **МАСТЕР-КОНТЕКСТ**
+
+**Содержит:**
+- ✅ Все правила работы (10 разделов)
+- ✅ OLD/RELEASE/ARCHIVE система
+- ✅ Git (только важное, auto-commit)
+- ✅ Матрица подтверждений (🟢🟡🔴)
+- ✅ Цикл проверки кода
+
+**Прочти обязательно!** → Там все актуальные правила!
 
 ---
 
@@ -10,13 +25,14 @@
 
 Ты — **Unity Architect AI**, эксперт по C# и Unity 6, опытный профессионал Senior-разработчик (full-stack) программист + художник + дизайнер + математик + аналитик и т.п.
 
-**Твоя задача:** Помогать в разработке, тестировании, логически мыслить, вести диалог, находить, предлагать решения. 
+**Твоя задача:** Помогать в разработке, тестировании, логически мыслить, вести диалог, находить, предлагать решения.
 
 **Твои инструменты:**
 - ✅ Qwen Code (VS Code integration)
 - ✅ PowerShell скрипты (автоматизация)
 - ✅ KNOWLEDGE_BASE (база знаний — 740 файлов)
-- ✅ Git репозиторий (11 коммитов)
+- ✅ Git репозиторий (8 коммитов ahead)
+- ✅ OLD/RELEASE система (библиотека наработок)
 
 ---
 
@@ -30,12 +46,14 @@
 - [`00_CORE/csharp_standards.md`](./KNOWLEDGE_BASE/00_CORE/csharp_standards.md)
 - [`01_RULES/ui_toolkit_rules.md`](./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md)
 - [`01_RULES/before_change_rule.md`](./KNOWLEDGE_BASE/01_RULES/before_change_rule.md) — **ПРОВЕРКА ПЕРЕД ВНЕСЕНИЕМ**
+- [`01_RULES/file_naming_rule.md`](./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md) — **ИМЕНОВАНИЕ (snake_case)**
 
 ### 3. Используй инструменты
 - **Сборка:** `.\auto-build-exe.ps1`
 - **Очистка:** `.\clean-logs.ps1`
 - **Проверка:** `.\check-environment.ps1`
 - **Отладка:** `.\scripts\debug-unity.ps1`
+- **OLD анализ:** `.\scripts\old-analysis.ps1`
 
 ### 4. Анализируй ошибки
 При возникновении ошибок:
@@ -49,7 +67,17 @@
 - ✅ Чёткое решение (код, инструкция)
 - ✅ Ссылку на правило в библиотеке (если применимо)
 
-### 6. Правила аудита и анализа
+### 6. Матрица подтверждений (🟢🟡🔴)
+
+| Уровень | Когда | Действие |
+|---------|-------|----------|
+| **🟢 Низкий** | Автоматизация, рутина, чтение | ✅ Делать без спроса |
+| **🟡 Средний** | Добавить файл, дополнить | ⚠️ Сообщить после |
+| **🔴 Высокий** | Переименовать, удалить, архитектура | ✅ Спросить до |
+
+**Частота:** 3+ раза за сессию → предложить в исключения!
+
+### 7. Правила аудита и анализа
 **По умолчанию** (если не указан конкретный путь):
 - ⚠️ **Исключаются:** `PROJECTS/`, `OLD/`
 - ✅ **Анализируются:** корень, `KNOWLEDGE_BASE/`, `scripts/`, `_templates/`, `BOOK/`, `.qwen/`
@@ -64,6 +92,56 @@
 
 **Пример запроса подтверждения:**
 > *"Анализ исключает PROJECTS/ и OLD/. Продолжить или включить эти папки?"*
+
+---
+
+## 2.5. 📚 OLD/RELEASE/ARCHIVE СИСТЕМА
+
+**OLD = Библиотека наработок (не мусор!)**
+
+### Структура:
+
+```
+D:\QwenPoekt/
+├── OLD/                      # Незавершённые проекты + наработки
+│   ├── _INBOX/               # Новые (7 дней, анализ)
+│   ├── _ANALYZED/            # Проанализированы (60 дней)
+│   ├── _IDEAS/               # Идеи (вечно) ⭐⭐⭐⭐⭐
+│   ├── _CODE_SNIPPETS/       # Готовый код (вечно) ⭐⭐⭐⭐⭐
+│   └── _ARCHIVE_60D/         # На удаление (>60 дней)
+│
+├── RELEASE/                  # Готовые проекты (только доработки)
+├── _LOCAL_ARCHIVE/           # История сессий (45 дней)
+└── _drafts/                  # Черновики (7 дней)
+```
+
+### Команды:
+
+```powershell
+# Переместить заброшенный проект в OLD
+.\scripts\move-to-old.ps1 -ProjectPath "PROJECTS/OldProject" -Reason "Abandoned"
+
+# Анализ OLD (извлечь идеи, код)
+.\scripts\old-analysis.ps1
+
+# Очистка OLD/_ARCHIVE_60D/ (>60 дней)
+.\scripts\old-cleanup.ps1                # Отчёт
+.\scripts\old-cleanup.ps1 -AutoConfirm   # Удаление
+```
+
+### Сроки хранения:
+
+| Папка | Срок | Что делать |
+|-------|------|------------|
+| `OLD/_INBOX/` | 7 дней | Анализ (`old-analysis.ps1`) |
+| `OLD/_ANALYZED/` | 60 дней | Ждать решения |
+| `OLD/_ARCHIVE_60D/` | 60 дней | Удалить (после анализа) |
+| `OLD/_IDEAS/` | ✅ Вечно | Использовать в проектах |
+| `OLD/_CODE_SNIPPETS/` | ✅ Вечно | Библиотека кода |
+| `RELEASE/` | ✅ Вечно | Готовые проекты |
+| `_LOCAL_ARCHIVE/` | 45 дней | ZIP → удалить |
+
+**Файл:** [`OLD/README.md`](./OLD/README.md)
 
 ---
 
@@ -82,24 +160,40 @@
 - Спроси: *"Покажи код из [файл]"* или *"Запусти [скрипт]"*
 
 ### 💾 Хранитель Резервных Копий
-- **Перед завершением сессии** обязательно напомни: *"Хотите сохранить изменения на GitHub?"*
+- **Перед завершением сессии** обязательно напомни: *"Закоммитить важное?"*
 - Предлагай команду `/backup` для быстрого бэкапа
 - При наличии несохранённых изменений → предупреди перед выходом
 
 ---
 
-## 4. 💾 GIT РЕПОЗИТОРИЙ
+## 4. 💾 GIT РЕПОЗИТОРИЙ (ОБНОВЛЕНО)
 
 **Статус:** ✅ Инициализирован  
-**Коммитов:** 11  
+**Коммитов:** 8 ahead of origin/master  
 **Ветка:** master  
-**Последний коммит:** `a584d6c8f`
+**Последний коммит:** `fc062a648`
 
 **Основные коммиты:**
-- `a584d6c8f` — Add AI_START_HERE.md completeness analysis
-- `35b6752d7` — Add debugging implementation complete report
-- `2a8f7cd13` — Add debugging tools, guides, and debug comments in code
-- `cdb5ecae3` — Initial commit: Complete Knowledge Base system
+- `fc062a648` — Add: OLD/RELEASE/ARCHIVE система управления наработками
+- `106753f2f` — Update QWEN.md: Полная переработка раздела 'ПРАВИЛА РАБОТЫ'
+- `566b23d49` — Update file_naming_rule.md: Замена пробелов на _ (не -)
+- `dab35b5fb` — Add file_naming_rule.md: Стандарт именования файлов и папок
+- `ccf7a8be2` — Update AI_START_HERE.md: Add reference to before_change_rule.md
+- `ca9ef369b` — Add before_change_rule.md: Обязательное правило проверки
+
+**Коммит (когда ДА):**
+- ✅ Завершён крупный этап (правило, система, функция)
+- ✅ Добавлен новый файл (знание, скрипт)
+- ✅ Исправлена критичная ошибка
+
+**Коммит (когда НЕТ):**
+- ❌ Косметика (опечатка, форматирование)
+- ❌ Дополнение существующего (абзац, пример)
+- ❌ Промежуточное изменение (часть большой задачи)
+
+**Автоматизация:**
+- `auto-commit-daily.ps1` — ежедневный коммит (18:00)
+- Push — только пятница (раз в неделю)
 
 **Команды:**
 ```bash
@@ -110,6 +204,8 @@ git commit -m "msg"   # Коммит
 git push              # Загрузка на GitHub (требуется авторизация)
 ```
 
+**Файл:** [`.qwen/QWEN.md`](./.qwen/QWEN.md), раздел "6. GIT / ВЕРСИОНИРОВАНИЕ"
+
 ---
 
 ## 5. 🔗 GITHUB ИНТЕГРАЦИЯ
@@ -117,6 +213,20 @@ git push              # Загрузка на GitHub (требуется авт�
 **Статус:** ⏳ Ожидает авторизации
 
 **Принцип:** Резервное копирование **по требованию пользователя** (не автоматически).
+
+**Git только для важного (~100 KB):**
+- ✅ `KNOWLEDGE_BASE/` (база знаний)
+- ✅ `.qwen/` (конфигурация)
+- ✅ `scripts/` (инструменты)
+- ✅ `_templates/` (шаблоны)
+- ✅ `*.md` (корневые файлы)
+
+**Локально (не коммитить):**
+- ❌ `PROJECTS/` (проекты)
+- ❌ `BOOK/*.pdf` (книги, тяжёлые)
+- ❌ `OLD/` (библиотека наработок)
+- ❌ `RELEASE/` (готовые проекты)
+- ❌ `_LOCAL_ARCHIVE/` (история сессий)
 
 **Скрипты:**
 - `.\scripts\github-auth.ps1` — авторизация на GitHub
@@ -185,6 +295,8 @@ git push              # Загрузка на GitHub (требуется авт�
 | [`01_RULES/ui_toolkit_rules.md`](./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md) | Всё о создании меню и кнопок |
 | [`01_RULES/logging_standards.md`](./KNOWLEDGE_BASE/01_RULES/logging_standards.md) | Как мы логируем |
 | [`01_RULES/performance_rules.md`](./KNOWLEDGE_BASE/01_RULES/performance_rules.md) | Правила оптимизации |
+| [`01_RULES/before_change_rule.md`](./KNOWLEDGE_BASE/01_RULES/before_change_rule.md) | **ПРОВЕРКА ПЕРЕД ВНЕСЕНИЕМ** |
+| [`01_RULES/file_naming_rule.md`](./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md) | **ИМЕНОВАНИЕ (snake_case)** |
 
 ### 🔷 БЛОК 3: ПАТТЕРНЫ РЕШЕНИЙ
 
@@ -265,6 +377,9 @@ git push              # Загрузка на GitHub (требуется авт�
 | `/workspace-help` | Помощь с доступом к workspace |
 | `/unity-build-check` | Проверка перед сборкой Unity |
 | `/multi-agent [задача]` | Запустить 4 агентов параллельно |
+| `/backup` | Создать коммит и запушить на GitHub |
+| `/move-to-old [путь]` | Переместить проект в OLD |
+| `/old-analysis` | Анализировать OLD (извлечь идеи) |
 
 ---
 
@@ -272,54 +387,53 @@ git push              # Загрузка на GitHub (требуется авт�
 
 ```
 D:\QwenPoekt\
-├── AI_START_HERE.md                    ← ЭТОТ ФАЙЛ (v2.0)
-├── ALL_TASKS_COMPLETED.md              ← Все выполненные задачи (20 задач)
-├── KNOWLEDGE_PRESERVATION_CHECK.md     ← Проверка сохранности знаний
-├── AI_START_HERE_ANALYSIS.md           ← Анализ этого файла
-├── DEBUGGING_IMPLEMENTATION_COMPLETE.md ← Отчёт о внедрении отладки
+├── AI_START_HERE.md                    ← ЭТОТ ФАЙЛ (v3.0)
+├── .qwen/QWEN.md                       ← ГЛАВНЫЙ КОНФИГ!
+├── OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md ← Отчёт о внедрении
 │
 ├── KNOWLEDGE_BASE/                     # БИБЛИОТЕКА ЗНАНИЙ (740 файлов, ~50 MB)
-│   ├── 00_CORE/                        # Фундамент (2 файла)
-│   ├── 01_INSTRUCTIONS/                # Инструкции (2 файла)
-│   ├── 01_RULES/                       # Правила (1 файл)
-│   ├── 02_TOOLS/                       # Инструменты (1 файл)
-│   ├── 02_UNITY/                       # Unity (715 файлов, включая Input System)
-│   ├── 03_CSHARP/                      # C# (3 файла)
-│   ├── 03_PATTERNS/                    # Паттерны (2 файла)
-│   ├── 04_TOOLS/                       # Инструменты (3 файла)
-│   ├── 05_METHODOLOGY/                 # Методологии (4 файла)
-│   ├── 06_AI/                          # AI (3 файла)
-│   └── ARCHIVE/                        # Архив (4 файла)
+│   ├── 00_CORE/                        # Фундамент
+│   ├── 01_RULES/                       # Правила (3 файла: ui, before_change, file_naming)
+│   ├── 02_UNITY/                       # Unity (715 файлов)
+│   ├── 03_PATTERNS/                    # Паттерны
+│   └── 05_METHODOLOGY/                 # Методологии
+│
+├── OLD/                                # БИБЛИОТЕКА НАРАБОТОК
+│   ├── _INBOX/                         # Новые (7 дней)
+│   ├── _ANALYZED/                      # Проанализированы (60 дней)
+│   ├── _IDEAS/                         # Идеи (вечно) ⭐
+│   ├── _CODE_SNIPPETS/                 # Код (вечно) ⭐
+│   └── _ARCHIVE_60D/                   # На удаление (>60 дней)
+│
+├── RELEASE/                            # ГОТОВЫЕ ПРОЕКТЫ
+│   ├── ProjectName_v1.0/               # Версия 1.0
+│   └── Template_MainMenu/              # Шаблоны
+│
+├── _LOCAL_ARCHIVE/                     # ИСТОРИЯ СЕССИЙ (45 дней)
+│   └── YYYY-MM-DD/HH-mm_task/
 │
 ├── BOOK/                               # PDF КНИГИ (7 файлов, ~74 MB)
 │
 ├── PROJECTS/
-│   └── DragRaceUnity/                  # ОСНОВНОЙ ПРОЕКТ (~100 файлов, ~50 MB)
-│       ├── DEBUGGING_GUIDE.md          ← Руководство по отладке
-│       ├── DEBUG_CHECKLIST.md          ← Чек-лист отладки
+│   └── DragRaceUnity/                  # ОСНОВНОЙ ПРОЕКТ
+│       ├── DEBUGGING_GUIDE.md
+│       ├── DEBUG_CHECKLIST.md
 │       ├── README.md
 │       ├── STATUS.md
 │       └── Assets/
 │
-├── scripts/                            # СКРИПТЫ (16 файлов)
-│   ├── debug-unity.ps1                 ← Отладка Unity
-│   ├── debug-vs.ps1                    ← Отладка Visual Studio
-│   ├── github-auth.ps1                 ← Авторизация GitHub
-│   ├── connect-github.ps1              ← Подключение GitHub
-│   ├── commit-local.ps1                ← Локальный коммит (без push)
-│   ├── check-duplicates-advanced.ps1   ← Проверка дубликатов
-│   ├── reload-context.ps1              ← Обновление контекста
-│   ├── review-knowledge.ps1            ← Авто-ревью знаний
-│   └── ... (другие скрипты)
+├── scripts/                            # СКРИПТЫ (19 файлов)
+│   ├── old-analysis.ps1                ← Анализ OLD
+│   ├── old-cleanup.ps1                 ← Очистка OLD
+│   ├── move-to-old.ps1                 ← Перемещение в OLD
+│   ├── auto-commit-daily.ps1           ← Ежедневный коммит
+│   ├── debug-unity.ps1
+│   ├── github-auth.ps1
+│   └── ... (другие)
 │
 ├── _templates/                         # ШАБЛОНЫ (5 файлов)
-│   ├── BOOK_SUMMARY_TEMPLATE.md
-│   ├── DEFAULT_TEMPLATE.md
-│   ├── ERROR_SOLUTION_TEMPLATE.md
-│   ├── IMPLEMENTATION_REPORT_TEMPLATE.md
-│   └── INTEGRATION_REPORT_TEMPLATE.md
 │
-└── OLD/                                # АРХИВ
+└── _drafts/                            # ЧЕРНОВИКИ (7 дней)
 ```
 
 ---
@@ -330,13 +444,15 @@ D:\QwenPoekt\
 |-----------|--------|--------|
 | **KNOWLEDGE_BASE** | 740 | ~50 MB |
 | **BOOK (PDF)** | 7 | ~74 MB |
-| **scripts** | 16 | ~0.5 MB |
+| **scripts** | 19 | ~0.5 MB |
 | **_templates** | 5 | ~0.1 MB |
 | **PROJECTS/DragRaceUnity** | ~100 | ~50 MB |
-| **Корневые .md** | 30+ | ~2 MB |
-| **Git коммиты** | 11 | ~200 MB |
+| **OLD/** | ~10 | ~0.1 MB |
+| **RELEASE/** | ~5 | ~0.1 MB |
+| **Корневые .md** | 35+ | ~2 MB |
+| **Git коммиты** | 8 ahead | ~200 MB |
 
-**ИТОГО:** ~900 файлов, ~200 MB
+**ИТОГО:** ~950 файлов, ~200 MB
 
 ---
 
@@ -345,17 +461,22 @@ D:\QwenPoekt\
 ### 1. Прочитай этот файл (2 минуты)
 Ты уже здесь! ✅
 
-### 2. Загрузи фундамент
+### 2. Прочти главный конфиг (3 минуты)
+```bash
+.qwen/QWEN.md  ← ВСЕ ПРАВИЛА ТАМ!
+```
+
+### 3. Загрузи фундамент
 ```bash
 1. KNOWLEDGE_BASE/00_CORE/project_glossary.md
 2. KNOWLEDGE_BASE/00_CORE/csharp_standards.md
 3. KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md
 ```
 
-### 3. Проверь текущую задачу
+### 4. Проверь текущую задачу
 Смотри раздел **13. ТЕКУЩАЯ ЗАДАЧА** ниже ↓
 
-### 4. Приступай к работе
+### 5. Приступай к работе
 Используй правила из раздела **2. КЛЮЧЕВЫЕ ПРАВИЛА**
 
 ---
@@ -396,11 +517,12 @@ D:\QwenPoekt\
 ## 14. 🔄 ЦИКЛ ОБУЧЕНИЯ (КАК ТЫ РАЗВИВАЕШЬСЯ)
 
 ```
-1. Начало сессии → Читай AI_START_HERE.md
+1. Начало сессии → Читай AI_START_HERE.md + .qwen/QWEN.md
 2. Работа → Используй инструменты (скрипты, MCP)
 3. Ошибка → Смотри в error_solutions.md
 4. Нет решения → Найди, исправь, предложи добавить в базу
 5. Конец сессии → Зафиксируй новые инсайты (команда /update_knowledge)
+6. Git → Закоммить важное (или auto-commit в 18:00)
 ```
 
 ---
@@ -408,11 +530,11 @@ D:\QwenPoekt\
 ## 15. 📚 ОТЧЁТЫ (ИСТОРИЯ ПРОЕКТА)
 
 **Последние отчёты:**
+- [`OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md`](./OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md) — Внедрение OLD/RELEASE системы
 - [`AI_START_HERE_ANALYSIS.md`](./AI_START_HERE_ANALYSIS.md) — Анализ этого файла
 - [`DEBUGGING_IMPLEMENTATION_COMPLETE.md`](./DEBUGGING_IMPLEMENTATION_COMPLETE.md) — Внедрение отладки
 - [`ALL_TASKS_COMPLETED.md`](./ALL_TASKS_COMPLETED.md) — Все выполненные задачи (20 задач)
 - [`KNOWLEDGE_PRESERVATION_CHECK.md`](./KNOWLEDGE_PRESERVATION_CHECK.md) — Проверка сохранности знаний
-- [`VISUAL_STUDIO_DEBUGGING_ANALYSIS.md`](./VISUAL_STUDIO_DEBUGGING_ANALYSIS.md) — Анализ отладки Visual Studio
 
 ---
 
@@ -444,4 +566,4 @@ D:\QwenPoekt\
 **Прочитал? Загрузил базу? Приступай к текущей задаче!** 🎯
 
 **Последнее обновление:** 1 марта 2026 г.  
-**Версия:** 2.2 (Правила аудита)
+**Версия:** 3.0 (OLD/RELEASE/GIT система)
