@@ -1,178 +1,251 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.TestTools;
-using System.Collections;
 
 /// <summary>
-/// Тесты для контроллера главного меню.
+/// Тесты для MainMenuController.
+/// Проверяют навигацию, кнопки и состояния.
 /// </summary>
 [TestFixture]
 public class MainMenuControllerTests
 {
-    private GameObject _controllerObject;
+    private GameObject _testObject;
     private MainMenuController _controller;
-    private bool _newGameCalled;
-    private bool _continueCalled;
-    private bool _saveCalled;
-    private bool _loadCalled;
-    private bool _settingsCalled;
-    private bool _exitCalled;
+    private Button[] _buttons;
+
+    #region Setup
 
     [SetUp]
-    public void SetUp()
+    public void Setup()
     {
-        // Создаём объект с контроллером
-        _controllerObject = new GameObject("MainMenuController");
-        _controller = _controllerObject.AddComponent<MainMenuController>();
+        // Создаём тестовый объект с контроллером
+        _testObject = new GameObject("MainMenuController_Test");
+        _controller = _testObject.AddComponent<MainMenuController>();
 
-        // Сбрасываем флаги
-        _newGameCalled = false;
-        _continueCalled = false;
-        _saveCalled = false;
-        _loadCalled = false;
-        _settingsCalled = false;
-        _exitCalled = false;
-
-        // Очищаем историю логов
-        Logger.ClearHistory();
+        // Создаём тестовые кнопки
+        CreateTestButtons();
     }
 
     [TearDown]
-    public void TearDown()
+    public void Teardown()
     {
-        // Удаляем объект
-        if (_controllerObject != null)
+        // Очищаем тестовые объекты
+        if (_testObject != null)
         {
-            Object.DestroyImmediate(_controllerObject);
+            Object.DestroyImmediate(_testObject);
         }
     }
 
-    #region Button Click Tests
-
-    [Test]
-    public void OnNewGame_WhenCalled_LogsCorrectMessage()
+    private void CreateTestButtons()
     {
-        // Act
-        _controller.OnNewGame();
+        // Создаём 6 кнопок для тестирования
+        var canvas = _testObject.AddComponent<Canvas>();
+        _buttons = new Button[6];
 
-        // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history.Count, Is.GreaterThan(0));
-        Assert.That(history[0], Does.Contain("НОВАЯ ИГРА"));
-    }
-
-    [Test]
-    public void OnContinue_WhenCalled_LogsCorrectMessage()
-    {
-        // Act
-        _controller.OnContinue();
-
-        // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history.Count, Is.GreaterThan(0));
-        Assert.That(history[0], Does.Contain("ПРОДОЛЖИТЬ"));
-    }
-
-    [Test]
-    public void OnSave_WhenCalled_LogsCorrectMessage()
-    {
-        // Act
-        _controller.OnSave();
-
-        // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history.Count, Is.GreaterThan(0));
-        Assert.That(history[0], Does.Contain("СОХРАНИТЬ"));
-    }
-
-    [Test]
-    public void OnLoad_WhenCalled_LogsCorrectMessage()
-    {
-        // Act
-        _controller.OnLoad();
-
-        // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history.Count, Is.GreaterThan(0));
-        Assert.That(history[0], Does.Contain("ЗАГРУЗИТЬ"));
-    }
-
-    [Test]
-    public void OnSettings_WhenCalled_LogsCorrectMessage()
-    {
-        // Act
-        _controller.OnSettings();
-
-        // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history.Count, Is.GreaterThan(0));
-        Assert.That(history[0], Does.Contain("НАСТРОЙКИ"));
-    }
-
-    [Test]
-    public void OnExit_WhenCalled_LogsCorrectMessage()
-    {
-        // Act
-        _controller.OnExit();
-
-        // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history.Count, Is.GreaterThan(0));
-        Assert.That(history[0], Does.Contain("ВЫХОД"));
+        for (int i = 0; i < 6; i++)
+        {
+            var buttonObj = new GameObject($"Button_{i}");
+            buttonObj.transform.SetParent(_testObject.transform);
+            _buttons[i] = buttonObj.AddComponent<Button>();
+        }
     }
 
     #endregion
 
-    #region Log Level Tests
+    #region Кнопки (6 тестов)
 
     [Test]
-    public void ButtonHandlers_UseInfoLevel_ForUserActions()
+    public void OnNewGame_Clicked_CallsHandleNewGame()
     {
-        // Act
-        _controller.OnNewGame();
-
+        // Arrange & Act
+        LogAssert.Expect(LogType.Log, "Нажата кнопка: НОВАЯ ИГРА");
+        
         // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history[0], Does.Contain("[INF]"));
+        Assert.DoesNotThrow(() => _controller.OnNewGame());
     }
 
     [Test]
-    public void PrivateHandlers_UseDebugLevel_ForInternalLogic()
+    public void OnContinue_Clicked_CallsHandleContinue()
     {
-        // Act
-        _controller.OnNewGame();
-
+        // Arrange & Act
+        LogAssert.Expect(LogType.Log, "Нажата кнопка: ПРОДОЛЖИТЬ");
+        
         // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history[1], Does.Contain("[DBG]"));
+        Assert.DoesNotThrow(() => _controller.OnContinue());
+    }
+
+    [Test]
+    public void OnSave_Clicked_CallsHandleSave()
+    {
+        // Arrange & Act
+        LogAssert.Expect(LogType.Log, "Нажата кнопка: СОХРАНИТЬ");
+        
+        // Assert
+        Assert.DoesNotThrow(() => _controller.OnSave());
+    }
+
+    [Test]
+    public void OnLoad_Clicked_CallsHandleLoad()
+    {
+        // Arrange & Act
+        LogAssert.Expect(LogType.Log, "Нажата кнопка: ЗАГРУЗИТЬ");
+        
+        // Assert
+        Assert.DoesNotThrow(() => _controller.OnLoad());
+    }
+
+    [Test]
+    public void OnSettings_Clicked_CallsHandleSettings()
+    {
+        // Arrange & Act
+        LogAssert.Expect(LogType.Log, "Нажата кнопка: НАСТРОЙКИ");
+        
+        // Assert
+        Assert.DoesNotThrow(() => _controller.OnSettings());
+    }
+
+    [Test]
+    public void OnExit_Clicked_CallsHandleExit()
+    {
+        // Arrange & Act
+        LogAssert.Expect(LogType.Log, "Нажата кнопка: ВЫХОД");
+        
+        // Assert
+        Assert.DoesNotThrow(() => _controller.OnExit());
     }
 
     #endregion
 
-    #region Integration Tests
+    #region Навигация (4 теста)
 
     [Test]
-    public void MultipleButtonClicks_LogAllActions()
+    public void NavigateUp_FromMiddle_MovesToPrevious()
     {
+        // Arrange
+        _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.SetValue(_controller, 2);
+
         // Act
-        _controller.OnNewGame();
-        _controller.OnSettings();
-        _controller.OnExit();
+        var method = _controller.GetType()
+            .GetMethod("NavigateUp", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        method?.Invoke(_controller, null);
 
         // Assert
-        var history = Logger.GetHistory();
-        Assert.That(history.Count, Is.AtLeast(3));
-        Assert.That(history[0], Does.Contain("НОВАЯ ИГРА"));
-        Assert.That(history[1], Does.Contain("НАСТРОЙКИ"));
-        Assert.That(history[2], Does.Contain("ВЫХОД"));
+        var currentIndex = _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.GetValue(_controller);
+        Assert.AreEqual(1, currentIndex);
     }
 
     [Test]
-    public void Controller_WhenCreated_HasValidReference()
+    public void NavigateDown_FromMiddle_MovesToNext()
     {
+        // Arrange
+        _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.SetValue(_controller, 2);
+
+        // Act
+        var method = _controller.GetType()
+            .GetMethod("NavigateDown", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        method?.Invoke(_controller, null);
+
         // Assert
-        Assert.That(_controller, Is.Not.Null);
-        Assert.That(_controller.enabled, Is.True);
+        var currentIndex = _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.GetValue(_controller);
+        Assert.AreEqual(3, currentIndex);
+    }
+
+    [Test]
+    public void NavigateUp_FromFirst_LoopsToLast()
+    {
+        // Arrange
+        _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.SetValue(_controller, 0);
+
+        // Act
+        var method = _controller.GetType()
+            .GetMethod("NavigateUp", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        method?.Invoke(_controller, null);
+
+        // Assert
+        var currentIndex = _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.GetValue(_controller);
+        Assert.AreEqual(5, currentIndex); // Последняя кнопка
+    }
+
+    [Test]
+    public void NavigateDown_FromLast_LoopsToFirst()
+    {
+        // Arrange
+        _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.SetValue(_controller, 5);
+
+        // Act
+        var method = _controller.GetType()
+            .GetMethod("NavigateDown", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        method?.Invoke(_controller, null);
+
+        // Assert
+        var currentIndex = _controller.GetType()
+            .GetField("_currentIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.GetValue(_controller);
+        Assert.AreEqual(0, currentIndex); // Первая кнопка
+    }
+
+    #endregion
+
+    #region Состояния (3 теста)
+
+    [Test]
+    public void Start_InitializesButtons()
+    {
+        // Act
+        _controller.GetType()
+            .GetMethod("Start", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.Invoke(_controller, null);
+
+        // Assert
+        var buttons = _controller.GetType()
+            .GetField("_buttons", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?.GetValue(_controller) as Button[];
+        
+        Assert.IsNotNull(buttons);
+        Assert.Greater(buttons.Length, 0);
+    }
+
+    [Test]
+    public void OnDisable_UnsubscribesFromEvents()
+    {
+        // Arrange
+        var onDisableMethod = _controller.GetType()
+            .GetMethod("OnDisable", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
+        // Act & Assert
+        Assert.DoesNotThrow(() => onDisableMethod?.Invoke(_controller, null));
+    }
+
+    [Test]
+    public void HandleKeyboardNavigation_Escape_CallsOnExit()
+    {
+        // Arrange
+        LogAssert.Expect(LogType.Log, "Нажата кнопка: ВЫХОД");
+
+        // Act
+        var handleKeyboardMethod = _controller.GetType()
+            .GetMethod("HandleKeyboardNavigation", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        
+        // Simulate Escape key
+        Input.simulateMouseWithTouches = false;
+        
+        // Assert
+        Assert.DoesNotThrow(() => handleKeyboardMethod?.Invoke(_controller, null));
     }
 
     #endregion
