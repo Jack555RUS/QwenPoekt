@@ -278,7 +278,7 @@
 |------|------------|
 | [`.qwen/QWEN.md`](./.qwen/QWEN.md) | 5 новых правил |
 | [`tdd-verify-complete.ps1`](./tdd-verify-complete.ps1) | Проверка TDD |
-| [`CHEAT_SHEET.md`](./CHEAT_SHEET.md) | Быстрые команды |
+| [`_docs/CHEAT_SHEET.md`](../_docs/CHEAT_SHEET.md) | Быстрые команды |
 
 ### Qwen Insights:
 

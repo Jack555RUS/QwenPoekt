@@ -103,7 +103,7 @@
 
 ### 5️⃣ ЧЁТКАЯ СТРУКТУРА ОТВЕТА
 
-**Файл:** [`ANSWER_TEMPLATE.md`](./ANSWER_TEMPLATE.md)
+**Файл:** [`_templates/ANSWER_TEMPLATE.md`](../_templates/ANSWER_TEMPLATE.md)
 
 **Правило:**
 ```markdown
@@ -162,7 +162,7 @@
 
 ### 8️⃣ БЫСТРЫЕ КОМАНДЫ (5 новых)
 
-**Файл:** [`CHEAT_SHEET.md`](./CHEAT_SHEET.md)
+**Файл:** [`_docs/CHEAT_SHEET.md`](../_docs/CHEAT_SHEET.md)
 
 | Команда | Описание |
 |---------|----------|
@@ -325,9 +325,9 @@
 | Файл | Назначение |
 |------|------------|
 | [`.qwen/QWEN.md`](./.qwen/QWEN.md) | 11 мета-правил |
-| [`ANSWER_TEMPLATE.md`](./ANSWER_TEMPLATE.md) | Шаблон ответа |
+| [`_templates/ANSWER_TEMPLATE.md`](../_templates/ANSWER_TEMPLATE.md) | Шаблон ответа |
 | [`PATTERN_DRAFT.md`](./PATTERN_DRAFT.md) | Черновик паттерна |
-| [`CHEAT_SHEET.md`](./CHEAT_SHEET.md) | 17 команд |
+| [`_docs/CHEAT_SHEET.md`](../_docs/CHEAT_SHEET.md) | 17 команд |
 
 ---
 

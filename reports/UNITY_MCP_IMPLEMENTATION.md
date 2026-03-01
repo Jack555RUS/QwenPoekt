@@ -161,7 +161,7 @@
 
 ### 4️⃣ БЫСТРЫЕ КОМАНДЫ — /need_data и /update
 
-**Файл:** [`CHEAT_SHEET.md`](./CHEAT_SHEET.md)
+**Файл:** [`_docs/CHEAT_SHEET.md`](../_docs/CHEAT_SHEET.md)
 
 **Добавлены команды:**
 
@@ -319,7 +319,7 @@
 | Файл | Назначение |
 |------|------------|
 | [`AI_START_HERE.md`](./AI_START_HERE.md) | Точка входа |
-| [`CHEAT_SHEET.md`](./CHEAT_SHEET.md) | Быстрые команды |
+| [`_docs/CHEAT_SHEET.md`](../_docs/CHEAT_SHEET.md) | Быстрые команды |
 | [`error_solutions.md`](./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md) | База ошибок |
 
 ---

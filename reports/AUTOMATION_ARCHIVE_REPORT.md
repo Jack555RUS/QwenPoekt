@@ -73,7 +73,7 @@
 
 ### ✅ Пункт 4: Описание скриптов
 
-**Файл:** [`SCRIPTS_README.md`](./SCRIPTS_README.md)
+**Файл:** [`_docs/SCRIPTS_README.md`](../_docs/SCRIPTS_README.md)
 
 **Что внутри:**
 - ✅ Описание всех `.ps1` скриптов
@@ -170,7 +170,7 @@ cd PROJECTS\DragRaceUnity
 |------|----------|
 | [`.gitignore`](./.gitignore) | Игнорирование файлов |
 | [`clean-logs.ps1`](./clean-logs.ps1) | Очистка логов |
-| [`SCRIPTS_README.md`](./SCRIPTS_README.md) | Описание скриптов |
+| [`_docs/SCRIPTS_README.md`](../_docs/SCRIPTS_README.md) | Описание скриптов |
 | [`ZONE_RULES.md`](./ZONE_RULES.md) | Правила структуры |
 | [`AUTOSTART.md`](./AUTOSTART.md) | Точка входа |
 
