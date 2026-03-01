@@ -91,7 +91,7 @@ KNOWLEDGE_BASE/
 
 1. **Прочти:** [`AI_START_HERE.md`](./AI_START_HERE.md)
 2. **Загрузи:** `00_CORE/csharp_standards.md`
-3. **Используй:** [`CHEAT_SHEET.md`](./CHEAT_SHEET.md)
+3. **Используй:** [`_docs/CHEAT_SHEET.md`](../_docs/CHEAT_SHEET.md)
 
 ### Поиск информации:
 
@@ -107,8 +107,9 @@ KNOWLEDGE_BASE/
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`AI_START_HERE.md`](./AI_START_HERE.md) — Точка входа для ИИ
-- [`CHEAT_SHEET.md`](./CHEAT_SHEET.md) — Быстрые команды
-- [`ANSWER_TEMPLATE.md`](./ANSWER_TEMPLATE.md) — Шаблон ответа
+- [`_docs/CHEAT_SHEET.md`](../_docs/CHEAT_SHEET.md) — Быстрые команды
+- [`_templates/ANSWER_TEMPLATE.md`](../_templates/ANSWER_TEMPLATE.md) — Шаблон ответа
+- [`reports/`](../reports/) — Отчёты (37 файлов)
 - [`PATTERN_DRAFT.md`](./PATTERN_DRAFT.md) — Черновик паттерна
 
 ---

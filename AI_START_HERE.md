@@ -448,7 +448,14 @@ D:\QwenPoekt\
 │   ├── github-auth.ps1
 │   └── ... (другие)
 │
-├── _templates/                         # ШАБЛОНЫ (5 файлов)
+├── _templates/                         # ШАБЛОНЫ (1 файл: ANSWER_TEMPLATE)
+│
+├── _docs/                              # ДОКУМЕНТАЦИЯ (2 файла)
+│   ├── CHEAT_SHEET.md                  ← Быстрые команды
+│   └── SCRIPTS_README.md               ← Описание скриптов
+│
+├── reports/                            # ОТЧЁТЫ (37 файлов)
+│   └── README.md                       ← Навигатор по отчётам
 │
 ├── _drafts/                            # ЧЕРНОВИКИ (7 дней)
 │
