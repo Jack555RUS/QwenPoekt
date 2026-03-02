@@ -1,0 +1,82 @@
+# Инструменты тихой проверки C#
+
+**Версия:** 1.0  
+**Дата:** 2026-03-02  
+**Статус:** ✅ Готово
+
+---
+
+## 🎯 НАЗНАЧЕНИЕ
+
+Запуск тестов C# в тихом режиме без вывода консоли.
+
+---
+
+## 🔧 ИНСТРУМЕНТЫ
+
+### 1. xUnit Silent Mode
+
+**Команда:**
+```bash
+dotnet test --logger "console;verbosity=quiet"
+```
+
+**Параметры:**
+| Параметр | Описание |
+|----------|----------|
+| `--logger "console;verbosity=quiet"` | Тихий вывод |
+| `--no-build` | Не перестраивать |
+| `--filter` | Фильтр тестов |
+
+---
+
+### 2. NUnit Quiet
+
+**Команда:**
+```bash
+dotnet test --verbosity quiet
+```
+
+---
+
+### 3. MSTest Silent
+
+**Команда:**
+```bash
+dotnet test --logger trx --results-directory TestResults
+```
+
+---
+
+## 📋 ПРИМЕРЫ
+
+### Тихий запуск всех тестов:
+
+```powershell
+dotnet test --logger "console;verbosity=quiet" --no-build
+```
+
+### Запуск с фильтром:
+
+```powershell
+dotnet test --filter "FullyQualifiedName~MyNamespace" --verbosity quiet
+```
+
+### Запуск с отчётом:
+
+```powershell
+dotnet test --logger trx --results-directory TestResults --verbosity quiet
+```
+
+---
+
+## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
+
+- [unity_silent_tests.md](../02_UNITY/unity_silent_tests.md) — Unity тесты
+- [qwen_unity_testing.md](../03_PATTERNS/qwen_unity_testing.md) — Qwen + Unity
+
+---
+
+**Версия:** 1.0  
+**Дата:** 2026-03-02  
+**Статус:** ✅ Готово
