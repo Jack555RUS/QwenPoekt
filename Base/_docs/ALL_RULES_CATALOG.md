@@ -226,6 +226,10 @@ scripts/cleanup-test-env.ps1
 | `STRUCTURE_GUIDE.md` | Структура проекта | ✅ |
 | `KNOWLEDGE_BASE_GUIDE.md` | Управление БЗ | ✅ |
 | `ANALYSIS_PROCESS.md` | Процесс анализа | ✅ |
+| `CODE_STYLE_GUIDE.md` | Стиль кода (актуализировано) | ✅ |
+| `UNITY_BUILD_GUIDE.md` | Сборка Unity (актуализировано) | ✅ |
+| `UI_TOOLKIT_SETUP_GUIDE.md` | Настройка UI Toolkit (актуализировано) | ✅ |
+| `TESTING_FULL_GUIDE.md` | Полное тестирование (актуализировано) | ✅ |
 
 **Интеграция:**
 ```
