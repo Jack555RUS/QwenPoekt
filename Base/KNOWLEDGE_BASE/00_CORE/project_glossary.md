@@ -1,7 +1,7 @@
 ---
 status: stable
 created: 2026-02-28
-last_reviewed: 2026-02-28
+last_reviewed: 2026-03-02
 source: Project Core
 ---
 # 📖 PROJECT GLOSSARY — ТЕРМИНОЛОГИЯ ПРОЕКТА
