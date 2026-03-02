@@ -20,6 +20,13 @@
 ### 2. Проверь продолжение сессии
 
 - **`reports/SESSION_HANDOVER.md`** — есть ли незавершённые задачи?
+- **`.resume_marker.json`** — маркер восстановления (корень Base/)
+- **Команда `/resume`** — автоматическое восстановление
+
+**При старте:**
+```powershell
+.\scripts\start-session.ps1 -Resume
+```
 
 ---
 
@@ -66,15 +73,38 @@
 
 ## 🔄 БЕСШОВНОЕ ПРОДОЛЖЕНИЕ
 
+### При старте сессии:
+
+```powershell
+# Автоматическая проверка
+.\scripts\start-session.ps1
+
+# Или команда в чате
+/resume
+```
+
+**Процесс:**
+1. ✅ Проверка маркера `.resume_marker.json`
+2. ✅ Чтение `SESSION_HANDOVER.md`
+3. ✅ Вывод контекста
+4. ✅ Предложение продолжения
+
 ### Перед завершением сессии:
 
+**Триггеры:** "выход", "перезагрузка", "выключение", "stop", "break"
+
+**Автоматически:**
+```powershell
+# При обнаружении триггера
+.\scripts\auto-save-session.ps1 -Reason "User exit" -CurrentTask "Задача" -NextStep "Шаг"
+```
+
+**Вручную:**
 ```powershell
 .\scripts\end-session.ps1
 ```
 
-**Создаётся:** `reports/SESSION_HANDOVER.md`
-
-**При старте:** Прочитать этот файл → Продолжить с задачи
+**Создаётся:** `reports/SESSION_HANDOVER.md` + `.resume_marker.json`
 
 ---
 
@@ -82,14 +112,18 @@
 
 | Команда | Действие |
 |---------|----------|
+| `/resume` | **Восстановление сессии** (автопроверка) |
 | `/backup` | Бэкап на GitHub |
 | `/multi-agent [задача]` | 4 агента параллельно |
 | `/verify-complete` | Проверка TDD (код, тесты, EXE) |
 | `/check-encoding [файл]` | Проверка кодировки |
 | `/lazy-load [тема]` | Загрузить только нужное |
 | `/architect-mode` | Полный анализ задачи |
+| `/status` | Статус сессии |
+| `/save-session` | Ручное автосохранение |
 
 **Полный список:** [`.qwen/rules/05-commands.md`](./.qwen/rules/05-commands.md)
+**Восстановление:** [`.qwen/rules/06-resume.md`](./.qwen/rules/06-resume.md)
 
 ---
 
