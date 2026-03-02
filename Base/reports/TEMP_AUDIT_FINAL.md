@@ -1,8 +1,8 @@
 ﻿# Отчёт аудита Базы Знаний
 
-**Дата аудита:** 2026-03-02 08:18:40
-**ID аудита:** 20260302_081840
-**Путь к базе:** D:\QwenPoekt\Base\KNOWLEDGE_BASE
+**Дата аудита:** 2026-03-02 08:44:12
+**ID аудита:** 20260302_084412
+**Путь к базе:** D:\QwenPoekt\Base\TEMP
 
 ---
 
@@ -10,8 +10,8 @@
 
 | Метрика | Значение |
 |---------|----------|
-| **Всего файлов** | 18 |
-| **Общий размер** | 0.06 MB |
+| **Всего файлов** | 191 |
+| **Общий размер** | 0.78 MB |
 | **Файлов нулевого размера** | 0 |
 | **Временных файлов** | 0 |
 | **Групп дубликатов** | 0 |
@@ -40,20 +40,20 @@
 
 `powershell
 # 1. Создать бэкап
-.\scripts\pre-operation-backup.ps1 -OperationType "KB_Audit_20260302_081840"
+.\scripts\pre-operation-backup.ps1 -OperationType "KB_Audit_20260302_084412"
 
 # 2. Запустить очистку
-.\scripts\kb-cleanup.ps1 -AuditId "20260302_081840" -Confirm
+.\scripts\kb-cleanup.ps1 -AuditId "20260302_084412" -Confirm
 
 # 3. Проверить результат
-.\scripts\kb-audit.ps1 -Path "D:\QwenPoekt\Base\KNOWLEDGE_BASE"
+.\scripts\kb-audit.ps1 -Path "D:\QwenPoekt\Base\TEMP"
 
 # 4. Закоммитить изменения
 git add .
-git commit -m "Cleanup: аудит БЗ 20260302_081840"
+git commit -m "Cleanup: аудит БЗ 20260302_084412"
 `
 
 ---
 
-**Аудит завершён:** 2026-03-02 08:18:40
+**Аудит завершён:** 2026-03-02 08:44:15
 **Скрипт:** kb-audit.ps1
