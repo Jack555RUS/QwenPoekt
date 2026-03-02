@@ -171,6 +171,7 @@ KNOWLEDGE_BASE/
 | **Анализ** | `old-backup-analysis.ps1`, `weekly-dedup-audit.ps1` | Аудит |
 | **Git** | `auto-commit-daily.ps1`, `github-auth.ps1` | Версионирование |
 | **Расписание** | `schedule-backup-tasks.ps1` | Task Scheduler |
+| **Завершение** | `end-session.ps1` | Завершение сессии | |
 
 **Правила:**
 - ✅ Документировать каждый скрипт
@@ -196,6 +197,7 @@ KNOWLEDGE_BASE/
 | `SAFE_DELETE_GUIDE.md` | Безопасное удаление |
 | `TEST_ENV_GUIDE.md` | Тестовая среда |
 | `STRUCTURE_GUIDE.md` | Структура проекта (этот файл) |
+| `END_SESSION_COMMAND.md` | Завершение сессии по команде |
 
 ---
 
