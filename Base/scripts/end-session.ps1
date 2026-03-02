@@ -5,7 +5,7 @@
 # Использование: .\scripts\end-session.ps1
 # ============================================================================
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 $BasePath = "D:\QwenPoekt\Base"
 $ReportsPath = "$BasePath\reports"
 $LogPath = "$ReportsPath\OPERATION_LOG.md"
@@ -54,7 +54,10 @@ try {
         git add . 2>&1 | Out-Null
         
         $commitMsg = "End: Завершение сессии $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-        git commit -m $commitMsg 2>&1 | Out-Null
+        
+        # Игнорируем предупреждения Git (warnings не являются ошибками)
+        $WarningPreference = 'SilentlyContinue'
+        git commit -m $commitMsg 2>&1 | Where-Object { $_ -notlike 'warning:*' } | Out-Null
         
         $hash = (git log -n 1 --oneline).Split(' ')[0]
         Write-Log "Git коммит: $hash" "Green"
