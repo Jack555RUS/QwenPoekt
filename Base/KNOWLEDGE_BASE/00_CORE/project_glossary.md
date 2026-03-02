@@ -288,6 +288,10 @@ Logger.Error("Критическая ошибка", exception);
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
+- [`AI_START_HERE.md`](../../AI_START_HERE.md) — Главная инструкция
+- [`STRUCTURE_GUIDE.md`](../../_docs/STRUCTURE_GUIDE.md) — Структура проекта
+- [`FOR_AI_READ_HERE.md`](FOR_AI_READ_HERE.md) — Контекст для ИИ
+
 - [`00_CORE/csharp_standards.md`](./00_CORE/csharp_standards.md) — Стандарты кода
 - [`01_RULES/ui_toolkit_rules.md`](./01_RULES/ui_toolkit_rules.md) — Правила UI
 - [`02_TOOLS/powershell_scripts.md`](./02_TOOLS/powershell_scripts.md) — Инструменты

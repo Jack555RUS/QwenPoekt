@@ -105,8 +105,9 @@ dotnet test --logger trx --results-directory TestResults --verbosity quiet
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [unity_silent_tests.md](../02_UNITY/unity_silent_tests.md) — Unity тесты
-- [qwen_unity_testing.md](../03_PATTERNS/qwen_unity_testing.md) — Qwen + Unity
+- [`unity_silent_tests.md`](../02_UNITY/unity_silent_tests.md) — Unity тесты
+- [`qwen_unity_testing.md`](../03_PATTERNS/qwen_unity_testing.md) — Qwen + Unity
+- [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы для правил
 
 ---
 

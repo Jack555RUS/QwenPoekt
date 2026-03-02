@@ -138,8 +138,10 @@ Dependency Injection — это паттерн проектирования...
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [qwen_vscode_setup.md](../02_TOOLS/qwen_vscode_setup.md) — Настройка
-- [ai_programming_tips.md](../05_METHODOLOGY/ai_programming_tips.md) — Советы
+- [`qwen_vscode_setup.md`](../02_TOOLS/qwen_vscode_setup.md) — Настройка
+- [`ai_programming_tips.md`](ai_programming_tips.md) — Советы ИИ
+- [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы
+- [`AI_DEVELOPER_INSTRUCTION.md`](AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
 
 ---
 

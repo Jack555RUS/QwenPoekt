@@ -139,9 +139,11 @@
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [qwen_vscode_setup.md](../02_TOOLS/qwen_vscode_setup.md) — Настройка Qwen
-- [qwen_modes.md](qwen_modes.md) — Режимы Qwen
-- [csharp_fast_learning.md](../00_CORE/csharp_fast_learning.md) — Изучение C#
+- [`qwen_vscode_setup.md`](../02_TOOLS/qwen_vscode_setup.md) — Настройка Qwen
+- [`qwen_modes.md`](qwen_modes.md) — Режимы Qwen
+- [`csharp_fast_learning.md`](../00_CORE/csharp_fast_learning.md) — Изучение C#
+- [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы для правил
+- [`AI_DEVELOPER_INSTRUCTION.md`](AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
 
 ---
 

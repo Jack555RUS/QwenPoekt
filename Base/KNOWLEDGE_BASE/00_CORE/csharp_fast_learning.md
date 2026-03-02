@@ -114,6 +114,10 @@
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
+- [`csharp_standards.md`](csharp_standards.md) — Стандарты кода C#
+- [`ai_programming_tips.md`](../05_METHODOLOGY/ai_programming_tips.md) — Советы ИИ по программированию
+- [`qwen_modes.md`](../05_METHODOLOGY/qwen_modes.md) — Режимы Qwen
+
 - [ai_programming_tips.md](../05_METHODOLOGY/ai_programming_tips.md) — Советы ИИ
 - [qwen_vscode_setup.md](../02_TOOLS/qwen_vscode_setup.md) — Настройка Qwen
 

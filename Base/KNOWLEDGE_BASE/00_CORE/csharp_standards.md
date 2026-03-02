@@ -255,6 +255,11 @@ print("Ошибка");
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
+- [`csharp_fast_learning.md`](csharp_fast_learning.md) — Быстрое изучение C#
+- [`ai_programming_tips.md`](../05_METHODOLOGY/ai_programming_tips.md) — Советы ИИ по программированию
+- [`roslynator_cli.md`](roslynator_cli.md) — Анализ кода через CLI
+- [`.editorconfig`](../../.editorconfig) — Настройки стиля
+
 - [`01_RULES/ui_toolkit_rules.md`](./01_RULES/ui_toolkit_rules.md) — Правила UI
 - [`01_RULES/logging_standards.md`](./01_RULES/logging_standards.md) — Стандарты логирования
 - [`03_PATTERNS/error_solutions.md`](./03_PATTERNS/error_solutions.md) — База ошибок
