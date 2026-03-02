@@ -21,7 +21,8 @@ Write-Info "║         ПРОВЕРКА ПРАВИЛ СЕССИИ $(Get-Date -F
 Write-Info "╚══════════════════════════════════════════════════════════╝"
 
 # Пути
-$BasePath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$BasePath = Split-Path -Parent $ScriptPath  # Поднимаемся на уровень выше (scripts → Base)
 $RulesPath = Join-Path $BasePath ".qwen\session-rules.json"
 $ResumeMarkerPath = Join-Path $BasePath ".resume_marker.json"
 $SessionsPath = Join-Path $BasePath "sessions"
@@ -84,16 +85,16 @@ if ($rules -and $rules.session.auto_save.enabled) {
         try {
             $action = New-ScheduledTaskAction -Execute "PowerShell" `
               -Argument "-NoProfile -WindowStyle Hidden -File `"$BasePath\scripts\auto-save-chat.ps1`""
-            
+
             $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) `
               -RepetitionInterval (New-TimeSpan -Minutes $rules.session.auto_save.interval_minutes) `
-              -RepetitionDuration ([TimeSpan]::MaxValue)
-            
+              -RepetitionDuration (New-TimeSpan -Days 365)  # Максимальное значение для Task Scheduler
+
             $settings = New-ScheduledTaskSettingsSet `
               -AllowStartIfOnBatteries `
               -DontStopIfGoingOnBatteries `
               -ExecutionTimeLimit (New-TimeSpan -Minutes 5)
-            
+
             Register-ScheduledTask -TaskName "QwenSessionAutoSave" `
               -Action $action `
               -Trigger $trigger `

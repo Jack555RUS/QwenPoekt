@@ -25,7 +25,8 @@ Write-Info "║         СОХРАНЕНИЕ СЕССИИ $(Get-Date -Format 'HH
 Write-Info "╚══════════════════════════════════════════════════════════╝"
 
 # Пути
-$BasePath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$BasePath = Split-Path -Parent $ScriptPath  # Поднимаемся на уровень выше (scripts → Base)
 $RulesPath = Join-Path $BasePath ".qwen\session-rules.json"
 $SessionsPath = Join-Path $BasePath "sessions"
 

@@ -11,7 +11,8 @@ param(
 $ErrorActionPreference = "Stop"
 
 # Пути
-$BasePath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$BasePath = Split-Path -Parent $ScriptPath  # Поднимаемся на уровень выше (scripts → Base)
 $RulesPath = Join-Path $BasePath ".qwen\session-rules.json"
 $SessionsPath = Join-Path $BasePath "sessions"
 $LogPath = Join-Path $SessionsPath "auto-save.log"
