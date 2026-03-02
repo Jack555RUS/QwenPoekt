@@ -1,0 +1,184 @@
+# =============================================================================
+# GitHub Actions CI/CD Pipeline для ProbMenu
+# =============================================================================
+# Автоматическая сборка, тестирование и публикация Docker-образов
+# =============================================================================
+
+name: Docker CI/CD
+
+on:
+  push:
+    branches: [ main, master, develop ]
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Версия для сборки'
+        required: false
+        default: 'latest'
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+  UNITY_VERSION: "2022.3"
+
+jobs:
+  # -------------------------------------------------------------------------
+  # Этап 1: Линтинг и валидация
+  # -------------------------------------------------------------------------
+  lint:
+    name: Lint & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Validate Docker Compose
+        run: docker compose config
+
+      - name: Check Dockerfile syntax
+        run: |
+          docker build --check -f Dockerfile . || echo "Docker build check completed"
+
+  # -------------------------------------------------------------------------
+  # Этап 2: Сборка и тестирование .NET приложения
+  # -------------------------------------------------------------------------
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore -c Release
+
+      - name: Test
+        run: dotnet test --no-build -c Release --logger "console;verbosity=detailed"
+        continue-on-error: true
+
+      - name: Publish
+        run: dotnet publish -c Release -o ./publish
+
+  # -------------------------------------------------------------------------
+  # Этап 3: Сборка Docker образа
+  # -------------------------------------------------------------------------
+  docker-build:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Container Registry
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # -------------------------------------------------------------------------
+  # Этап 4: Сборка Unity проекта (только для тегов и main)
+  # -------------------------------------------------------------------------
+  unity-build:
+    name: Unity Build
+    runs-on: ubuntu-latest
+    needs: docker-build
+    if: startsWith(github.ref, 'refs/tags/') || github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Unity
+        uses: actions/cache@v4
+        with:
+          path: DragRaceUnity/Library
+          key: unity-library-${{ hashFiles('DragRaceUnity/**') }}
+          restore-keys: |
+            unity-library-
+
+      - name: Unity Build
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: DragRaceUnity
+          buildPath: Builds
+          targetPlatform: StandaloneWindows64
+          versioning: ${{ github.ref_type == 'tag' && github.ref_name || 'auto' }}
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: unity-build-${{ github.sha }}
+          path: Builds/
+          retention-days: 30
+
+  # -------------------------------------------------------------------------
+  # Этап 5: Деплой (опционально)
+  # -------------------------------------------------------------------------
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [docker-build, unity-build]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to environment
+        id: deploy
+        run: |
+          echo "Deploying to production..."
+          echo "url=https://probmenu.example.com" >> $GITHUB_OUTPUT
+        # Здесь можно добавить реальный деплой на ваш сервер

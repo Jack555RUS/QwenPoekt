@@ -1,0 +1,87 @@
+# ============================================================
+# .gitignore для Unity проекта
+# ============================================================
+
+# Папки Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Файлы Visual Studio
+*.csproj
+*.sln
+*.suo
+*.user
+*.userosscache
+*.suo.user
+.vs/
+
+# MonoDevelop/Xamarin Studio
+*.pidb
+*.userprefs
+*.mono/
+
+# Unity specific
+*.booproj
+*.unityproj
+*.csproj.user
+*.resharper/
+*.ncrunchproject
+*.icsharpcode
+*.Unity3D/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Unity Hub
+.project
+
+# Test results
+TestResults/
+*.trx
+*.xml
+
+# Build artifacts
+*.exe
+*.dll
+*.pdb
+*.apk
+*.aab
+*.ipa
+*.xapk
+
+# Unity cache
+Cache/
+UnityCache/
+
+# Package manager
+Packages/packages-lock.json
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Local settings
+LocalSettings/
+
+# ============================================================
+# Что коммитить:
+# ============================================================
+# ✅ Assets/ (кроме больших бинарников)
+# ✅ ProjectSettings/
+# ✅ Packages/manifest.json
+# ✅ .github/workflows/
+# ✅ .gitignore
+# ✅ README.md
+# ============================================================

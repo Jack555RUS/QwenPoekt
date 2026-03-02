@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Меню (Unity-style)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            font-family: Arial, sans-serif;
+        }
+        #gameWindow {
+            width: 640px;
+            height: 480px;
+            background: #4d4d4d;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .button {
+            width: 150px;
+            height: 40px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #cccccc;
+            color: #000;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+        .button:hover {
+            background: #b3b3b3;
+        }
+        .button:active {
+            background: #999999;
+        }
+        .counter-container {
+            position: absolute;
+            right: 70px;
+            top: 240px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .counter-label {
+            color: #fff;
+            font-size: 14px;
+        }
+        .counter-value {
+            width: 50px;
+            height: 40px;
+            background: transparent;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameWindow">
+        <h2>2D Меню</h2>
+        <button class="button" id="colorBtn">Сменить цвет</button>
+        <div class="counter-container">
+            <button class="button" id="counterBtn">Накрутить счётчик</button>
+            <span class="counter-label">Счётчик:</span>
+            <span class="counter-value" id="counterValue">0</span>
+        </div>
+        <button class="button" id="exitBtn">Выход</button>
+    </div>
+
+    <script>
+        const gameWindow = document.getElementById('gameWindow');
+        const colorBtn = document.getElementById('colorBtn');
+        const counterBtn = document.getElementById('counterBtn');
+        const exitBtn = document.getElementById('exitBtn');
+        const counterValue = document.getElementById('counterValue');
+        
+        let counter = 0;
+
+        // Кнопка 1: Смена цвета
+        colorBtn.addEventListener('click', () => {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            gameWindow.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        });
+
+        // Кнопка 2: Счётчик
+        counterBtn.addEventListener('click', () => {
+            counter++;
+            counterValue.textContent = counter;
+        });
+
+        // Кнопка 3: Выход
+        exitBtn.addEventListener('click', () => {
+            if (confirm('Закрыть программу?')) {
+                window.close();
+                document.body.innerHTML = '<h1 style="color: #fff;">Программа закрыта</h1>';
+            }
+        });
+    </script>
+</body>
+</html>
