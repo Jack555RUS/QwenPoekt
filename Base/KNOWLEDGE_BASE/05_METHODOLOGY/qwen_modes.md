@@ -142,6 +142,8 @@ Dependency Injection — это паттерн проектирования...
 - [`ai_programming_tips.md`](ai_programming_tips.md) — Советы ИИ
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы
 - [`AI_DEVELOPER_INSTRUCTION.md`](AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
+- [`csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты кода
+- [`PROFILES_MATRIX.md`](../../_docs/PROFILES_MATRIX.md) — Матрица профилей
 
 ---
 

@@ -293,6 +293,8 @@ Logger.Error("Критическая ошибка", exception);
 - [`AI_START_HERE.md`](../../AI_START_HERE.md) — Главная инструкция
 - [`STRUCTURE_GUIDE.md`](../../_docs/STRUCTURE_GUIDE.md) — Структура проекта
 - [`FOR_AI_READ_HERE.md`](FOR_AI_READ_HERE.md) — Контекст для ИИ
+- [`csharp_standards.md`](csharp_standards.md) — Стандарты кода C#
+- [`RULES_INDEX.md`](../../_docs/RULES_INDEX.md) — Индекс всех правил
 
 - [`00_CORE/csharp_standards.md`](./00_CORE/csharp_standards.md) — Стандарты кода
 - [`01_RULES/ui_toolkit_rules.md`](./01_RULES/ui_toolkit_rules.md) — Правила UI

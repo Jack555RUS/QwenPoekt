@@ -321,3 +321,13 @@ unity-build.ps1
 - DragRaceUnity — полноценная Unity игра (Drag Racing)
 
 **Не путать!**
+
+---
+
+## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
+
+- [`AI_START_HERE.md`](../../AI_START_HERE.md) — Главная инструкция
+- [`RULES_AND_TASKS.md`](../../RULES_AND_TASKS.md) — Правила и задачи
+- [`README.md`](../../README.md) — Навигатор по проекту
+- [`AI_DEVELOPER_INSTRUCTION.md`](../05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
+- [`project_glossary.md`](project_glossary.md) — Терминология проекта

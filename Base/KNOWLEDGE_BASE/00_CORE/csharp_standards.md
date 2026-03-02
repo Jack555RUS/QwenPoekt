@@ -260,7 +260,9 @@ print("Ошибка");
 - [`csharp_fast_learning.md`](csharp_fast_learning.md) — Быстрое изучение C#
 - [`ai_programming_tips.md`](../05_METHODOLOGY/ai_programming_tips.md) — Советы ИИ по программированию
 - [`roslynator_cli.md`](roslynator_cli.md) — Анализ кода через CLI
+- [`csharp_silent_testing.md`](csharp_silent_testing.md) — Тихие тесты C#
 - [`.editorconfig`](../../.editorconfig) — Настройки стиля
+- [`project_glossary.md`](project_glossary.md) — Терминология проекта
 
 - [`01_RULES/ui_toolkit_rules.md`](./01_RULES/ui_toolkit_rules.md) — Правила UI
 - [`01_RULES/logging_standards.md`](./01_RULES/logging_standards.md) — Стандарты логирования

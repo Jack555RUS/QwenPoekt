@@ -1046,6 +1046,8 @@ grep "& 1400000001" Assets/Scenes/MainMenu.unity
 - [`qwen_modes.md`](qwen_modes.md) — Режимы Qwen
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы для правил
 - [`csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты кода C#
+- [`project_glossary.md`](../00_CORE/project_glossary.md) — Терминология проекта
+- [`PROFILES_MATRIX.md`](../../_docs/PROFILES_MATRIX.md) — Матрица профилей
 
 ---
 

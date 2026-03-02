@@ -203,8 +203,10 @@ dotnet add package Roslynator.Analyzers
 - [`unity_docker_builder.md`](../02_UNITY/unity_docker_builder.md) — Unity в Docker
 - [`csharp_silent_testing.md`](csharp_silent_testing.md) — Тесты C#
 - [`csharp_standards.md`](csharp_standards.md) — Стандарты кода
+- [`csharp_fast_learning.md`](csharp_fast_learning.md) — Быстрое изучение C#
 - [`ai_programming_tips.md`](../05_METHODOLOGY/ai_programming_tips.md) — Советы ИИ
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы
+- [`RULES_INDEX.md`](../../_docs/RULES_INDEX.md) — Индекс правил
 
 ---
 

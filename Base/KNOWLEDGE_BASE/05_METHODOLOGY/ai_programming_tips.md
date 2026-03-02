@@ -144,6 +144,7 @@
 - [`csharp_fast_learning.md`](../00_CORE/csharp_fast_learning.md) — Изучение C#
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы для правил
 - [`AI_DEVELOPER_INSTRUCTION.md`](AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
+- [`csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты кода
 
 ---
 

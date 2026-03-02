@@ -108,6 +108,8 @@ dotnet test --logger trx --results-directory TestResults --verbosity quiet
 - [`unity_silent_tests.md`](../02_UNITY/unity_silent_tests.md) — Unity тесты
 - [`qwen_unity_testing.md`](../03_PATTERNS/qwen_unity_testing.md) — Qwen + Unity
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы для правил
+- [`csharp_standards.md`](csharp_standards.md) — Стандарты кода C#
+- [`PROFILES_MATRIX.md`](../../_docs/PROFILES_MATRIX.md) — Матрица профилей
 
 ---
 
