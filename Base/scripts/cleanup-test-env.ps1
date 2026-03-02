@@ -1,18 +1,22 @@
 # ============================================================================
 # CLEANUP TEST ENVIRONMENT
 # ============================================================================
-# Назначение: Очистка тестовой среды после тестирования
-# Использование: .\scripts\cleanup-test-env.ps1
+# Назначение: Умная очистка тестовой среды с сохранением структуры и истории
+# Использование: .\scripts\cleanup-test-env.ps1 [-Archive] [-WhatIf] [-Force]
 # ============================================================================
 
 param(
     [string]$TestEnvRoot = "D:\QwenPoekt\_TEST_ENV",
     
+    [string]$LocalArchiveRoot = "D:\QwenPoekt\Base\_LOCAL_ARCHIVE",
+    
     [switch]$WhatIf,
     
     [switch]$Force,
     
-    [switch]$SaveLogs
+    [switch]$SaveLogs,
+    
+    [switch]$ArchiveTests
 )
 
 $ErrorActionPreference = "Stop"
@@ -170,91 +174,109 @@ try {
         Write-Host ""
         Write-Host "Для реальной очистки запустите без -WhatIf" -ForegroundColor "Cyan"
         Write-Host "Для сохранения логов добавьте -SaveLogs" -ForegroundColor "Yellow"
+        Write-Host "Для архивации тестов добавьте -ArchiveTests" -ForegroundColor "Yellow"
         Write-Host ""
         exit 0
     }
-    
+
     # ------------------------------------------------------------------------
     # ШАГ 4: Подтверждение (если не Force)
     # ------------------------------------------------------------------------
     if (!$Force) {
         Write-Host ""
-        Write-Host "ВНИМАНИЕ: Будет удалена тестовая среда!" -ForegroundColor "Yellow"
+        Write-Host "ВНИМАНИЕ: Будет очищена тестовая среда!" -ForegroundColor "Yellow"
         Write-Host "  Путь: $TestEnvRoot" -ForegroundColor "Gray"
         Write-Host "  Размер: $([math]::Round($testSize, 2)) MB" -ForegroundColor "Gray"
         Write-Host ""
         Write-Host "Продолжить? (Y/N) " -ForegroundColor "Yellow" -NoNewline
-        
+
         $response = Read-Host
-        
+
         if ($response -notlike "Y*" -and $response -notlike "y*") {
             Write-Log "Очистка отменена пользователем" -Color "Gray"
             exit 0
         }
     }
-    
+
     # ------------------------------------------------------------------------
-    # ШАГ 5: Удаление тестовой среды
+    # ШАГ 5: Архивация тестов (если ArchiveTests)
     # ------------------------------------------------------------------------
-    Write-Log "Шаг 3: Удаление тестовой среды..."
-    
-    Write-Info-Log "Удаление: $TestEnvRoot"
-    Remove-Item -Path $TestEnvRoot -Recurse -Force
-    
-    # Проверка удаления
-    if (Test-Path-Safe -Path $TestEnvRoot) {
-        Write-Error-Log "Не удалось удалить тестовую среду!"
-        exit 1
-    }
-    
-    Write-Success-Log "Тестовая среда удалена"
-    
-    # ------------------------------------------------------------------------
-    # ШАГ 6: Запись в лог (если сохранили)
-    # ------------------------------------------------------------------------
-    if ($SaveLogs) {
-        Write-Log "Шаг 4: Запись в лог..."
+    if ($ArchiveTests) {
+        Write-Log "Шаг 3: Архивация тестов..."
         
-        $logEntry = @"
-
-## $(Get-Date -Format 'yyyy-MM-dd HH:mm') Очистка тестовой среды
-
-**Тип:** Очистка с сохранением логов
-
-**Параметры:**
-- Путь: $TestEnvRoot
-- Размер: $([math]::Round($testSize, 2)) MB
-- Файлов: $testFiles
-- Сохранение логов: Да
-
-**Статус:** ✅ Успешно
-
----
-"@
+        $archivePath = Join-Path $LocalArchiveRoot "TESTS\$(Get-Date -Format 'yyyy-MM-dd_HH-mm')"
+        Ensure-Directory-Exists -Path $archivePath
         
-        $mainLogPath = "D:\QwenPoekt\Base\reports\OPERATION_LOG.md"
-        if (Test-Path $mainLogPath) {
-            Add-Content -Path $mainLogPath -Value $logEntry -Encoding UTF8
+        # Копировать отчёты и логи
+        $reportsPath = Join-Path $TestEnvRoot "reports"
+        if (Test-Path-Safe -Path $reportsPath) {
+            Copy-Item -Path $reportsPath -Destination $archivePath -Recurse -Force
+            Write-Success-Log "Тесты архивированы: $archivePath"
         }
     }
     
     # ------------------------------------------------------------------------
-    # ЗАВЕРШЕНИЕ
+    # ШАГ 6: Сохранение логов (если SaveLogs)
     # ------------------------------------------------------------------------
-    Write-Host ""
-    Write-Success-Log "ОЧИСТКА ЗАВЕРШЕНА!" -Color "Green"
-    Write-Host ""
-    
     if ($SaveLogs) {
-        Write-Host "Логи сохранены:" -ForegroundColor "White"
-        Write-Host "  D:\QwenPoekt\Base\reports\test-logs\" -ForegroundColor "Gray"
-        Write-Host ""
+        Write-Log "Шаг 4: Сохранение логов..."
+
+        $logsDestPath = "D:\QwenPoekt\Base\reports\test-logs"
+        Ensure-Directory-Exists -Path $logsDestPath
+
+        Save-Test-Logs -SourcePath $TestEnvRoot -DestPath $logsDestPath
+
+        Write-Success-Log "Логи сохранены: $logsDestPath"
+    }
+
+    # ------------------------------------------------------------------------
+    # ШАГ 7: Очистка содержимого (НЕ структуры!)
+    # ------------------------------------------------------------------------
+    Write-Log "Шаг 5: Очистка содержимого..."
+
+    # Очистить Base/ (сохранить структуру)
+    $basePath = Join-Path $TestEnvRoot "Base"
+    if (Test-Path-Safe -Path $basePath) {
+        Write-Info-Log "Очистка: $basePath"
+        Get-ChildItem -Path $basePath -Recurse -File | Remove-Item -Force
+        Get-ChildItem -Path $basePath -Recurse -Directory | Remove-Item -Force -Recurse
+        Write-Success-Log "Base/ очищен"
     }
     
-    Write-Host "Для создания новой тестовой среды:" -ForegroundColor "Cyan"
-    Write-Host "  .\create-test-env.ps1" -ForegroundColor "Gray"
+    # Очистить _BACKUP/ (сохранить папку)
+    $backupPath = Join-Path $TestEnvRoot "_BACKUP"
+    if (Test-Path-Safe -Path $backupPath) {
+        Write-Info-Log "Очистка: $backupPath"
+        Get-ChildItem -Path $backupPath -Recurse -File | Remove-Item -Force
+        Get-ChildItem -Path $backupPath -Recurse -Directory | Remove-Item -Force -Recurse
+        Write-Success-Log "_BACKUP/ очищен"
+    }
+    
+    # Очистить reports/ (сохранить TEST_LOG.md)
+    $reportsPath = Join-Path $TestEnvRoot "reports"
+    if (Test-Path-Safe -Path $reportsPath) {
+        Write-Info-Log "Очистка: $reportsPath (сохранение TEST_LOG.md)"
+        Get-ChildItem -Path $reportsPath -Recurse -File | Where-Object { $_.Name -ne "TEST_LOG.md" } | Remove-Item -Force
+        Write-Success-Log "reports/ очищен (TEST_LOG.md сохранён)"
+    }
+
+    Write-Success-Log "Тестовая среда очищена (структура сохранена)"
+    
+    Write-Host ""
+    Write-Host "Структура сохранена:" -ForegroundColor "Green"
+    Write-Host "  ✅ $TestEnvRoot" -ForegroundColor "Gray"
+    Write-Host "  ✅ Base/" -ForegroundColor "Gray"
+    Write-Host "  ✅ _BACKUP/" -ForegroundColor "Gray"
+    Write-Host "  ✅ reports/ (TEST_LOG.md)" -ForegroundColor "Gray"
     Write-Host ""
     
+    Write-Host "Для создания новой тестовой среды:" -ForegroundColor "Cyan"
+    Write-Host "  .\create-test-env.ps1 -Force" -ForegroundColor "Gray"
+    Write-Host ""
+    Write-Host "Для архивации тестов в следующий раз:" -ForegroundColor "Yellow"
+    Write-Host "  .\cleanup-test-env.ps1 -ArchiveTests" -ForegroundColor "Gray"
+    Write-Host ""
+
 } catch {
     Write-Error-Log "КРИТИЧЕСКАЯ ОШИБКА: $($_.Exception.Message)"
     Write-Error-Log "Детали: $($_.Exception.StackTrace)"
