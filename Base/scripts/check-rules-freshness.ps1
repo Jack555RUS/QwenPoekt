@@ -83,22 +83,34 @@ function Get-Rule-Metadata {
             Version = "Unknown"
         }
         
-        # Извлечь last_reviewed
+        # Извлечь last_reviewed из Markdown (**Последняя проверка:** ГГГГ-ММ-ДД)
         if ($content -match '\*\*Последняя проверка:\*\*\s+(\d{4}-\d{2}-\d{2})') {
             $metadata.LastReviewed = [datetime]$matches[1]
         }
+        # Извлечь last_reviewed из YAML (last_reviewed: ГГГГ-ММ-ДД)
+        elseif ($content -match 'last_reviewed:\s+(\d{4}-\d{2}-\d{2})') {
+            $metadata.LastReviewed = [datetime]$matches[1]
+        }
         
-        # Извлечь created
+        # Извлечь created из Markdown
         if ($content -match '\*\*Дата создания:\*\*\s+(\d{4}-\d{2}-\d{2})') {
             $metadata.Created = [datetime]$matches[1]
         }
+        # Извлечь created из YAML
+        elseif ($content -match 'created:\s+(\d{4}-\d{2}-\d{2})') {
+            $metadata.Created = [datetime]$matches[1]
+        }
         
-        # Извлечь status
+        # Извлечь status из Markdown
         if ($content -match '\*\*Статус:\*\*\s+(✅|⚠️|❌)\s+(\w+)') {
             $metadata.Status = $matches[2]
         }
+        # Извлечь status из YAML
+        elseif ($content -match 'status:\s+(\w+)') {
+            $metadata.Status = $matches[1]
+        }
         
-        # Извлечь version
+        # Извлечь version из Markdown
         if ($content -match '\*\*Версия:\*\*\s+([\d\.]+)') {
             $metadata.Version = $matches[1]
         }
