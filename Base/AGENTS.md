@@ -75,19 +75,22 @@
 
 ### При старте сессии:
 
+**Автоматическая проверка:**
 ```powershell
-# Автоматическая проверка
-.\scripts\start-session.ps1
+.\scripts\check-session-rules.ps1
+```
 
-# Или команда в чате
+**Или команда в чате:**
+```
 /resume
 ```
 
 **Процесс:**
-1. ✅ Проверка маркера `.resume_marker.json`
-2. ✅ Чтение `SESSION_HANDOVER.md`
-3. ✅ Вывод контекста
-4. ✅ Предложение продолжения
+1. ✅ Проверка `.qwen/session-rules.json` (конфигурация)
+2. ✅ Проверка `.resume_marker.json` (маркер восстановления)
+3. ✅ Проверка `sessions/` (сохранённые сессии)
+4. ✅ Проверка Task Scheduler (автосохранение)
+5. ✅ Вывод контекста
 
 ### Перед завершением сессии:
 
@@ -96,15 +99,21 @@
 **Автоматически:**
 ```powershell
 # При обнаружении триггера
-.\scripts\auto-save-session.ps1 -Reason "User exit" -CurrentTask "Задача" -NextStep "Шаг"
+.\scripts\save-chat-log.ps1 -ChatContent "..." -Metadata "..." -Task "Задача"
 ```
 
 **Вручную:**
 ```powershell
+/save-session
 .\scripts\end-session.ps1
 ```
 
-**Создаётся:** `reports/SESSION_HANDOVER.md` + `.resume_marker.json`
+**Создаётся:**
+- `sessions/YYYY-MM-DD_HH-mm/` — папка сессии
+- `chat.md` — переписка
+- `metadata.json` — метаданные
+- `commands.log` — команды
+- `.resume_marker.json` — маркер восстановления
 
 ---
 
@@ -113,17 +122,21 @@
 | Команда | Действие |
 |---------|----------|
 | `/resume` | **Восстановление сессии** (автопроверка) |
+| `/save-session` | **Сохранение переписки** (чат + метаданные) |
+| `/auto-save on` | **Включить автосохранение** (каждые 2 мин) |
+| `/auto-save off` | **Выключить автосохранение** |
+| `/auto-save status` | **Статус автосохранения** |
+| `/status` | Статус сессии |
 | `/backup` | Бэкап на GitHub |
 | `/multi-agent [задача]` | 4 агента параллельно |
 | `/verify-complete` | Проверка TDD (код, тесты, EXE) |
 | `/check-encoding [файл]` | Проверка кодировки |
 | `/lazy-load [тема]` | Загрузить только нужное |
 | `/architect-mode` | Полный анализ задачи |
-| `/status` | Статус сессии |
-| `/save-session` | Ручное автосохранение |
 
 **Полный список:** [`.qwen/rules/05-commands.md`](./.qwen/rules/05-commands.md)
 **Восстановление:** [`.qwen/rules/06-resume.md`](./.qwen/rules/06-resume.md)
+**Автосохранение:** [`.qwen/rules/07-session-persistence.md`](./.qwen/rules/07-session-persistence.md)
 
 ---
 

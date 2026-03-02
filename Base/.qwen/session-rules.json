@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "updated": "2026-03-02T22:30:00",
+  
+  "session": {
+    "auto_save": {
+      "enabled": true,
+      "interval_minutes": 2,
+      "format": "hybrid",
+      "path": "sessions/",
+      "retention_days": 30,
+      "compress_old": true,
+      "max_size_mb": 10
+    },
+    
+    "auto_resume": {
+      "enabled": true,
+      "check_on_start": true,
+      "show_summary": true
+    },
+    
+    "chat_log": {
+      "enabled": true,
+      "include_commands": true,
+      "include_metadata": true,
+      "include_timestamps": true,
+      "encoding": "utf8"
+    },
+    
+    "triggers": {
+      "exit_words": [
+        "выход", "exit", "quit", "bye", "goodbye",
+        "перезагрузка", "reboot", "restart", "выключение", "shutdown",
+        "конец", "end", "stop", "break", "pause",
+        "до свидания", "see you", "завершаю"
+      ],
+      "auto_save_words": [
+        "сохранить", "save", "сохранение", "backup"
+      ],
+      "resume_words": [
+        "восстановить", "resume", "продолжить", "continue"
+      ]
+    },
+    
+    "paths": {
+      "sessions": "sessions/",
+      "archive": "_LOCAL_ARCHIVE/sessions/",
+      "rules": ".qwen/session-rules.json",
+      "marker": ".resume_marker.json"
+    },
+    
+    "commands": {
+      "save_session": "/save-session",
+      "auto_save_on": "/auto-save on",
+      "auto_save_off": "/auto-save off",
+      "auto_save_status": "/auto-save status",
+      "resume": "/resume",
+      "status": "/status"
+    }
+  },
+  
+  "git": {
+    "auto_commit": false,
+    "commit_message_prefix": "Add: Session backup"
+  },
+  
+  "notifications": {
+    "on_save": true,
+    "on_resume": true,
+    "on_error": true
+  }
+}
