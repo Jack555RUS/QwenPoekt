@@ -1010,6 +1010,331 @@ rank_hypotheses(
 
 ---
 
-**Версия:** 1.2 (Авто-аннотирование, классификация, поиск связей)  
-**Дата:** 2026-03-02  
+### Раздел 6: Продвинутые методы рассуждений
+
+#### 6.1 induce_rule_from_examples(examples)
+
+**Назначение:** Индуктивный вывод общего правила из частных примеров.
+
+**Параметры:**
+```json
+{
+  "examples": [
+    {"situation": "...", "action": "...", "result": "..."}
+  ],
+  "min_confidence": 0.8
+}
+```
+
+**Возвращает:**
+```json
+{
+  "rule": "сформулированное правило",
+  "confidence": 0.75,
+  "examples_count": 3,
+  "status": "induced",
+  "counter_examples": []
+}
+```
+
+**Пример вызова:**
+```
+induce_rule_from_examples(
+  examples: [
+    {"situation": "Создание кнопки", "action": "Добавить Image", "result": "Видна"},
+    {"situation": "Создание панели", "action": "Добавить Image", "result": "Видна"},
+    {"situation": "Создание текста", "action": "Добавить Image", "result": "Виден"}
+  ],
+  min_confidence: 0.7
+)
+```
+
+**Процесс:**
+```
+1. Проверить количество примеров (≥ 3)
+2. Найти общий паттерн
+3. Сформулировать правило
+4. Рассчитать уверенность: n/(n+1)
+5. Проверить на контрпримеры
+6. Если валидно → вернуть правило
+```
+
+**См.:** [`logic_rules_for_ai.md`](./logic_rules_for_ai.md#22-индукция-induction)
+
+---
+
+#### 6.2 find_analogy(source_domain, target_domain)
+
+**Назначение:** Поиск аналогии между областями для переноса знаний.
+
+**Параметры:**
+```json
+{
+  "source_domain": "область-источник",
+  "target_domain": "область-цель"
+}
+```
+
+**Возвращает:**
+```json
+{
+  "analogy": "A:B :: C:D",
+  "mapping": {
+    "source_element": "target_element"
+  },
+  "transferred_knowledge": [...],
+  "confidence": 0.85
+}
+```
+
+**Пример вызова:**
+```
+find_analogy(
+  source_domain: "Git (версионирование)",
+  target_domain: "OLD/ (хранение наработок)"
+)
+```
+
+**Процесс:**
+```
+1. Извлечь структуру источника
+2. Найти похожую структуру в цели
+3. Найти отображение (mapping)
+4. Перенести знания
+5. Рассчитать уверенность
+```
+
+**См.:** [`logic_rules_for_ai.md`](./logic_rules_for_ai.md#24-рассуждение-по-аналогии-analogy)
+
+---
+
+#### 6.3 plan_reasoning(goal)
+
+**Назначение:** Построение плана рассуждений перед выполнением задачи.
+
+**Параметры:**
+```json
+{
+  "goal": "цель рассуждения"
+}
+```
+
+**Возвращает:**
+```json
+{
+  "plan": [
+    {"step": 1, "action": "Найти факт А", "required": [...]},
+    {"step": 2, "action": "Применить правило Б", "required": [...]},
+    {"step": 3, "action": "Проверить условие В", "required": [...]},
+    {"step": 4, "action": "Сделать вывод Г", "required": [...]}
+  ],
+  "estimated_steps": 4,
+  "required_facts": [...],
+  "required_rules": [...]
+}
+```
+
+**Пример вызова:**
+```
+plan_reasoning(goal: "Исправить ошибку компиляции")
+```
+
+**Процесс:**
+```
+1. Декомпозировать цель на подцели
+2. Для каждой подцели найти необходимые факты
+3. Найти необходимые правила
+4. Построить последовательный план
+5. Оценить количество шагов
+```
+
+**См.:** [`logic_rules_for_ai.md`](./logic_rules_for_ai.md#33-планирование-рассуждений-reasoning-planning)
+
+---
+
+#### 6.4 tree_of_thought(problem, branches=3)
+
+**Назначение:** Исследование дерева рассуждений вместо линейной цепочки.
+
+**Параметры:**
+```json
+{
+  "problem": "проблема для решения",
+  "branches": 3,
+  "depth": 2
+}
+```
+
+**Возвращает:**
+```json
+{
+  "tree": {
+    "branches": [
+      {"id": 1, "steps": [...], "score": 0.85},
+      {"id": 2, "steps": [...], "score": 0.60},
+      {"id": 3, "steps": [...], "score": 0.70}
+    ]
+  },
+  "best_branch": {"id": 1, "score": 0.85},
+  "reasoning": "Выбрана ветвь 1 (наивысшая оценка)"
+}
+```
+
+**Пример вызова:**
+```
+tree_of_thought(
+  problem: "Кнопка не отображается в Unity",
+  branches: 3
+)
+```
+
+**Процесс:**
+```
+1. Сгенерировать N ветвей рассуждений
+2. Для каждой ветви оценить:
+   - Логичность (30%)
+   - Полнота (25%)
+   - Эффективность (25%)
+   - Проверяемость (20%)
+3. Выбрать ветвь с максимальной оценкой
+4. Продолжить углубление
+```
+
+**См.:** [`logic_rules_for_ai.md`](./logic_rules_for_ai.md#4-tree-of-thought-дерево-рассуждений)
+
+---
+
+#### 6.5 retrieve_episodic_memory(new_situation)
+
+**Назначение:** Извлечение похожих эпизодов с цепочками рассуждений.
+
+**Параметры:**
+```json
+{
+  "new_situation": "описание текущей ситуации",
+  "threshold": 0.8
+}
+```
+
+**Возвращает:**
+```json
+{
+  "similar_episodes": [
+    {
+      "id": "EPISODE-001",
+      "context": {...},
+      "reasoning_chain": [...],
+      "insights": [...],
+      "similarity": 0.92
+    }
+  ],
+  "reasoning_chains": [...],
+  "insights": [...]
+}
+```
+
+**Пример вызова:**
+```
+retrieve_episodic_memory(
+  new_situation: "Организация хаотичного хранилища файлов"
+)
+```
+
+**Процесс:**
+```
+1. Извлечь контекст ситуации
+2. Поиск похожих эпизодов по контексту
+3. Сравнить цепочки рассуждений
+4. Вернуть эпизоды с порогом相似ности
+5. Извлечь инсайты
+```
+
+**См.:** [`../reports/EPISODIC_MEMORY.md`](../reports/EPISODIC_MEMORY.md)
+
+---
+
+#### 6.6 case_based_reasoning(new_problem)
+
+**Назначение:** Решение новой задачи через адаптацию прошлых решений.
+
+**Параметры:**
+```json
+{
+  "new_problem": "описание новой проблемы",
+  "threshold": 0.7
+}
+```
+
+**Возвращает:**
+```json
+{
+  "similar_cases": [
+    {
+      "id": "CASE-001",
+      "problem": "...",
+      "solution": "...",
+      "result": "...",
+      "similarity": 0.88
+    }
+  ],
+  "adapted_solution": {...},
+  "confidence": 0.88
+}
+```
+
+**Пример вызова:**
+```
+case_based_reasoning(
+  new_problem: "Кнопка не отображается в Unity UI"
+)
+```
+
+**Процесс:**
+```
+1. ИЗВЛЕЧЬ: Поиск похожих кейсов
+2. ПЕРЕИСПОЛЬЗУЙ: Выбрать лучший кейс
+3. АДАПТИРУЙ: Скорректировать под контекст
+4. СОХРАНИ: Новый кейс в базу
+```
+
+**См.:** [`../reports/CASE_BASES.md`](../reports/CASE_BASES.md)
+
+---
+
+## 📊 ОБНОВЛЁННАЯ ТАБЛИЦА ФУНКЦИЙ
+
+| Функция | Раздел | Параметры | Возвращает |
+|---------|--------|-----------|------------|
+| **query_knowledge_base** | Поиск | query, category, limit | Результаты поиска |
+| **get_rule_metadata** | Метаданные | rule_name | Метаданные правила |
+| **get_rule_relations** | Связи | rule_name | Зависимости, влияния |
+| **run_logical_inference** | Вывод | facts, goal | Цепочка правил |
+| **get_causal_chain** | Причинность | effect | Цепочка причин |
+| **check_rule_conflicts** | Конфликты | rule1, rule2 | Наличие конфликта |
+| **analyze_rule_quality** | Анализ | rule_name | Оценка, метрики |
+| **get_logic_metrics** | Метрики | - | Метрики базы |
+| **find_duplicates** | Дубликаты | content | Список дублей |
+| **run_test_suite** | Тесты | suite_name | Результаты тестов |
+| **verify_rule_tests** | Тесты | rule_name | Тесты правила |
+| **find_best_explanation** | Абдукция | observations | Лучшее объяснение |
+| **rank_hypotheses** | Вероятности | hypotheses, evidence | Ранжирование |
+| **induce_rule_from_examples** | Индукция | examples, min_confidence | Правило |
+| **find_analogy** | Аналогия | source, target | Mapping, knowledge |
+| **plan_reasoning** | Планирование | goal | Plan of steps |
+| **tree_of_thought** | Дерево | problem, branches | Best branch |
+| **retrieve_episodic_memory** | Эпизод | new_situation | Episodes, chains |
+| **case_based_reasoning** | CBR | new_problem | Adapted solution |
+
+---
+
+## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
+
+- [`logic_rules_for_ai.md`](./logic_rules_for_ai.md) — Логические правила для ИИ
+- [`../reports/CASE_BASES.md`](../reports/CASE_BASES.md) — Case-Based Reasoning
+- [`../reports/EPISODIC_MEMORY.md`](../reports/EPISODIC_MEMORY.md) — Эпизодическая память
+
+---
+
+**Версия:** 1.3 (Индукция, Аналогия, Планирование, Tree-of-Thought, CBR, Эпизодическая память)
+**Дата:** 2026-03-02
 **Статус:** ✅ Дополнено
