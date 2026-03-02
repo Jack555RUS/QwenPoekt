@@ -84,34 +84,37 @@ function Get-Rule-Profile-Score {
     try {
         $content = Get-Content $FilePath -Raw
         
-        # Проверка мета-полей (20 баллов)
+        # Проверка мета-полей (25 баллов) — ПОВЫШЕН ВЕС
         if ($content -match '(version|Версия):\s*[\d\.]+') { $score.Metadata += 5 }
         if ($content -match '(created|Дата создания):\s*\d{4}-\d{2}-\d{2}') { $score.Metadata += 5 }
         if ($content -match '(last_reviewed|Последняя проверка):\s*\d{4}-\d{2}-\d{2}') { $score.Metadata += 5 }
         if ($content -match '(author|Автор):') { $score.Metadata += 5 }
+        if ($content -match '(status|Статус):\s*') { $score.Metadata += 5 }
         
         # Проверка структуры (20 баллов)
         if ($content -match '#\s+') { $score.Structure += 5 }
         if ($content -match '##\s+') { $score.Structure += 5 }
         if ($content -match '## 🔗 СВЯЗАННЫЕ ФАЙЛЫ') { $score.Structure += 5 }
-        if ($content.Length -gt 100 -and $content -match '## 📋 ОГЛАВЛЕНИЕ') { $score.Structure += 5 }
+        if ($content.Length -gt 100 -and $content -match '(## 📋 ОГЛАВЛЕНИЕ|## Содержание)') { $score.Structure += 5 }
         
-        # Проверка содержания (20 баллов)
+        # Проверка содержания (25 баллов) — ПОВЫШЕН ВЕС
         if ($content -match '## 🎯 НАЗНАЧЕНИЕ') { $score.Content += 5 }
         if ($content -match '```') { $score.Content += 5 }  # Есть примеры кода
-        if ($content -match '\*\*Пример\*\*') { $score.Content += 5 }
+        if ($content -match '\*\*Пример\*\*|### Пример') { $score.Content += 5 }
         if ($content.Length -gt 50) { $score.Content += 5 }
+        if ($content -match '## 📋|## 🔧|## 📖') { $score.Content += 5 }  # Есть разделы
         
-        # Проверка связей (20 баллов)
+        # Проверка связей (15 баллов) — СНИЖЕН ВЕС
         if ($content -match '\[`[^\]]+`\]\([^\)]+\)') {
             $linksCount = ([regex]::Matches($content, '\[`[^\]]+`\]\([^\)]+\)')).Count
-            if ($linksCount -ge 3) { $score.Links += 20 }
-            elseif ($linksCount -ge 1) { $score.Links += 10 }
+            if ($linksCount -ge 5) { $score.Links += 15 }
+            elseif ($linksCount -ge 3) { $score.Links += 10 }
+            elseif ($linksCount -ge 1) { $score.Links += 5 }
         }
         
-        # Проверка тестов (20 баллов)
+        # Проверка тестов (15 баллов) — СНИЖЕН ВЕС
         if ($content -match 'RULE_TEST_CASES') { $score.Tests += 10 }
-        if ($content -match 'Тест|test|Test') { $score.Tests += 10 }
+        if ($content -match 'Тест|test|Test') { $score.Tests += 5 }
         
         $score.Total = $score.Metadata + $score.Structure + $score.Content + $score.Links + $score.Tests
         
