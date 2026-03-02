@@ -3,6 +3,8 @@ status: stable
 created: 2026-02-28
 last_reviewed: 2026-03-02
 source: Project Core
+author: Project Core
+version: 1.0
 ---
 # 📝 C# STANDARDS — СТАНДАРТЫ КОДА
 
