@@ -1,139 +1,242 @@
-# ============================================================================
-# ЗАВЕРШЕНИЕ СЕССИИ
-# ============================================================================
-# Назначение: Автоматическое завершение сессии по команде
-# Использование: .\scripts\end-session.ps1
-# ============================================================================
+# end-session.ps1 — Завершение сессии
+# Версия: 1.0
+# Дата: 2 марта 2026 г.
+# Назначение: Автоматическое создание SESSION_HANDOVER.md и архивация
 
-$ErrorActionPreference = "Continue"
-$BasePath = "D:\QwenPoekt\Base"
-$ReportsPath = "$BasePath\reports"
-$LogPath = "$ReportsPath\OPERATION_LOG.md"
+param(
+    [string]$Reason = "Session end",
+    [switch]$NoCommit,
+    [switch]$Verbose
+)
 
-# ============================================================================
-# ФУНКЦИИ
-# ============================================================================
+$ErrorActionPreference = "Stop"
 
-function Write-Log {
-    param([string]$Message, [string]$Color = "Cyan")
-    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    Write-Host "[$timestamp] $Message" -ForegroundColor $Color
-}
+# Цвета вывода
+function Write-Info { param($msg) Write-Host $msg -ForegroundColor Cyan }
+function Write-Success { param($msg) Write-Host $msg -ForegroundColor Green }
+function Write-Warning { param($msg) Write-Host $msg -ForegroundColor Yellow }
+function Write-Error { param($msg) Write-Host $msg -ForegroundColor Red }
 
-function Get-GitStatus {
-    $status = git status --porcelain
-    return ($status | Measure-Object).Count
-}
+Write-Info "╔══════════════════════════════════════════════════════════╗"
+Write-Info "║         ЗАВЕРШЕНИЕ СЕССИИ $(Get-Date -Format 'yyyy-MM-dd HH:mm')          ║"
+Write-Info "╚══════════════════════════════════════════════════════════╝"
 
-function Get-FileCount {
-    param([string]$Path)
-    return (Get-ChildItem $Path -Recurse -File).Count
-}
+# Пути
+$BasePath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$ReportsPath = Join-Path $BasePath "reports"
+$SessionHandoverPath = Join-Path $ReportsPath "SESSION_HANDOVER.md"
+$GitPath = Join-Path $BasePath ".git"
 
-# ============================================================================
-# ОСНОВНАЯ ЛОГИКА
-# ============================================================================
-
-try {
-    Write-Host ""
-    Write-Log "=== ЗАВЕРШЕНИЕ СЕССИИ ===" "Yellow"
-    
-    # ------------------------------------------------------------------------
-    # ШАГ 1: Проверка изменений
-    # ------------------------------------------------------------------------
-    Write-Log "Шаг 1: Проверка изменений..."
-    $filesChanged = Get-GitStatus
-    Write-Log "Изменено файлов: $filesChanged" "Gray"
-    
-    # ------------------------------------------------------------------------
-    # ШАГ 2: Git add + коммит
-    # ------------------------------------------------------------------------
-    Write-Log "Шаг 2: Git коммит..."
-    
-    if ($filesChanged -gt 0) {
-        git add . 2>&1 | Out-Null
-        
-        $commitMsg = "End: Завершение сессии $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-        
-        # Игнорируем предупреждения Git (warnings не являются ошибками)
-        $WarningPreference = 'SilentlyContinue'
-        git commit -m $commitMsg 2>&1 | Where-Object { $_ -notlike 'warning:*' } | Out-Null
-        
-        $hash = (git log -n 1 --oneline).Split(' ')[0]
-        Write-Log "Git коммит: $hash" "Green"
-    } else {
-        Write-Log "Нет изменений для коммита" "Gray"
-        $hash = "N/A"
-    }
-    
-    # ------------------------------------------------------------------------
-    # ШАГ 3: Обновление OPERATION_LOG.md
-    # ------------------------------------------------------------------------
-    Write-Log "Шаг 3: Обновление OPERATION_LOG.md..."
-    
-    $entry = @"
-
-## $(Get-Date -Format 'yyyy-MM-dd HH:mm') ЗАВЕРШЕНИЕ СЕССИИ
-
-**Тип:** Автоматическое завершение
-
-**Статус:** ✅ ЗАВЕРШЕНО
-
----
-"@
-    
-    Add-Content -Path $LogPath -Value $entry -Encoding UTF8
-    Write-Log "OPERATION_LOG.md обновлён" "Green"
-    
-    # ------------------------------------------------------------------------
-    # ШАГ 4: Создание отчёта
-    # ------------------------------------------------------------------------
-    Write-Log "Шаг 4: Создание отчёта..."
-    
-    $reportPath = "$ReportsPath\SESSION_$(Get-Date -Format 'yyyy-MM-dd_HH-mm').md"
-    
-    $report = @"
-# Отчёт сессии
-
-**Дата завершения:** $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
-**Статус:** ✅ Завершено
-
----
-
-## Итоги
-
-**Git коммит:** $hash
-**Изменено файлов:** $filesChanged
-**Всего файлов:** $(Get-FileCount -Path $BasePath)
-**Всего коммитов:** $(git rev-list --count HEAD)
-
----
-
-**Сессия завершена!** 🎉
-"@
-    
-    $report | Out-File $reportPath -Encoding UTF8
-    Write-Log "Отчёт: $reportPath" "Green"
-    
-    # ------------------------------------------------------------------------
-    # ШАГ 5: Финальная статистика
-    # ------------------------------------------------------------------------
-    Write-Log "Шаг 5: Статистика..."
-    
-    Write-Host ""
-    Write-Log "=== ИТОГИ СЕССИИ ===" "Yellow"
-    Write-Host ""
-    Write-Host "  Изменено файлов: $filesChanged" -ForegroundColor White
-    Write-Host "  Git коммит: $hash" -ForegroundColor White
-    Write-Host "  Всего файлов: $(Get-FileCount -Path $BasePath)" -ForegroundColor White
-    Write-Host "  Всего коммитов: $(git rev-list --count HEAD)" -ForegroundColor White
-    Write-Host ""
-    Write-Host "  Отчёт: $reportPath" -ForegroundColor Cyan
-    Write-Host ""
-    Write-Log "СЕССИЯ ЗАВЕРШЕНА!" "Green"
-    Write-Host ""
-    
-} catch {
-    Write-Log "❌ ОШИБКА: $($_.Exception.Message)" "Red"
+# Проверка Git
+Write-Info "[1/5] Проверка Git репозитория..."
+if (Test-Path $GitPath) {
+    Write-Success "  ✅ Git репозиторий найден"
+} else {
+    Write-Error "  ❌ Git репозиторий не найден"
     exit 1
 }
+
+# Получение статуса Git
+Write-Info "[2/5] Получение статуса Git..."
+$GitStatus = git status --porcelain 2>$null
+$UncommittedChanges = $GitStatus | Measure-Object | Select-Object -ExpandProperty Count
+
+if ($UncommittedChanges -gt 0) {
+    Write-Warning "  ⚠️ Найдено $UncommittedChanges незакоммиченных изменений"
+    Write-Info "  Рекомендуется закоммитить перед завершением сессии"
+} else {
+    Write-Success "  ✅ Нет незакоммиченных изменений"
+}
+
+# Создание SESSION_HANDOVER.md
+Write-Info "[3/5] Создание SESSION_HANDOVER.md..."
+
+$SessionData = @{
+    Date = Get-Date -Format "yyyy-MM-dd HH:mm"
+    EndDate = Get-Date -Format "yyyy-MM-dd HH:mm"
+    Reason = $Reason
+    UncommittedChanges = $UncommittedChanges
+    GitBranch = git branch --show-current 2>$null
+    GitLog = (git log -n 3 --oneline 2>$null) -join "`n"
+}
+
+$SessionHandoverContent = @"
+# 📋 SESSION HANDOVER — Передача Сессии
+
+**Дата создания:** $($SessionData.Date)  
+**Причина:** $($SessionData.Reason)  
+**Статус:** ⏳ Открыта / ✅ Закрыта
+
+---
+
+## 🎯 ТЕКУЩЕЕ СОСТОЯНИЕ
+
+### Git статус
+- **Ветка:** $($SessionData.GitBranch)
+- **Незакоммиченные изменения:** $($SessionData.UncommittedChanges)
+- **Последние коммиты:**
+``````
+$($SessionData.GitLog)
+``````
+
+---
+
+## 📋 АКТИВНЫЕ ЗАДАЧИ
+
+| Задача | Статус | Приоритет | Комментарий |
+|--------|--------|-----------|-------------|
+| [Задача 1] | ⏳ В работе | 🟡 Средний | [Описание] |
+| [Задача 2] | ⏳ В работе | 🔴 Высокий | [Описание] |
+
+---
+
+## 🔄 ПРОДОЛЖЕНИЕ С НАЧАЛА
+
+### Что нужно сделать при старте следующей сессии:
+
+1. **Прочитать этот файл** → понять текущее состояние
+2. **Проверить `ТЕКУЩАЯ_ЗАДАЧА.md`** → активные задачи
+3. **Проверить `AGENTS.md`** → точка входа
+4. **Восстановить контекст** → продолжить с задачи
+
+---
+
+## 📚 ВАЖНЫЕ ФАЙЛЫ СЕССИИ
+
+### Создано/Изменено:
+- [Файл 1] — [Описание изменений]
+- [Файл 2] — [Описание изменений]
+
+### Требует внимания:
+- [Файл] — [Что нужно сделать]
+
+---
+
+## ⚠️ ПРОБЛЕМЫ/ОШИБКИ
+
+### Зафиксированные ошибки:
+| Ошибка | Статус | Решение |
+|--------|--------|---------|
+| [Описание] | ⏳ Не исправлено | [План] |
+
+### Извлечённые уроки:
+- [Урок 1]
+- [Урок 2]
+
+---
+
+## 🎯 ПЛАН НА СЛЕДУЮЩУЮ СЕССИЮ
+
+### Приоритетные задачи:
+1. [Задача 1]
+2. [Задача 2]
+3. [Задача 3]
+
+### Отложенные задачи:
+- [Задача]
+
+---
+
+## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
+
+- [`AGENTS.md`](./AGENTS.md) — Точка входа
+- [`ТЕКУЩАЯ_ЗАДАЧА.md`](./ТЕКУЩАЯ_ЗАДАЧА.md) — Активная задача
+- [`ERROR_LOG.md`](./ERROR_LOG.md) — Журнал ошибок
+- [`ANTI_PATTERNS.md`](./ANTI_PATTERNS.md) — Анти-паттерны
+
+---
+
+**Следующая сессия:** Начать с чтения этого файла и `AGENTS.md`
+
+---
+
+**Создано:** $($SessionData.Date)  
+**Скрипт:** `end-session.ps1`
+"@
+
+# Создание файла
+try {
+    if (-not (Test-Path $ReportsPath)) {
+        New-Item -ItemType Directory -Path $ReportsPath -Force | Out-Null
+        Write-Success "  ✅ Создана папка reports/"
+    }
+    
+    $SessionHandoverContent | Out-File -FilePath $SessionHandoverPath -Encoding UTF8NoBOM
+    Write-Success "  ✅ SESSION_HANDOVER.md создан"
+} catch {
+    Write-Error "  ❌ Ошибка создания SESSION_HANDOVER.md: $_"
+    exit 1
+}
+
+# Архивация сессии
+Write-Info "[4/5] Архивация сессии..."
+
+$ArchivePath = Join-Path $BasePath "_LOCAL_ARCHIVE"
+$SessionArchivePath = Join-Path $ArchivePath (Get-Date -Format "yyyy-MM-dd_HH-mm")
+
+try {
+    if (-not (Test-Path $ArchivePath)) {
+        New-Item -ItemType Directory -Path $ArchivePath -Force | Out-Null
+    }
+    
+    # Копирование важных файлов
+    $FilesToArchive = @(
+        "AGENTS.md",
+        "ERROR_LOG.md",
+        "ANTI_PATTERNS.md",
+        "PRE_ACTION_CHECKLIST.md"
+    )
+    
+    $SessionArchivePath = Join-Path $ArchivePath (Get-Date -Format "yyyy-MM-dd_HH-mm")
+    if (-not (Test-Path $SessionArchivePath)) {
+        New-Item -ItemType Directory -Path $SessionArchivePath -Force | Out-Null
+    }
+    
+    foreach ($File in $FilesToArchive) {
+        $SourcePath = Join-Path $BasePath $File
+        if (Test-Path $SourcePath) {
+            Copy-Item -Path $SourcePath -Destination $SessionArchivePath -Force
+            if ($Verbose) {
+                Write-Info "  📄 Скопировано: $File"
+            }
+        }
+    }
+    
+    Write-Success "  ✅ Сессия заархивирована в $SessionArchivePath"
+} catch {
+    Write-Warning "  ⚠️ Ошибка архивации: $_"
+}
+
+# Коммит (опционально)
+if (-not $NoCommit) {
+    Write-Info "[5/5] Создание коммита..."
+    
+    try {
+        git add $SessionHandoverPath 2>$null
+        git commit -m "Add: SESSION_HANDOVER.md — завершение сессии ($Reason)" 2>$null
+        
+        if ($LASTEXITCODE -eq 0) {
+            Write-Success "  ✅ Коммит создан"
+        } else {
+            Write-Warning "  ⚠️ Нет изменений для коммита"
+        }
+    } catch {
+        Write-Warning "  ⚠️ Ошибка коммита: $_"
+    }
+} else {
+    Write-Info "[5/5] Пропуск коммита (флаг -NoCommit)"
+}
+
+# Итог
+Write-Info "╔══════════════════════════════════════════════════════════╗"
+Write-Success "║                  СЕССИЯ ЗАВЕРШЕНА ✅                     ║"
+Write-Info "╚══════════════════════════════════════════════════════════╝"
+Write-Host ""
+Write-Info "📄 SESSION_HANDOVER.md создан: $SessionHandoverPath"
+Write-Info "📦 Архив сессии: $SessionArchivePath"
+Write-Host ""
+Write-Info "Для продолжения следующей сессии:"
+Write-Info "  1. Прочитать SESSION_HANDOVER.md"
+Write-Info "  2. Прочитать AGENTS.md"
+Write-Info "  3. Продолжить с задачи"
+Write-Host ""
