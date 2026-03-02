@@ -1,8 +1,27 @@
 # Навигатор по Базе Знаний
 
-**Версия:** 1.0  
-**Дата:** 2026-03-02  
+**Версия:** 1.1
+**Дата:** 2026-03-02 (обновлено)
 **Проект:** QwenPoekt\Base
+
+---
+
+## ⚠️ ВАЖНОЕ ОБНОВЛЕНИЕ
+
+**Дата расследования:** 2026-03-02
+
+**Выявлено:** В предыдущей версии указаны неверные данные о количестве файлов.
+
+**Исправлено:**
+- 02_UNITY: ~~715~~ → **4 файла**
+- 03_PATTERNS: ~~~10~~ → **3 файла**
+- **ВСЕГО:** ~~~740~~ → **24 файла**
+
+**Причина:** Ошибка в документации (файлы не потеряны, они не существовали).
+
+**План пополнения:** См. [`reports/KNOWLEDGE_BASE_EXPANSION_PLAN.md`](../reports/KNOWLEDGE_BASE_EXPANSION_PLAN.md)
+
+**Расследование:** См. [`reports/Missing_FILES_INVESTIGATION.md`](../reports/Missing_FILES_INVESTIGATION.md)
 
 ---
 
@@ -32,11 +51,11 @@ KNOWLEDGE_BASE/
 │   ├── before_change_rule.md   # Проверка перед изменением
 │   └── file_naming_rule.md     # Именование файлов
 │
-├── 02_UNITY/                   # Unity документация (715 файлов)
-│   ├── 2D_ANIMATION/
-│   ├── AUDIO/
-│   ├── PHYSICS/
-│   └── ...
+├── 02_UNITY/                   # Unity документация (4 файла)
+│   ├── free_ai_for_unity.md
+│   ├── unity_docker_builder.md
+│   ├── unity_personal_license.md
+│   └── unity_silent_tests.md
 │
 ├── 03_PATTERNS/                # Паттерны решений
 │   ├── error_solutions.md      # База решений ошибок
@@ -55,11 +74,15 @@ KNOWLEDGE_BASE/
 
 | Категория | Файлов | Описание | Поиск |
 |-----------|--------|----------|-------|
-| **00_CORE** | ~10 | Фундамент (глоссарий, стандарты) | `glob -path "00_CORE"` |
+| **00_CORE** | 9 | Фундамент (глоссарий, стандарты) | `glob -path "00_CORE"` |
 | **01_RULES** | 3 | Правила (ui, before_change, file_naming) | `glob -path "01_RULES"` |
-| **02_UNITY** | 715 | Unity документация | `glob -path "02_UNITY"` |
-| **03_PATTERNS** | ~10 | Паттерны решений | `glob -path "03_PATTERNS"` |
-| **05_METHODOLOGY** | ~5 | Методологии | `glob -path "05_METHODOLOGY"` |
+| **02_TOOLS** | 2 | Инструменты (Qwen CLI, VS Code) | `glob -path "02_TOOLS"` |
+| **02_UNITY** | 4 | Unity документация | `glob -path "02_UNITY"` |
+| **03_CSHARP** | 2 | C# (Style Guide, Patterns) | `glob -path "03_CSHARP"` |
+| **03_PATTERNS** | 3 | Паттерны решений | `glob -path "03_PATTERNS"` |
+| **04_ARCHIVES** | 1 | Архивы | `glob -path "04_ARCHIVES"` |
+| **05_METHODOLOGY** | 5 | Методологии ИИ | `glob -path "05_METHODOLOGY"` |
+| **ИТОГО** | **24** | **База знаний** | `glob -path "KNOWLEDGE_BASE"` |
 
 ### По теме
 
@@ -176,11 +199,16 @@ git commit -m "Add: название файла"
 
 | Дата | Файл | Категория | Статус |
 |------|------|-----------|--------|
-| 2026-03-02 | ANALYSIS_PROCESS.md | _docs | ✅ Добавлено |
-| 2026-03-02 | AI_ANALYSIS_PROMPT.md | _templates | ✅ Добавлено |
-| 2026-03-02 | KNOWLEDGE_BASE_GUIDE.md | _docs | ✅ Добавлено |
-| 2026-03-02 | DEDUP_GUIDE.md (будет) | _docs | ⏳ Ожидает |
-| 2026-03-02 | SCRIPTS_CATALOG.md (будет) | _docs | ⏳ Ожидает |
+| 2026-03-02 | CODE_STYLE.md | 03_CSHARP | ✅ Добавлено |
+| 2026-03-02 | DESIGN_PATTERNS_UNITY.md | 03_CSHARP | ✅ Добавлено |
+| 2026-03-02 | UNITY_CS_REFERENCE_ANALYSIS.md | 00_CORE | ✅ Добавлено |
+| 2026-03-02 | ObjectPool.cs | PROJECTS | ✅ Добавлено |
+| 2026-03-02 | EventBus.cs | PROJECTS | ✅ Добавлено |
+| 2026-03-02 | Commands.cs | PROJECTS | ✅ Добавлено |
+
+**План пополнения:**
+- 8 книг ждут конспектов (84 MB)
+- 12 GitHub репозиториев ждут анализа
 
 ---
 
@@ -248,18 +276,42 @@ git commit -m "Add: название файла"
 
 ## 🎯 СЛЕДУЮЩИЕ ШАГИ
 
-**Планируется:**
+**Актуальный план:**
 
-1. **Создать `_docs/SCRIPTS_CATALOG.md`** — Каталог всех скриптов
-2. **Создать `_docs/DEDUP_GUIDE.md`** — Руководство по дедупликации
-3. **Создать `meta/file_hashes.json`** — Индекс хэшей файлов
-4. **Автоматизировать еженедельный аудит** — scripts/weekly-knowledge-audit.ps1
+### 🔴 Приоритет 1: Пополнение KNOWLEDGE_BASE
+
+1. **Конспекты книг (8 шт.):**
+   - C# Style Guide → `03_CSHARP/CODE_STYLE.md` ✅
+   - UI Toolkit Unity 6 → `02_UNITY/UI_TOOLKIT_BOOK.md`
+   - Design Patterns → `03_CSHARP/DESIGN_PATTERNS_BOOK.md` ✅
+   - Scriptable Objects → `02_UNITY/SCRIPTABLE_OBJECTS_BOOK.md`
+   - URP Cookbook → `02_UNITY/URP_COOKBOOK_BOOK.md`
+
+2. **Анализ репозиториев (12 шт.):**
+   - UnityCsReference → `00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md` ✅
+   - ui-toolkit-dragon-crashers → `02_UNITY/DRAGON_CRASHERS_ANALYSIS.md`
+   - QuizU → `02_UNITY/QUIZU_ANALYSIS.md`
+
+### 🟡 Приоритет 2: Исправление документации
+
+1. **Обновить `_docs/SCRIPTS_CATALOG.md`** — Каталог всех скриптов
+2. **Создать `reports/KNOWLEDGE_BASE_EXPANSION_PLAN.md`** — План расширения
+
+### 🟢 Приоритет 3: Автоматизация
+
+1. **Создать `scripts/weekly-knowledge-audit.ps1`** — Еженедельный аудит
+2. **Создать `scripts/check-knowledge-stats.ps1`** — Проверка статистики
 
 ---
 
-**Версия:** 1.0  
+**Версия:** 1.1 (ИСПРАВЛЕНА СТАТИСТИКА)  
 **Дата:** 2026-03-02  
-**Статус:** ✅ Актуально
+**Статус:** ✅ Актуально  
+
+**Изменения:**
+- Исправлена статистика (24 файла вместо 740)
+- Добавлены новые поступления (C# Style Guide, Design Patterns, etc.)
+- Обновлён план пополнения базы
 
 ---
 
