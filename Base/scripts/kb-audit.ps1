@@ -77,33 +77,23 @@ function Test-File-Readable {
     try {
         $ext = [System.IO.Path]::GetExtension($FilePath).ToLower()
         
-        switch ($ext) {
-            ".md" {
-                $content = Get-Content $FilePath -Raw -ErrorAction Stop
-                return $true
-            }
-            ".txt" {
-                $content = Get-Content $FilePath -Raw -ErrorAction Stop
-                return $true
-            }
-            ".json" {
-                $content = Get-Content $FilePath -Raw -ErrorAction Stop
-                $null = $content | ConvertFrom-Json -ErrorAction Stop
-                return $true
-            }
-            ".yaml", ".yml" {
-                $content = Get-Content $FilePath -Raw -ErrorAction Stop
-                return $true
-            }
-            ".ps1" {
-                $content = Get-Content $FilePath -Raw -ErrorAction Stop
-                return $true
-            }
-            default {
-                # Для остальных файлов проверяем только чтение
-                $null = [System.IO.File]::OpenRead($FilePath)
-                return $true
-            }
+        if ($ext -eq ".md" -or $ext -eq ".txt" -or $ext -eq ".ps1") {
+            $content = Get-Content $FilePath -Raw -ErrorAction Stop
+            return $true
+        }
+        elseif ($ext -eq ".json") {
+            $content = Get-Content $FilePath -Raw -ErrorAction Stop
+            $null = $content | ConvertFrom-Json -ErrorAction Stop
+            return $true
+        }
+        elseif ($ext -eq ".yaml" -or $ext -eq ".yml") {
+            $content = Get-Content $FilePath -Raw -ErrorAction Stop
+            return $true
+        }
+        else {
+            # Для остальных файлов проверяем только чтение
+            $null = [System.IO.File]::OpenRead($FilePath)
+            return $true
         }
     } catch {
         return $false
@@ -160,14 +150,18 @@ function Find-Duplicates {
             Write-Log "  Обработано $progress из $total файлов..." -Color "Gray"
         }
         
-        $hash = Get-FileHash-Safe -FilePath $file.FullName
-        
-        if ($hash) {
-            if ($Hashes.ContainsKey($hash)) {
-                $Hashes[$hash] += $file.FullName
-            } else {
-                $Hashes[$hash] = @($file.FullName)
+        try {
+            $hash = (Get-FileHash -Path $file.FullName -Algorithm SHA256 -ErrorAction Stop).Hash
+            
+            if ($hash) {
+                if ($Hashes.ContainsKey($hash)) {
+                    $Hashes[$hash] += $file.FullName
+                } else {
+                    $Hashes[$hash] = @($file.FullName)
+                }
             }
+        } catch {
+            # Не удалось вычислить хэш
         }
     }
     
@@ -343,25 +337,29 @@ $($Stats.Duplicates[$hash] | ForEach-Object { "- ``````$_``````" })
 ### 2. Битые файлы ($($Stats.BrokenFiles.Count))
 
 $($Stats.BrokenFiles | Select-Object -First 20 | ForEach-Object { "- ``````$_``````" })
-$($Stats.BrokenFiles.Count -gt 20 ? "`n... и ещё $($Stats.BrokenFiles.Count - 20) файлов" : "")
-
 "@
+        if ($Stats.BrokenFiles.Count -gt 20) {
+            $report += "`n... и ещё $($Stats.BrokenFiles.Count - 20) файлов"
+        }
+        $report += "`n`n"
     }
-    
+
     # Нарушения именования
     if ($Stats.NamingViolations.Count -gt 0) {
         $report += @"
 
 ### 3. Нарушения именования ($($Stats.NamingViolations.Count))
 
-$($Stats.NamingViolations | Select-Object -First 20 | ForEach-Object {
-    "- ``````$($_.Path)```````n  Нарушения: $($_.Violations -join ', ')"
-})
-$($Stats.NamingViolations.Count -gt 20 ? "`n... и ещё $($Stats.NamingViolations.Count - 20) файлов" : "")
-
 "@
+        $Stats.NamingViolations | Select-Object -First 20 | ForEach-Object {
+            $report += "- ``````$($_.Path)``````  `n  Нарушения: $($_.Violations -join ', ')`n"
+        }
+        if ($Stats.NamingViolations.Count -gt 20) {
+            $report += "`n... и ещё $($Stats.NamingViolations.Count - 20) файлов"
+        }
+        $report += "`n`n"
     }
-    
+
     # Файлы нулевого размера
     if ($Stats.ZeroSizeFiles.Count -gt 0) {
         $report += @"
@@ -369,11 +367,13 @@ $($Stats.NamingViolations.Count -gt 20 ? "`n... и ещё $($Stats.NamingViolati
 ### 4. Файлы нулевого размера ($($Stats.ZeroSizeFiles.Count))
 
 $($Stats.ZeroSizeFiles | Select-Object -First 20 | ForEach-Object { "- ``````$_``````" })
-$($Stats.ZeroSizeFiles.Count -gt 20 ? "`n... и ещё $($Stats.ZeroSizeFiles.Count - 20) файлов" : "")
-
 "@
+        if ($Stats.ZeroSizeFiles.Count -gt 20) {
+            $report += "`n... и ещё $($Stats.ZeroSizeFiles.Count - 20) файлов"
+        }
+        $report += "`n`n"
     }
-    
+
     # Временные файлы
     if ($Stats.TempFiles.Count -gt 0) {
         $report += @"
@@ -381,11 +381,13 @@ $($Stats.ZeroSizeFiles.Count -gt 20 ? "`n... и ещё $($Stats.ZeroSizeFiles.Co
 ### 5. Временные файлы ($($Stats.TempFiles.Count))
 
 $($Stats.TempFiles | Select-Object -First 20 | ForEach-Object { "- ``````$_``````" })
-$($Stats.TempFiles.Count -gt 20 ? "`n... и ещё $($Stats.TempFiles.Count - 20) файлов" : "")
-
 "@
+        if ($Stats.TempFiles.Count -gt 20) {
+            $report += "`n... и ещё $($Stats.TempFiles.Count - 20) файлов"
+        }
+        $report += "`n`n"
     }
-    
+
     # Устаревшие версии
     if ($Stats.OldVersions.Count -gt 0) {
         $report += @"
@@ -393,9 +395,11 @@ $($Stats.TempFiles.Count -gt 20 ? "`n... и ещё $($Stats.TempFiles.Count - 20
 ### 6. Устаревшие версии ($($Stats.OldVersions.Count))
 
 $($Stats.OldVersions | Select-Object -First 20 | ForEach-Object { "- ``````$_``````" })
-$($Stats.OldVersions.Count -gt 20 ? "`n... и ещё $($Stats.OldVersions.Count - 20) файлов" : "")
-
 "@
+        if ($Stats.OldVersions.Count -gt 20) {
+            $report += "`n... и ещё $($Stats.OldVersions.Count - 20) файлов"
+        }
+        $report += "`n`n"
     }
     
     # Рекомендации
