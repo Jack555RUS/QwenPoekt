@@ -134,6 +134,16 @@ Base/
 | **auto-commit-daily.ps1** | Ежедневный коммит (18:00) | `.\scripts\auto-commit-daily.ps1` |
 | **github-auth.ps1** | Авторизация на GitHub | `.\scripts\github-auth.ps1` |
 | **github-backup.ps1** | Резервное копирование | `.\scripts\github-backup.ps1` |
+| **end-session.ps1** | Завершение сессии | `.\scripts\end-session.ps1` |
+
+**Завершение сессии:**
+```powershell
+# Автоматически (по команде ИИ)
+"завершаем сессию" / "выход" / "конец работы"
+
+# Вручную
+.\scripts\end-session.ps1
+```
 
 ---
 
@@ -198,7 +208,18 @@ code NOTES.md
 │  6. Записать в OPERATION_LOG.md                        │
 │     ↓                                                   │
 │  7. Git коммит (auto-commit-daily.ps1)                 │
+│     ↓                                                   │
+│  8. Завершение сессии (end-session.ps1)                │
 └─────────────────────────────────────────────────────────┘
+```
+
+**Завершение сессии:**
+```powershell
+# Автоматически (по команде ИИ)
+"завершаем сессию" / "выход" / "конец работы"
+
+# Вручную
+.\scripts\end-session.ps1
 ```
 
 ---
