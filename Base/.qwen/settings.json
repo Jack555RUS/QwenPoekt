@@ -1,0 +1,27 @@
+{
+    "// NOTE": "MCP Servers configuration for Qwen Code",
+    "// DOC": "https://qwenlm.github.io/qwen-code-docs/en/users/features/mcp/",
+    
+    "mcpServers": {
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "D:\\QwenPoekt",
+                "D:\\QwenPoekt\\Base",
+                "D:\\QwenPoekt\\Projects",
+                "D:\\QwenPoekt\\_BACKUP",
+                "D:\\QwenPoekt\\_TEST_ENV"
+            ],
+            "disabled": false,
+            "alwaysAllow": [
+                "read_file",
+                "list_directory",
+                "get_file_info",
+                "search_files"
+            ],
+            "readOnly": false
+        }
+    }
+}
