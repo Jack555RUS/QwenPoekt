@@ -51,8 +51,8 @@ if ($FreeRAM -lt ($SizeMB / 1024)) {
 Write-Host ""
 Write-Host "[2/6] Проверка ImDisk Toolkit..." -ForegroundColor Cyan
 
-$ImDiskPath = "C:\Program Files\ImDisk Toolkit\ImDiskDrv.dll"
-$ImDiskExe = "C:\Program Files\ImDisk Toolkit\ImDisk.exe"
+$ImDiskPath = "C:\Program Files\ImDisk\DiscUtils\ImDiskNet.dll"
+$ImDiskExe = "C:\Program Files\ImDisk\imdisk.exe"
 
 if (Test-Path $ImDiskPath) {
     Write-Host "  ✅ ImDisk установлен" -ForegroundColor Green
