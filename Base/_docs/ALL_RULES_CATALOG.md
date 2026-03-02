@@ -142,6 +142,23 @@
 
 ---
 
+### 2.3 KNOWLEDGE_BASE/05_METHODOLOGY/
+
+**Назначение:** Методологии и инструкции для ИИ
+
+| Файл | Описание | Статус |
+|------|----------|--------|
+| `AI_DEVELOPER_INSTRUCTION.md` | Инструкция ИИ-разработчика (29 KB) | ✅ |
+| `FOR_AI_READ_HERE.md` | Главная инструкция для ИИ | ✅ |
+| `META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | Мета-правила анализа | ✅ |
+| `AI_SELF_LEARNING_METHODOLOGY.md` | Саморазвитие ИИ | ✅ |
+
+**Связанные файлы:**
+- `AI_START_HERE.md`
+- `.qwen/QWEN.md`
+
+---
+
 ### 2.3 _docs/FILE_CHANGE_RULE.md
 
 **Назначение:** Правило обновления связанных файлов
