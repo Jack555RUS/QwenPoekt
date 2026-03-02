@@ -85,7 +85,7 @@ if ($HasResumeMarker) {
                 SessionFile = $SessionHandoverPath
             }
         } else {
-            Write-Info "💡 Используйте команду \`/resume\` для автоматического восстановления"
+            Write-Info "💡 Используйте команду /resume для автоматического восстановления"
             Write-Host ""
             Write-Info "Или прочитайте вручную:"
             Write-Info "  - SESSION_HANDOVER.md — контекст сессии"
@@ -187,7 +187,7 @@ if ($HasResumeMarker -and -not $Resume) {
     Write-Info "📌 Рекомендации:"
     Write-Host ""
     Write-Info "  Для восстановления контекста:"
-    Write-Info "  1. Используйте команду \`/resume\`"
+    Write-Info "  1. Используйте команду /resume"
     Write-Info "  2. Или прочитайте SESSION_HANDOVER.md вручную"
     Write-Host ""
 } elseif ($HasResumeMarker -and $Resume) {

@@ -37,13 +37,20 @@ $ErrorLogPath = Join-Path $BasePath "ERROR_LOG.md"
 
 Write-Info "[1/5] Сбор информации о сессии..."
 
-# Git статус
-$GitBranch = git branch --show-current 2>$null
-$GitLog = (git log -n 5 --oneline 2>$null) -join "`n"
-$UncommittedChanges = (git status --porcelain 2>$null | Measure-Object).Count
-
-# Последние изменённые файлы
-$RecentFiles = git diff HEAD --name-only 2>$null | Select-Object -First 10
+# Git статус (с подавлением предупреждений)
+try {
+    $GitBranch = git branch --show-current 2>&1 | Out-String
+    $GitBranch = ($GitBranch -split "`n" | Where-Object { $_ -notmatch "^warning:" }) -join "`n"
+    $GitLog = (git log -n 5 --oneline 2>&1 | Where-Object { $_ -notmatch "^warning:" }) -join "`n"
+    $GitStatusOutput = git status --porcelain 2>&1 | Where-Object { $_ -notmatch "^warning:" }
+    $UncommittedChanges = ($GitStatusOutput | Measure-Object).Count
+    $RecentFiles = (git diff HEAD --name-only 2>&1 | Where-Object { $_ -notmatch "^warning:" } | Select-Object -First 10) -join "`n"
+} catch {
+    $GitBranch = "unknown"
+    $GitLog = "Git error"
+    $UncommittedChanges = 0
+    $RecentFiles = ""
+}
 
 # Активные задачи из ТЕКУЩАЯ_ЗАДАЧА.md
 $ActiveTasks = @()
@@ -125,7 +132,7 @@ $($SessionData.ActiveTasks)
 ### Что нужно сделать при старте следующей сессии:
 
 1. **Прочитать этот файл** → понять текущее состояние
-2. **Запустить команду** \`/resume\` → автоматическое восстановление
+2. **Запустить команду** `/resume` → автоматическое восстановление
 3. **Или прочитать вручную:**
    - \`ТЕКУЩАЯ_ЗАДАЧА.md\` → активные задачи
    - \`ERROR_LOG.md\` → проблемы сессии
@@ -135,9 +142,9 @@ $($SessionData.ActiveTasks)
 
 | Команда | Описание |
 |---------|----------|
-| **\`/resume\`** | Автоматическое восстановление контекста |
-| **\`/status\`** | Показать статус сессии |
-| **\`/continue\`** | Продолжить с последней задачи |
+| **`/resume`** | Автоматическое восстановление контекста |
+| **`/status`** | Показать статус сессии |
+| **`/continue`** | Продолжить с последней задачи |
 
 ---
 
@@ -194,7 +201,7 @@ $($SessionData.ActiveTasks)
 
 ---
 
-**Следующая сессия:** Начать с команды \`/resume\` или чтения этого файла
+**Следующая сессия:** Начать с команды `/resume` или чтения этого файла
 "@
 
 # Создание файла
@@ -204,7 +211,7 @@ try {
         Write-Success "  ✅ Создана папка reports/"
     }
 
-    $SessionHandoverContent | Out-File -FilePath $SessionHandoverPath -Encoding UTF8NoBOM
+    $SessionHandoverContent | Out-File -FilePath $SessionHandoverPath -Encoding utf8
     Write-Success "  ✅ SESSION_HANDOVER.md v2 создан"
 } catch {
     Write-Error "  ❌ Ошибка создания SESSION_HANDOVER.md: $_"
@@ -270,7 +277,7 @@ $ResumeMarker = @{
 } | ConvertTo-Json -Depth 3
 
 try {
-    $ResumeMarker | Out-File -FilePath $ResumeMarkerPath -Encoding UTF8NoBOM
+    $ResumeMarker | Out-File -FilePath $ResumeMarkerPath -Encoding utf8
     Write-Success "  ✅ Маркер восстановления создан"
     if ($Verbose) {
         Write-Info "  📄 Путь: $ResumeMarkerPath"
@@ -317,6 +324,6 @@ Write-Info "🔖 Маркер: $ResumeMarkerPath"
 Write-Host ""
 Write-Info "Для продолжения следующей сессии:"
 Write-Info "  1. Открыть AI_START_HERE.md или AGENTS.md"
-Write-Info "  2. Использовать команду \`/resume\`"
+Write-Info "  2. Использовать команду /resume"
 Write-Info "  3. Или прочитать SESSION_HANDOVER.md вручную"
 Write-Host ""
