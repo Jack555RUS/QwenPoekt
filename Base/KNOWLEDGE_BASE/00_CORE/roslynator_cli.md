@@ -17,6 +17,8 @@
 
 ## 🚀 УСТАНОВКА
 
+### Базовая установка:
+
 ```powershell
 dotnet tool install -g roslynator.dotnet.cli
 ```
@@ -24,6 +26,62 @@ dotnet tool install -g roslynator.dotnet.cli
 **Требования:**
 - ✅ .NET SDK 6.0/7.0/8.0/9.0
 - ✅ Добавить в PATH: `/root/.dotnet/tools`
+
+### Проверка установки:
+
+```powershell
+# Проверить версию
+roslynator --version
+
+# Показать справку
+roslynator --help
+```
+
+### Обновление:
+
+```powershell
+dotnet tool update -g roslynator.dotnet.cli
+```
+
+### Удаление:
+
+```powershell
+dotnet tool uninstall -g roslynator.dotnet.cli
+```
+
+---
+
+## 🐛 ТИПИЧНЫЕ ОШИБКИ ПРИ УСТАНОВКЕ
+
+### Ошибка 1: "tool already installed"
+
+**Решение:**
+```powershell
+# Обновить существующую
+dotnet tool update -g roslynator.dotnet.cli
+```
+
+### Ошибка 2: "not found in NuGet package"
+
+**Решение:**
+```powershell
+# Проверить .NET SDK
+dotnet --version
+
+# Если < 6.0 — обновить
+# https://dotnet.microsoft.com/download
+```
+
+### Ошибка 3: "command not found" после установки
+
+**Решение:**
+```powershell
+# Добавить в PATH
+$env:PATH += ";$env:USERPROFILE\.dotnet\tools"
+
+# Или добавить в профиль PowerShell
+Add-Content -Path $PROFILE -Value '$env:PATH += ";$env:USERPROFILE\.dotnet\tools"'
+```
 
 ---
 
@@ -66,6 +124,58 @@ fi
 
 # Сборка Unity
 unity-editor -batchmode -projectPath /project -buildWindows64Player /project/builds/game.exe -quit
+```
+
+---
+
+## 📋 СЛОЖНЫЕ ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ
+
+### Пример 1: Анализ с фильтрацией
+
+```powershell
+# Анализировать только определённые диагностики
+roslynator analyze Solution.sln --diagnostics CS0168,CS0219
+
+# Исключить определённые диагностики
+roslynator analyze Solution.sln --exclude-diagnostics CS0618
+```
+
+### Пример 2: Массовое исправление
+
+```powershell
+# Исправить всё в решении
+roslynator fix Solution.sln
+
+# Исправить только определённые проблемы
+roslynator fix Solution.sln --diagnostics CS0168,CS0219
+
+# Исправить с предварительным просмотром
+roslynator fix Solution.sln --dry-run
+```
+
+### Пример 3: Форматирование с настройками
+
+```powershell
+# Форматировать проект
+roslynator format Project.csproj
+
+# Форматировать с настройками
+roslynator format Project.csproj --use-tabs --indent-width 4
+```
+
+### Пример 4: Интеграция в CI/CD
+
+```yaml
+# GitHub Actions пример
+- name: Install Roslynator
+  run: dotnet tool install -g roslynator.dotnet.cli
+
+- name: Analyze code
+  run: roslynator analyze Solution.sln
+  continue-on-error: true
+
+- name: Fix code
+  run: roslynator fix Solution.sln
 ```
 
 ---

@@ -40,6 +40,21 @@ dotnet test --logger "console;verbosity=quiet"
 dotnet test --verbosity quiet
 ```
 
+**Параметры:**
+| Параметр | Описание |
+|----------|----------|
+| `--verbosity quiet` | Минимальный вывод |
+| `--logger "console;verbosity=minimal"` | Только важные сообщения |
+
+**Пример:**
+```bash
+# Тихий запуск NUnit тестов
+dotnet test --verbosity quiet
+
+# С минимальным выводом
+dotnet test --logger "console;verbosity=minimal" --filter "Category=Unit"
+```
+
 ---
 
 ### 3. MSTest Silent
@@ -47,6 +62,21 @@ dotnet test --verbosity quiet
 **Команда:**
 ```bash
 dotnet test --logger trx --results-directory TestResults
+```
+
+**Параметры:**
+| Параметр | Описание |
+|----------|----------|
+| `--logger trx` | Формат отчёта TRX |
+| `--results-directory` | Папка для результатов |
+
+**Пример:**
+```bash
+# Запуск с отчётом в TRX формате
+dotnet test --logger trx --results-directory TestResults --verbosity quiet
+
+# Просмотр результатов
+Get-ChildItem TestResults/*.trx | Select-Xml -XPath "//UnitTestResult" | Select-Object -First 10
 ```
 
 ---
