@@ -48,3 +48,11 @@ PROJECTS/*/*.csproj.user
 ../_LOCAL_ARCHIVE/
 ../_drafts/
 ../BOOK/
+
+# ===========================================
+# JUNCTION ССЫЛКИ (не коммитить!)
+# ===========================================
+_PROJECTS/
+_BACKUP_LINK/
+_TEST_ENV_LINK/
+_EXTERNAL/
