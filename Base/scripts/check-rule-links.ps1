@@ -6,9 +6,9 @@
 # ============================================================================
 
 param(
-    [string]$RulesPath = "D:\QwenPoekt\Base\KNOWLEDGE_BASE",
+    [string]$RulesPath = "D:\QwenPoekt\_TEST_ENV\Base\KNOWLEDGE_BASE",
     
-    [string]$ReportPath = "D:\QwenPoekt\Base\reports\rule_links_report.md"
+    [string]$ReportPath = "D:\QwenPoekt\_TEST_ENV\reports\rule_links_report.md"
 )
 
 $ErrorActionPreference = "Continue"

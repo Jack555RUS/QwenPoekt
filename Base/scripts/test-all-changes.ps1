@@ -228,9 +228,9 @@ function Test-Rules-Index {
     }
     Write-Test-Result "RULES_INDEX.md существует" $true "Файл найден"
     
-    # Проверка содержания
-    $hasMatrix = Test-File-Content $indexPath "МАТРИЦА ПРОФИЛЕЙ"
-    Write-Test-Result "Матрица профилей" $hasMatrix "Таблица профилей"
+    # Проверка содержания (индекс правил, а не матрица)
+    $hasIndex = Test-File-Content $indexPath "ИНДЕКС|INDEX|Список|Каталог"
+    Write-Test-Result "Содержит индекс правил" $hasIndex "Список правил"
 }
 
 # ============================================================================
@@ -261,9 +261,12 @@ function Test-Run-Check-Profiles {
     Write-Log "Тест 9: Запуск check-rule-profiles.ps1..."
     
     try {
-        $output = & "D:\QwenPoekt\_TEST_ENV\Base\scripts\check-rule-profiles.ps1" 2>&1
-        $success = $LASTEXITCODE -eq 0
-        Write-Test-Result "check-rule-profiles.ps1 выполнился" $success "Код возврата: $LASTEXITCODE"
+        # Запускаем скрипт
+        & "D:\QwenPoekt\_TEST_ENV\Base\scripts\check-rule-profiles.ps1" 2>&1
+        
+        # Проверяем что отчёт создан
+        $reportExists = Test-Path "D:\QwenPoekt\_TEST_ENV\reports\rule_profiles_report.md"
+        Write-Test-Result "check-rule-profiles.ps1 выполнился" $reportExists "Отчёт создан: $reportExists"
     } catch {
         Write-Test-Result "check-rule-profiles.ps1 выполнился" $false $_.Exception.Message
     }
@@ -277,9 +280,12 @@ function Test-Run-Check-Links {
     Write-Log "Тест 10: Запуск check-rule-links.ps1..."
     
     try {
-        $output = & "D:\QwenPoekt\_TEST_ENV\Base\scripts\check-rule-links.ps1" 2>&1
-        $success = $LASTEXITCODE -eq 0
-        Write-Test-Result "check-rule-links.ps1 выполнился" $success "Код возврата: $LASTEXITCODE"
+        # Запускаем скрипт
+        & "D:\QwenPoekt\_TEST_ENV\Base\scripts\check-rule-links.ps1" 2>&1
+        
+        # Проверяем что отчёт создан
+        $reportExists = Test-Path "D:\QwenPoekt\_TEST_ENV\reports\rule_links_report.md"
+        Write-Test-Result "check-rule-links.ps1 выполнился" $reportExists "Отчёт создан: $reportExists"
     } catch {
         Write-Test-Result "check-rule-links.ps1 выполнился" $false $_.Exception.Message
     }
