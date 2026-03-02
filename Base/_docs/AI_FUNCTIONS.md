@@ -216,6 +216,241 @@ check_rule_conflicts(
 
 ---
 
+#### 2.4 get_rule_metadata(rule_name)
+
+**Назначение:** Получение мета-данных правила (мета-рассуждения).
+
+**Параметры:**
+```json
+{
+  "rule_name": "имя файла.md"
+}
+```
+
+**Возвращает:**
+```json
+{
+  "version": "1.0",
+  "created": "2026-02-28",
+  "last_reviewed": "2026-03-02",
+  "status": "active",
+  "author": "Qwen Code",
+  "level": 2,
+  "class": "Стандарт",
+  "dependencies": ["file1.md", "file2.md"],
+  "used_by": ["file3.md", "file4.md"]
+}
+```
+
+**Пример вызова:**
+```
+get_rule_metadata(rule_name: "csharp_standards.md")
+```
+
+---
+
+#### 2.5 get_inference_chain(query)
+
+**Назначение:** Получение цепочки правил, использованных для вывода (мета-рассуждения).
+
+**Параметры:**
+```json
+{
+  "query": "запрос"
+}
+```
+
+**Возвращает:**
+```json
+{
+  "chain": [
+    {"rule": "Правило 1", "from": ["факт1"], "to": "промежуточный1"},
+    {"rule": "Правило 2", "from": ["промежуточный1", "факт2"], "to": "цель"}
+  ],
+  "total_rules": 2,
+  "inference_time_ms": 150
+}
+```
+
+**Пример вызова:**
+```
+get_inference_chain(query: "почему тесты провалены?")
+```
+
+---
+
+#### 2.6 check_consistency()
+
+**Назначение:** Проверка базы знаний на противоречия (мета-рассуждения).
+
+**Параметры:** Нет
+
+**Возвращает:**
+```json
+{
+  "is_consistent": true,
+  "conflicts": [],
+  "warnings": [
+    {"rule": "Правило 1", "issue": "Устарело (>90 дней)"}
+  ]
+}
+```
+
+**Пример вызова:**
+```
+check_consistency()
+```
+
+---
+
+### Раздел 2A: Нейросимволический подход
+
+#### 3.1 llm_to_logical_query(natural_language_query)
+
+**Назначение:** Преобразование естественного языка в логический запрос (LLM как преобразователь).
+
+**Параметры:**
+```json
+{
+  "natural_language_query": "Почему тесты провалены?"
+}
+```
+
+**Возвращает:**
+```json
+{
+  "logical_function": "get_causal_chain",
+  "arguments": {
+    "effect": "тесты провалены"
+  },
+  "confidence": 0.95
+}
+```
+
+**Пример вызова:**
+```
+llm_to_logical_query(natural_language_query: "Почему тесты провалены?")
+```
+
+**Процесс:**
+```
+1. LLM анализирует вопрос
+2. LLM определяет тип (причинность)
+3. LLM выбирает функцию (get_causal_chain)
+4. LLM генерирует аргументы
+```
+
+---
+
+#### 3.2 llm_generate_hypothesis(context)
+
+**Назначение:** Генерация гипотез/правил на основе контекста (LLM как генератор гипотез).
+
+**Параметры:**
+```json
+{
+  "context": "Замечено: все правила имеют last_reviewed"
+}
+```
+
+**Возвращает:**
+```json
+{
+  "hypothesis": "Правило: Все правила должны иметь last_reviewed",
+  "confidence": 0.85,
+  "supporting_facts": [
+    "csharp_standards.md имеет last_reviewed",
+    "project_glossary.md имеет last_reviewed"
+  ]
+}
+```
+
+**Пример вызова:**
+```
+llm_generate_hypothesis(context: "Замечено: все правила имеют last_reviewed")
+```
+
+**Процесс:**
+```
+1. LLM анализирует базу знаний
+2. LLM находит закономерность
+3. LLM формулирует правило
+4. check_consistency() → Проверка на противоречия
+5. Если OK → Предложить Пользователю
+```
+
+---
+
+#### 3.3 llm_explain_inference(chain)
+
+**Назначение:** Преобразование цепочки правил в понятное объяснение (LLM для объяснения выводов).
+
+**Параметры:**
+```json
+{
+  "chain": [
+    {"rule": "Правило 13", "description": "Красный уровень"},
+    {"rule": "Правило 3", "description": "Создание файла"}
+  ]
+}
+```
+
+**Возвращает:**
+```json
+{
+  "explanation": "При создании нового правила необходимо:\n1. Спросить пользователя (Красный уровень)\n2. Создать черновик в _drafts/\n3. Протестировать в _TEST_ENV\n4. Если 100% → Внедрить в Base",
+  "readability_score": 0.9
+}
+```
+
+**Пример вызова:**
+```
+llm_explain_inference(chain: [{"rule": "Правило 13"}, {"rule": "Правило 3"}])
+```
+
+---
+
+#### 3.4 hybrid_rag_query(query)
+
+**Назначение:** Гибридный запрос: векторный поиск + логический вывод.
+
+**Параметры:**
+```json
+{
+  "query": "Какие правила относятся к тестированию?"
+}
+```
+
+**Возвращает:**
+```json
+{
+  "vector_search": [
+    {"file": "test-all-changes.ps1", "relevance": 0.95},
+    {"file": "RULE_TEST_CASES.md", "relevance": 0.90}
+  ],
+  "logical_inference": {
+    "function": "check_rule_relations",
+    "argument": "тестирование",
+    "result": ["test-all-changes.ps1", "RULE_TEST_CASES.md", "_TEST_ENV"]
+  },
+  "combined_answer": "К тестированию относятся 5 правил: test-all-changes.ps1, RULE_TEST_CASES.md, _TEST_ENV, ..."
+}
+```
+
+**Пример вызова:**
+```
+hybrid_rag_query(query: "Какие правила относятся к тестированию?")
+```
+
+**Процесс:**
+```
+1. Векторный поиск → релевантные документы
+2. Логический вывод → check_rule_relations("тестирование")
+3. LLM формулирует итоговый ответ
+```
+
+---
+
 ### Раздел 3: Анализ и метрики
 
 #### 3.1 analyze_rule_quality(rule_name)
