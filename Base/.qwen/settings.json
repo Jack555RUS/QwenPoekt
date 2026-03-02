@@ -20,8 +20,18 @@
         "get_file_info",
         "search_files"
       ],
-      "readOnly": false
+      "readOnly": false,
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=32768",
+        "V8_MAX_HEAP_SIZE": "32768"
+      }
     }
+  },
+  "workspace": {
+    "maxFileSize": "100MB",
+    "maxContextFiles": 1000,
+    "cacheEnabled": true,
+    "cacheSizeMB": 8192
   },
   "$version": 3
 }
