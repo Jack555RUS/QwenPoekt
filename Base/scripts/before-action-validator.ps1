@@ -7,12 +7,12 @@ param(
     [Parameter(Mandatory=$true)]
     [ValidateSet("delete", "move", "rename", "create", "modify")]
     [string]$Action,
-    
+
     [Parameter(Mandatory=$true)]
     [string]$Target,
-    
+
     [switch]$DryRun,
-    [switch]$Verbose
+    [switch]$ShowDetails
 )
 
 $ErrorActionPreference = "Stop"
