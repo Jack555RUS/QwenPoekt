@@ -1,4 +1,4 @@
-# 🔍 РАССЛЕДОВАНИЕ: БЕСШОВНЫЙ ЗАПУСК ПОСЛЕ PARA ВНЕДРЕНИЯ
+﻿# 🔍 РАССЛЕДОВАНИЕ: БЕСШОВНЫЙ ЗАПУСК ПОСЛЕ PARA ВНЕДРЕНИЯ
 
 **Дата:** 3 марта 2026 г.
 **Статус:** ✅ **ЗАВЕРШЕНО**
@@ -33,8 +33,8 @@
 ✅ Файл существует (вне Base, в D:\QwenPoekt\)
 ✅ Ссылки на Base/ актуальны
 ⚠️ Ссылки на KNOWLEDGE_BASE/ устарели (перемещено в 03-Resources/Knowledge/)
-⚠️ Ссылки на scripts/ устарели (перемещено в 03-Resources/PowerShell/)
-⚠️ Ссылки на _docs/ устарели (перемещено в 02-Areas/Documentation/)
+⚠️ Ссылки на 03-Resources/PowerShell/ устарели (перемещено в 03-Resources/PowerShell/)
+⚠️ Ссылки на 02-Areas/Documentation/ устарели (перемещено в 02-Areas/Documentation/)
 ⚠️ Ссылки на reports/ устарели (перемещено в 03-Resources/Knowledge/)
 ```
 
@@ -63,7 +63,7 @@
 | **00_README.md** | `03-Resources/Knowledge/00_README.md` | ✅ Существует |
 | **FOR_AI_READ_HERE.md** | `03-Resources/Knowledge/FOR_AI_READ_HERE.md` | ✅ Существует |
 | **AI_START_HERE_AUDIT.md** | `03-Resources/Knowledge/AI_START_HERE_AUDIT.md` | ✅ Существует |
-| **csharp_standards.md** | `03-Resources/Knowledge/csharp_standards.md` | ✅ Существует (перемещён из KNOWLEDGE_BASE/00_CORE/) |
+| **csharp_standards.md** | `03-Resources/Knowledge/csharp_standards.md` | ✅ Существует (перемещён из 03-Resources/Knowledge/00_CORE/) |
 | **error_solutions.md** | ❌ НЕ НАЙДЕН | ⚠️ **ПРОБЛЕМА** |
 | **ui_toolkit_rules.md** | ❌ НЕ НАЙДЕН | ⚠️ **ПРОБЛЕМА** |
 
@@ -80,7 +80,7 @@
 | **03-Resources/** | 159 | ✅ PowerShell (76) + Knowledge (80) + AI/BOOKS |
 | **04-Archives/** | 0 | ✅ Пусто (готово к архивации) |
 | **sessions/** | 490 | ✅ Автосохранение |
-| **scripts/** | 6 | ✅ Остались .bat, .js |
+| **03-Resources/PowerShell/** | 6 | ✅ Остались .bat, .js |
 
 **Вывод:** ✅ **Структура PARA внедрена корректно**
 
@@ -127,7 +127,7 @@ KNOWLEDGE_BASE/
 
 **Было:**
 ```
-scripts/ (82 файла)
+03-Resources/PowerShell/ (82 файла)
 ```
 
 **Стало:**
@@ -149,9 +149,9 @@ scripts/ (82 файла)
 
 **Не найдены:**
 ```
-⚠️ create-bridge.bat (остался в scripts/)
-⚠️ test-mcp.js (остался в scripts/)
-⚠️ cleanup-root-mess.ps1 (остался в scripts/)
+⚠️ create-bridge.bat (остался в 03-Resources/PowerShell/)
+⚠️ test-mcp.js (остался в 03-Resources/PowerShell/)
+⚠️ cleanup-root-mess.ps1 (остался в 03-Resources/PowerShell/)
 ⚠️ Microsoft.PowerShell_profile.ps1 (остался в Base/)
 ```
 
@@ -188,8 +188,8 @@ scripts/ (82 файла)
 | # | Проблема | Влияние | Приоритет |
 |---|----------|---------|-----------|
 | 4 | **KNOWLEDGE_BASE** переименована | Старые ссылки не работают | 🟡 Средний |
-| 5 | **scripts/** перемещена | Скрипты в Resources/ | 🟡 Средний |
-| 6 | **_docs/** перемещена | Документация в Areas/ | 🟡 Средний |
+| 5 | **03-Resources/PowerShell/** перемещена | Скрипты в Resources/ | 🟡 Средний |
+| 6 | **02-Areas/Documentation/** перемещена | Документация в Areas/ | 🟡 Средний |
 | 7 | **reports/** перемещена | Отчёты в Knowledge/ | 🟡 Средний |
 
 ---
@@ -198,7 +198,7 @@ scripts/ (82 файла)
 
 | # | Проблема | Влияние | Приоритет |
 |---|----------|---------|-----------|
-| 8 | 6 файлов не .ps1 в scripts/ | Не критично | 🟢 Низкий |
+| 8 | 6 файлов не .ps1 в 03-Resources/PowerShell/ | Не критично | 🟢 Низкий |
 | 9 | **04-Archives/** пуст | Нет старых файлов | 🟢 Низкий |
 
 ---
@@ -212,7 +212,7 @@ scripts/ (82 файла)
 **Заменить:**
 ```markdown
 # БЫЛО:
-- [`00_CORE/csharp_standards.md`](./KNOWLEDGE_BASE/00_CORE/csharp_standards.md)
+- [`00_CORE/csharp_standards.md`](./03-Resources/Knowledge/00_CORE/csharp_standards.md)
 
 # СТАЛО:
 - [`csharp_standards.md`](./Base/03-Resources/Knowledge/csharp_standards.md)
@@ -315,3 +315,4 @@ Get-ChildItem "D:\QwenPoekt" -Filter "ui_toolkit_rules.md" -Recurse
 **Статус:** ✅ **Расследование завершено**
 
 **Следующий шаг:** Исправление выявленных проблем.
+

@@ -1,4 +1,4 @@
-# Roslynator CLI — Анализ C# кода
+﻿# Roslynator CLI — Анализ C# кода
 
 **Версия:** 1.0
 **Дата создания:** 2026-03-02
@@ -206,10 +206,11 @@ dotnet add package Roslynator.Analyzers
 - [`csharp_fast_learning.md`](csharp_fast_learning.md) — Быстрое изучение C#
 - [`ai_programming_tips.md`](../05_METHODOLOGY/ai_programming_tips.md) — Советы ИИ
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы
-- [`RULES_INDEX.md`](../../_docs/RULES_INDEX.md) — Индекс правил
+- [`RULES_INDEX.md`](../../02-Areas/Documentation/RULES_INDEX.md) — Индекс правил
 
 ---
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+

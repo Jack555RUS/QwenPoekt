@@ -1,4 +1,4 @@
-# 🏁 Drag Racing Game — Статус проекта
+﻿# 🏁 Drag Racing Game — Статус проекта
 
 **Дата:** 27 февраля 2026 г.  
 **Платформа:** Unity (Unity 6000.x)  
@@ -29,7 +29,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 1. 🎛️ Главное меню (MainMenuController.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/UI/MainMenuController.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/UI/MainMenuController.cs`
 
 | Кнопка | Статус | Описание |
 |--------|--------|----------|
@@ -49,7 +49,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 2. 🎮 Меню игры (GameMenuController.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/UI/GameMenuController.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/UI/GameMenuController.cs`
 
 | Кнопка | Статус | Описание |
 |--------|--------|----------|
@@ -65,7 +65,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 3. 🏁 Заезд (RaceManager.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/Racing/RaceManager.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/Racing/RaceManager.cs`
 
 | Дистанция | Статус | Описание |
 |-----------|--------|----------|
@@ -85,7 +85,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 4. 🚗 Гараж (GarageUI.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/UI/GarageUI.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/UI/GarageUI.cs`
 
 **Функционал:**
 - ✅ Список автомобилей игрока
@@ -104,7 +104,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 5. 🔧 Тюнинг (TuningUI.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/UI/TuningUI.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/UI/TuningUI.cs`
 
 **Функционал:**
 - ✅ Список доступных апгрейдов
@@ -128,7 +128,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 6. 🛒 Магазин (ShopUI.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/UI/ShopUI.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/UI/ShopUI.cs`
 
 **Вкладки:**
 - ✅ **Автомобили** — покупка новых авто
@@ -152,7 +152,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 7. 💾 Система сохранений (SaveManager.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/SaveSystem/SaveManager.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/SaveSystem/SaveManager.cs`
 
 **Возможности:**
 - ✅ 5 слотов сохранений
@@ -174,7 +174,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 8. ⚙️ Настройки (SettingsManager.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/Settings/SettingsManager.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/Settings/SettingsManager.cs`
 
 **Настройки:**
 - ✅ Разрешение экрана
@@ -194,7 +194,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 9. 📊 Данные игрока (PlayerData.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/Data/PlayerData.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/Data/PlayerData.cs`
 
 **Хранит:**
 - ✅ Имя
@@ -210,7 +210,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 10. 🚙 Данные автомобиля (CarData.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/Data/CarData.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/Data/CarData.cs`
 
 **Параметры:**
 - ✅ Название, производитель
@@ -225,7 +225,7 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 
 ### 11. 🎮 Физика (CarPhysics.cs)
 
-**Файл:** `DragRaceUnity/Assets/Scripts/Physics/CarPhysics.cs`
+**Файл:** `DragRaceUnity/Assets/03-Resources/PowerShell/Physics/CarPhysics.cs`
 
 **Расчёт:**
 - ✅ Сила тяги двигателя
@@ -257,38 +257,38 @@ D:\QwenPoekt\ProbMenu\DragRaceUnity\
 ### Главное меню
 ```
 DragRaceUnity/Assets/Scenes/MainMenu.unity
-DragRaceUnity/Assets/Scripts/UI/MainMenuController.cs
+DragRaceUnity/Assets/03-Resources/PowerShell/UI/MainMenuController.cs
 ```
 
 ### Меню игры
 ```
 DragRaceUnity/Assets/Scenes/GameMenu.unity
-DragRaceUnity/Assets/Scripts/UI/GameMenuController.cs
+DragRaceUnity/Assets/03-Resources/PowerShell/UI/GameMenuController.cs
 ```
 
 ### Гараж
 ```
 DragRaceUnity/Assets/Scenes/Garage.unity
-DragRaceUnity/Assets/Scripts/UI/GarageUI.cs
+DragRaceUnity/Assets/03-Resources/PowerShell/UI/GarageUI.cs
 ```
 
 ### Тюнинг
 ```
 DragRaceUnity/Assets/Scenes/Tuning.unity
-DragRaceUnity/Assets/Scripts/UI/TuningUI.cs
+DragRaceUnity/Assets/03-Resources/PowerShell/UI/TuningUI.cs
 ```
 
 ### Магазин
 ```
 DragRaceUnity/Assets/Scenes/Shop.unity
-DragRaceUnity/Assets/Scripts/UI/ShopUI.cs
+DragRaceUnity/Assets/03-Resources/PowerShell/UI/ShopUI.cs
 ```
 
 ### Гонка
 ```
 DragRaceUnity/Assets/Scenes/Race.unity
-DragRaceUnity/Assets/Scripts/Racing/RaceManager.cs
-DragRaceUnity/Assets/Scripts/Physics/CarPhysics.cs
+DragRaceUnity/Assets/03-Resources/PowerShell/Racing/RaceManager.cs
+DragRaceUnity/Assets/03-Resources/PowerShell/Physics/CarPhysics.cs
 ```
 
 ---
@@ -368,3 +368,4 @@ Game Menu
 - ✅ Настройки (графика/звук/управление)
 
 **ProbMenu (WinForms) — отдельный тестовый проект, не связан с Drag Racing!**
+

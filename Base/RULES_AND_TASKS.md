@@ -1,4 +1,4 @@
-# 📋 ПРАВИЛА И ЗАДАЧИ — ИЗВЛЕЧЁННЫЕ УРОКИ
+﻿# 📋 ПРАВИЛА И ЗАДАЧИ — ИЗВЛЕЧЁННЫЕ УРОКИ
 
 **Дата:** 1 марта 2026 г.  
 **Версия:** 1.0
@@ -46,7 +46,7 @@ grep_search -pattern "CHEAT_SHEET.md" -glob "*.md"
     [ ] Или replace в текстовом редакторе
     
 [ ] 4. ИСПРАВИТЬ ССЫЛКИ
-    [ ] ./file.md → ../_docs/file.md
+    [ ] ./file.md → ../02-Areas/Documentation/file.md
     [ ] Проверить относительные пути
     
 [ ] 5. ПРОВЕРИТЬ
@@ -64,7 +64,7 @@ grep_search -pattern "CHEAT_SHEET.md" -glob "*.md"
 
 param(
     [string]$OldPath = "./CHEAT_SHEET.md",
-    [string]$NewPath = "../_docs/CHEAT_SHEET.md",
+    [string]$NewPath = "../02-Areas/Documentation/CHEAT_SHEET.md",
     [string]$SearchPath = "."
 )
 
@@ -122,8 +122,8 @@ foreach ($file in $files) {
 
 **Описание:**
 Исправить все ссылки на перемещённые файлы:
-- CHEAT_SHEET.md → _docs/CHEAT_SHEET.md
-- SCRIPTS_README.md → _docs/SCRIPTS_README.md
+- CHEAT_SHEET.md → 02-Areas/Documentation/CHEAT_SHEET.md
+- SCRIPTS_README.md → 02-Areas/Documentation/SCRIPTS_README.md
 - ANSWER_TEMPLATE.md → _templates/ANSWER_TEMPLATE.md
 
 **Приоритет:** 🔴 Высокий
@@ -291,3 +291,4 @@ Write-Host "✅ Pre-commit check passed!" -ForegroundColor Green
 **Правила готовы!** 📋
 
 **Следующий шаг:** Использовать и обновлять!
+

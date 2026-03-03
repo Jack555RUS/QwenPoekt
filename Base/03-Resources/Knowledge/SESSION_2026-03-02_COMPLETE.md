@@ -1,4 +1,4 @@
-# ✅ СЕССИЯ ЗАВЕРШЕНА — ФИНАЛЬНЫЙ ОТЧЁТ
+﻿# ✅ СЕССИЯ ЗАВЕРШЕНА — ФИНАЛЬНЫЙ ОТЧЁТ
 
 **Дата:** 2 марта 2026 г.  
 **Статус:** ✅ **ВСЁ ВЫПОЛНЕНО**
@@ -62,7 +62,7 @@
 ### 3. Извлечение руководства по мышлению ИИ ✅
 
 **Создано:**
-- `KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md` (475 строк)
+- `03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md` (475 строк)
 
 **Содержание:**
 - 8 типов рассуждений (дедукция, индукция, абдукция, аналогия, CBR)
@@ -101,7 +101,7 @@
 11. `TEMP/ВАЖНАЯ_ЗАДАЧА.md` (удалён)
 
 ### База знаний (1):
-1. `KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md`
+1. `03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md`
 
 ### Исправлено (1):
 1. `AI_START_HERE.md` (v4.1)
@@ -155,24 +155,24 @@ cd D:\QwenPoekt\Base
 - ✅ `NOTES.md`
 - ✅ `ТЕКУЩАЯ_ЗАДАЧА.md`
 - ✅ `README.md`
-- ✅ `_docs/VS_CODE_SETUP_FOR_AI.md`
-- ✅ `_docs/MCP_FILESYSTEM_SETUP.md`
-- ✅ `_docs/BRIDGE_SETUP.md`
+- ✅ `02-Areas/Documentation/VS_CODE_SETUP_FOR_AI.md`
+- ✅ `02-Areas/Documentation/MCP_FILESYSTEM_SETUP.md`
+- ✅ `02-Areas/Documentation/BRIDGE_SETUP.md`
 
 ---
 
 ## 🛠️ СКРИПТЫ (все работают)
 
-- ✅ `scripts/AUDIT_ALL.ps1`
-- ✅ `scripts/audit-ai-start-here.ps1`
-- ✅ `scripts/organize-root.ps1`
-- ✅ `scripts/safe-delete.ps1`
-- ✅ `scripts/full-file-audit.ps1`
-- ✅ `scripts/build-knowledge-graph.ps1`
-- ✅ `scripts/calculate-kb-metrics.ps1`
-- ✅ `scripts/update-dashboard.ps1`
-- ✅ `scripts/weekly-knowledge-audit.ps1`
-- ✅ `scripts/check-knowledge-stats.ps1`
+- ✅ `03-Resources/PowerShell/AUDIT_ALL.ps1`
+- ✅ `03-Resources/PowerShell/audit-ai-start-here.ps1`
+- ✅ `03-Resources/PowerShell/organize-root.ps1`
+- ✅ `03-Resources/PowerShell/safe-delete.ps1`
+- ✅ `03-Resources/PowerShell/full-file-audit.ps1`
+- ✅ `03-Resources/PowerShell/build-knowledge-graph.ps1`
+- ✅ `03-Resources/PowerShell/calculate-kb-metrics.ps1`
+- ✅ `03-Resources/PowerShell/update-dashboard.ps1`
+- ✅ `03-Resources/PowerShell/weekly-knowledge-audit.ps1`
+- ✅ `03-Resources/PowerShell/check-knowledge-stats.ps1`
 
 ---
 
@@ -193,3 +193,4 @@ cd D:\QwenPoekt\Base
 
 **Файл создан:** 2 марта 2026 г.  
 **Сессия завершена:** ✅
+

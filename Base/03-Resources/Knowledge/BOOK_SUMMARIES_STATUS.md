@@ -1,4 +1,4 @@
-# 📚 КНИГИ — СОСТОЯНИЕ И ПРИОРИТЕТЫ
+﻿# 📚 КНИГИ — СОСТОЯНИЕ И ПРИОРИТЕТЫ
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -32,8 +32,8 @@
 
 | Книга | Причина | Планируемый файл |
 |-------|---------|------------------|
-| **C# Style Guide** | Чистый код для проекта | `KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md` |
-| **UI Toolkit Unity 6** | Создаём меню на UI Toolkit | `KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_BOOK.md` |
+| **C# Style Guide** | Чистый код для проекта | `03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md` |
+| **UI Toolkit Unity 6** | Создаём меню на UI Toolkit | `03-Resources/Knowledge/02_UNITY/UI_TOOLKIT_BOOK.md` |
 
 **Время:** ~2 часа  
 **Польза:** Немедленное применение в проекте
@@ -44,9 +44,9 @@
 
 | Книга | Причина | Планируемый файл |
 |-------|---------|------------------|
-| **Scriptable Objects** | Архитектура игры | `KNOWLEDGE_BASE/02_UNITY/SCRIPTABLE_OBJECTS_BOOK.md` |
-| **Design Patterns** | Паттерны для сложных систем | `KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_BOOK.md` |
-| **URP Cookbook** | Графика и эффекты | `KNOWLEDGE_BASE/02_UNITY/URP_COOKBOOK_BOOK.md` |
+| **Scriptable Objects** | Архитектура игры | `03-Resources/Knowledge/02_UNITY/SCRIPTABLE_OBJECTS_BOOK.md` |
+| **Design Patterns** | Паттерны для сложных систем | `03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_BOOK.md` |
+| **URP Cookbook** | Графика и эффекты | `03-Resources/Knowledge/02_UNITY/URP_COOKBOOK_BOOK.md` |
 
 **Время:** ~3 часа  
 **Польза:** Улучшение архитектуры и графики
@@ -57,9 +57,9 @@
 
 | Книга | Причина | Планируемый файл |
 |-------|---------|------------------|
-| **2D Art & Animation** | Художественная часть | `KNOWLEDGE_BASE/02_UNITY/2D_ART_BOOK.md` |
-| **URP Introduction** | Базовое понимание | `KNOWLEDGE_BASE/02_UNITY/URP_INTRO_BOOK.md` |
-| **DOTS** | Оптимизация (позже) | `KNOWLEDGE_BASE/02_UNITY/DOTS_BOOK.md` |
+| **2D Art & Animation** | Художественная часть | `03-Resources/Knowledge/02_UNITY/2D_ART_BOOK.md` |
+| **URP Introduction** | Базовое понимание | `03-Resources/Knowledge/02_UNITY/URP_INTRO_BOOK.md` |
+| **DOTS** | Оптимизация (позже) | `03-Resources/Knowledge/02_UNITY/DOTS_BOOK.md` |
 
 **Время:** ~2 часа  
 **Польза:** Долгосрочное развитие
@@ -228,12 +228,12 @@ source_book: "Use a C# Style Guide for Clean and Scalable Game Code (Unity 6)"
 **Немедленно:**
 1. Открыть `BOOK/Use_a_C__style_guide_for_clean_and_scalable_game_code_Unity_6_edition_e-book.pdf`
 2. Прочитать главы 1-3
-3. Создать конспект в `KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md`
+3. Создать конспект в `03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md`
 
 **После:**
 1. Открыть `BOOK/UI_Toolkit_for_advanced_Unity_developers_Unity_6_2025.pdf`
 2. Прочитать раздел "Для программистов"
-3. Создать конспект в `KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_BOOK.md`
+3. Создать конспект в `03-Resources/Knowledge/02_UNITY/UI_TOOLKIT_BOOK.md`
 
 ---
 
@@ -241,10 +241,11 @@ source_book: "Use a C# Style Guide for Clean and Scalable Game Code (Unity 6)"
 
 - [`BOOK/00_README.md`](../BOOK/00_README.md) — Каталог книг
 - [`reports/GITHUB_REPOSITORIES_CATALOG.md`](./GITHUB_REPOSITORIES_CATALOG.md) — GitHub репозитории
-- [`KNOWLEDGE_BASE/00_CORE/csharp_standards.md`](../KNOWLEDGE_BASE/00_CORE/csharp_standards.md) — Стандарты C#
-- [`KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md`](../KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md) — Правила UI Toolkit
+- [`03-Resources/Knowledge/00_CORE/csharp_standards.md`](../03-Resources/Knowledge/00_CORE/csharp_standards.md) — Стандарты C#
+- [`03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md`](../03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md) — Правила UI Toolkit
 
 ---
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** После создания первых конспектов
+

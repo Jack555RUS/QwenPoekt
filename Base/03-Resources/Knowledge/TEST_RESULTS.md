@@ -1,4 +1,4 @@
-# ✅ ТЕСТИРОВАНИЕ АВТОМАТИЗАЦИИ — ОТЧЁТ
+﻿# ✅ ТЕСТИРОВАНИЕ АВТОМАТИЗАЦИИ — ОТЧЁТ
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -40,12 +40,12 @@
 ## 📁 СОЗДАННЫЕ ФАЙЛЫ
 
 ### Скрипты:
-- ✅ `scripts/organize-root.ps1` (исправлен)
-- ✅ `scripts/full-file-audit.ps1` (lite)
-- ✅ `scripts/build-knowledge-graph.ps1`
-- ✅ `scripts/calculate-kb-metrics.ps1`
-- ✅ `scripts/AUDIT_ALL.ps1`
-- ✅ `scripts/update-dashboard.ps1`
+- ✅ `03-Resources/PowerShell/organize-root.ps1` (исправлен)
+- ✅ `03-Resources/PowerShell/full-file-audit.ps1` (lite)
+- ✅ `03-Resources/PowerShell/build-knowledge-graph.ps1`
+- ✅ `03-Resources/PowerShell/calculate-kb-metrics.ps1`
+- ✅ `03-Resources/PowerShell/AUDIT_ALL.ps1`
+- ✅ `03-Resources/PowerShell/update-dashboard.ps1`
 
 ### Отчёты:
 - ✅ `reports/KB_DASHBOARD.html`
@@ -89,3 +89,4 @@
 
 **Файл создан:** 2 марта 2026 г.  
 **Тестирование:** В процессе
+

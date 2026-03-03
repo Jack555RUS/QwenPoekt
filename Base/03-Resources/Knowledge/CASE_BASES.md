@@ -1,4 +1,4 @@
-# 📚 РАССУЖДЕНИЕ НА ОСНОВЕ ПРЕЦЕДЕНТОВ (CASE-BASED REASONING)
+﻿# 📚 РАССУЖДЕНИЕ НА ОСНОВЕ ПРЕЦЕДЕНТОВ (CASE-BASED REASONING)
 
 **Версия:** 1.0  
 **Дата создания:** 2 марта 2026 г.  
@@ -293,8 +293,8 @@ git push -f -u origin master
 ## 8. 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`EPISODIC_MEMORY.md`](./EPISODIC_MEMORY.md) — Эпизодическая память
-- [`AI_FUNCTIONS.md`](../_docs/AI_FUNCTIONS.md) — Функции ИИ
-- [`error_solutions.md`](../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md) — База ошибок
+- [`AI_FUNCTIONS.md`](../02-Areas/Documentation/AI_FUNCTIONS.md) — Функции ИИ
+- [`error_solutions.md`](../03-Resources/Knowledge/03_PATTERNS/error_solutions.md) — База ошибок
 
 ---
 
@@ -334,3 +334,4 @@ git push -f -u origin master
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** По мере добавления кейсов
+

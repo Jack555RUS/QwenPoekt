@@ -1,4 +1,4 @@
-# 📦 RAM ДИСК — РУКОВОДСТВО ПО УСТАНОВКЕ
+﻿# 📦 RAM ДИСК — РУКОВОДСТВО ПО УСТАНОВКЕ
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -156,7 +156,7 @@ npm config set prefix "R:\npm-global"
 
 ### Автоматически (при выключении)
 
-**Скрипт:** `scripts/cleanup-ramdisk.ps1`
+**Скрипт:** `03-Resources/PowerShell/cleanup-ramdisk.ps1`
 
 **Настройка Task Scheduler:**
 1. Task Scheduler → Create Task
@@ -220,7 +220,7 @@ Get-ChildItem "R:\" -Recurse | Where-Object FullName -ne "R:\Temp" | Remove-Item
 
 ## 🔄 ВОССТАНОВЛЕНИЕ ПОСЛЕ ПЕРЕЗАГРУЗКИ
 
-**Скрипт:** `scripts/restore-ramdisk.ps1` (будет создан)
+**Скрипт:** `03-Resources/PowerShell/restore-ramdisk.ps1` (будет создан)
 
 **Автоматически:**
 1. Task Scheduler → Create Task
@@ -265,3 +265,4 @@ Get-Volume | Where-Object DriveLetter -EQ 'R'
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее действие:** Установить ImDisk и запустить скрипт
+

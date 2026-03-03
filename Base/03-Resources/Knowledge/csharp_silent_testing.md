@@ -1,4 +1,4 @@
-# Инструменты тихой проверки C#
+﻿# Инструменты тихой проверки C#
 
 **Версия:** 1.0
 **Дата создания:** 2026-03-02
@@ -109,10 +109,11 @@ dotnet test --logger trx --results-directory TestResults --verbosity quiet
 - [`qwen_unity_testing.md`](../03_PATTERNS/qwen_unity_testing.md) — Qwen + Unity
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы для правил
 - [`csharp_standards.md`](csharp_standards.md) — Стандарты кода C#
-- [`PROFILES_MATRIX.md`](../../_docs/PROFILES_MATRIX.md) — Матрица профилей
+- [`PROFILES_MATRIX.md`](../../02-Areas/Documentation/PROFILES_MATRIX.md) — Матрица профилей
 
 ---
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+

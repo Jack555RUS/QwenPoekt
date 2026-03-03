@@ -1,4 +1,4 @@
-# 🤖 СПЕЦИАЛИЗИРОВАННЫЕ АГЕНТЫ (SUBAGENTS)
+﻿# 🤖 СПЕЦИАЛИЗИРОВАННЫЕ АГЕНТЫ (SUBAGENTS)
 
 **Версия:** 3.0  
 **Дата:** 28 февраля 2026 г.  
@@ -148,7 +148,7 @@
 
 ```bash
 # Проверка кода
-/code-reviewer проверь Assets/Scripts/UI/MainMenuController.cs
+/code-reviewer проверь Assets/03-Resources/PowerShell/UI/MainMenuController.cs
 
 # Написание тестов
 /test-writer напиши тесты для SaveSystem
@@ -367,3 +367,4 @@ compile_attempt_1.log
 **Специализированные агенты готовы к работе!** 🤖
 
 **Использование:** `/[агент] [действие] [объект]`
+

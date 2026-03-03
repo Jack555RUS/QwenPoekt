@@ -1,4 +1,4 @@
-# ✅ ТЕСТ УСПЕШЕН
+﻿# ✅ ТЕСТ УСПЕШЕН
 
 **Дата:** 1 марта 2026 г.
 **Сессии:** 1 + 2
@@ -87,14 +87,14 @@ _TEST_ENV/
 │   ├── .gitignore                  ✅ Создан
 │   ├── .qwen/
 │   ├── KNOWLEDGE_BASE/
-│   ├── scripts/
+│   ├── 03-Resources/PowerShell/
 │   ├── reports/
 │   └── *.md
 │
 ├── Projects/                       ← ПРОЕКТЫ
 │   └── DragRaceUnity/
 │       ├── .git/                   ✅ Git инициализирован
-│       ├── Assets/Scripts/
+│       ├── Assets/03-Resources/PowerShell/
 │       └── *.md
 │
 ├── WORKSPACE_TEST.code-workspace   ✅ Multi-Root
@@ -120,3 +120,4 @@ _TEST_ENV/
 **Тест завершён успешно!** 🎉
 
 **Последнее обновление:** 1 марта 2026 г. (Сессия 2 завершена)
+

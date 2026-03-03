@@ -95,6 +95,7 @@
 |------|------------|
 | **[`AGENTS.md`](./AGENTS.md)** | **Точка входа (обязательно!)** |
 | [`ТЕКУЩАЯ_ЗАДАЧА.md`](./ТЕКУЩАЯ_ЗАДАЧА.md) | Активная задача |
+| [`reports/SESSION_HANDOVER.md`](./reports/SESSION_HANDOVER.md) | Передача сессии (создаётся автоматически) |
 | [`.qwen/QWEN.md`](./.qwen/QWEN.md) | Полный конфиг (1100 строк) |
 | [`KNOWLEDGE_BASE/00_README.md`](./KNOWLEDGE_BASE/00_README.md) | База знаний |
 

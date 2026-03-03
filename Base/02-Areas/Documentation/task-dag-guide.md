@@ -1,4 +1,4 @@
-# 📊 TASK DAG SYSTEM
+﻿# 📊 TASK DAG SYSTEM
 
 **Версия:** 1.0
 **Дата:** 2026-03-03
@@ -157,10 +157,11 @@
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`tasks-dag.json`](../../tasks-dag.json) — Граф задач
-- [`scripts/manage-tasks-dag.ps1`](../../scripts/manage-tasks-dag.ps1) — Скрипт
+- [`03-Resources/PowerShell/manage-tasks-dag.ps1`](../../03-Resources/PowerShell/manage-tasks-dag.ps1) — Скрипт
 - [`FILE_PID_SYSTEM.md`](./FILE_PID_SYSTEM.md) — PID система
 
 ---
 
 **Создано:** 2026-03-03
 **Обновлено:** 2026-03-03
+

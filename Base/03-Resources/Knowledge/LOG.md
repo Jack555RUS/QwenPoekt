@@ -1,4 +1,4 @@
-# 📊 ЖУРНАЛ ИЗМЕНЕНИЙ ТЕСТА
+﻿# 📊 ЖУРНАЛ ИЗМЕНЕНИЙ ТЕСТА
 
 **Дата начала:** 1 марта 2026 г.
 
@@ -129,7 +129,7 @@ xcopy PROJECTS\DragRaceUnity\Assets\Scripts\*.cs _TEST_ENV\Projects\DragRaceUnit
 ### 20:50 — Дополнение правила file_naming_rule.md
 
 **Действие:**
-Дополнено правило `KNOWLEDGE_BASE/01_RULES/file_naming_rule.md`:
+Дополнено правило `03-Resources/Knowledge/01_RULES/file_naming_rule.md`:
 - Раздел 6: Запрещённые символы (20+ символов, таблица)
 - Раздел 7: Регистр букв (только lowercase)
 - Раздел 8: Экранирование (PowerShell/cmd/Unix)
@@ -142,7 +142,7 @@ xcopy PROJECTS\DragRaceUnity\Assets\Scripts\*.cs _TEST_ENV\Projects\DragRaceUnit
 ### 20:50 — Создание скрипта check-safe-filename.ps1
 
 **Действие:**
-Создан скрипт `scripts/check-safe-filename.ps1`:
+Создан скрипт `03-Resources/PowerShell/check-safe-filename.ps1`:
 - Проверка на запрещённые символы
 - Проверка на кириллицу
 - Проверка на пробелы
@@ -193,9 +193,9 @@ code _TEST_ENV\WORKSPACE_TEST.code-workspace
 
 **Проверено:**
 - ✅ `.qwen/QWEN.md` — 654 строки (доступен)
-- ✅ `KNOWLEDGE_BASE/00_CORE/csharp_standards.md` — 267 строк (доступен)
+- ✅ `03-Resources/Knowledge/00_CORE/csharp_standards.md` — 267 строк (доступен)
 - ✅ `AI_START_HERE.md` — доступен
-- ✅ `scripts/*.ps1` — доступны
+- ✅ `03-Resources/PowerShell/*.ps1` — доступны
 
 **Результат:** ✅ **Qwen Code читает Base/**
 
@@ -207,9 +207,9 @@ code _TEST_ENV\WORKSPACE_TEST.code-workspace
 
 **Проверено:**
 - ✅ `DragRaceUnity/README.md` — 159 строк (доступен)
-- ✅ `DragRaceUnity/Assets/Scripts/UI/MainMenuController.cs` — 259 строк (доступен)
+- ✅ `DragRaceUnity/Assets/03-Resources/PowerShell/UI/MainMenuController.cs` — 259 строк (доступен)
 - ✅ `DragRaceUnity/STATUS.md` — доступен
-- ✅ `DragRaceUnity/Assets/Scripts/` — все скрипты доступны
+- ✅ `DragRaceUnity/Assets/03-Resources/PowerShell/` — все скрипты доступны
 
 **Результат:** ✅ **Qwen Code читает Projects/**
 
@@ -293,3 +293,4 @@ code _TEST_ENV\WORKSPACE_TEST.code-workspace
 ---
 
 **Сессия 1 завершена. Ожидает Сессии 2!** 🚀
+

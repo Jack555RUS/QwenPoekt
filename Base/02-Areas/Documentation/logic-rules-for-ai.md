@@ -1,4 +1,4 @@
-# 🧠 ЛОГИЧЕСКИЕ ПРАВИЛА ДЛЯ ИИ
+﻿# 🧠 ЛОГИЧЕСКИЕ ПРАВИЛА ДЛЯ ИИ
 
 **Версия:** 1.0  
 **Дата создания:** 2 марта 2026 г.  
@@ -747,7 +747,7 @@ def tree_of_thought(problem, knowledge_base, branches=3, depth=2):
 - [`AI_FUNCTIONS.md`](./AI_FUNCTIONS.md) — Функции ИИ
 - [`../reports/CASE_BASES.md`](../reports/CASE_BASES.md) — Case-Based Reasoning
 - [`../reports/EPISODIC_MEMORY.md`](../reports/EPISODIC_MEMORY.md) — Эпизодическая память
-- [`../KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md`](../KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md) — Саморазвитие ИИ
+- [`../03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md`](../03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md) — Саморазвитие ИИ
 
 ---
 
@@ -828,3 +828,4 @@ plan_reasoning(goal, knowledge_base):
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** По мере добавления новых логических методов
+

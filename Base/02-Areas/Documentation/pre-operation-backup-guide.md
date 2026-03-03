@@ -1,4 +1,4 @@
-# Pre-Operation Backup
+﻿# Pre-Operation Backup
 
 **Назначение:** Автоматическое создание резервной копии ПЕРЕД удалением/перемещением файлов
 
@@ -53,7 +53,7 @@ Remove-Item "OLD/_INBOX/AbandonedProject" -Recurse -Force
 .\scripts\pre-operation-backup.ps1 -OperationType "Move_Scripts"
 
 # Шаг 2: Переместить файлы
-Move-Item "scripts/old/*.ps1" "OLD/_ARCHIVE/" -Force
+Move-Item "03-Resources/PowerShell/old/*.ps1" "OLD/_ARCHIVE/" -Force
 
 # Шаг 3: Записать в OPERATION_LOG.md
 ```
@@ -167,3 +167,4 @@ Copy-Item "D:\QwenPoekt\_BACKUP\2026-03-02_03-23_Delete_OldProject" `
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готов к использованию
+

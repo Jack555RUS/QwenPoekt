@@ -1,4 +1,4 @@
-# 🧪 ТЕСТИРОВАНИЕ СИСТЕМЫ АУДИТА
+﻿# 🧪 ТЕСТИРОВАНИЕ СИСТЕМЫ АУДИТА
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -21,7 +21,7 @@
 
 ### Создано:
 - ✅ Тестовая среда: `_TEST_ENV/audit_test/`
-- ✅ Скрипты в: `Base/scripts/`
+- ✅ Скрипты в: `Base/03-Resources/PowerShell/`
 - ✅ Dashboard в: `Base/reports/KB_DASHBOARD.html`
 
 ---
@@ -41,7 +41,7 @@ Get-ChildItem
 **Ожидаемый результат:**
 ```
 KNOWLEDGE_BASE/
-scripts/
+03-Resources/PowerShell/
 reports/
 ```
 
@@ -274,12 +274,13 @@ $Error[0] | Format-List * -Force
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`scripts/AUDIT_ALL.ps1`](./scripts/AUDIT_ALL.ps1) — Главный скрипт
-- [`scripts/organize-root.ps1`](./scripts/organize-root.ps1) — Организация корня
+- [`03-Resources/PowerShell/AUDIT_ALL.ps1`](./03-Resources/PowerShell/AUDIT_ALL.ps1) — Главный скрипт
+- [`03-Resources/PowerShell/organize-root.ps1`](./03-Resources/PowerShell/organize-root.ps1) — Организация корня
 - [`reports/KB_DASHBOARD.html`](./reports/KB_DASHBOARD.html) — Dashboard
-- [`_docs/VS_CODE_SETUP_FOR_AI.md`](./_docs/VS_CODE_SETUP_FOR_AI.md) — Настройка VS Code
+- [`02-Areas/Documentation/VS_CODE_SETUP_FOR_AI.md`](./02-Areas/Documentation/VS_CODE_SETUP_FOR_AI.md) — Настройка VS Code
 
 ---
 
 **Файл создан:** 2 марта 2026 г.  
 **Готов к тестированию:** ✅
+

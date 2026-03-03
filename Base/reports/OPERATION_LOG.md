@@ -1,4 +1,4 @@
-# 📝 OPERATION LOG — ЖУРНАЛ ОПЕРАЦИЙ
+﻿# 📝 OPERATION LOG — ЖУРНАЛ ОПЕРАЦИЙ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -58,8 +58,8 @@
 
 **Файлы:**
 - `SEAMLESS_START.md` — Автономный запуск
-- `scripts/check-kernel-integrity.ps1` — Проверка Ядра
-- `scripts/test-seamless-launch.ps1` — Тест запуска
+- `03-Resources/PowerShell/check-kernel-integrity.ps1` — Проверка Ядра
+- `03-Resources/PowerShell/test-seamless-launch.ps1` — Тест запуска
 - `.qwen/rules/08-mass-operations.md` — Обновление (7 вопросов + чек-лист)
 
 **Причина:** Охрана Ядра системы, автономный запуск без .qwen/
@@ -82,7 +82,7 @@
 **Файлы:**
 - `03-Resources/Knowledge/01_RULES/file_naming_rule.md` — Правила именования
 - `03-Resources/Knowledge/00_README.md` — Навигатор по Базе
-- `scripts/check-file-naming.ps1` — Проверка соблюдения правил
+- `03-Resources/PowerShell/check-file-naming.ps1` — Проверка соблюдения правил
 
 **Причина:** Единый стандарт именования, навигация по Базе
 
@@ -146,3 +146,4 @@
 ---
 
 **Записывай каждую операцию — это история Базы!** 📝
+

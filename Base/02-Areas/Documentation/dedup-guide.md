@@ -1,4 +1,4 @@
-# Руководство по дедупликации Базы Знаний
+﻿# Руководство по дедупликации Базы Знаний
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -179,8 +179,8 @@
 #
 # Группа #1
 # Хэш: a1b2c3d4e5f6...
-#   1. ✅ KNOWLEDGE_BASE/01_RULES/file_naming_rule.md
-#   2. ✅ KNOWLEDGE_BASE/01_RULES/file_naming_rule_copy.md
+#   1. ✅ 03-Resources/Knowledge/01_RULES/file_naming_rule.md
+#   2. ✅ 03-Resources/Knowledge/01_RULES/file_naming_rule_copy.md
 ```
 
 **Что проверяет:**
@@ -221,7 +221,7 @@ code reports\DEDUP_AUDIT_REPORT.md
 # 2. Проверить каждый дубликат
 
 # 3. Удалить лишние
-Remove-Item "KNOWLEDGE_BASE/01_RULES/file_naming_rule_copy.md"
+Remove-Item "03-Resources/Knowledge/01_RULES/file_naming_rule_copy.md"
 ```
 
 ---
@@ -402,3 +402,4 @@ Get-Content meta\file_hashes.json | ConvertFrom-Json |
 ---
 
 **Прочитал? Приступай к дедупликации!** 🚀
+

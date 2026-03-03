@@ -1,4 +1,4 @@
-# 🧭 НАВИГАТОР ДЛЯ ИИ — ПОСЛЕ PARA ВНЕДРЕНИЯ
+﻿# 🧭 НАВИГАТОР ДЛЯ ИИ — ПОСЛЕ PARA ВНЕДРЕНИЯ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -14,8 +14,8 @@
 **Изменения:**
 - ✅ **PARA структура внедрена** (Неделя 2 завершена)
 - ✅ **KNOWLEDGE_BASE** → `03-Resources/Knowledge/`
-- ✅ **scripts/** → `03-Resources/PowerShell/`
-- ✅ **_docs/** → `02-Areas/Documentation/`
+- ✅ **03-Resources/PowerShell/** → `03-Resources/PowerShell/`
+- ✅ **02-Areas/Documentation/** → `02-Areas/Documentation/`
 - ✅ **reports/** → `03-Resources/Knowledge/`
 - ✅ **BOOK/** → `D:\QwenPoekt\BOOK\` (вне Base)
 - ✅ **OLD/** → `D:\QwenPoekt\OLD\` (вне Base)
@@ -52,7 +52,7 @@ D:\QwenPoekt\Base\
 ├── sessions/             # 💾 АВТОСОХРАНЕНИЕ СЕССИЙ
 │   └── YYYY-MM-DD_HH-mm/ # ✅ 490+ сессий
 │
-└── scripts/              # 🔧 ВСПОМОГАТЕЛЬНЫЕ СКРИПТЫ
+└── 03-Resources/PowerShell/              # 🔧 ВСПОМОГАТЕЛЬНЫЕ СКРИПТЫ
     ├── auto-save-chat-silent.bat
     └── ... (6 файлов)
 ```
@@ -170,9 +170,9 @@ git add . && git commit -m "Move: файлы из old/ в 04-Archives/"
 **Заменить:**
 ```markdown
 # БЫЛО:
-- [`00_CORE/csharp_standards.md`](./KNOWLEDGE_BASE/00_CORE/csharp_standards.md)
-- [`scripts/auto-save-chat.ps1`](./scripts/auto-save-chat.ps1)
-- [`_docs/PARA_GUIDE.md`](./_docs/PARA_GUIDE.md)
+- [`00_CORE/csharp_standards.md`](./03-Resources/Knowledge/00_CORE/csharp_standards.md)
+- [`03-Resources/PowerShell/auto-save-chat.ps1`](./03-Resources/PowerShell/auto-save-chat.ps1)
+- [`02-Areas/Documentation/PARA_GUIDE.md`](./02-Areas/Documentation/PARA_GUIDE.md)
 
 # СТАЛО:
 - [`Base/03-Resources/Knowledge/csharp_standards.md`](./Base/03-Resources/Knowledge/csharp_standards.md)
@@ -230,3 +230,4 @@ git add . && git commit -m "Move: файлы из old/ в 04-Archives/"
 **Создано:** 3 марта 2026 г.
 **Причина:** PARA внедрение (Неделя 2 завершена)
 **Статус:** ✅ **Активно**
+

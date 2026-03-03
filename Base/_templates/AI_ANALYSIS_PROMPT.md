@@ -1,4 +1,4 @@
-# 🤖 AI ANALYSIS PROMPT — ПРОМПТ ДЛЯ ИИ-АНАЛИЗА
+﻿# 🤖 AI ANALYSIS PROMPT — ПРОМПТ ДЛЯ ИИ-АНАЛИЗА
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -117,7 +117,7 @@ related: [файл1.md, файл2.ps1]
 - `путь/к/файлу3.md` — [что изменить]
 
 ### Скрипты для добавления:
-- `scripts/script-name.ps1` — [назначение]
+- `03-Resources/PowerShell/script-name.ps1` — [назначение]
 
 ## ✅ СЛЕДУЮЩИЕ ШАГИ
 
@@ -192,14 +192,14 @@ ISO 8601 для дат, автоматизация проверок через C
 
 ### Файлы для создания:
 - `03-Resources/Knowledge/01_RULES/file_naming_rule.md` — Правила именования
-- `scripts/check-file-naming.ps1` — Проверка соблюдения правил
+- `03-Resources/PowerShell/check-file-naming.ps1` — Проверка соблюдения правил
 
 ### Файлы для изменения:
 - `03-Resources/Knowledge/00_README.md` — Добавить навигатор
 - `.qwen/rules/08-mass-operations.md` — Добавить проверку именования
 
 ### Скрипты для добавления:
-- `scripts/weekly-knowledge-audit.ps1` — Еженедельная проверка
+- `03-Resources/PowerShell/weekly-knowledge-audit.ps1` — Еженедельная проверка
 
 ## ✅ СЛЕДУЮЩИЕ ШАГИ
 
@@ -230,7 +230,7 @@ ISO 8601 для дат, автоматизация проверок через C
 ### **Скрипт для пакетного анализа:**
 
 ```powershell
-# scripts/batch-analyze-materials.ps1
+# 03-Resources/PowerShell/batch-analyze-materials.ps1
 param(
     [string]$InputPath,
     [string]$OutputPath
@@ -303,3 +303,4 @@ foreach ($material in $materials) {
 ---
 
 **Используйте этот промпт для каждого нового материала!** 🤖
+

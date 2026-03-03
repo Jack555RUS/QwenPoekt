@@ -1,4 +1,4 @@
-# 🔍 РАССЛЕДОВАНИЕ: ПРАВИЛА НА ПЕРЕМЕЩЕНИЕ ФАЙЛОВ
+﻿# 🔍 РАССЛЕДОВАНИЕ: ПРАВИЛА НА ПЕРЕМЕЩЕНИЕ ФАЙЛОВ
 
 **Дата:** 3 марта 2026 г.
 **Статус:** ✅ **ЗАВЕРШЕНО**
@@ -62,8 +62,8 @@
 **Пример 1: Создание скрипта**
 ```powershell
 # ✅ 5. Внедрить
-Move-Item "_drafts/new-script.ps1" "scripts/"
-git add scripts/new-script.ps1
+Move-Item "_drafts/new-script.ps1" "03-Resources/PowerShell/"
+git add 03-Resources/PowerShell/new-script.ps1
 git commit -m "Add: new-script.ps1"
 ```
 
@@ -403,3 +403,4 @@ foreach ($file in $mdFiles) {
 **Статус:** ✅ **Расследование завершено**
 
 **Следующий шаг:** Исправление выявленных проблем.
+

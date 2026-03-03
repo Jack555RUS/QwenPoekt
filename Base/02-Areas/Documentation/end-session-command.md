@@ -1,4 +1,4 @@
-# Завершение сессии по команде
+﻿# Завершение сессии по команде
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -91,7 +91,7 @@
 
 | Файл | Назначение |
 |------|------------|
-| [`scripts/end-session.ps1`](../scripts/end-session.ps1) | Скрипт завершения |
+| [`03-Resources/PowerShell/end-session.ps1`](../03-Resources/PowerShell/end-session.ps1) | Скрипт завершения |
 | [`reports/OPERATION_LOG.md`](../reports/OPERATION_LOG.md) | Журнал операций |
 | [`reports/SESSION_*.md`](../reports/) | Отчёты сессий |
 
@@ -133,3 +133,4 @@ git push -u origin master
 - ✅ "end session"
 
 **Я автоматически запущу скрипт завершения!**
+

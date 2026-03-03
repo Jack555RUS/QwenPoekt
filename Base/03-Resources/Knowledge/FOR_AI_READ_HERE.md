@@ -1,4 +1,4 @@
-# 📘 Контекст проекта для ИИ-ассистента
+﻿# 📘 Контекст проекта для ИИ-ассистента
 
 **Версия:** 2.0
 **Дата создания:** 2026-02-27
@@ -41,7 +41,7 @@ D:\QwenPoekt\ProbMenu\
 ├── .github/workflows/dotnet.yml # CI/CD пайплайн
 └── DragRaceUnity/               # ← UNITY ИГРА
     ├── Assets/
-    │   ├── Scripts/
+    │   ├── 03-Resources/PowerShell/
     │   │   ├── Core/            # GameManager, Logger
     │   │   ├── UI/              # MainMenu (6 кнопок)
     │   │   ├── Data/            # PlayerData, CarData
@@ -198,7 +198,7 @@ D:\QwenPoekt\ProbMenu\
 ├── DRAG_RACING_STATUS.md        # Статус Unity проекта
 ├── PUBLISH.md                   # Как собрать EXE
 └── DragRaceUnity/               # ← UNITY ИГРА
-    └── Assets/Scripts/
+    └── Assets/03-Resources/PowerShell/
         ├── Core/                # GameManager, Logger
         ├── Data/                # CarData, PlayerData
         ├── UI/                  # MainMenu, GameMenu, Garage, Tuning, Shop
@@ -331,3 +331,4 @@ unity-build.ps1
 - [`README.md`](../../README.md) — Навигатор по проекту
 - [`AI_DEVELOPER_INSTRUCTION.md`](../05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
 - [`project_glossary.md`](project_glossary.md) — Терминология проекта
+

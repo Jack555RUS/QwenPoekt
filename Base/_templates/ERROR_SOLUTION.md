@@ -1,4 +1,4 @@
-# Решение ошибки
+﻿# Решение ошибки
 
 **Название ошибки:** [Краткое название]  
 **Дата анализа:** ГГГГ-ММ-ДД  
@@ -121,9 +121,9 @@ Test-The-Fix
 ## 🔗 Связанные файлы
 
 **В Базе Знаний:**
-- [03_PATTERNS/error_solutions.md](../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md)
-- [scripts/debug-unity.ps1](../scripts/debug-unity.ps1)
-- [_docs/DEBUGGING_GUIDE.md](_docs/DEBUGGING_GUIDE.md)
+- [03_PATTERNS/error_solutions.md](../03-Resources/Knowledge/03_PATTERNS/error_solutions.md)
+- [03-Resources/PowerShell/debug-unity.ps1](../03-Resources/PowerShell/debug-unity.ps1)
+- [02-Areas/Documentation/DEBUGGING_GUIDE.md](02-Areas/Documentation/DEBUGGING_GUIDE.md)
 
 **Внешние ресурсы:**
 - [Stack Overflow](URL)
@@ -191,3 +191,4 @@ Test-The-Fix
 **Статус:** ✅ Проверено / ⚠️ Требуется тестирование / ❌ Устарело
 
 **Дата последней проверки:** ГГГГ-ММ-ДД
+

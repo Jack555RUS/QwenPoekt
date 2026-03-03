@@ -1,4 +1,4 @@
-# 🔄 PROCESS ANALYSIS — ПРОЦЕСС АНАЛИЗА ИНФОРМАЦИИ
+﻿# 🔄 PROCESS ANALYSIS — ПРОЦЕСС АНАЛИЗА ИНФОРМАЦИИ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -218,7 +218,7 @@ value: 5 | 4 | 3 | 2 | 1
 | Форма | Пример | Куда |
 |-------|--------|------|
 | **Письмо** | Статья, правило | `02-Areas/Documentation/` |
-| **Код** | Скрипт, функция | `scripts/` или `03-Resources/PowerShell/` |
+| **Код** | Скрипт, функция | `03-Resources/PowerShell/` или `03-Resources/PowerShell/` |
 | **Обучение** | Объяснение кому-то | Сессия с ИИ |
 | **Внедрение** | Изменение в проекте | Git коммит |
 
@@ -369,7 +369,7 @@ tags: [markdown, документация, best-practices]
 | [`_templates/AI_ANALYSIS_PROMPT.md`](./_templates/AI_ANALYSIS_PROMPT.md) | Промпт для ИИ-анализа |
 | [`03-Resources/Knowledge/01_RULES/file_naming_rule.md`](./03-Resources/Knowledge/01_RULES/file_naming_rule.md) | Правила именования |
 | [`reports/OPERATION_LOG.md`](./reports/OPERATION_LOG.md) | Журнал операций |
-| [`scripts/check-duplicates.ps1`](./scripts/check-duplicates.ps1) | Проверка дубликатов |
+| [`03-Resources/PowerShell/check-duplicates.ps1`](./03-Resources/PowerShell/check-duplicates.ps1) | Проверка дубликатов |
 
 ---
 
@@ -393,3 +393,4 @@ tags: [markdown, документация, best-practices]
 ---
 
 **Используйте этот процесс для каждого нового материала!** 📚
+

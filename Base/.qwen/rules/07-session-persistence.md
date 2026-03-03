@@ -1,4 +1,4 @@
-# 07 — СОХРАНЕНИЕ СЕССИЙ (SESSION PERSISTENCE)
+﻿# 07 — СОХРАНЕНИЕ СЕССИЙ (SESSION PERSISTENCE)
 
 **Версия:** 1.0
 **Дата:** 2 марта 2026 г.
@@ -351,12 +351,13 @@ sessions/2026-03-02_22-04/
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`.qwen/session-rules.json`](./session-rules.json) — Конфигурация
-- [`scripts/check-session-rules.ps1`](./scripts/check-session-rules.ps1) — Проверка
-- [`scripts/save-chat-log.ps1`](./scripts/save-chat-log.ps1) — Сохранение
-- [`scripts/auto-save-chat.ps1`](./scripts/auto-save-chat.ps1) — Автосохранение
+- [`03-Resources/PowerShell/check-session-rules.ps1`](./03-Resources/PowerShell/check-session-rules.ps1) — Проверка
+- [`03-Resources/PowerShell/save-chat-log.ps1`](./03-Resources/PowerShell/save-chat-log.ps1) — Сохранение
+- [`03-Resources/PowerShell/auto-save-chat.ps1`](./03-Resources/PowerShell/auto-save-chat.ps1) — Автосохранение
 - [`.qwen/rules/06-resume.md`](./06-resume.md) — Восстановление
 
 ---
 
 **Создано:** 2 марта 2026 г.
 **Версия:** 1.0
+

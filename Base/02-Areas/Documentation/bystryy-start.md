@@ -1,4 +1,4 @@
-# 🎮 DragRaceUnity — Быстрый старт
+﻿# 🎮 DragRaceUnity — Быстрый старт
 
 **Версия:** 1.0  
 **Дата:** 27 февраля 2026 г.  
@@ -82,7 +82,7 @@
 2. Переименуйте в `MainMenuManager`
 
 ### 4.2. Добавить скрипт
-1. Перетащите `Assets/Scripts/UI/MainMenuController.cs` на `MainMenuManager`
+1. Перетащите `Assets/03-Resources/PowerShell/UI/MainMenuController.cs` на `MainMenuManager`
 2. Или: `Add Component` → `MainMenuController`
 
 ### 4.3. Настроить onClick для кнопок
@@ -222,3 +222,4 @@
 ---
 
 **Удачи в разработке!** 🎯
+

@@ -1,4 +1,4 @@
-# 📋 ЖУРНАЛ СОБЛЮДЕНИЯ ПРОЦЕССА (PROCESS COMPLIANCE LOG)
+﻿# 📋 ЖУРНАЛ СОБЛЮДЕНИЯ ПРОЦЕССА (PROCESS COMPLIANCE LOG)
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -207,7 +207,7 @@ git log --since="7 days ago" --oneline
 
 ```powershell
 # Скрипт для проверки соблюдения процесса
-# scripts/check-process-compliance.ps1
+# 03-Resources/PowerShell/check-process-compliance.ps1
 
 param(
     [int]$Days = 7
@@ -338,3 +338,4 @@ foreach ($commit in $commits) {
 | 2026-03-02 | Создан журнал | Qwen Code |
 | 2026-03-02 | Добавлены нарушения 1-5 | Qwen Code |
 | 2026-03-02 | Process внедрён (Git Push ✅) | Qwen Code |
+

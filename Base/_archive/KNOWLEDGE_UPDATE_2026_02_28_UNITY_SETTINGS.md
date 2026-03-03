@@ -1,4 +1,4 @@
-# 📚 ОБНОВЛЕНИЕ БАЗЫ ЗНАНИЙ — 28 февраля 2026 (Unity настройки)
+﻿# 📚 ОБНОВЛЕНИЕ БАЗЫ ЗНАНИЙ — 28 февраля 2026 (Unity настройки)
 
 **Правило:** Научился → Применил → Записал!
 
@@ -65,7 +65,7 @@ Shadows: Disabled (для производительности)
 **Файлы:**
 - `Assets/Settings/PlayerInput.inputactions` — карта ввода
 - `Assets/Settings/PlayerInput.inputactions.meta` — Meta файл
-- `Assets/Scripts/Input/` — папка для кода
+- `Assets/03-Resources/PowerShell/Input/` — папка для кода
 
 **Действия (Car):**
 - ✅ Gas (W, ↑)
@@ -85,7 +85,7 @@ Shadows: Disabled (для производительности)
 | **`UNITY_SETTINGS_APPLIED.md`** | Инструкция по настройкам | 150+ |
 | **`Assets/Settings/UniversalRP.asset`** | URP Asset | 80+ |
 | **`Assets/Settings/PlayerInput.inputactions`** | Input Actions | 200+ |
-| **`Assets/Scripts/Input/`** | Папка Input | — |
+| **`Assets/03-Resources/PowerShell/Input/`** | Папка Input | — |
 
 ---
 
@@ -137,7 +137,7 @@ Scriptable Render Pipeline: UniversalRP ✅
 ```
 Assets/Settings/PlayerInput.inputactions →
 Inspector → Save Asset →
-Сгенерируется: Assets/Scripts/Input/PlayerInput.cs
+Сгенерируется: Assets/03-Resources/PowerShell/Input/PlayerInput.cs
 ```
 
 ---
@@ -171,3 +171,4 @@ Inspector → Save Asset →
 **Настройки Unity применены!** 🚀
 
 **Следующий шаг: Открыть Unity и проверить!**
+

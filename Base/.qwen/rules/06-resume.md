@@ -1,4 +1,4 @@
-# 🔄 КОМАНДА /RESUME — Восстановление Сессии
+﻿# 🔄 КОМАНДА /RESUME — Восстановление Сессии
 
 **Версия:** 1.0
 **Дата:** 2 марта 2026 г.
@@ -278,11 +278,12 @@ Test-Path reports/SESSION_HANDOVER.md
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`AGENTS.md`](./AGENTS.md) — Точка входа (раздел "Команды")
-- [`scripts/auto-save-session.ps1`](./scripts/auto-save-session.ps1) — Автосохранение
-- [`scripts/start-session.ps1`](./scripts/start-session.ps1) — Восстановление
+- [`03-Resources/PowerShell/auto-save-session.ps1`](./03-Resources/PowerShell/auto-save-session.ps1) — Автосохранение
+- [`03-Resources/PowerShell/start-session.ps1`](./03-Resources/PowerShell/start-session.ps1) — Восстановление
 - [`reports/SESSION_HANDOVER.md`](./reports/SESSION_HANDOVER.md) — Контекст сессии
 
 ---
 
 **Создано:** 2 марта 2026 г.
 **Версия:** 1.0
+

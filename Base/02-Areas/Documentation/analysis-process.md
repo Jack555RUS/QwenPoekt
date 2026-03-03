@@ -1,4 +1,4 @@
-# Процесс анализа информации для Базы Знаний
+﻿# Процесс анализа информации для Базы Знаний
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -249,7 +249,7 @@ grep_search -pattern "button click" -path "KNOWLEDGE_BASE/03_PATTERNS"
 **Связанные файлы:**
 - [01_RULES/ui_toolkit_rules.md](01_RULES/ui_toolkit_rules.md)
 - [03_PATTERNS/error_solutions.md](03_PATTERNS/error_solutions.md)
-- [scripts/pre-operation-backup.ps1](scripts/pre-operation-backup.ps1)
+- [03-Resources/PowerShell/pre-operation-backup.ps1](03-Resources/PowerShell/pre-operation-backup.ps1)
 ```
 
 ---
@@ -387,7 +387,7 @@ Write-Host "Аудит завершён. Отчёт: reports\MONTHLY_AUDIT.md"
 
 ## 🔮 Итоговая рекомендация
 
-✅ **Добавить в KNOWLEDGE_BASE/02_TOOLS/**
+✅ **Добавить в 03-Resources/Knowledge/02_TOOLS/**
 
 ---
 
@@ -402,7 +402,7 @@ Write-Host "Аудит завершён. Отчёт: reports\MONTHLY_AUDIT.md"
 ## 🔍 Проверка на дубликаты
 
 **Существующие аналоги:**
-- `scripts/safe-delete.ps1` (уже есть)
+- `03-Resources/PowerShell/safe-delete.ps1` (уже есть)
 
 **Степень совпадения:** Частичное (дополняет существующее)
 
@@ -442,8 +442,8 @@ if (Test-Integrity) { Remove-Item $Path }
 
 ## 🔗 Связи с другими объектами
 
-- [scripts/safe-delete.ps1](scripts/safe-delete.ps1)
-- [_docs/SAFE_DELETE_GUIDE.md](_docs/SAFE_DELETE_GUIDE.md)
+- [03-Resources/PowerShell/safe-delete.ps1](03-Resources/PowerShell/safe-delete.ps1)
+- [02-Areas/Documentation/SAFE_DELETE_GUIDE.md](02-Areas/Documentation/SAFE_DELETE_GUIDE.md)
 
 ---
 
@@ -457,7 +457,7 @@ if (Test-Integrity) { Remove-Item $Path }
 **Статус:** ✅ Актуально
 
 **Связанные файлы:**
-- [scripts/safe-delete.ps1](scripts/safe-delete.ps1)
+- [03-Resources/PowerShell/safe-delete.ps1](03-Resources/PowerShell/safe-delete.ps1)
 
 **Теги:** #powershell #file-management #safety
 
@@ -487,7 +487,7 @@ if (Test-Integrity) { Remove-Item $Path }
 
 ## 📋 План действий
 
-1. [ ] Создать файл: `KNOWLEDGE_BASE/02_TOOLS/powershell_safe_delete.md`
+1. [ ] Создать файл: `03-Resources/Knowledge/02_TOOLS/powershell_safe_delete.md`
 2. [ ] Добавить оглавление
 3. [ ] Связать с safe-delete.ps1
 4. [ ] Записать в OPERATION_LOG.md
@@ -514,3 +514,4 @@ if (Test-Integrity) { Remove-Item $Path }
 ---
 
 **Прочитал? Приступай к анализу!** 🚀
+

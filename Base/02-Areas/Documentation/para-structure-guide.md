@@ -1,4 +1,4 @@
-# 🗂️ PARA СТРУКТУРА — РУКОВОДСТВО ПО ВНЕДРЕНИЮ
+﻿# 🗂️ PARA СТРУКТУРА — РУКОВОДСТВО ПО ВНЕДРЕНИЮ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -149,7 +149,7 @@ D:\QwenPoekt\Base\
 ### **Неделя 2: Организация**
 
 ```
-⏳ Распределить scripts/ по Resources/
+⏳ Распределить 03-Resources/PowerShell/ по Resources/
 ⏳ Распределить .qwen/ по Areas/
 ⏳ Архивировать старое (>30 дней)
 ```
@@ -218,3 +218,4 @@ D:\QwenPoekt\Base\
 - Building a Second Brain by Tiago Forte
 - smartremotegigs.com/para-method-complete-guide
 - theweekendreads.com/second-brain-summary
+

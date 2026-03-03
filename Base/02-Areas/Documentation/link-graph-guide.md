@@ -1,4 +1,4 @@
-# 🔗 LINK CHECK SYSTEM
+﻿# 🔗 LINK CHECK SYSTEM
 
 **Версия:** 1.0
 **Дата:** 2026-03-03
@@ -117,11 +117,12 @@
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`scripts/check-links.ps1`](../scripts/check-links.ps1)
-- [`scripts/build-link-graph.ps1`](../scripts/build-link-graph.ps1)
+- [`03-Resources/PowerShell/check-links.ps1`](../03-Resources/PowerShell/check-links.ps1)
+- [`03-Resources/PowerShell/build-link-graph.ps1`](../03-Resources/PowerShell/build-link-graph.ps1)
 - [`reports/LINK_CHECK_REPORT.md`](../reports/LINK_CHECK_REPORT.md)
 
 ---
 
 **Создано:** 2026-03-03
 **Обновлено:** 2026-03-03
+

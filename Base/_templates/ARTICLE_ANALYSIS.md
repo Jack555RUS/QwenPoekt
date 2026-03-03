@@ -1,4 +1,4 @@
-# Анализ статьи/документации
+﻿# Анализ статьи/документации
 
 **Название:** [Вставить название]  
 **Источник:** [URL/путь]  
@@ -57,9 +57,9 @@
 ## 🔗 Связанные файлы
 
 **В Базе Знаний:**
-- [00_CORE/unity_fundamentals.md](../KNOWLEDGE_BASE/00_CORE/unity_fundamentals.md)
-- [01_RULES/ui_toolkit_rules.md](../KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md)
-- [03_PATTERNS/error_solutions.md](../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md)
+- [00_CORE/unity_fundamentals.md](../03-Resources/Knowledge/00_CORE/unity_fundamentals.md)
+- [01_RULES/ui_toolkit_rules.md](../03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md)
+- [03_PATTERNS/error_solutions.md](../03-Resources/Knowledge/03_PATTERNS/error_solutions.md)
 
 **Внешние ресурсы:**
 - [Официальная документация](URL)
@@ -119,3 +119,4 @@
 **Статус:** ⏳ Черновик / ✅ Готово / ❌ Отклонено
 
 **Дата завершения:** ГГГГ-ММ-ДД
+

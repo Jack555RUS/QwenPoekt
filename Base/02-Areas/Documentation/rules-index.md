@@ -1,4 +1,4 @@
-# 📚 ИНДЕКС ВСЕХ ПРАВИЛ
+﻿# 📚 ИНДЕКС ВСЕХ ПРАВИЛ
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -51,15 +51,15 @@
 
 ## 📋 РУКОВОДСТВА (Уровень 3)
 
-### _docs/
+### 02-Areas/Documentation/
 
 | Файл | Описание | Статус |
 |------|----------|--------|
-| [`ALL_RULES_CATALOG.md`](_docs/ALL_RULES_CATALOG.md) | Каталог всех правил | ✅ |
-| [`BACKUP_STRATEGY.md`](_docs/BACKUP_STRATEGY.md) | Стратегия 3-2-1 | ✅ |
-| [`DEDUP_GUIDE.md`](_docs/DEDUP_GUIDE.md) | Борьба с дубликатами | ✅ |
-| [`KB_AUDIT_GUIDE.md`](_docs/KB_AUDIT_GUIDE.md) | Аудит Базы Знаний | ✅ |
-| [`STRUCTURE_GUIDE.md`](_docs/STRUCTURE_GUIDE.md) | Структура проекта | ✅ |
+| [`ALL_RULES_CATALOG.md`](02-Areas/Documentation/ALL_RULES_CATALOG.md) | Каталог всех правил | ✅ |
+| [`BACKUP_STRATEGY.md`](02-Areas/Documentation/BACKUP_STRATEGY.md) | Стратегия 3-2-1 | ✅ |
+| [`DEDUP_GUIDE.md`](02-Areas/Documentation/DEDUP_GUIDE.md) | Борьба с дубликатами | ✅ |
+| [`KB_AUDIT_GUIDE.md`](02-Areas/Documentation/KB_AUDIT_GUIDE.md) | Аудит Базы Знаний | ✅ |
+| [`STRUCTURE_GUIDE.md`](02-Areas/Documentation/STRUCTURE_GUIDE.md) | Структура проекта | ✅ |
 
 ---
 
@@ -129,14 +129,15 @@ git commit -m "Update: актуализация правил (квартал YYY
 ### Для разработки:
 1. [`csharp_standards.md`](00_CORE/csharp_standards.md) — Стандарты кода
 2. [`project_glossary.md`](00_CORE/project_glossary.md) — Терминология
-3. [`STRUCTURE_GUIDE.md`](_docs/STRUCTURE_GUIDE.md) — Структура
+3. [`STRUCTURE_GUIDE.md`](02-Areas/Documentation/STRUCTURE_GUIDE.md) — Структура
 
 ### Для тестирования:
 1. [`RULE_TEST_CASES.md`](reports/RULE_TEST_CASES.md) — Тест-кейсы
-2. [`check-rules-freshness.ps1`](../scripts/check-rules-freshness.ps1) — Проверка актуальности
+2. [`check-rules-freshness.ps1`](../03-Resources/PowerShell/check-rules-freshness.ps1) — Проверка актуальности
 
 ---
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово к использованию
+

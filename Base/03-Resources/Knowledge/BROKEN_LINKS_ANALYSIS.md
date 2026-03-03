@@ -1,4 +1,4 @@
-# 🔍 АНАЛИЗ БИТЫХ ССЫЛОК AI_START_HERE.MD
+﻿# 🔍 АНАЛИЗ БИТЫХ ССЫЛОК AI_START_HERE.MD
 
 **Дата:** 2 марта 2026 г.  
 **Статус:** ✅ **АНАЛИЗ ЗАВЕРШЁН**
@@ -25,10 +25,10 @@
 - AI_START_HERE.md (Раздел 7, 10)
 - LINKS.md
 - KNOWLEDGE_BASE/00_README.md
-- _docs/ALL_RULES_CATALOG.md (помечен как ✅)
+- 02-Areas/Documentation/ALL_RULES_CATALOG.md (помечен как ✅)
 
 **Анализ:**
-- Файл НЕ найден в KNOWLEDGE_BASE/01_RULES/
+- Файл НЕ найден в 03-Resources/Knowledge/01_RULES/
 - НЕ найден в OLD/
 - НЕ найден в _archive/
 - Упоминается в ALL_RULES_CATALOG.md как существующий
@@ -49,7 +49,7 @@
 - KNOWLEDGE_BASE/00_README.md
 
 **Анализ:**
-- НЕ найден в KNOWLEDGE_BASE/01_RULES/
+- НЕ найден в 03-Resources/Knowledge/01_RULES/
 - НЕ найден в архивах
 - Критичное правило ("ПРОВЕРКА ПЕРЕД ВНЕСЕНИЕМ")
 
@@ -66,16 +66,16 @@
 - AI_START_HERE.md (Раздел 2, 7, 10, 18)
 - LINKS.md
 - KNOWLEDGE_BASE/00_README.md
-- scripts/check-safe-filename.ps1
+- 03-Resources/PowerShell/check-safe-filename.ps1
 
 **Анализ:**
-- НЕ найден в KNOWLEDGE_BASE/01_RULES/
+- НЕ найден в 03-Resources/Knowledge/01_RULES/
 - Упоминается в коммите: `566b23d49 — Update file_naming_rule.md`
 - Файл СУЩЕСТВОВАЛ!
 
 **Вывод:** 🚨 **ФАЙЛ БЫЛ УДАЛЁН ПРИ ЧИСТКЕ**  
 **Решение:** 
-- Восстановить из Git: `git checkout 566b23d49 -- KNOWLEDGE_BASE/01_RULES/file_naming_rule.md`
+- Восстановить из Git: `git checkout 566b23d49 -- 03-Resources/Knowledge/01_RULES/file_naming_rule.md`
 - Или создать заново
 
 ---
@@ -112,7 +112,7 @@
 **Анализ:**
 - Критичный файл ("БАЗА РЕШЁННЫХ ОШИБОК")
 - Упоминается в шаблонах
-- НЕ найден в KNOWLEDGE_BASE/03_PATTERNS/
+- НЕ найден в 03-Resources/Knowledge/03_PATTERNS/
 
 **Вывод:** 🚨 **ФАЙЛ УДАЛЕН ПРИ ЧИСТКЕ**  
 **Решение:** 
@@ -177,7 +177,7 @@
 
 **Анализ:**
 - Упоминается в AI_START_HERE.md
-- НЕ найден в KNOWLEDGE_BASE/02_UNITY/
+- НЕ найден в 03-Resources/Knowledge/02_UNITY/
 - Есть PROJECTS/DragRaceUnity/DEBUGGING_GUIDE.md (другой файл)
 
 **Вывод:** 🚨 **НЕ СУЩЕСТВОВАЛ**  
@@ -195,7 +195,7 @@
 
 **Анализ:**
 - Упоминается в AI_START_HERE.md
-- НЕ найден в KNOWLEDGE_BASE/05_METHODOLOGY/
+- НЕ найден в 03-Resources/Knowledge/05_METHODOLOGY/
 
 **Вывод:** 🚨 **НЕ СУЩЕСТВОВАЛ**  
 **Решение:** Удалить ссылку
@@ -208,7 +208,7 @@
 
 **Анализ:**
 - Упоминается в AI_START_HERE.md
-- НЕ найден в KNOWLEDGE_BASE/05_METHODOLOGY/
+- НЕ найден в 03-Resources/Knowledge/05_METHODOLOGY/
 
 **Вывод:** 🚨 **НЕ СУЩЕСТВОВАЛ**  
 **Решение:** Удалить ссылку
@@ -350,7 +350,7 @@ git log --all --full-history -- "**/file_naming_rule.md"
 git log --all --full-history -- "**/file_naming_rule.md"
 
 # Восстановить файл
-git checkout <commit-hash> -- KNOWLEDGE_BASE/01_RULES/file_naming_rule.md
+git checkout <commit-hash> -- 03-Resources/Knowledge/01_RULES/file_naming_rule.md
 ```
 
 ### Шаг 2: Создание критичных файлов
@@ -369,3 +369,4 @@ git checkout <commit-hash> -- KNOWLEDGE_BASE/01_RULES/file_naming_rule.md
 
 **Файл создан:** 2 марта 2026 г.  
 **Анализ завершён:** ✅
+

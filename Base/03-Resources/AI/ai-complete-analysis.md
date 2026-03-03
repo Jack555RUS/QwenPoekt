@@ -1,4 +1,4 @@
-# 🧠 ИИ: ПОЛНЫЙ АНАЛИЗ — ОБУЧЕНИЕ, РАЗВИТИЕ, МЫШЛЕНИЕ
+﻿# 🧠 ИИ: ПОЛНЫЙ АНАЛИЗ — ОБУЧЕНИЕ, РАЗВИТИЕ, МЫШЛЕНИЕ
 
 **Версия:** 3.0 (Deep Analysis Complete)
 **Дата:** 3 марта 2026 г.
@@ -406,7 +406,7 @@ GPT-4 (175B) → 1M примеров → GPT-4o (10B)
 ИИ использовал относительный путь вместо абсолютного
 
 ## Анализ
-- Ошибка: `./scripts/file.ps1`
+- Ошибка: `./03-Resources/PowerShell/file.ps1`
 - Правильно: `D:\QwenPoekt\Base\scripts\file.ps1`
 
 ## Правило
@@ -773,3 +773,4 @@ RAG (Retrieval-Augmented Generation) — это как:
 - Shinn et al. (2023) — Self-Reflection
 - Gartner (2026) — Adaptive AI
 - Devox Software (2026) — AI Engineering
+

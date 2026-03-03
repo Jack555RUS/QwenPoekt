@@ -1,4 +1,4 @@
-# 📚 NAVIGATOR — НАВИГАТОР ПО БАЗЕ ЗНАНИЙ
+﻿# 📚 NAVIGATOR — НАВИГАТОР ПО БАЗЕ ЗНАНИЙ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -54,7 +54,7 @@ D:\QwenPoekt\Base/
 │   ├── PowerShell/               # Скрипты (79 файлов)
 │   └── ...
 │
-├── 📜 scripts/                   # Скрипты Ядра
+├── 📜 03-Resources/PowerShell/                   # Скрипты Ядра
 │   ├── check-kernel-integrity.ps1    # Проверка Ядра
 │   ├── test-seamless-launch.ps1      # Тест запуска
 │   ├── check-file-naming.ps1         # Проверка имён
@@ -85,7 +85,7 @@ D:\QwenPoekt\Base/
 | **Правила** | ~10 | `grep -r "правило" 01_RULES/` |
 | **Стандарты** | ~5 | `grep -r "стандарт" 02_STANDARDS/` |
 | **Документация** | ~70 | `grep -r "руководство" 02-Areas/` |
-| **Скрипты** | ~85 | `ls scripts/, 03-Resources/PowerShell/` |
+| **Скрипты** | ~85 | `ls 03-Resources/PowerShell/, 03-Resources/PowerShell/` |
 | **Отчёты** | ~50 | `ls reports/` |
 | **Сессии** | ~250 | `ls sessions/` |
 
@@ -115,7 +115,7 @@ grep_search -pattern "правила" -path "03-Resources/Knowledge/01_RULES/"
 | **Правило** | `01_RULES/` |
 | **Стандарт** | `02_STANDARDS/` |
 | **Руководство** | `02-Areas/Documentation/` |
-| **Скрипт** | `03-Resources/PowerShell/` или `scripts/` |
+| **Скрипт** | `03-Resources/PowerShell/` или `03-Resources/PowerShell/` |
 | **Шаблон** | `04_TEMPLATES/` |
 | **Отчёт** | `reports/` |
 
@@ -253,7 +253,7 @@ tags: [тег1, тег2]
 
 **Планируется:**
 
-1. **Автоматизация проверок** — scripts/weekly-knowledge-audit.ps1
+1. **Автоматизация проверок** — 03-Resources/PowerShell/weekly-knowledge-audit.ps1
 2. **CI/CD для документации** — автоматическая проверка ссылок
 3. **Индекс хэшей файлов** — meta/file_hashes.json
 4. **Гиперссылки между файлами** — автоматическое обновление
@@ -267,3 +267,4 @@ tags: [тег1, тег2]
 ---
 
 **Нашёл что искал? Приступай к работе!** 🚀
+

@@ -1,4 +1,4 @@
-# 🧠 UNITYCSREFERENCE — ПОЛНЫЙ АНАЛИЗ
+﻿# 🧠 UNITYCSREFERENCE — ПОЛНЫЙ АНАЛИЗ
 
 **Дата:** 2 марта 2026 г.  
 **Репозиторий:** UnityCsReference (Unity 6000.2.0b4)  
@@ -342,9 +342,10 @@ public async Task LoadSceneAsync(string sceneName)
 
 - [`reports/UnityCsReference_ANALYSIS.md`](./UnityCsReference_ANALYSIS.md) — Предыдущий анализ
 - [`TEMP/UnityCsReference/`](./TEMP/UnityCsReference/) — Исходный код
-- [`KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md`](./KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md) — Мышление ИИ
+- [`03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md`](./03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md) — Мышление ИИ
 
 ---
 
 **Анализ завершён:** 2 марта 2026 г.  
 **Следующее действие:** Применить знания в DragRaceUnity
+

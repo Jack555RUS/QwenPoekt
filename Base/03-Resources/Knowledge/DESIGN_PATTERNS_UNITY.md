@@ -1,4 +1,4 @@
----
+﻿---
 status: draft
 created: 2026-03-02
 last_reviewed: 2026-03-02
@@ -939,8 +939,8 @@ public class DamagedState : IOpponentState
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`../../KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md`](./CODE_STYLE.md) — C# Style Guide
-- [`../../KNOWLEDGE_BASE/00_CORE/csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты C#
+- [`../../03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md`](./CODE_STYLE.md) — C# Style Guide
+- [`../../03-Resources/Knowledge/00_CORE/csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты C#
 - [`../../reports/GITHUB_REPOSITORIES_CATALOG.md`](../reports/GITHUB_REPOSITORIES_CATALOG.md) — GitHub репозитории
 
 ---
@@ -948,3 +948,4 @@ public class DamagedState : IOpponentState
 **Статус:** ⏳ Черновик  
 **Последнее обновление:** 2026-03-02  
 **Следующее действие:** Применить паттерны к PROJECTS/DragRaceUnity
+

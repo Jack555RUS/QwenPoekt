@@ -1,4 +1,4 @@
-# 📚 КАТАЛОГ ВСЕХ ПРАВИЛ И СТАНДАРТОВ
+﻿# 📚 КАТАЛОГ ВСЕХ ПРАВИЛ И СТАНДАРТОВ
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -29,14 +29,14 @@
                         ↓
 ┌─────────────────────────────────────────────────────────┐
 │  УРОВЕНЬ 2: СТАНДАРТЫ И СТАНДАРТЫ (код, данные)        │
-│  ├─ KNOWLEDGE_BASE/00_CORE/csharp_standards.md         │
-│  ├─ KNOWLEDGE_BASE/01_RULES/*.md                       │
-│  └─ _docs/FILE_CHANGE_RULE.md                          │
+│  ├─ 03-Resources/Knowledge/00_CORE/csharp_standards.md         │
+│  ├─ 03-Resources/Knowledge/01_RULES/*.md                       │
+│  └─ 02-Areas/Documentation/FILE_CHANGE_RULE.md                          │
 └─────────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────────┐
 │  УРОВЕНЬ 3: РУКОВОДСТВА (how-to)                       │
-│  ├─ _docs/*_GUIDE.md (20+ файлов)                      │
+│  ├─ 02-Areas/Documentation/*_GUIDE.md (20+ файлов)                      │
 │  └─ OLD/*/BUILD_INSTRUCTIONS.md                        │
 └─────────────────────────────────────────────────────────┘
                         ↓
@@ -104,7 +104,7 @@
 
 ## 📋 УРОВЕНЬ 2: СТАНДАРТЫ
 
-### 2.1 KNOWLEDGE_BASE/00_CORE/csharp_standards.md
+### 2.1 03-Resources/Knowledge/00_CORE/csharp_standards.md
 
 **Назначение:** Стандарты кода C#
 
@@ -122,11 +122,11 @@
 
 **Связанные файлы:**
 - `.editorconfig`
-- `KNOWLEDGE_BASE/01_RULES/file_naming_rule.md`
+- `03-Resources/Knowledge/01_RULES/file_naming_rule.md`
 
 ---
 
-### 2.2 KNOWLEDGE_BASE/01_RULES/
+### 2.2 03-Resources/Knowledge/01_RULES/
 
 **Назначение:** Правила разработки
 
@@ -137,12 +137,12 @@
 | `file_naming_rule.md` | Именование файлов (snake_case) | ✅ |
 
 **Связанные файлы:**
-- `_docs/STRUCTURE_GUIDE.md`
-- `_docs/KB_AUDIT_GUIDE.md`
+- `02-Areas/Documentation/STRUCTURE_GUIDE.md`
+- `02-Areas/Documentation/KB_AUDIT_GUIDE.md`
 
 ---
 
-### 2.3 KNOWLEDGE_BASE/05_METHODOLOGY/
+### 2.3 03-Resources/Knowledge/05_METHODOLOGY/
 
 **Назначение:** Методологии и инструкции для ИИ
 
@@ -159,7 +159,7 @@
 
 ---
 
-### 2.3 _docs/FILE_CHANGE_RULE.md
+### 2.3 02-Areas/Documentation/FILE_CHANGE_RULE.md
 
 **Назначение:** Правило обновления связанных файлов
 
@@ -172,7 +172,7 @@
 
 **Связанные файлы:**
 - `RULES_AND_TASKS.md`
-- `_docs/STRUCTURE_GUIDE.md`
+- `02-Areas/Documentation/STRUCTURE_GUIDE.md`
 
 ---
 
@@ -191,7 +191,7 @@
 ```
 AI_START_HERE.md (Инструменты)
     ↓
-scripts/pre-operation-backup.ps1
+03-Resources/PowerShell/pre-operation-backup.ps1
     ↓
 reports/OPERATION_LOG.md
 ```
@@ -208,7 +208,7 @@ reports/OPERATION_LOG.md
 
 **Интеграция:**
 ```
-scripts/kb-audit.ps1
+03-Resources/PowerShell/kb-audit.ps1
     ↓
 reports/KB_AUDIT_REPORT.md
     ↓
@@ -227,11 +227,11 @@ OPERATION_LOG.md
 
 **Интеграция:**
 ```
-scripts/create-test-env.ps1
+03-Resources/PowerShell/create-test-env.ps1
     ↓
 _TEST_ENV/
     ↓
-scripts/cleanup-test-env.ps1
+03-Resources/PowerShell/cleanup-test-env.ps1
 ```
 
 ---
@@ -263,7 +263,7 @@ KNOWLEDGE_BASE/
 
 ### 4.1 Установка и настройка
 
-**Файлы в _docs/:**
+**Файлы в 02-Areas/Documentation/:**
 - `INSTALL_SONARLINT.md`
 - `INSTALL_NUGET_PACKETS.md`
 - `INSTALL_SIMPLE_RU.md`
@@ -279,7 +279,7 @@ KNOWLEDGE_BASE/
 ```
 AI_START_HERE.md (Настройка)
     ↓
-_docs/INSTALL_*.md
+02-Areas/Documentation/INSTALL_*.md
     ↓
 PROJECTS/DragRaceUnity/
 ```
@@ -288,7 +288,7 @@ PROJECTS/DragRaceUnity/
 
 ### 4.2 Отладка и тестирование
 
-**Файлы в _docs/:**
+**Файлы в 02-Areas/Documentation/:**
 - `DEBUGGING_GUIDE.md`
 - `DEBUG_CHECKLIST.md`
 - `TESTING_GUIDE.md`
@@ -298,16 +298,16 @@ PROJECTS/DragRaceUnity/
 ```
 PROJECTS/DragRaceUnity/
     ↓
-_docs/DEBUGGING_GUIDE.md
+02-Areas/Documentation/DEBUGGING_GUIDE.md
     ↓
-scripts/debug-unity.ps1
+03-Resources/PowerShell/debug-unity.ps1
 ```
 
 ---
 
 ### 4.3 Сохранения и данные
 
-**Файлы в _docs/:**
+**Файлы в 02-Areas/Documentation/:**
 - `SAVE_SYSTEM_GUIDE.md`
 - `STATUS.md`
 - `WHAT_IS_IMPLEMENTED.md`
@@ -318,9 +318,9 @@ scripts/debug-unity.ps1
 ```
 PROJECTS/DragRaceUnity/
     ↓
-_docs/SAVE_SYSTEM_GUIDE.md
+02-Areas/Documentation/SAVE_SYSTEM_GUIDE.md
     ↓
-scripts/
+03-Resources/PowerShell/
 ```
 
 ---
@@ -338,7 +338,7 @@ scripts/
 **Статус:** ⚠️ Требуют актуализации
 
 **Рекомендация:**
-- Переместить актуальные в `_docs/`
+- Переместить актуальные в `02-Areas/Documentation/`
 - Устаревшие → в `_archive/`
 
 ---
@@ -358,33 +358,33 @@ scripts/
 ┌─────────────────────────────────────────────────────────┐
 │  README.md (НАВИГАТОР)                                 │
 │  ├─ Ссылается на STRUCTURE_GUIDE.md                    │
-│  ├─ Ссылается на _docs/*.md                            │
+│  ├─ Ссылается на 02-Areas/Documentation/*.md                            │
 │  └─ Ссылается на KNOWLEDGE_BASE/                       │
 └─────────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────────┐
 │  STRUCTURE_GUIDE.md (СТРУКТУРА)                        │
 │  ├─ Описывает иерархию                                 │
-│  ├─ Ссылается на KNOWLEDGE_BASE/00_CORE/               │
-│  └─ Ссылается на KNOWLEDGE_BASE/01_RULES/              │
+│  ├─ Ссылается на 03-Resources/Knowledge/00_CORE/               │
+│  └─ Ссылается на 03-Resources/Knowledge/01_RULES/              │
 └─────────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────────┐
-│  KNOWLEDGE_BASE/01_RULES/ (ПРАВИЛА)                    │
+│  03-Resources/Knowledge/01_RULES/ (ПРАВИЛА)                    │
 │  ├─ file_naming_rule.md                                │
 │  ├─ ui_toolkit_rules.md                                │
 │  └─ before_change_rule.md                              │
 └─────────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────────┐
-│  _docs/*_GUIDE.md (РУКОВОДСТВА)                        │
+│  02-Areas/Documentation/*_GUIDE.md (РУКОВОДСТВА)                        │
 │  ├─ BACKUP_STRATEGY.md                                 │
 │  ├─ DEDUP_GUIDE.md                                     │
 │  └─ KB_AUDIT_GUIDE.md                                  │
 └─────────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────────┐
-│  scripts/*.ps1 (АВТОМАТИЗАЦИЯ)                         │
+│  03-Resources/PowerShell/*.ps1 (АВТОМАТИЗАЦИЯ)                         │
 │  ├─ pre-operation-backup.ps1                           │
 │  ├─ kb-audit.ps1                                       │
 │  └─ safe-delete.ps1                                    │
@@ -420,9 +420,9 @@ scripts/
 
 2. **Определить уровень:**
    - Глобальное → `RULES_AND_TASKS.md`
-   - Стандарт → `KNOWLEDGE_BASE/00_CORE/` или `01_RULES/`
-   - Руководство → `_docs/*_GUIDE.md`
-   - Инструкция → `_docs/INSTALL_*.md`
+   - Стандарт → `03-Resources/Knowledge/00_CORE/` или `01_RULES/`
+   - Руководство → `02-Areas/Documentation/*_GUIDE.md`
+   - Инструкция → `02-Areas/Documentation/INSTALL_*.md`
 
 3. **Обновить связанные файлы:**
    - `AI_START_HERE.md` (карта проекта)
@@ -519,19 +519,19 @@ code reports\RULE_TEST_CASES.md
 - [`.qwen/QWEN.md`](.qwen/QWEN.md)
 
 ### Стандарты:
-- [`csharp_standards.md`](KNOWLEDGE_BASE/00_CORE/csharp_standards.md)
-- [`ui_toolkit_rules.md`](KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md)
-- [`file_naming_rule.md`](KNOWLEDGE_BASE/01_RULES/file_naming_rule.md)
+- [`csharp_standards.md`](03-Resources/Knowledge/00_CORE/csharp_standards.md)
+- [`ui_toolkit_rules.md`](03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md)
+- [`file_naming_rule.md`](03-Resources/Knowledge/01_RULES/file_naming_rule.md)
 
 ### Руководства:
-- [`BACKUP_STRATEGY.md`](_docs/BACKUP_STRATEGY.md)
-- [`DEDUP_GUIDE.md`](_docs/DEDUP_GUIDE.md)
-- [`KB_AUDIT_GUIDE.md`](_docs/KB_AUDIT_GUIDE.md)
+- [`BACKUP_STRATEGY.md`](02-Areas/Documentation/BACKUP_STRATEGY.md)
+- [`DEDUP_GUIDE.md`](02-Areas/Documentation/DEDUP_GUIDE.md)
+- [`KB_AUDIT_GUIDE.md`](02-Areas/Documentation/KB_AUDIT_GUIDE.md)
 
 ### Инструкции:
-- [`INSTALL_SONARLINT.md`](_docs/INSTALL_SONARLINT.md)
-- [`DEBUGGING_GUIDE.md`](_docs/DEBUGGING_GUIDE.md)
-- [`TESTING_GUIDE.md`](_docs/TESTING_GUIDE.md)
+- [`INSTALL_SONARLINT.md`](02-Areas/Documentation/INSTALL_SONARLINT.md)
+- [`DEBUGGING_GUIDE.md`](02-Areas/Documentation/DEBUGGING_GUIDE.md)
+- [`TESTING_GUIDE.md`](02-Areas/Documentation/TESTING_GUIDE.md)
 
 ---
 
@@ -542,3 +542,4 @@ code reports\RULE_TEST_CASES.md
 ---
 
 **Используйте этот файл для навигации по всем правилам проекта!** 🚀
+

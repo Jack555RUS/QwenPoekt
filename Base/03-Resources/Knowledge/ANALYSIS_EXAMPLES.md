@@ -1,4 +1,4 @@
-# Примеры анализа материалов
+﻿# Примеры анализа материалов
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -27,7 +27,7 @@
 
 ## 🔮 Итоговая рекомендация
 
-✅ **Добавить в KNOWLEDGE_BASE/01_RULES/**
+✅ **Добавить в 03-Resources/Knowledge/01_RULES/**
 
 ---
 
@@ -82,8 +82,8 @@ button.RegisterCallback<ClickEvent>(OnClick);
 
 ## 🔗 Связи с другими объектами
 
-- [01_RULES/ui_toolkit_rules.md](../KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md)
-- [03_PATTERNS/menu_creation.md](../KNOWLEDGE_BASE/03_PATTERNS/menu_creation.md)
+- [01_RULES/ui_toolkit_rules.md](../03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md)
+- [03_PATTERNS/menu_creation.md](../03-Resources/Knowledge/03_PATTERNS/menu_creation.md)
 
 ---
 
@@ -133,7 +133,7 @@ button.RegisterCallback<ClickEvent>(OnClick);
 
 ## 🔮 Итоговая рекомендация
 
-✅ **Добавить в scripts/ и создать документацию**
+✅ **Добавить в 03-Resources/PowerShell/ и создать документацию**
 
 ---
 
@@ -192,7 +192,7 @@ button.RegisterCallback<ClickEvent>(OnClick);
 
 ## 🔗 Связи с другими объектами
 
-- [_docs/PRE_OPERATION_BACKUP_GUIDE.md](_docs/PRE_OPERATION_BACKUP_GUIDE.md)
+- [02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md)
 - [reports/OPERATION_LOG.md](reports/OPERATION_LOG.md)
 
 ---
@@ -207,7 +207,7 @@ button.RegisterCallback<ClickEvent>(OnClick);
 **Статус:** ✅ Готов
 
 **Связанные файлы:**
-- [_docs/PRE_OPERATION_BACKUP_GUIDE.md](_docs/PRE_OPERATION_BACKUP_GUIDE.md)
+- [02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md)
 
 **Теги:** #powershell #backup #safety
 
@@ -225,8 +225,8 @@ button.RegisterCallback<ClickEvent>(OnClick);
 
 ## 📋 План действий
 
-1. [ ] Создать файл `scripts/pre-operation-backup.ps1`
-2. [ ] Создать руководство `_docs/PRE_OPERATION_BACKUP_GUIDE.md`
+1. [ ] Создать файл `03-Resources/PowerShell/pre-operation-backup.ps1`
+2. [ ] Создать руководство `02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md`
 3. [ ] Протестировать на _TEST_ENV
 4. [ ] Записать в OPERATION_LOG.md
 5. [ ] Git коммит
@@ -281,7 +281,7 @@ button.RegisterCallback<ClickEvent>(OnClick);
 **Решение:**
 ```powershell
 # 1. Восстановление из Git
-git restore Base/scripts/
+git restore Base/03-Resources/PowerShell/
 git restore Base/reports/
 
 # 2. Проверка целостности
@@ -311,8 +311,8 @@ git restore Base/reports/
 
 ## 🔗 Связи с другими объектами
 
-- [03_PATTERNS/error_solutions.md](../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md)
-- [_docs/BACKUP_STRATEGY.md](_docs/BACKUP_STRATEGY.md)
+- [03_PATTERNS/error_solutions.md](../03-Resources/Knowledge/03_PATTERNS/error_solutions.md)
+- [02-Areas/Documentation/BACKUP_STRATEGY.md](02-Areas/Documentation/BACKUP_STRATEGY.md)
 
 ---
 
@@ -425,3 +425,4 @@ git restore Base/reports/
 ---
 
 **Используйте эти примеры как шаблон!** 🚀
+

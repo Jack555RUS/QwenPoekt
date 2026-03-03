@@ -1,4 +1,4 @@
-# 🌉 МОСТ ДЛЯ ДОСТУПА К ПАПКАМ — ИНСТРУКЦИЯ
+﻿# 🌉 МОСТ ДЛЯ ДОСТУПА К ПАПКАМ — ИНСТРУКЦИЯ
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -190,7 +190,7 @@ mklink /J "D:\QwenPoekt\Base\_TEST_ENV_LINK" "D:\QwenPoekt\_TEST_ENV"
 
 - [`create-bridge.bat`](./create-bridge.bat) — Скрипт создания моста
 - [`QwenPoekt.code-workspace`](../QwenPoekt.code-workspace) — Multi-Root Workspace
-- [`_docs/VS_CODE_SETUP_FOR_AI.md`](./VS_CODE_SETUP_FOR_AI.md) — Настройка VS Code
+- [`02-Areas/Documentation/VS_CODE_SETUP_FOR_AI.md`](./VS_CODE_SETUP_FOR_AI.md) — Настройка VS Code
 
 ---
 
@@ -212,3 +212,4 @@ mklink /J "D:\QwenPoekt\Base\_TEST_ENV_LINK" "D:\QwenPoekt\_TEST_ENV"
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** После тестирования моста
+

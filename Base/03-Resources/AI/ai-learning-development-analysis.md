@@ -1,4 +1,4 @@
-# 🧠 ИИ: ОБУЧЕНИЕ, РАЗВИТИЕ, МЫШЛЕНИЕ — ГЛУБОКИЙ АНАЛИЗ
+﻿# 🧠 ИИ: ОБУЧЕНИЕ, РАЗВИТИЕ, МЫШЛЕНИЕ — ГЛУБОКИЙ АНАЛИЗ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -240,7 +240,7 @@ Response Generation (генерация ответа)
 ИИ использовал относительный путь вместо абсолютного
 
 ## Анализ
-- Ошибка: `./scripts/file.ps1`
+- Ошибка: `./03-Resources/PowerShell/file.ps1`
 - Правильно: `D:\QwenPoekt\Base\scripts\file.ps1`
 
 ## Правило
@@ -508,3 +508,4 @@ RAG (Retrieval-Augmented Generation) — это как:
 - Prompt Engineering Best Practices 2026 (ARTJOKER)
 - Thinking Fast, Slow, and Artificial (ResearchGate)
 - 12 AI Books for 2026 (Medium)
+

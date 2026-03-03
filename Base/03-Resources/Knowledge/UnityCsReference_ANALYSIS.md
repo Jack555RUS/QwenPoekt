@@ -1,4 +1,4 @@
-# 🧠 UNITYCSREFERENCE — ГЛУБОКИЙ АНАЛИЗ
+﻿# 🧠 UNITYCSREFERENCE — ГЛУБОКИЙ АНАЛИЗ
 
 **Дата анализа:** 2 марта 2026 г.  
 **Репозиторий:** https://github.com/Unity-Technologies/UnityCsReference  
@@ -469,10 +469,11 @@ public async Task LoadAsync()
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`](../KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md) — Предыдущий анализ
+- [`03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`](../03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md) — Предыдущий анализ
 - [`TEMP/UnityCsReference/`](./) — Исходный код
 
 ---
 
 **Анализ завершён:** 2 марта 2026 г.  
 **Следующее действие:** Исправить AI_START_HERE.md
+

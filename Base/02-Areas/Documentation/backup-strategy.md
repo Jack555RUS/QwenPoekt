@@ -1,4 +1,4 @@
-# Стратегия резервного копирования
+﻿# Стратегия резервного копирования
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -68,7 +68,7 @@
 
 **Когда:** Ежедневно в 18:00
 
-**Скрипт:** [`auto-commit-daily.ps1`](../../scripts/auto-commit-daily.ps1)
+**Скрипт:** [`auto-commit-daily.ps1`](../../03-Resources/PowerShell/auto-commit-daily.ps1)
 
 **Команда:**
 ```powershell
@@ -82,8 +82,8 @@
 
 **Что коммитить:**
 - ✅ `KNOWLEDGE_BASE/` (база знаний)
-- ✅ `scripts/` (скрипты)
-- ✅ `_docs/` (документация)
+- ✅ `03-Resources/PowerShell/` (скрипты)
+- ✅ `02-Areas/Documentation/` (документация)
 - ✅ `_templates/` (шаблоны)
 - ✅ `reports/` (отчёты)
 - ❌ `PROJECTS/` (Unity проекты, локально)
@@ -121,7 +121,7 @@
 
 ### Автоматическое (Task Scheduler)
 
-**Скрипт:** [`schedule-backup-tasks.ps1`](../../scripts/schedule-backup-tasks.ps1)
+**Скрипт:** [`schedule-backup-tasks.ps1`](../../03-Resources/PowerShell/schedule-backup-tasks.ps1)
 
 **Задачи:**
 
@@ -371,3 +371,4 @@ Get-ChildItem "D:\QwenPoekt\_BACKUP" -Recurse |
 ---
 
 **Прочитал? Настрой бэкап!** 🚀
+

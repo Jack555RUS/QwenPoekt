@@ -1,4 +1,4 @@
-# Архив устаревших знаний
+﻿# Архив устаревших знаний
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -32,7 +32,7 @@
 ├── README.md                     # Этот файл
 ├── 2025/                         # Архив за 2025 год
 │   ├── old_rules/                # Старые правила
-│   ├── deprecated_scripts/       # Устаревшие скрипты
+│   ├── deprecated_03-Resources/PowerShell/       # Устаревшие скрипты
 │   └── historical_articles/      # Исторические статьи
 ├── 2024/                         # Архив за 2024 год
 └── ...
@@ -58,8 +58,8 @@
 
 ```powershell
 # Переместить файл в архив
-Move-Item "KNOWLEDGE_BASE/01_RULES/old_rule.md" `
-          "KNOWLEDGE_BASE/04_ARCHIVES/2025/old_rules/"
+Move-Item "03-Resources/Knowledge/01_RULES/old_rule.md" `
+          "03-Resources/Knowledge/04_ARCHIVES/2025/old_rules/"
 ```
 
 ---
@@ -176,7 +176,7 @@ Ctrl+Shift+F → [текст] (выбрать папку 04_ARCHIVES)
 |------|----------|
 | [_archive/](../../_archive/) | Общий архив проекта |
 | [_drafts/](../../_drafts/) | Черновики (7 дней) |
-| [ANALYSIS_PROCESS.md](../../_docs/ANALYSIS_PROCESS.md) | Процесс анализа |
+| [ANALYSIS_PROCESS.md](../../02-Areas/Documentation/ANALYSIS_PROCESS.md) | Процесс анализа |
 
 ---
 
@@ -203,7 +203,7 @@ Ctrl+Shift+F → [текст] (выбрать папку 04_ARCHIVES)
 
 ### Пример 2: Устаревший скрипт
 
-**Файл:** `04_ARCHIVES/2025/deprecated_scripts/old-backup.ps1`
+**Файл:** `04_ARCHIVES/2025/deprecated_03-Resources/PowerShell/old-backup.ps1`
 
 ```powershell
 # ============================================================================
@@ -225,11 +225,11 @@ Ctrl+Shift+F → [текст] (выбрать папку 04_ARCHIVES)
 ```powershell
 # Создать папку года
 $year = (Get-Date).Year
-New-Item "KNOWLEDGE_BASE/04_ARCHIVES/$year" -ItemType Directory -Force
+New-Item "03-Resources/Knowledge/04_ARCHIVES/$year" -ItemType Directory -Force
 
 # Переместить файл
-Move-Item "KNOWLEDGE_BASE/01_RULES/old_file.md" `
-          "KNOWLEDGE_BASE/04_ARCHIVES/$year/old_rules/"
+Move-Item "03-Resources/Knowledge/01_RULES/old_file.md" `
+          "03-Resources/Knowledge/04_ARCHIVES/$year/old_rules/"
 ```
 
 ### Мониторинг архива
@@ -250,3 +250,4 @@ Get-ChildItem "KNOWLEDGE_BASE/04_ARCHIVES" -Recurse |
 ---
 
 **Архивируй устаревшее, сохраняй историю!** 📚
+

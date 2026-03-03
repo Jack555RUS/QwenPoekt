@@ -1,4 +1,4 @@
-# 🌉 MCP FILESYSTEM — НАСТРОЙКА ДОСТУПА
+﻿# 🌉 MCP FILESYSTEM — НАСТРОЙКА ДОСТУПА
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -297,8 +297,8 @@ node --version
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`.qwen/settings.json`](./.qwen/settings.json) — Конфигурация MCP
-- [`_docs/BRIDGE_SETUP.md`](./BRIDGE_SETUP.md) — Мост через Junction
-- [`_docs/VS_CODE_SETUP_FOR_AI.md`](./VS_CODE_SETUP_FOR_AI.md) — Настройка VS Code
+- [`02-Areas/Documentation/BRIDGE_SETUP.md`](./BRIDGE_SETUP.md) — Мост через Junction
+- [`02-Areas/Documentation/VS_CODE_SETUP_FOR_AI.md`](./VS_CODE_SETUP_FOR_AI.md) — Настройка VS Code
 
 ---
 
@@ -313,3 +313,4 @@ node --version
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** После тестирования MCP
+

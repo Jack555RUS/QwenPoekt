@@ -1,4 +1,4 @@
-# 🧠 ЭПИЗОДИЧЕСКАЯ ПАМЯТЬ (EPISODIC MEMORY)
+﻿# 🧠 ЭПИЗОДИЧЕСКАЯ ПАМЯТЬ (EPISODIC MEMORY)
 
 **Версия:** 1.0  
 **Дата создания:** 2 марта 2026 г.  
@@ -283,9 +283,9 @@ OLD/
 - **Версия Unity:** 6000.3.10f1
 - **Файлы затронуты:** 
   - `OLD/README.md`
-  - `scripts/move-to-old.ps1`
-  - `scripts/old-analysis.ps1`
-  - `scripts/old-cleanup.ps1`
+  - `03-Resources/PowerShell/move-to-old.ps1`
+  - `03-Resources/PowerShell/old-analysis.ps1`
+  - `03-Resources/PowerShell/old-cleanup.ps1`
   - `AI_START_HERE.md`
 - **Git статус:** 5 коммитов ahead
 
@@ -327,9 +327,9 @@ OLD/
 
 **Файлы изменены:**
 - `OLD/README.md` (создан)
-- `scripts/move-to-old.ps1` (создан)
-- `scripts/old-analysis.ps1` (создан)
-- `scripts/old-cleanup.ps1` (создан)
+- `03-Resources/PowerShell/move-to-old.ps1` (создан)
+- `03-Resources/PowerShell/old-analysis.ps1` (создан)
+- `03-Resources/PowerShell/old-cleanup.ps1` (создан)
 - `AI_START_HERE.md` (дополнен)
 - `reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` (создан)
 
@@ -466,8 +466,8 @@ Case-Based Reasoning (структурированный кейс)
 ## 8. 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`CASE_BASES.md`](./CASE_BASES.md) — Рассуждение на основе прецедентов
-- [`AI_FUNCTIONS.md`](../_docs/AI_FUNCTIONS.md) — Функции ИИ
-- [`logic_rules_for_ai.md`](../_docs/logic_rules_for_ai.md) — Логика ИИ
+- [`AI_FUNCTIONS.md`](../02-Areas/Documentation/AI_FUNCTIONS.md) — Функции ИИ
+- [`logic_rules_for_ai.md`](../02-Areas/Documentation/logic_rules_for_ai.md) — Логика ИИ
 
 ---
 
@@ -511,3 +511,4 @@ Case-Based Reasoning (структурированный кейс)
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** По мере добавления эпизодов
+

@@ -1,4 +1,4 @@
-# 🔍 РАССЛЕДОВАНИЕ: ДОСТУП К ПАПКАМ QWENPOEKT
+﻿# 🔍 РАССЛЕДОВАНИЕ: ДОСТУП К ПАПКАМ QWENPOEKT
 
 **Дата:** 3 марта 2026 г.
 **Статус:** ✅ **ЗАВЕРШЕНО (ТОЛЬКО ЧТЕНИЕ)**
@@ -98,8 +98,8 @@ Qwen Code имеет доступ ТОЛЬКО к:
 ```
 D:\QwenPoekt\Base\
 ├── KNOWLEDGE_BASE/    # Внутри Base → ✅ Доступен
-├── scripts/           # Внутри Base → ✅ Доступен
-├── _docs/             # Внутри Base → ✅ Доступен
+├── 03-Resources/PowerShell/           # Внутри Base → ✅ Доступен
+├── 02-Areas/Documentation/             # Внутри Base → ✅ Доступен
 └── reports/           # Внутри Base → ✅ Доступен
 ```
 
@@ -131,8 +131,8 @@ D:\QwenPoekt\
 | Папка | До PARA | После PARA | Изменение |
 |-------|---------|------------|-----------|
 | **Base/KNOWLEDGE_BASE/** | ✅ Доступен | ✅ Перемещено в Base/03-Resources/Knowledge/ | ✅ OK |
-| **Base/scripts/** | ✅ Доступен | ✅ Перемещено в Base/03-Resources/PowerShell/ | ✅ OK |
-| **Base/_docs/** | ✅ Доступен | ✅ Перемещено в Base/02-Areas/Documentation/ | ✅ OK |
+| **Base/03-Resources/PowerShell/** | ✅ Доступен | ✅ Перемещено в Base/03-Resources/PowerShell/ | ✅ OK |
+| **Base/02-Areas/Documentation/** | ✅ Доступен | ✅ Перемещено в Base/02-Areas/Documentation/ | ✅ OK |
 | **Base/BOOK/** | ✅ Доступен | ❌ Перемещено в D:\QwenPoekt\BOOK\ | ❌ НЕТ доступа |
 | **Base/OLD/** | ✅ Доступен | ❌ Перемещено в D:\QwenPoekt\OLD\ | ❌ НЕТ доступа |
 | **Base/_BACKUP/** | ✅ Доступен | ⚠️ Осталось в D:\QwenPoekt\_BACKUP\ | ⚠️ Частично |
@@ -257,3 +257,4 @@ Qwen Code workspace ограничен Base/
 **Статус:** ✅ **Расследование завершено (ТОЛЬКО ЧТЕНИЕ)**
 
 **Следующий шаг:** Требуется подтверждение пользователя для исправления.
+

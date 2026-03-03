@@ -1,4 +1,4 @@
-# 🚫 ANTI-PATTERNS — Чего НЕ делать (Никогда!)
+﻿# 🚫 ANTI-PATTERNS — Чего НЕ делать (Никогда!)
 
 **Версия:** 1.0  
 **Дата создания:** 2 марта 2026 г.  
@@ -94,7 +94,7 @@ rm important_file.md
 .\scripts\safe-delete.ps1 -Path "_TEMP/" -AutoConfirm
 ```
 
-**Связанное правило:** [`scripts/safe-delete.ps1`](./scripts/safe-delete.ps1)
+**Связанное правило:** [`03-Resources/PowerShell/safe-delete.ps1`](./03-Resources/PowerShell/safe-delete.ps1)
 
 ---
 
@@ -220,7 +220,7 @@ rm important_file.md
 **Что НЕ делать:**
 ```
 ❌ Создать KNOWLEDGE_BASE/new.md
-❌ При этом уже есть _docs/similar.md
+❌ При этом уже есть 02-Areas/Documentation/similar.md
 ```
 
 **Что делать:**
@@ -231,7 +231,7 @@ rm important_file.md
 # Если нет → Создать новый
 ```
 
-**Связанное правило:** [`scripts/check-duplicates.ps1`](./scripts/check-duplicates.ps1)
+**Связанное правило:** [`03-Resources/PowerShell/check-duplicates.ps1`](./03-Resources/PowerShell/check-duplicates.ps1)
 
 ---
 
@@ -269,8 +269,8 @@ rm important_file.md
 **Почему:** Загрязнение корня, сложность навигации
 
 **Правильно:**
-- Документы → `KNOWLEDGE_BASE/` или `_docs/`
-- Скрипты → `scripts/`
+- Документы → `KNOWLEDGE_BASE/` или `02-Areas/Documentation/`
+- Скрипты → `03-Resources/PowerShell/`
 - Отчёты → `reports/`
 
 ---
@@ -395,3 +395,4 @@ graph TD
 **Следующий пересмотр:** 9 марта 2026 г. (еженедельно)
 
 **Правило:** Если действие описано здесь как анти-паттерн → **НЕ ДЕЛАТЬ НИКОГДА!**
+

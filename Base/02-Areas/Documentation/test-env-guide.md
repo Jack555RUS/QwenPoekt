@@ -1,4 +1,4 @@
-# Test Environment — Тестовая среда
+﻿# Test Environment — Тестовая среда
 
 **Назначение:** Изолированная среда для безопасного тестирования скриптов
 
@@ -174,7 +174,7 @@ if ($SourceRoot -notlike "*_TEST_ENV*") {
 ```
 _TEST_ENV/
 ├── Base/                        # Копия Base (облегчённая)
-│   ├── scripts/                 # Скрипты
+│   ├── 03-Resources/PowerShell/                 # Скрипты
 │   │   ├── pre-operation-backup.ps1
 │   │   ├── safe-delete.ps1
 │   │   ├── old-backup-analysis.ps1
@@ -182,7 +182,7 @@ _TEST_ENV/
 │   │   ├── test-safe-delete.ps1             ← Тестовая версия
 │   │   └── test-old-backup-analysis.ps1     ← Тестовая версия
 │   ├── reports/                 # Отчёты
-│   ├── _docs/                   # Документация
+│   ├── 02-Areas/Documentation/                   # Документация
 │   ├── _templates/              # Шаблоны
 │   ├── KNOWLEDGE_BASE/          # База знаний
 │   └── ...                      # Другие папки
@@ -325,3 +325,4 @@ Copy-Item "_TEST_ENV\Base\scripts\test-safe-delete.ps1" "scripts\safe-delete.ps1
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готов к использованию
+

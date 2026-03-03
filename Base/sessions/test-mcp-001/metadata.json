@@ -1,0 +1,8 @@
+{
+  "session_id": "test-mcp-001",
+  "timestamp": 1741024500,
+  "task": "Тестирование MCP Session Saver",
+  "saved_at": "2026-03-03T17:35:00Z",
+  "message_count": 2,
+  "test_session": true
+}

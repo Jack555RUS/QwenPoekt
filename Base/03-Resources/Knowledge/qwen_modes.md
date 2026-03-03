@@ -1,4 +1,4 @@
-# Режимы Qwen 3.5 Plus
+﻿# Режимы Qwen 3.5 Plus
 
 **Версия:** 1.0
 **Дата создания:** 2026-03-02
@@ -143,10 +143,11 @@ Dependency Injection — это паттерн проектирования...
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы
 - [`AI_DEVELOPER_INSTRUCTION.md`](AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
 - [`csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты кода
-- [`PROFILES_MATRIX.md`](../../_docs/PROFILES_MATRIX.md) — Матрица профилей
+- [`PROFILES_MATRIX.md`](../../02-Areas/Documentation/PROFILES_MATRIX.md) — Матрица профилей
 
 ---
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+

@@ -1,4 +1,4 @@
-# 🧠 UNITYCSREFERENCE — ИТОГОВЫЙ АНАЛИЗ (3000+ строк)
+﻿# 🧠 UNITYCSREFERENCE — ИТОГОВЫЙ АНАЛИЗ (3000+ строк)
 
 **Дата завершения:** 2 марта 2026 г.  
 **Репозиторий:** UnityCsReference (Unity 6000.2.0b4)  
@@ -20,7 +20,7 @@
 1. `reports/UnityCsReference_ANALYSIS.md` (478 строк)
 2. `reports/UNITYCSREFERENCE_FULL_ANALYSIS.md` (350 строк)
 3. `reports/UNITY_ATTRIBUTES_GUIDE.md` (500+ строк)
-4. `KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md` (475 строк)
+4. `03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md` (475 строк)
 
 ---
 
@@ -441,7 +441,7 @@ public static class GameBootstrap
 - [`reports/UNITY_ATTRIBUTES_GUIDE.md`](./reports/UNITY_ATTRIBUTES_GUIDE.md)
 
 **База знаний:**
-- [`KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md`](./KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md)
+- [`03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md`](./03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md)
 
 **Исходный код:**
 - [`TEMP/UnityCsReference/`](./TEMP/UnityCsReference/)
@@ -464,3 +464,4 @@ public static class GameBootstrap
 
 **Анализ завершён:** 2 марта 2026 г.  
 **Следующее действие:** Очистить TEMP или применить знания в DragRaceUnity
+

@@ -1,4 +1,4 @@
-# 📖 БАЗА РЕШЁННЫХ ОШИБОК (Error Solutions)
+﻿# 📖 БАЗА РЕШЁННЫХ ОШИБОК (Error Solutions)
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -55,7 +55,7 @@
 # 3. Запустить .\scripts\auto-archive.ps1
 ```
 
-**Скрипт:** `scripts/backup-before-change.ps1`
+**Скрипт:** `03-Resources/PowerShell/backup-before-change.ps1`
 
 #### **Связанные файлы**
 - [`PRE_ACTION_CHECKLIST.md`](../02-Areas/Documentation/PRE_ACTION_CHECKLIST.md)
@@ -141,7 +141,7 @@
 3. Base/ → Внедрение после 100% тестов
 ```
 
-**Скрипт:** `scripts/test-all-changes.ps1`
+**Скрипт:** `03-Resources/PowerShell/test-all-changes.ps1`
 
 #### **Предотвращение**
 ```markdown
@@ -180,3 +180,4 @@
 
 **Восстановлено:** 3 марта 2026 г.
 **Источник:** `ERROR_LOG.md` + `_templates/ERROR_SOLUTION.md`
+

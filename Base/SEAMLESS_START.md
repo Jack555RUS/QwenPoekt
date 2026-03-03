@@ -1,4 +1,4 @@
-# 🚀 БЕСШОВНЫЙ ЗАПУСК — АВТОНОМНАЯ ИНСТРУКЦИЯ
+﻿# 🚀 БЕСШОВНЫЙ ЗАПУСК — АВТОНОМНАЯ ИНСТРУКЦИЯ
 
 **Версия:** 1.0
 **Дата:** 2026-03-03
@@ -70,7 +70,7 @@ Get-Content "ТЕКУЩАЯ_ЗАДАЧА.md"
 | **AGENTS.md** | Точка входа | 🔴 Критично |
 | **.resume_marker.json** | Маркер сессии | 🟡 Важно |
 | **ТЕКУЩАЯ_ЗАДАЧА.md** | Активная задача | 🟡 Важно |
-| **scripts/start-session.ps1** | Запуск сессии | 🟡 Важно |
+| **03-Resources/PowerShell/start-session.ps1** | Запуск сессии | 🟡 Важно |
 
 **Опциональные (восстанавливаются):**
 
@@ -122,7 +122,7 @@ Copy-Item "03-Resources/Knowledge/01_RULES/*" ".qwen/rules/" -Force
 **Скрипт проверки:**
 
 ```powershell
-# scripts/check-kernel-integrity.ps1
+# 03-Resources/PowerShell/check-kernel-integrity.ps1
 $criticalFiles = @(
     "AI_START_HERE.md",
     "AGENTS.md",
@@ -151,8 +151,8 @@ if ($missing.Count -gt 0) {
 
 - [`AI_START_HERE.md`](./AI_START_HERE.md) — Основная инструкция
 - [`AGENTS.md`](./AGENTS.md) — Точка входа
-- [`scripts/check-kernel-integrity.ps1`](./scripts/check-kernel-integrity.ps1) — Проверка целостности
-- [`scripts/start-session.ps1`](./scripts/start-session.ps1) — Запуск сессии
+- [`03-Resources/PowerShell/check-kernel-integrity.ps1`](./03-Resources/PowerShell/check-kernel-integrity.ps1) — Проверка целостности
+- [`03-Resources/PowerShell/start-session.ps1`](./03-Resources/PowerShell/start-session.ps1) — Запуск сессии
 
 ---
 
@@ -160,3 +160,4 @@ if ($missing.Count -gt 0) {
 
 **Последнее обновление:** 3 марта 2026 г.
 **Версия:** 1.0 (Автономный режим)
+

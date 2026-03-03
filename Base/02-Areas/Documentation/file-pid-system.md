@@ -1,4 +1,4 @@
-# 📁 FILE PID SYSTEM
+﻿# 📁 FILE PID SYSTEM
 
 **Версия:** 1.0
 **Дата:** 2026-03-03
@@ -185,10 +185,11 @@ Get-Content "mcp.json.pid" | ConvertFrom-Json
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`scripts/generate-file-pid.ps1`](../../scripts/generate-file-pid.ps1) — Скрипт генерации
+- [`03-Resources/PowerShell/generate-file-pid.ps1`](../../03-Resources/PowerShell/generate-file-pid.ps1) — Скрипт генерации
 - [`reports/FILE_PID_REGISTRY.md`](./FILE_PID_REGISTRY.md) — Реестр PID
 
 ---
 
 **Создано:** 2026-03-03
 **Обновлено:** 2026-03-03
+

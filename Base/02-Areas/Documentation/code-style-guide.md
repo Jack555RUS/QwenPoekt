@@ -1,4 +1,4 @@
-# 📖 ПРАВИЛА ХОРОШЕГО ТОНА (CLEAN CODE) — DRAG RACING PROJECT
+﻿# 📖 ПРАВИЛА ХОРОШЕГО ТОНА (CLEAN CODE) — DRAG RACING PROJECT
 
 **Дата:** 27 февраля 2026 г.  
 **Статус:** ✅ Обязательно к исполнению
@@ -100,7 +100,7 @@ public int CalculateFinalScore(int baseScore, float bonusMultiplier)
 
 ### 4.2. Namespace = Путь к папке
 ```
-Assets/Scripts/UI/MainMenu.cs → namespace Game.UI
+Assets/03-Resources/PowerShell/UI/MainMenu.cs → namespace Game.UI
 ```
 
 ### 4.3. Один класс — один файл
@@ -315,3 +315,4 @@ GameObject:
 ---
 
 **Соблюдайте эти правила — код будет понятным и поддерживаемым!** 🎯
+

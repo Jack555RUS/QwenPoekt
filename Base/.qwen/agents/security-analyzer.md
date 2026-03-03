@@ -1,4 +1,4 @@
-# 🔒 SECURITY ANALYZER AGENT
+﻿# 🔒 SECURITY ANALYZER AGENT
 
 **Роль:** Анализ кода на уязвимости и безопасность
 
@@ -104,7 +104,7 @@ command.Parameters.AddWithValue("@name", name);
 ### Проверить файл на уязвимости:
 
 ```
-/security-analyzer проверь Assets/Scripts/SaveSystem/SaveSystem.cs
+/security-analyzer проверь Assets/03-Resources/PowerShell/SaveSystem/SaveSystem.cs
 ```
 
 ### Проверить весь проект:
@@ -192,3 +192,4 @@ dotnet list package --vulnerable
 **Агент Security Analyzer готов к работе!** 🔒
 
 **Использование:** `/security-analyzer проверь [файл/модуль]`
+

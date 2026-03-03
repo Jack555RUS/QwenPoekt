@@ -1,4 +1,4 @@
-# Анализ скрипта PowerShell
+﻿# Анализ скрипта PowerShell
 
 **Название:** [Название скрипта]  
 **Файл:** [путь/к/файлу.ps1]  
@@ -85,8 +85,8 @@ $result = Function-Name -param1 "value"
 ## 🔗 Связанные файлы
 
 **В Базе Знаний:**
-- [scripts/pre-operation-backup.ps1](../scripts/pre-operation-backup.ps1)
-- [_docs/PRE_OPERATION_BACKUP_GUIDE.md](_docs/PRE_OPERATION_BACKUP_GUIDE.md)
+- [03-Resources/PowerShell/pre-operation-backup.ps1](../03-Resources/PowerShell/pre-operation-backup.ps1)
+- [02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md)
 
 **Внешние ресурсы:**
 - [PowerShell Docs](https://docs.microsoft.com/powershell/)
@@ -144,3 +144,4 @@ $result = Function-Name -param1 "value"
 **Статус:** ✅ Готов / ⚠️ Тестирование / ❌ Устарел
 
 **Дата проверки:** ГГГГ-ММ-ДД
+

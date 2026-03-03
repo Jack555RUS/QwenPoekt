@@ -1,4 +1,4 @@
----
+﻿---
 status: stable
 created: 2026-02-28
 last_reviewed: 2026-03-02
@@ -59,7 +59,7 @@ version: 1.0
 
 **Что это:** Контроллер главного меню.
 
-**Где:** `Assets/Scripts/UI/MainMenuController.cs`
+**Где:** `Assets/03-Resources/PowerShell/UI/MainMenuController.cs`
 
 **Ответственность:**
 - Обработка нажатий кнопок
@@ -80,7 +80,7 @@ version: 1.0
 
 **Что это:** Система сохранений.
 
-**Где:** `Assets/Scripts/SaveSystem/SaveSystem.cs`
+**Где:** `Assets/03-Resources/PowerShell/SaveSystem/SaveSystem.cs`
 
 **Ответственность:**
 - Сериализация данных в JSON
@@ -106,7 +106,7 @@ version: 1.0
 
 **Что это:** Модель данных игрока.
 
-**Где:** `Assets/Scripts/Data/PlayerData.cs`
+**Где:** `Assets/03-Resources/PowerShell/Data/PlayerData.cs`
 
 **Поля:**
 - `playerName` (string) — Имя игрока
@@ -122,7 +122,7 @@ version: 1.0
 
 **Что это:** Система логирования.
 
-**Где:** `Assets/Scripts/Core/Logger.cs`
+**Где:** `Assets/03-Resources/PowerShell/Core/Logger.cs`
 
 **Уровни логов:**
 - `Debug` — Отладочные
@@ -144,7 +144,7 @@ Logger.Error("Критическая ошибка", exception);
 
 **Что это:** Инициализатор игры.
 
-**Где:** `Assets/Scripts/Core/GameInitializer.cs`
+**Где:** `Assets/03-Resources/PowerShell/Core/GameInitializer.cs`
 
 **Ответственность:**
 - Настройка оконного режима (1920x1080)
@@ -291,13 +291,14 @@ Logger.Error("Критическая ошибка", exception);
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`AI_START_HERE.md`](../../AI_START_HERE.md) — Главная инструкция
-- [`STRUCTURE_GUIDE.md`](../../_docs/STRUCTURE_GUIDE.md) — Структура проекта
+- [`STRUCTURE_GUIDE.md`](../../02-Areas/Documentation/STRUCTURE_GUIDE.md) — Структура проекта
 - [`FOR_AI_READ_HERE.md`](FOR_AI_READ_HERE.md) — Контекст для ИИ
 - [`csharp_standards.md`](csharp_standards.md) — Стандарты кода C#
-- [`RULES_INDEX.md`](../../_docs/RULES_INDEX.md) — Индекс всех правил
+- [`RULES_INDEX.md`](../../02-Areas/Documentation/RULES_INDEX.md) — Индекс всех правил
 
 ---
 
 **Правило:** Используй термины из этого файла! ✅
 
 **Последнее обновление:** 28 февраля 2026 г.
+

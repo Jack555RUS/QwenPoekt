@@ -1,4 +1,4 @@
----
+﻿---
 status: draft
 created: 2026-03-02
 last_reviewed: 2026-03-02
@@ -561,8 +561,8 @@ private void FixedUpdate()
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`../../KNOWLEDGE_BASE/00_CORE/csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты C#
-- [`../../KNOWLEDGE_BASE/01_RULES/file_naming_rule.md`](../01_RULES/file_naming_rule.md) — Именование файлов
+- [`../../03-Resources/Knowledge/00_CORE/csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты C#
+- [`../../03-Resources/Knowledge/01_RULES/file_naming_rule.md`](../01_RULES/file_naming_rule.md) — Именование файлов
 - [`../../reports/GITHUB_REPOSITORIES_CATALOG.md`](./GITHUB_REPOSITORIES_CATALOG.md) — GitHub репозитории
 
 ---
@@ -570,3 +570,4 @@ private void FixedUpdate()
 **Статус:** ⏳ Черновик  
 **Последнее обновление:** 2026-03-02  
 **Следующее действие:** Применить к PROJECTS/DragRaceUnity
+

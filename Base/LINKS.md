@@ -1,4 +1,4 @@
-# 🔗 CROSS-REFERENCE LINKS — ПЕРЕКРЁСТНЫЕ ССЫЛКИ
+﻿# 🔗 CROSS-REFERENCE LINKS — ПЕРЕКРЁСТНЫЕ ССЫЛКИ
 
 **Дата:** 1 марта 2026 г.  
 **Версия:** 1.0  
@@ -23,16 +23,16 @@
 
 | Правило | Файл | Где упоминается |
 |---------|------|-----------------|
-| **Проверка перед внесением** | [`01_RULES/before_change_rule.md`](./KNOWLEDGE_BASE/01_RULES/before_change_rule.md) | AI_START_HERE.md (Раздел 2), QWEN.md (Раздел 10) |
-| **Именование файлов** | [`01_RULES/file_naming_rule.md`](./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md) | AI_START_HERE.md (Раздел 2), QWEN.md (Раздел 10), META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
-| **UI Toolkit** | [`01_RULES/ui_toolkit_rules.md`](./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md) | AI_START_HERE.md (Раздел 2) |
+| **Проверка перед внесением** | [`01_RULES/before_change_rule.md`](./03-Resources/Knowledge/01_RULES/before_change_rule.md) | AI_START_HERE.md (Раздел 2), QWEN.md (Раздел 10) |
+| **Именование файлов** | [`01_RULES/file_naming_rule.md`](./03-Resources/Knowledge/01_RULES/file_naming_rule.md) | AI_START_HERE.md (Раздел 2), QWEN.md (Раздел 10), META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
+| **UI Toolkit** | [`01_RULES/ui_toolkit_rules.md`](./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md) | AI_START_HERE.md (Раздел 2) |
 
 ### Методологии
 
 | Правило | Файл | Где упоминается |
 |---------|------|-----------------|
-| **Мета-правила анализа** | [`05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md`](./KNOWLEDGE_BASE/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md) | QWEN.md (Раздел 8) |
-| **Саморазвитие ИИ** | [`05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md`](./KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md) | AI_START_HERE.md (Раздел 8) |
+| **Мета-правила анализа** | [`05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md`](./03-Resources/Knowledge/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md) | QWEN.md (Раздел 8) |
+| **Саморазвитие ИИ** | [`05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md`](./03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md) | AI_START_HERE.md (Раздел 8) |
 
 ---
 
@@ -42,9 +42,9 @@
 |-----------|------|-----------------|
 | **OLD система (полная)** | [`QWEN.md`](./.qwen/QWEN.md) (Раздел 6A, 6B, 6C) | AI_START_HERE.md (Раздел 2.5) |
 | **OLD система (краткая)** | [`AI_START_HERE.md`](./AI_START_HERE.md) (Раздел 2.5) | — |
-| **Скрипт анализа** | [`scripts/old-analysis.ps1`](./scripts/old-analysis.ps1) | AI_START_HERE.md (Раздел 2.5), QWEN.md (Раздел 6A) |
-| **Скрипт очистки** | [`scripts/old-cleanup.ps1`](./scripts/old-cleanup.ps1) | AI_START_HERE.md (Раздел 2.5), QWEN.md (Раздел 6A) |
-| **Скрипт перемещения** | [`scripts/move-to-old.ps1`](./scripts/move-to-old.ps1) | AI_START_HERE.md (Раздел 2.5), QWEN.md (Раздел 6A) |
+| **Скрипт анализа** | [`03-Resources/PowerShell/old-analysis.ps1`](./03-Resources/PowerShell/old-analysis.ps1) | AI_START_HERE.md (Раздел 2.5), QWEN.md (Раздел 6A) |
+| **Скрипт очистки** | [`03-Resources/PowerShell/old-cleanup.ps1`](./03-Resources/PowerShell/old-cleanup.ps1) | AI_START_HERE.md (Раздел 2.5), QWEN.md (Раздел 6A) |
+| **Скрипт перемещения** | [`03-Resources/PowerShell/move-to-old.ps1`](./03-Resources/PowerShell/move-to-old.ps1) | AI_START_HERE.md (Раздел 2.5), QWEN.md (Раздел 6A) |
 | **Отчёт о внедрении** | [`reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md`](./reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md) | AI_START_HERE.md (Раздел 16) |
 
 ---
@@ -54,10 +54,10 @@
 | Компонент | Файл | Где упоминается |
 |-----------|------|-----------------|
 | **Git правило** | [`QWEN.md`](./.qwen/QWEN.md) (Раздел 6) | AI_START_HERE.md (Раздел 4) |
-| **Auto-commit** | [`scripts/auto-commit-daily.ps1`](./scripts/auto-commit-daily.ps1) | AI_START_HERE.md (Раздел 4), QWEN.md (Раздел 6) |
-| **Проверка дубликатов** | [`scripts/check-duplicates.ps1`](./scripts/check-duplicates.ps1) | AI_START_HERE.md (Раздел 8), QWEN.md (Раздел 8) |
-| **Организация корня** | [`scripts/organize-root.ps1`](./scripts/organize-root.ps1) | — |
-| **Обновление AI_START_HERE** | [`scripts/update-ai-start-here.ps1`](./scripts/update-ai-start-here.ps1) | AI_START_HERE.md (Раздел 18) |
+| **Auto-commit** | [`03-Resources/PowerShell/auto-commit-daily.ps1`](./03-Resources/PowerShell/auto-commit-daily.ps1) | AI_START_HERE.md (Раздел 4), QWEN.md (Раздел 6) |
+| **Проверка дубликатов** | [`03-Resources/PowerShell/check-duplicates.ps1`](./03-Resources/PowerShell/check-duplicates.ps1) | AI_START_HERE.md (Раздел 8), QWEN.md (Раздел 8) |
+| **Организация корня** | [`03-Resources/PowerShell/organize-root.ps1`](./03-Resources/PowerShell/organize-root.ps1) | — |
+| **Обновление AI_START_HERE** | [`03-Resources/PowerShell/update-ai-start-here.ps1`](./03-Resources/PowerShell/update-ai-start-here.ps1) | AI_START_HERE.md (Раздел 18) |
 
 ---
 
@@ -66,8 +66,8 @@
 | Компонент | Файл | Где упоминается |
 |-----------|------|-----------------|
 | **TDD правило** | [`QWEN.md`](./.qwen/QWEN.md) (Раздел 12.5) | AI_START_HERE.md (Раздел 12.5) |
-| **Скрипт проверки** | [`scripts/tdd-verify-complete.ps1`](./scripts/tdd-verify-complete.ps1) | _docs/CHEAT_SHEET.md |
-| **Команда** | `/verify-complete` | AI_START_HERE.md (Раздел 9), QWEN.md (Раздел 12.5), _docs/CHEAT_SHEET.md |
+| **Скрипт проверки** | [`03-Resources/PowerShell/tdd-verify-complete.ps1`](./03-Resources/PowerShell/tdd-verify-complete.ps1) | 02-Areas/Documentation/CHEAT_SHEET.md |
+| **Команда** | `/verify-complete` | AI_START_HERE.md (Раздел 9), QWEN.md (Раздел 12.5), 02-Areas/Documentation/CHEAT_SHEET.md |
 
 ---
 
@@ -87,8 +87,8 @@
 
 | Документ | Файл | Описание |
 |----------|------|----------|
-| **Cheat Sheet** | [`_docs/CHEAT_SHEET.md`](./_docs/CHEAT_SHEET.md) | Быстрые команды |
-| **Scripts README** | [`_docs/SCRIPTS_README.md`](./_docs/SCRIPTS_README.md) | Описание скриптов |
+| **Cheat Sheet** | [`02-Areas/Documentation/CHEAT_SHEET.md`](./02-Areas/Documentation/CHEAT_SHEET.md) | Быстрые команды |
+| **Scripts README** | [`02-Areas/Documentation/SCRIPTS_README.md`](./02-Areas/Documentation/SCRIPTS_README.md) | Описание скриптов |
 | **Answer Template** | [`_templates/ANSWER_TEMPLATE.md`](./_templates/ANSWER_TEMPLATE.md) | Шаблон ответа |
 
 ---
@@ -112,8 +112,8 @@
 |------|------|--------|
 | **Как начать работу** | [`AI_START_HERE.md`](./AI_START_HERE.md) | Раздел 12 |
 | **Где мои задачи** | [`NOTES.md`](./NOTES.md) | — |
-| **Как организовать файлы** | [`01_RULES/file_naming_rule.md`](./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md) | — |
-| **Как проверить перед изменением** | [`01_RULES/before_change_rule.md`](./KNOWLEDGE_BASE/01_RULES/before_change_rule.md) | — |
+| **Как организовать файлы** | [`01_RULES/file_naming_rule.md`](./03-Resources/Knowledge/01_RULES/file_naming_rule.md) | — |
+| **Как проверить перед изменением** | [`01_RULES/before_change_rule.md`](./03-Resources/Knowledge/01_RULES/before_change_rule.md) | — |
 | **Как использовать OLD** | [`AI_START_HERE.md`](./AI_START_HERE.md) | Раздел 2.5 |
 | **Как коммитить** | [`QWEN.md`](./.qwen/QWEN.md) | Раздел 6 |
 | **Где правила ИИ** | [`QWEN.md`](./.qwen/QWEN.md) | — |
@@ -137,3 +137,4 @@
 
 **Последнее обновление:** 1 марта 2026 г.  
 **Версия:** 1.0
+

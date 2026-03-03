@@ -1,4 +1,4 @@
-# 📋 PARA ВНЕДРЕНИЕ: НЕДЕЛЯ 2 — РАСПРЕДЕЛЕНИЕ ФАЙЛОВ
+﻿# 📋 PARA ВНЕДРЕНИЕ: НЕДЕЛЯ 2 — РАСПРЕДЕЛЕНИЕ ФАЙЛОВ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -14,9 +14,9 @@
 | **02-Areas/** | 1 | ✅ para-structure-guide.md |
 | **03-Resources/** | 80 | ✅ PowerShell (76), AI, Knowledge, BOOKS, CSharp, Unity |
 | **04-Archives/** | 0 | ✅ Пусто |
-| **scripts/** | 6 | ⏳ Остались .bat, .js |
+| **03-Resources/PowerShell/** | 6 | ⏳ Остались .bat, .js |
 | **reports/** | 55 | ⏳ Нужно распределить |
-| **_docs/** | 60 | ⏳ Нужно распределить |
+| **02-Areas/Documentation/** | 60 | ⏳ Нужно распределить |
 | **KNOWLEDGE_BASE/** | 25 | ⏳ Нужно распределить |
 
 ---
@@ -69,13 +69,13 @@ Get-ChildItem reports -File | Where-Object { $_.LastWriteTime -le (Get-Date).Add
 **Действие:**
 ```powershell
 # Актуальная документация
-Move-Item "_docs/*.md" "02-Areas/Documentation/" -Exclude "*old*","*deprecated*"
+Move-Item "02-Areas/Documentation/*.md" "02-Areas/Documentation/" -Exclude "*old*","*deprecated*"
 
 # Справочные материалы
-Move-Item "_docs/*.md" "03-Resources/Knowledge/" -Include "*guide*","*reference*"
+Move-Item "02-Areas/Documentation/*.md" "03-Resources/Knowledge/" -Include "*guide*","*reference*"
 
 # Устаревшее
-Move-Item "_docs/*.md" "04-Archives/" -Include "*old*","*deprecated*"
+Move-Item "02-Areas/Documentation/*.md" "04-Archives/" -Include "*old*","*deprecated*"
 ```
 
 ---
@@ -134,7 +134,7 @@ D:\QwenPoekt\Base\
 │   └── BOOKS/            # 1 файл (библиография)
 ├── 04-Archives/          # ~50 файлов (старое)
 ├── sessions/             # Автосохранение (отдельно)
-└── scripts/              # 6 файлов (.bat, .js)
+└── 03-Resources/PowerShell/              # 6 файлов (.bat, .js)
 ```
 
 ---
@@ -169,3 +169,4 @@ D:\QwenPoekt\Base\
 ---
 
 **Следующий шаг:** Выполнить Шаги 2-5, закоммитить, протестировать поиск.
+

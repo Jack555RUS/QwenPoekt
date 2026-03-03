@@ -1,4 +1,4 @@
-# 🐛 DRAGRACEUNITY DEBUGGING GUIDE
+﻿# 🐛 DRAGRACEUNITY DEBUGGING GUIDE
 
 **Версия:** 1.0  
 **Дата:** 28 февраля 2026 г.  
@@ -38,7 +38,7 @@
 
 #### 1. Инициализация игры
 
-**Файл:** `Assets/Scripts/Core/GameInitializer.cs`
+**Файл:** `Assets/03-Resources/PowerShell/Core/GameInitializer.cs`
 
 ```csharp
 void Awake()
@@ -54,7 +54,7 @@ void Awake()
 
 #### 2. Главное меню
 
-**Файл:** `Assets/Scripts/UI/MainMenuController.cs`
+**Файл:** `Assets/03-Resources/PowerShell/UI/MainMenuController.cs`
 
 ```csharp
 public void OnNewGame()
@@ -73,7 +73,7 @@ public void OnNewGame()
 
 #### 3. Система сохранений
 
-**Файл:** `Assets/Scripts/SaveSystem/SaveSystem.cs`
+**Файл:** `Assets/03-Resources/PowerShell/SaveSystem/SaveSystem.cs`
 
 ```csharp
 public void Save(int slot)
@@ -91,7 +91,7 @@ public void Save(int slot)
 
 #### 4. Логирование
 
-**Файл:** `Assets/Scripts/Core/Logger.cs`
+**Файл:** `Assets/03-Resources/PowerShell/Core/Logger.cs`
 
 ```csharp
 public static void Info(string message)
@@ -110,7 +110,7 @@ public static void Info(string message)
 
 ### 1. Запуск Unity в режиме отладки
 
-**Файл:** `scripts/debug-unity.ps1`
+**Файл:** `03-Resources/PowerShell/debug-unity.ps1`
 
 ```powershell
 # ============================================
@@ -147,7 +147,7 @@ Write-Host ""
 
 ### 2. Открытие Visual Studio с отладкой
 
-**Файл:** `scripts/debug-vs.ps1`
+**Файл:** `03-Resources/PowerShell/debug-vs.ps1`
 
 ```powershell
 # ============================================
@@ -281,8 +281,8 @@ Write-Host ""
 
 | Файл | Назначение |
 |------|------------|
-| [`scripts/debug-unity.ps1`](./scripts/debug-unity.ps1) | Запуск Unity в режиме отладки |
-| [`scripts/debug-vs.ps1`](./scripts/debug-vs.ps1) | Открытие Visual Studio |
+| [`03-Resources/PowerShell/debug-unity.ps1`](./03-Resources/PowerShell/debug-unity.ps1) | Запуск Unity в режиме отладки |
+| [`03-Resources/PowerShell/debug-vs.ps1`](./03-Resources/PowerShell/debug-vs.ps1) | Открытие Visual Studio |
 | [`VISUAL_STUDIO_DEBUGGING_ANALYSIS.md`](./VISUAL_STUDIO_DEBUGGING_ANALYSIS.md) | Анализ отладки |
 
 ---
@@ -303,3 +303,4 @@ Write-Host ""
 **Готово к отладке!** 🐛
 
 **Последнее обновление:** 28 февраля 2026 г.
+

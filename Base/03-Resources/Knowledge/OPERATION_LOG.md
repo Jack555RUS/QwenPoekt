@@ -62,10 +62,10 @@
 | **Ежемесячная очистка** | 10:00 1-е число | `old-backup-cleanup.ps1` | ⏳ Ожидает проверки |
 
 **Созданные файлы:**
-- `_docs/TASK_SCHEDULER_SETUP.md` — полная инструкция
-- `_docs/TASK_SCHEDULER_COMPLETE.md` — краткая инструкция
-- `scripts/check-scheduled-tasks.ps1` — проверка задач
-- `scripts/run-schedule-backup.bat` — быстрый запуск
+- `02-Areas/Documentation/TASK_SCHEDULER_SETUP.md` — полная инструкция
+- `02-Areas/Documentation/TASK_SCHEDULER_COMPLETE.md` — краткая инструкция
+- `03-Resources/PowerShell/check-scheduled-tasks.ps1` — проверка задач
+- `03-Resources/PowerShell/run-schedule-backup.bat` — быстрый запуск
 
 **Git коммит:**
 - Хэш: `015442808`
@@ -306,3 +306,4 @@ Get-ScheduledTask -TaskName "QwenPoekt-*" |
 [2026-03-02 08:57:38]   Бэкап: 682 файлов
 [2026-03-02 08:57:38] ❌ ОШИБКА: Несоответствие: разница в 491 файлов!
 [2026-03-02 08:57:38] ❌ ОШИБКА: Бэкап повреждён! Удаление отменено.
+

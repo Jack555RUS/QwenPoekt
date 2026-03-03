@@ -1,4 +1,4 @@
-# Правило обновления связанных файлов
+﻿# Правило обновления связанных файлов
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -22,21 +22,21 @@
 
 | Файл | Что добавить |
 |------|--------------|
-| `_docs/STRUCTURE_GUIDE.md` | В каталог скриптов/документов |
+| `02-Areas/Documentation/STRUCTURE_GUIDE.md` | В каталог скриптов/документов |
 | `README.md` | В таблицу скриптов (если применимо) |
 | `AI_START_HERE.md` | В карту проекта |
-| `_docs/*_GUIDE.md` | В связанные руководства |
+| `02-Areas/Documentation/*_GUIDE.md` | В связанные руководства |
 | `reports/OPERATION_LOG.md` | Запись о создании |
 
 **Пример:**
 ```
-Создан: scripts/end-session.ps1
+Создан: 03-Resources/PowerShell/end-session.ps1
 Обновить:
-  ✅ _docs/STRUCTURE_GUIDE.md (каталог скриптов)
-  ✅ _docs/BACKUP_STRATEGY.md (раздел бэкапа)
+  ✅ 02-Areas/Documentation/STRUCTURE_GUIDE.md (каталог скриптов)
+  ✅ 02-Areas/Documentation/BACKUP_STRATEGY.md (раздел бэкапа)
   ✅ README.md (таблица скриптов)
   ✅ AI_START_HERE.md (карта проекта)
-  ✅ _docs/END_SESSION_COMMAND.md (инструкция)
+  ✅ 02-Areas/Documentation/END_SESSION_COMMAND.md (инструкция)
 ```
 
 ---
@@ -57,7 +57,7 @@
    - Или заменить на новую
 
 3. **Обновить каталоги:**
-   - `_docs/STRUCTURE_GUIDE.md`
+   - `02-Areas/Documentation/STRUCTURE_GUIDE.md`
    - `README.md`
    - `AI_START_HERE.md`
 
@@ -92,7 +92,7 @@
    ```
 
 4. **Обновить каталоги:**
-   - `_docs/STRUCTURE_GUIDE.md`
+   - `02-Areas/Documentation/STRUCTURE_GUIDE.md`
    - `README.md`
    - `AI_START_HERE.md`
 
@@ -102,7 +102,7 @@
 
 Найти ссылки (9 файлов):
   ✅ 01_RULES/README.md
-  ✅ _docs/STRUCTURE_GUIDE.md
+  ✅ 02-Areas/Documentation/STRUCTURE_GUIDE.md
   ✅ README.md
   ✅ AI_START_HERE.md
   ✅ ...
@@ -147,7 +147,7 @@
 
 | Файл | Что изменить |
 |------|--------------|
-| `_docs/*_GUIDE.md` | Примеры использования |
+| `02-Areas/Documentation/*_GUIDE.md` | Примеры использования |
 | `README.md` | Таблица параметров |
 | `_templates/*.md` | Шаблоны вызова |
 | `reports/*.md` | Отчёты с примерами |
@@ -158,7 +158,7 @@
 Добавлен параметр: -Force
 
 Обновить:
-  ✅ _docs/SAFE_DELETE_GUIDE.md (примеры)
+  ✅ 02-Areas/Documentation/SAFE_DELETE_GUIDE.md (примеры)
   ✅ README.md (таблица параметров)
   ✅ _templates/SCRIPT_ANALYSIS.md (шаблон)
 ```
@@ -196,7 +196,7 @@ Get-Content "файл.md" | Select-String "\[.*\]\(.*\)"
 
 ### 3. Автоматическая проверка
 
-**Скрипт:** `scripts/check-broken-links.ps1` (будет создан)
+**Скрипт:** `03-Resources/PowerShell/check-broken-links.ps1` (будет создан)
 
 ```powershell
 # Проверить все ссылки в проекте
@@ -211,10 +211,10 @@ Get-Content "файл.md" | Select-String "\[.*\]\(.*\)"
 
 ```markdown
 [ ] 1. Создан файл
-[ ] 2. Добавлен в _docs/STRUCTURE_GUIDE.md
+[ ] 2. Добавлен в 02-Areas/Documentation/STRUCTURE_GUIDE.md
 [ ] 3. Добавлен в README.md (если применимо)
 [ ] 4. Добавлен в AI_START_HERE.md
-[ ] 5. Создана инструкция (_docs/*_GUIDE.md)
+[ ] 5. Создана инструкция (02-Areas/Documentation/*_GUIDE.md)
 [ ] 6. Запись в OPERATION_LOG.md
 [ ] 7. Git коммит
 ```
@@ -253,13 +253,13 @@ Get-Content "файл.md" | Select-String "\[.*\]\(.*\)"
 ### Пример 1: Создание end-session.ps1
 
 **Создано:**
-- `scripts/end-session.ps1`
+- `03-Resources/PowerShell/end-session.ps1`
 
 **Обновлено:**
-- ✅ `_docs/END_SESSION_COMMAND.md` (инструкция)
-- ✅ `_docs/BACKUP_STRATEGY.md` (раздел бэкапа)
+- ✅ `02-Areas/Documentation/END_SESSION_COMMAND.md` (инструкция)
+- ✅ `02-Areas/Documentation/BACKUP_STRATEGY.md` (раздел бэкапа)
 - ✅ `README.md` (таблица скриптов)
-- ✅ `_docs/STRUCTURE_GUIDE.md` (каталог)
+- ✅ `02-Areas/Documentation/STRUCTURE_GUIDE.md` (каталог)
 - ✅ `AI_START_HERE.md` (карта проекта)
 
 **Git коммитов:** 3
@@ -275,10 +275,10 @@ Get-Content "файл.md" | Select-String "\[.*\]\(.*\)"
 
 **Обновлено файлов:**
 - ✅ `01_RULES/README.md`
-- ✅ `_docs/STRUCTURE_GUIDE.md`
+- ✅ `02-Areas/Documentation/STRUCTURE_GUIDE.md`
 - ✅ `README.md`
 - ✅ `AI_START_HERE.md`
-- ✅ `KNOWLEDGE_BASE/01_RULES/file_naming_rule.md` (оглавление)
+- ✅ `03-Resources/Knowledge/01_RULES/file_naming_rule.md` (оглавление)
 
 **Git коммитов:** 1 (все вместе)
 
@@ -318,7 +318,7 @@ Get-Content "файл.md" | Select-String "\[.*\]\(.*\)"
 
 | Файл | Назначение |
 |------|------------|
-| [_docs/STRUCTURE_GUIDE.md](_docs/STRUCTURE_GUIDE.md) | Каталог всех файлов |
+| [02-Areas/Documentation/STRUCTURE_GUIDE.md](02-Areas/Documentation/STRUCTURE_GUIDE.md) | Каталог всех файлов |
 | [README.md](README.md) | Навигатор по проекту |
 | [AI_START_HERE.md](AI_START_HERE.md) | Карта проекта |
 | [reports/OPERATION_LOG.md](reports/OPERATION_LOG.md) | Журнал изменений |
@@ -331,3 +331,4 @@ Get-Content "файл.md" | Select-String "\[.*\]\(.*\)"
 ---
 
 **Соблюдай правило → не будет битых ссылок!** ✅
+

@@ -1,4 +1,4 @@
-# 04 — БЕЗОПАСНОСТЬ (SAFETY)
+﻿# 04 — БЕЗОПАСНОСТЬ (SAFETY)
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -173,8 +173,8 @@ Copy-Item "_drafts/new-script.ps1" "_TEST_ENV/"
 .\scripts\test-all-changes.ps1
 
 # ✅ 5. Внедрить
-Move-Item "_drafts/new-script.ps1" "scripts/"
-git add scripts/new-script.ps1
+Move-Item "_drafts/new-script.ps1" "03-Resources/PowerShell/"
+git add 03-Resources/PowerShell/new-script.ps1
 git commit -m "Add: new-script.ps1"
 ```
 
@@ -217,3 +217,4 @@ git commit -m "Backup: Перед очисткой _TEMP/"
 ---
 
 **Последнее обновление:** 2 марта 2026 г.
+

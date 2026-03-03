@@ -1,4 +1,4 @@
-# ⚡ Быстрая установка SonarLint
+﻿# ⚡ Быстрая установка SonarLint
 
 **Время установки:** 2 минуты
 **Лицензия:** Бесплатно (open source)
@@ -81,4 +81,5 @@ View → Error List (Вид → Список ошибок)
 
 SonarLint работает в фоновом режиме и помогает писать чистый код.
 
-**Следующий шаг:** Откройте `Assets/Scripts/UI/MainMenuController.cs` и проверьте анализ!
+**Следующий шаг:** Откройте `Assets/03-Resources/PowerShell/UI/MainMenuController.cs` и проверьте анализ!
+

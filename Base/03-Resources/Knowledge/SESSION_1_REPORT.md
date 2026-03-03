@@ -1,4 +1,4 @@
-# 🏁 ОТЧЁТ О СЕССИИ 1
+﻿# 🏁 ОТЧЁТ О СЕССИИ 1
 
 **Дата:** 1 марта 2026 г. (20:42 — 21:15)  
 **Длительность:** ~35 минут  
@@ -117,9 +117,9 @@ code _TEST_ENV\WORKSPACE_TEST.code-workspace
 
 **Протестировано:**
 - ✅ `.qwen/QWEN.md` — 654 строки (доступен)
-- ✅ `KNOWLEDGE_BASE/00_CORE/csharp_standards.md` — 267 строк (доступен)
+- ✅ `03-Resources/Knowledge/00_CORE/csharp_standards.md` — 267 строк (доступен)
 - ✅ `AI_START_HERE.md` — доступен
-- ✅ `scripts/*.ps1` — доступны
+- ✅ `03-Resources/PowerShell/*.ps1` — доступны
 
 **Результат:** ✅ **Qwen Code читает Base/**
 
@@ -129,9 +129,9 @@ code _TEST_ENV\WORKSPACE_TEST.code-workspace
 
 **Протестировано:**
 - ✅ `DragRaceUnity/README.md` — 159 строк (доступен)
-- ✅ `DragRaceUnity/Assets/Scripts/UI/MainMenuController.cs` — 259 строк (доступен)
+- ✅ `DragRaceUnity/Assets/03-Resources/PowerShell/UI/MainMenuController.cs` — 259 строк (доступен)
 - ✅ `DragRaceUnity/STATUS.md` — доступен
-- ✅ `DragRaceUnity/Assets/Scripts/` — все скрипты доступны
+- ✅ `DragRaceUnity/Assets/03-Resources/PowerShell/` — все скрипты доступны
 
 **Результат:** ✅ **Qwen Code читает Projects/**
 
@@ -277,3 +277,4 @@ Remove-Item _ТЕСТ_РАЗДЕЛЕНИЯ.md -Force
 **Сессия 1 ЗАВЕРШЕНА. Готово к Сессии 2!** 🚀
 
 **Последнее обновление:** 1 марта 2026 г. (21:15)
+

@@ -1,4 +1,4 @@
-# 🛡️ CODE REVIEWER AGENT
+﻿# 🛡️ CODE REVIEWER AGENT
 
 **Роль:** Проверка кода на соответствие стандартам и лучшим практикам
 
@@ -122,7 +122,7 @@ void Update()
 ### Проверка конкретного файла:
 
 ```
-/code-reviewer проверь Assets/Scripts/UI/MainMenuController.cs
+/code-reviewer проверь Assets/03-Resources/PowerShell/UI/MainMenuController.cs
 ```
 
 ### Полная проверка проекта:
@@ -231,3 +231,4 @@ dotnet test
 **Агент Code Reviewer готов к работе!** 🛡️
 
 **Использование:** `/code-reviewer проверь [файл/модуль]`
+

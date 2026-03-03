@@ -1,4 +1,4 @@
-# 🧠 ЛОГИЧЕСКИЕ ПРАВИЛА ДЛЯ ИИ
+﻿# 🧠 ЛОГИЧЕСКИЕ ПРАВИЛА ДЛЯ ИИ
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -34,11 +34,11 @@
 
 **Пример:**
 ```
-ЕСЛИ: CHEAT_SHEET.md → _docs/CHEAT_SHEET.md
+ЕСЛИ: CHEAT_SHEET.md → 02-Areas/Documentation/CHEAT_SHEET.md
 ТО: 
   1. grep_search -pattern "CHEAT_SHEET.md"
   2. Найти 9 ссылок
-  3. Исправить: ./CHEAT_SHEET.md → ../_docs/CHEAT_SHEET.md
+  3. Исправить: ./CHEAT_SHEET.md → ../02-Areas/Documentation/CHEAT_SHEET.md
   4. git commit -m "Fix: ссылки после перемещения"
 ```
 
@@ -81,7 +81,7 @@
 
 **Пример:**
 ```
-ЕСЛИ: scripts/new-script.ps1 создан
+ЕСЛИ: 03-Resources/PowerShell/new-script.ps1 создан
 ТО:
   1. Уровень 3 (скрипт)
   2. ALL_RULES_CATALOG.md → добавить в каталог
@@ -400,7 +400,7 @@ Add: RULES_GRAPH.md — граф связей правил
 
 ### Пример 1: Переименование файла
 
-**Ситуация:** Нужно переименовать `CHEAT_SHEET.md` → `_docs/CHEAT_SHEET.md`
+**Ситуация:** Нужно переименовать `CHEAT_SHEET.md` → `02-Areas/Documentation/CHEAT_SHEET.md`
 
 **Применение правил:**
 ```
@@ -415,7 +415,7 @@ Add: RULES_GRAPH.md — граф связей правил
 
 ### Пример 2: Создание скрипта
 
-**Ситуация:** Создан `scripts/check-rules.ps1`
+**Ситуация:** Создан `03-Resources/PowerShell/check-rules.ps1`
 
 **Применение правил:**
 ```
@@ -1018,3 +1018,4 @@ LLM ответ:
 **Версия:** 1.1 (Немонотонная логика, временные правила, мета-рассуждения, нейросимволика)  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Дополнено
+

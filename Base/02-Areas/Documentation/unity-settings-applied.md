@@ -1,4 +1,4 @@
-# ✅ UNITY НАСТРОЙКИ ПРИМЕНЕНЫ!
+﻿# ✅ UNITY НАСТРОЙКИ ПРИМЕНЕНЫ!
 
 **Дата:** 28 февраля 2026 г.  
 **Статус:** ✅ Выполнено
@@ -50,7 +50,7 @@ activeInputHandler: 2 (Input System)
 **Файлы:**
 - ✅ `Assets/Settings/PlayerInput.inputactions` — карта ввода
 - ✅ `Assets/Settings/PlayerInput.inputactions.meta` — Meta файл
-- ✅ `Assets/Scripts/Input/` — папка для сгенерированного кода
+- ✅ `Assets/03-Resources/PowerShell/Input/` — папка для сгенерированного кода
 
 **Действия:**
 
@@ -84,7 +84,7 @@ activeInputHandler: 2 (Input System)
 
 | Файл | Назначение |
 |------|------------|
-| **`Assets/Scripts/Input/`** | Папка для Input скриптов |
+| **`Assets/03-Resources/PowerShell/Input/`** | Папка для Input скриптов |
 | **`Assets/Editor/URPConverter.cs`** | Скрипт конвертации URP |
 
 ### Проектные файлы:
@@ -120,7 +120,7 @@ Scriptable Render Pipeline Settings: Assets/Settings/UniversalRP ✅
 ```
 Выбрать: Assets/Settings/PlayerInput.inputactions
 В Inspector: нажать "Save Asset"
-Unity сгенерирует: Assets/Scripts/Input/PlayerInput.cs
+Unity сгенерирует: Assets/03-Resources/PowerShell/Input/PlayerInput.cs
 ```
 
 **5. Применить URP к камере:**
@@ -228,7 +228,7 @@ Scriptable Render Pipeline Settings:
 ```
 1. Выбрать: Assets/Settings/PlayerInput.inputactions
 2. В Inspector: нажать "Save Asset"
-3. Проверить: Assets/Scripts/Input/PlayerInput.cs
+3. Проверить: Assets/03-Resources/PowerShell/Input/PlayerInput.cs
 ```
 
 ---
@@ -268,3 +268,4 @@ Scriptable Render Pipeline Settings:
 **Настройки Unity применены!** 🚀
 
 **Следующий шаг: Открыть Unity и проверить!**
+

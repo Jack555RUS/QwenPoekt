@@ -1,4 +1,4 @@
-# 📦 GITHUB РЕПОЗИТОРИИ — КАТАЛОГ
+﻿# 📦 GITHUB РЕПОЗИТОРИИ — КАТАЛОГ
 
 **Версия:** 1.0  
 **Дата создания:** 2 марта 2026 г.  
@@ -301,8 +301,8 @@ git clone https://github.com/Unity-Technologies/UnityCsReference
 
 ```
 Создать файл в KNOWLEDGE_BASE/:
-- KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_DRAGON_CRASHERS_ANALYSIS.md
-- KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_GUIDE.md
+- 03-Resources/Knowledge/02_UNITY/UI_TOOLKIT_DRAGON_CRASHERS_ANALYSIS.md
+- 03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_GUIDE.md
 ```
 
 ### Шаг 5: Внедрение
@@ -339,7 +339,7 @@ git clone https://github.com/Unity-Technologies/UnityCsReference
 
 - [`BOOK/00_README.md`](../BOOK/00_README.md) — Каталог книг
 - [`BOOK/UI_TOOLKIT_BOOK_DOWNLOAD.md`](../BOOK/UI_TOOLKIT_BOOK_DOWNLOAD.md) — UI Toolkit книга
-- [`KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md`](../KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md) — Конспект UI Toolkit книги
+- [`03-Resources/Knowledge/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md`](../03-Resources/Knowledge/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md) — Конспект UI Toolkit книги
 
 ---
 
@@ -352,8 +352,8 @@ git clone https://github.com/Unity-Technologies/UnityCsReference
    ```
 
 2. **Создать анализ:**
-   - `KNOWLEDGE_BASE/02_UNITY/DRAGON_CRASHERS_ANALYSIS.md`
-   - `KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_GUIDE.md`
+   - `03-Resources/Knowledge/02_UNITY/DRAGON_CRASHERS_ANALYSIS.md`
+   - `03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_GUIDE.md`
 
 3. **Внедрить паттерны:**
    - Data Binding для меню
@@ -364,3 +364,4 @@ git clone https://github.com/Unity-Technologies/UnityCsReference
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** По мере анализа репозиториев
+

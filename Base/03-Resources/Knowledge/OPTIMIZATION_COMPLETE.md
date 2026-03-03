@@ -1,4 +1,4 @@
-# 🎉 ПОЛНАЯ ОПТИМИЗАЦИЯ СИСТЕМЫ — ИТОГОВЫЙ ОТЧЁТ
+﻿# 🎉 ПОЛНАЯ ОПТИМИЗАЦИЯ СИСТЕМЫ — ИТОГОВЫЙ ОТЧЁТ
 
 **Дата:** 2 марта 2026 г.  
 **Система:** Windows 11, Ryzen 7 9800X3D, 96 GB DDR5, RTX 3090  
@@ -87,19 +87,19 @@
 
 | Файл | Назначение |
 |------|------------|
-| `scripts/apply-powershell-profile.ps1` | Применение профиля |
-| `scripts/powershell-profile-optimized.ps1` | Готовый профиль |
-| `scripts/optimize-file-system.ps1` | Очистка кэша |
-| `scripts/install-ramdisk.ps1` | Установка RAM диска |
-| `scripts/cleanup-ramdisk.ps1` | Очистка RAM диска |
+| `03-Resources/PowerShell/apply-powershell-profile.ps1` | Применение профиля |
+| `03-Resources/PowerShell/powershell-profile-optimized.ps1` | Готовый профиль |
+| `03-Resources/PowerShell/optimize-file-system.ps1` | Очистка кэша |
+| `03-Resources/PowerShell/install-ramdisk.ps1` | Установка RAM диска |
+| `03-Resources/PowerShell/cleanup-ramdisk.ps1` | Очистка RAM диска |
 
 ### Документация:
 
 | Файл | Назначение |
 |------|------------|
-| `_docs/POWERSHELL_PROFILE_FIX.md` | Инструкция PowerShell |
-| `_docs/RAMDISK_SETUP.md` | Полное руководство RAM диск |
-| `_docs/RAMDISK_QUICK_SETUP.md` | Быстрая установка RAM диск |
+| `02-Areas/Documentation/POWERSHELL_PROFILE_FIX.md` | Инструкция PowerShell |
+| `02-Areas/Documentation/RAMDISK_SETUP.md` | Полное руководство RAM диск |
+| `02-Areas/Documentation/RAMDISK_QUICK_SETUP.md` | Быстрая установка RAM диск |
 
 ---
 
@@ -215,7 +215,7 @@ code .vscode/settings.json
    .\install-ramdisk.ps1
    ```
 
-**Инструкция:** [`_docs/RAMDISK_QUICK_SETUP.md`](./_docs/RAMDISK_QUICK_SETUP.md)
+**Инструкция:** [`02-Areas/Documentation/RAMDISK_QUICK_SETUP.md`](./02-Areas/Documentation/RAMDISK_QUICK_SETUP.md)
 
 ---
 
@@ -291,3 +291,4 @@ git push -u origin master
 
 **Дата завершения:** 2 марта 2026 г.  
 **Статус:** ✅ **УСПЕШНО**
+

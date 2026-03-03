@@ -1,4 +1,4 @@
-# 🛠️ РУКОВОДСТВО ПО ВНЕДРЕНИЮ ПАТТЕРНОВ
+﻿# 🛠️ РУКОВОДСТВО ПО ВНЕДРЕНИЮ ПАТТЕРНОВ
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -11,9 +11,9 @@
 Это руководство описывает **внедрение паттернов из книг A1+B2+C2** в проект DragRaceUnity.
 
 **Источники:**
-- [`KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md`](../KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md) — C# Style Guide
-- [`KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md`](../KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md) — Design Patterns
-- [`KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`](../KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md) — Unity Internals
+- [`03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md`](../03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md) — C# Style Guide
+- [`03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md`](../03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md) — Design Patterns
+- [`03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`](../03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md) — Unity Internals
 
 ---
 
@@ -29,7 +29,7 @@
 
 ### 1. Object Pool (Пул объектов)
 
-**Файл:** [`PROJECTS/DragRaceUnity/Assets/Scripts/Core/ObjectPool.cs`](../PROJECTS/DragRaceUnity/Assets/Scripts/Core/ObjectPool.cs)
+**Файл:** [`PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/ObjectPool.cs`](../PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/ObjectPool.cs)
 
 **Назначение:** Переиспользование объектов вместо создания/уничтожения.
 
@@ -61,7 +61,7 @@ pool.Return(car);
 
 ### 2. Observer / Event System
 
-**Файл:** [`PROJECTS/DragRaceUnity/Assets/Scripts/Core/EventBus.cs`](../PROJECTS/DragRaceUnity/Assets/Scripts/Core/EventBus.cs)
+**Файл:** [`PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/EventBus.cs`](../PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/EventBus.cs)
 
 **Назначение:** Слабая связанность компонентов через события.
 
@@ -100,7 +100,7 @@ EventBus.RaiseRaceFinished(result);
 
 ### 3. Command (Команда)
 
-**Файл:** [`PROJECTS/DragRaceUnity/Assets/Scripts/Core/Commands.cs`](../PROJECTS/DragRaceUnity/Assets/Scripts/Core/Commands.cs)
+**Файл:** [`PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/Commands.cs`](../PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/Commands.cs)
 
 **Назначение:** Инкапсуляция запросов как объектов.
 
@@ -144,7 +144,7 @@ commandManager.SetControllable(car);
 
 #### 2.1 Обновить MainMenuController
 
-**Файл:** `PROJECTS/DragRaceUnity/Assets/Scripts/UI/MainMenuController.cs`
+**Файл:** `PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/UI/MainMenuController.cs`
 
 **Изменения:**
 ```csharp
@@ -174,7 +174,7 @@ public class MainMenuController : MonoBehaviour
 
 #### 2.2 Создать CarController с IControllable
 
-**Файл:** `PROJECTS/DragRaceUnity/Assets/Scripts/Gameplay/CarController.cs`
+**Файл:** `PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Gameplay/CarController.cs`
 
 **Код:**
 ```csharp
@@ -251,7 +251,7 @@ namespace DragRace.Gameplay
 
 #### 2.3 Создать UI для гонки
 
-**Файл:** `PROJECTS/DragRaceUnity/Assets/Scripts/UI/RaceUI.cs`
+**Файл:** `PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/UI/RaceUI.cs`
 
 **Код:**
 ```csharp
@@ -426,8 +426,8 @@ private void Update()
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md`](../KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md) — C# Style Guide
-- [`KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md`](../KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md) — Design Patterns
+- [`03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md`](../03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md) — C# Style Guide
+- [`03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md`](../03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md) — Design Patterns
 - [`PROJECTS/DragRaceUnity/README.md`](../PROJECTS/DragRaceUnity/README.md) — Главный README проекта
 - [`PROJECTS/DragRaceUnity/STATUS.md`](../PROJECTS/DragRaceUnity/STATUS.md) — Текущий статус
 
@@ -437,12 +437,12 @@ private void Update()
 
 1. **Создать CarController:**
    ```
-   Файл: PROJECTS/DragRaceUnity/Assets/Scripts/Gameplay/CarController.cs
+   Файл: PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Gameplay/CarController.cs
    ```
 
 2. **Создать RaceUI:**
    ```
-   Файл: PROJECTS/DragRaceUnity/Assets/Scripts/UI/RaceUI.cs
+   Файл: PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/UI/RaceUI.cs
    ```
 
 3. **Протестировать:**
@@ -457,3 +457,4 @@ private void Update()
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** После тестирования паттернов
+

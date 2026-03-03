@@ -1,4 +1,4 @@
-# 🧪 TEST WRITER AGENT
+﻿# 🧪 TEST WRITER AGENT
 
 **Роль:** Написание юнит-тестов и интеграционных тестов
 
@@ -123,7 +123,7 @@ public void PlayerData_NewInstance_HasDefaultValues()
 ### Написать тесты для файла:
 
 ```
-/test-writer напиши тесты для Assets/Scripts/Data/PlayerData.cs
+/test-writer напиши тесты для Assets/03-Resources/PowerShell/Data/PlayerData.cs
 ```
 
 ### Запустить тесты:
@@ -253,3 +253,4 @@ uloop run-tests
 **Агент Test Writer готов к работе!** 🧪
 
 **Использование:** `/test-writer напиши тесты для [модуль]`
+

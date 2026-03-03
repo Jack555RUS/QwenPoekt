@@ -1,0 +1,17 @@
+c858b38bf Add: PARA Неделя 2 ЗАВЕРШЕНА — полная структура внедрена (220 файлов)
+5a621257d Add: Руководство по мышлению ИИ (извлечено из TEMP/read.txt)
+125c17ff2 Fix: Исправлена статистика KNOWLEDGE_BASE (v1.1)
+866c893c5 Add: Конспекты книг A1+B2+C2 (C# Style Guide, UnityCsReference, Design Patterns)
+161014c00 Update: Расширенная логика (немонотонная, временная, мета-рассуждения, нейросимволика) — +565 строк
+6f0141fe2 Add: Причинно-следственные связи (3 файла: RULES_GRAPH, logic_rules_for_ai, LESSONS_LEARNED)
+32ab2eb90 Add: check-rule-links.ps1 + исправление битых ссылок (100% рабочих ссылок)
+6c130ca12 Update: Добавлены перекрёстные ссылки между 9 правилами (улучшена связность базы)
+ff54cbad7 Update: Приоритет 3 (Желательно) — добавлены author/version в YAML и создан RULES_INDEX.md
+61784560a Update: Приоритет 2 (Важно) — добавлены ссылки между файлами и оглавления
+b42005d6c Update: Приоритет 1 (Критично) — добавлены примеры в 3 файла (csharp_silent_testing, qwen_modes, roslynator_cli)
+8c97ac165 Update: Добавлены мета-поля (last_reviewed) в 9 правил
+3614ea2d4 Add: Актуализация методологий ИИ и архивных отчётов (AI_DEVELOPER_INSTRUCTION, FOR_AI_READ_HERE, 14 KNOWLEDGE_UPDATE)
+368d1dfdf Add: 3 дополнительных файла (Unity Docker, Roslynator, License) + финальные исправления
+060db385b Add: Этап 1 — 11 файлов знаний (Qwen, C#, Unity, PowerShell, Drag Racing)
+c046a0774 Add: Полная система управления Базой Знаний (34 файла)
+54e32ed1d fix: Удаление внешних папок из репозитория (Projects, OLD, RELEASE, _TEST_ENV хранятся вне Base/)

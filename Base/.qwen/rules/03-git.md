@@ -1,4 +1,4 @@
-# 03 — GIT / OLD / RELEASE / БЭКАП
+﻿# 03 — GIT / OLD / RELEASE / БЭКАП
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -173,10 +173,11 @@ _LOCAL_ARCHIVE/
 | **`05-commands.md`** | Быстрые команды |
 
 **Скрипты:**
-- [`scripts/auto-commit-daily.ps1`](../../scripts/auto-commit-daily.ps1)
-- [`scripts/github-backup.ps1`](../../scripts/github-backup.ps1)
-- [`scripts/old-analysis.ps1`](../../scripts/old-analysis.ps1)
+- [`03-Resources/PowerShell/auto-commit-daily.ps1`](../../03-Resources/PowerShell/auto-commit-daily.ps1)
+- [`03-Resources/PowerShell/github-backup.ps1`](../../03-Resources/PowerShell/github-backup.ps1)
+- [`03-Resources/PowerShell/old-analysis.ps1`](../../03-Resources/PowerShell/old-analysis.ps1)
 
 ---
 
 **Последнее обновление:** 2 марта 2026 г.
+

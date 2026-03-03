@@ -1,6 +1,6 @@
 ﻿# 🔗 LINK CHECK REPORT
 
-**Дата:** 2026-03-03 20:19:11
+**Дата:** 2026-03-03 20:56:07
 **Путь:** D:\QwenPoekt\Base
 
 ---
@@ -9,10 +9,10 @@
 
 | Метрика | Значение |
 |---------|----------|
-| **Всего ссылок** | 1131 |
-| **Рабочих** | 283 |
-| **Битых** | 848 |
-| **Процент** | 25.02% |
+| **Всего ссылок** | 1126 |
+| **Рабочих** | 301 |
+| **Битых** | 825 |
+| **Процент** | 26.73% |
 
 ---
 
@@ -22,53 +22,23 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 171 | `AI_START_HERE.md` | ../AI_START_HERE.md |
-
-### 📄 01-core.md
-
-| Строка | Текст | Ссылка |
-|--------|-------|--------|
-| 156 | `PRE_ACTION_CHECKLIST.md` | ../PRE_ACTION_CHECKLIST.md |
-| 158 | `ANTI_PATTERNS.md` | ../ANTI_PATTERNS.md |
-| 160 | `ERROR_LOG.md` | ../ERROR_LOG.md |
+| 170 | `CURRENT_CONTEXT.md` | ../../CURRENT_CONTEXT.md |
 
 ### 📄 03-git.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 176 | `scripts/auto-commit-daily.ps1` | ../scripts/auto-commit-daily.ps1 |
-| 177 | `scripts/github-backup.ps1` | ../scripts/github-backup.ps1 |
-| 178 | `scripts/old-analysis.ps1` | ../scripts/old-analysis.ps1 |
-
-### 📄 04-safety.md
-
-| Строка | Текст | Ссылка |
-|--------|-------|--------|
-| 122 | `ERROR_LOG.md` | ../ERROR_LOG.md |
-| 124 | `ANTI_PATTERNS.md` | ../ANTI_PATTERNS.md |
-| 142 | `PRE_ACTION_CHECKLIST.md` | ../PRE_ACTION_CHECKLIST.md |
-| 213 | `PRE_ACTION_CHECKLIST.md` | ../PRE_ACTION_CHECKLIST.md |
-| 214 | `ANTI_PATTERNS.md` | ../ANTI_PATTERNS.md |
-| 215 | `ERROR_LOG.md` | ../ERROR_LOG.md |
-
-### 📄 05-commands.md
-
-| Строка | Текст | Ссылка |
-|--------|-------|--------|
-| 124 | `PROJECTS/DragRaceUnity/DEBUGGING_GUIDE.md` | ../PROJECTS/DragRaceUnity/DEBUGGING_GUIDE.md |
-| 125 | `PROJECTS/DragRaceUnity/DEBUG_CHECKLIST.md` | ../PROJECTS/DragRaceUnity/DEBUG_CHECKLIST.md |
-| 138 | `reports/UnityCsReference_ANALYSIS.md` | ../reports/UnityCsReference_ANALYSIS.md |
-| 139 | `reports/AI_START_HERE_AUDIT.md` | ../reports/AI_START_HERE_AUDIT.md |
-| 140 | `reports/BROKEN_LINKS_ANALYSIS.md` | ../reports/BROKEN_LINKS_ANALYSIS.md |
-| 141 | `reports/SESSION_HANDOVER.md` | ../reports/SESSION_HANDOVER.md |
+| 176 | `03-Resources/PowerShell/auto-commit-daily.ps1` | ../../03-Resources/PowerShell/auto-commit-daily.ps1 |
+| 177 | `03-Resources/PowerShell/github-backup.ps1` | ../../03-Resources/PowerShell/github-backup.ps1 |
+| 178 | `03-Resources/PowerShell/old-analysis.ps1` | ../../03-Resources/PowerShell/old-analysis.ps1 |
 
 ### 📄 06-resume.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 280 | `AGENTS.md` | ./AGENTS.md |
-| 281 | `scripts/auto-save-session.ps1` | ./scripts/auto-save-session.ps1 |
-| 282 | `scripts/start-session.ps1` | ./scripts/start-session.ps1 |
+| 281 | `03-Resources/PowerShell/auto-save-session.ps1` | ./03-Resources/PowerShell/auto-save-session.ps1 |
+| 282 | `03-Resources/PowerShell/start-session.ps1` | ./03-Resources/PowerShell/start-session.ps1 |
 | 283 | `reports/SESSION_HANDOVER.md` | ./reports/SESSION_HANDOVER.md |
 
 ### 📄 07-session-persistence.md
@@ -76,16 +46,14 @@
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 353 | `.qwen/session-rules.json` | ./session-rules.json |
-| 354 | `scripts/check-session-rules.ps1` | ./scripts/check-session-rules.ps1 |
-| 355 | `scripts/save-chat-log.ps1` | ./scripts/save-chat-log.ps1 |
-| 356 | `scripts/auto-save-chat.ps1` | ./scripts/auto-save-chat.ps1 |
+| 354 | `03-Resources/PowerShell/check-session-rules.ps1` | ./03-Resources/PowerShell/check-session-rules.ps1 |
+| 355 | `03-Resources/PowerShell/save-chat-log.ps1` | ./03-Resources/PowerShell/save-chat-log.ps1 |
+| 356 | `03-Resources/PowerShell/auto-save-chat.ps1` | ./03-Resources/PowerShell/auto-save-chat.ps1 |
 
 ### 📄 08-mass-operations.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 135 | `ERROR_LOG.md` | ../ERROR_LOG.md |
-| 137 | `ANTI_PATTERNS.md` | ../ANTI_PATTERNS.md |
 | 198 | `pre-move-check.ps1` | ../03-Resources/PowerShell/pre-move-check.ps1 |
 | 199 | `update-links-after-move.ps1` | ../03-Resources/PowerShell/update-links-after-move.ps1 |
 
@@ -113,18 +81,18 @@
 |--------|-------|--------|
 | 11 | `AI_START_HERE.md` | ./AI_START_HERE.md |
 | 618 | `PATTERN_DRAFT.md` | ./PATTERN_DRAFT.md |
-| 742 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 754 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 768 | `02_TOOLS/build_system.md` | ./KNOWLEDGE_BASE/02_TOOLS/build_system.md |
-| 780 | `02_TOOLS/test_framework.md` | ./KNOWLEDGE_BASE/02_TOOLS/test_framework.md |
-| 791 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 742 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 754 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 768 | `02_TOOLS/build_system.md` | ./03-Resources/Knowledge/02_TOOLS/build_system.md |
+| 780 | `02_TOOLS/test_framework.md` | ./03-Resources/Knowledge/02_TOOLS/test_framework.md |
+| 791 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 | 833 | `AI_START_HERE.md` | ./AI_START_HERE.md |
-| 874 | `scripts/old-analysis.ps1` | ./scripts/old-analysis.ps1 |
+| 874 | `03-Resources/PowerShell/old-analysis.ps1` | ./03-Resources/PowerShell/old-analysis.ps1 |
 | 906 | `RELEASE/README.md` | ./RELEASE/README.md |
-| 931 | `scripts/auto-archive.ps1` | ./scripts/auto-archive.ps1 |
-| 944 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 931 | `03-Resources/PowerShell/auto-archive.ps1` | ./03-Resources/PowerShell/auto-archive.ps1 |
+| 944 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 | 954 | `ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md` | ./ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md |
-| 980 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 980 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 | 990 | `ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md` | ./ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md |
 | 991 | `ТЕКУЩАЯ_ЗАДАЧА.md` | ./ТЕКУЩАЯ_ЗАДАЧА.md |
 | 992 | `PROJECTS/DragRaceUnity/README.md` | ./PROJECTS/DragRaceUnity/README.md |
@@ -149,15 +117,15 @@
 | 517 | `AI_START_HERE.md` | AI_START_HERE.md |
 | 518 | `RULES_AND_TASKS.md` | RULES_AND_TASKS.md |
 | 519 | `.qwen/QWEN.md` | .qwen/QWEN.md |
-| 522 | `csharp_standards.md` | KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 523 | `ui_toolkit_rules.md` | KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 524 | `file_naming_rule.md` | KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 527 | `BACKUP_STRATEGY.md` | _docs/BACKUP_STRATEGY.md |
-| 528 | `DEDUP_GUIDE.md` | _docs/DEDUP_GUIDE.md |
-| 529 | `KB_AUDIT_GUIDE.md` | _docs/KB_AUDIT_GUIDE.md |
-| 532 | `INSTALL_SONARLINT.md` | _docs/INSTALL_SONARLINT.md |
-| 533 | `DEBUGGING_GUIDE.md` | _docs/DEBUGGING_GUIDE.md |
-| 534 | `TESTING_GUIDE.md` | _docs/TESTING_GUIDE.md |
+| 522 | `csharp_standards.md` | 03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 523 | `ui_toolkit_rules.md` | 03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 524 | `file_naming_rule.md` | 03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 527 | `BACKUP_STRATEGY.md` | 02-Areas/Documentation/BACKUP_STRATEGY.md |
+| 528 | `DEDUP_GUIDE.md` | 02-Areas/Documentation/DEDUP_GUIDE.md |
+| 529 | `KB_AUDIT_GUIDE.md` | 02-Areas/Documentation/KB_AUDIT_GUIDE.md |
+| 532 | `INSTALL_SONARLINT.md` | 02-Areas/Documentation/INSTALL_SONARLINT.md |
+| 533 | `DEBUGGING_GUIDE.md` | 02-Areas/Documentation/DEBUGGING_GUIDE.md |
+| 534 | `TESTING_GUIDE.md` | 02-Areas/Documentation/TESTING_GUIDE.md |
 
 ### 📄 ANALYSIS_PROCESS.md
 
@@ -173,21 +141,20 @@
 | 244 | DragRaceUnity/README.md | путь |
 | 250 | 01_RULES/ui_toolkit_rules.md | 01_RULES/ui_toolkit_rules.md |
 | 251 | 03_PATTERNS/error_solutions.md | 03_PATTERNS/error_solutions.md |
-| 252 | scripts/pre-operation-backup.ps1 | scripts/pre-operation-backup.ps1 |
+| 252 | 03-Resources/PowerShell/pre-operation-backup.ps1 | 03-Resources/PowerShell/pre-operation-backup.ps1 |
 | 269 | Файл1 | путь |
 | 270 | Файл2 | путь |
-| 445 | scripts/safe-delete.ps1 | scripts/safe-delete.ps1 |
-| 446 | _docs/SAFE_DELETE_GUIDE.md | _docs/SAFE_DELETE_GUIDE.md |
-| 460 | scripts/safe-delete.ps1 | scripts/safe-delete.ps1 |
+| 445 | 03-Resources/PowerShell/safe-delete.ps1 | 03-Resources/PowerShell/safe-delete.ps1 |
+| 446 | 02-Areas/Documentation/SAFE_DELETE_GUIDE.md | 02-Areas/Documentation/SAFE_DELETE_GUIDE.md |
+| 460 | 03-Resources/PowerShell/safe-delete.ps1 | 03-Resources/PowerShell/safe-delete.ps1 |
 | 484 | safe-delete.ps1 | путь |
 
 ### 📄 BACKUP_STRATEGY.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 71 | `auto-commit-daily.ps1` | ../scripts/auto-commit-daily.ps1 |
-| 124 | `schedule-backup-tasks.ps1` | ../scripts/schedule-backup-tasks.ps1 |
-| 332 | OPERATION_LOG.md | ../reports/OPERATION_LOG.md |
+| 71 | `auto-commit-daily.ps1` | ../../03-Resources/PowerShell/auto-commit-daily.ps1 |
+| 124 | `schedule-backup-tasks.ps1` | ../../03-Resources/PowerShell/schedule-backup-tasks.ps1 |
 
 ### 📄 BRIDGE_SETUP.md
 
@@ -208,22 +175,15 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 284 | `scripts/debug-unity.ps1` | ./scripts/debug-unity.ps1 |
-| 285 | `scripts/debug-vs.ps1` | ./scripts/debug-vs.ps1 |
+| 284 | `03-Resources/PowerShell/debug-unity.ps1` | ./03-Resources/PowerShell/debug-unity.ps1 |
+| 285 | `03-Resources/PowerShell/debug-vs.ps1` | ./03-Resources/PowerShell/debug-vs.ps1 |
 | 286 | `VISUAL_STUDIO_DEBUGGING_ANALYSIS.md` | ./VISUAL_STUDIO_DEBUGGING_ANALYSIS.md |
-
-### 📄 DEDUP_GUIDE.md
-
-| Строка | Текст | Ссылка |
-|--------|-------|--------|
-| 362 | AI_ANALYSIS_PROMPT.md | ../_templates/AI_ANALYSIS_PROMPT.md |
-| 363 | OPERATION_LOG.md | ../reports/OPERATION_LOG.md |
 
 ### 📄 END_SESSION_COMMAND.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 94 | `scripts/end-session.ps1` | ../scripts/end-session.ps1 |
+| 94 | `03-Resources/PowerShell/end-session.ps1` | ../03-Resources/PowerShell/end-session.ps1 |
 | 95 | `reports/OPERATION_LOG.md` | ../reports/OPERATION_LOG.md |
 | 96 | `reports/SESSION_*.md` | ../reports/ |
 
@@ -235,7 +195,7 @@
 | 86 | Описание | new_name.md |
 | 129 | Описание | old_folder/file.md |
 | 132 | Описание | new_folder/file.md |
-| 321 | _docs/STRUCTURE_GUIDE.md | _docs/STRUCTURE_GUIDE.md |
+| 321 | 02-Areas/Documentation/STRUCTURE_GUIDE.md | 02-Areas/Documentation/STRUCTURE_GUIDE.md |
 | 323 | AI_START_HERE.md | AI_START_HERE.md |
 | 324 | reports/OPERATION_LOG.md | reports/OPERATION_LOG.md |
 
@@ -243,7 +203,6 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 188 | `scripts/generate-file-pid.ps1` | ../scripts/generate-file-pid.ps1 |
 | 189 | `reports/FILE_PID_REGISTRY.md` | ./FILE_PID_REGISTRY.md |
 
 ### 📄 folder-access-investigation.md
@@ -276,8 +235,16 @@
 | 193 | `AI_START_HERE.md` | AI_START_HERE.md |
 | 390 | AI_START_HERE.md | AI_START_HERE.md |
 | 391 | .qwen/QWEN.md | .qwen/QWEN.md |
-| 393 | TEST_ENV_GUIDE.md | _docs/TEST_ENV_GUIDE.md |
-| 394 | PRE_OPERATION_BACKUP_GUIDE.md | _docs/PRE_OPERATION_BACKUP_GUIDE.md |
+| 393 | TEST_ENV_GUIDE.md | 02-Areas/Documentation/TEST_ENV_GUIDE.md |
+| 394 | PRE_OPERATION_BACKUP_GUIDE.md | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md |
+
+### 📄 LINK_GRAPH_GUIDE.md
+
+| Строка | Текст | Ссылка |
+|--------|-------|--------|
+| 120 | `03-Resources/PowerShell/check-links.ps1` | ../03-Resources/PowerShell/check-links.ps1 |
+| 121 | `03-Resources/PowerShell/build-link-graph.ps1` | ../03-Resources/PowerShell/build-link-graph.ps1 |
+| 122 | `reports/LINK_CHECK_REPORT.md` | ../reports/LINK_CHECK_REPORT.md |
 
 ### 📄 logic_rules_for_ai.md
 
@@ -287,7 +254,7 @@
 | 468 | `../reports/EPISODIC_MEMORY.md` | ../reports/EPISODIC_MEMORY.md |
 | 748 | `../reports/CASE_BASES.md` | ../reports/CASE_BASES.md |
 | 749 | `../reports/EPISODIC_MEMORY.md` | ../reports/EPISODIC_MEMORY.md |
-| 750 | `../KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ../KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
+| 750 | `../03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ../03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
 
 ### 📄 MCP_FILESYSTEM_SETUP.md
 
@@ -319,14 +286,14 @@
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 36 | `RULE_TEMPLATE.md` | _templates/RULE_TEMPLATE.md |
-| 53 | `AI_DEVELOPER_INSTRUCTION.md` | KNOWLEDGE_BASE/05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md |
-| 71 | `STRUCTURE_GUIDE.md` | _docs/STRUCTURE_GUIDE.md |
+| 53 | `AI_DEVELOPER_INSTRUCTION.md` | 03-Resources/Knowledge/05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md |
+| 71 | `STRUCTURE_GUIDE.md` | 02-Areas/Documentation/STRUCTURE_GUIDE.md |
 | 88 | `PROFILE_TEMPLATE.md` | _templates/PROFILE_TEMPLATE.md |
 | 105 | `RULE_TEST_CASES.md` | reports/RULE_TEST_CASES.md |
 | 177 | `RULE_TEMPLATE.md` | _templates/RULE_TEMPLATE.md |
 | 178 | `PROFILE_TEMPLATE.md` | _templates/PROFILE_TEMPLATE.md |
 | 179 | `RULE_TEST_CASES.md` | reports/RULE_TEST_CASES.md |
-| 180 | `check-rule-profiles.ps1` | scripts/check-rule-profiles.ps1 |
+| 180 | `check-rule-profiles.ps1` | 03-Resources/PowerShell/check-rule-profiles.ps1 |
 
 ### 📄 README.md
 
@@ -350,11 +317,11 @@
 | 46 | `AI_DEVELOPER_INSTRUCTION.md` | 05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md |
 | 47 | `ai_programming_tips.md` | 05_METHODOLOGY/ai_programming_tips.md |
 | 48 | `qwen_modes.md` | 05_METHODOLOGY/qwen_modes.md |
-| 58 | `ALL_RULES_CATALOG.md` | _docs/ALL_RULES_CATALOG.md |
-| 59 | `BACKUP_STRATEGY.md` | _docs/BACKUP_STRATEGY.md |
-| 60 | `DEDUP_GUIDE.md` | _docs/DEDUP_GUIDE.md |
-| 61 | `KB_AUDIT_GUIDE.md` | _docs/KB_AUDIT_GUIDE.md |
-| 62 | `STRUCTURE_GUIDE.md` | _docs/STRUCTURE_GUIDE.md |
+| 58 | `ALL_RULES_CATALOG.md` | 02-Areas/Documentation/ALL_RULES_CATALOG.md |
+| 59 | `BACKUP_STRATEGY.md` | 02-Areas/Documentation/BACKUP_STRATEGY.md |
+| 60 | `DEDUP_GUIDE.md` | 02-Areas/Documentation/DEDUP_GUIDE.md |
+| 61 | `KB_AUDIT_GUIDE.md` | 02-Areas/Documentation/KB_AUDIT_GUIDE.md |
+| 62 | `STRUCTURE_GUIDE.md` | 02-Areas/Documentation/STRUCTURE_GUIDE.md |
 | 72 | `RULE_TEMPLATE.md` | _templates/RULE_TEMPLATE.md |
 | 73 | `AI_ANALYSIS_PROMPT.md` | _templates/AI_ANALYSIS_PROMPT.md |
 | 83 | `RULE_TEST_CASES.md` | reports/RULE_TEST_CASES.md |
@@ -364,36 +331,28 @@
 | 127 | `AI_DEVELOPER_INSTRUCTION.md` | 05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md |
 | 130 | `csharp_standards.md` | 00_CORE/csharp_standards.md |
 | 131 | `project_glossary.md` | 00_CORE/project_glossary.md |
-| 132 | `STRUCTURE_GUIDE.md` | _docs/STRUCTURE_GUIDE.md |
+| 132 | `STRUCTURE_GUIDE.md` | 02-Areas/Documentation/STRUCTURE_GUIDE.md |
 | 135 | `RULE_TEST_CASES.md` | reports/RULE_TEST_CASES.md |
-| 136 | `check-rules-freshness.ps1` | ../scripts/check-rules-freshness.ps1 |
+| 136 | `check-rules-freshness.ps1` | ../03-Resources/PowerShell/check-rules-freshness.ps1 |
 
 ### 📄 seamless-launch-investigation.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 215 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
+| 215 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
 | 218 | `csharp_standards.md` | ./Base/03-Resources/Knowledge/csharp_standards.md |
-
-### 📄 TASK_DAG_GUIDE.md
-
-| Строка | Текст | Ссылка |
-|--------|-------|--------|
-| 159 | `tasks-dag.json` | ../tasks-dag.json |
-| 160 | `scripts/manage-tasks-dag.ps1` | ../scripts/manage-tasks-dag.ps1 |
 
 ### 📄 TASK_SCHEDULER_COMPLETE.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 105 | `_docs/TASK_SCHEDULER_SETUP.md` | _docs/TASK_SCHEDULER_SETUP.md |
+| 105 | `02-Areas/Documentation/TASK_SCHEDULER_SETUP.md` | 02-Areas/Documentation/TASK_SCHEDULER_SETUP.md |
 
 ### 📄 TASK_SCHEDULER_SETUP.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 241 | schedule-backup-tasks.ps1 | ../scripts/schedule-backup-tasks.ps1 |
-| 242 | OPERATION_LOG.md | ../reports/OPERATION_LOG.md |
+| 241 | schedule-backup-tasks.ps1 | ../../03-Resources/PowerShell/schedule-backup-tasks.ps1 |
 
 ### 📄 UNITY_BUILD_SETUP.md
 
@@ -408,7 +367,7 @@
 | 339 | `QwenPoekt.code-workspace` | ./QwenPoekt.code-workspace |
 | 340 | `.vscode/settings.json` | ./.vscode/settings.json |
 | 341 | `reports/GITHUB_REPOSITORIES_CATALOG.md` | ./reports/GITHUB_REPOSITORIES_CATALOG.md |
-| 342 | `KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md` | ./KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md |
+| 342 | `03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md` | ./03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md |
 
 ### 📄 WHAT_IS_IMPLEMENTED.md
 
@@ -423,7 +382,7 @@
 |--------|-------|--------|
 | 22 | `reports/KNOWLEDGE_BASE_EXPANSION_PLAN.md` | ../reports/KNOWLEDGE_BASE_EXPANSION_PLAN.md |
 | 24 | `reports/Missing_FILES_INVESTIGATION.md` | ../reports/Missing_FILES_INVESTIGATION.md |
-| 106 | `_docs/ANALYSIS_PROCESS.md` | _docs/ANALYSIS_PROCESS.md |
+| 106 | `02-Areas/Documentation/ANALYSIS_PROCESS.md` | 02-Areas/Documentation/ANALYSIS_PROCESS.md |
 | 117 | `_templates/AI_ANALYSIS_PROMPT.md` | _templates/AI_ANALYSIS_PROMPT.md |
 | 152 | Файл1 | путь |
 | 153 | Файл2 | путь |
@@ -441,7 +400,7 @@
 | 1047 | `RULE_TEST_CASES.md` | ../../reports/RULE_TEST_CASES.md |
 | 1048 | `csharp_standards.md` | ../00_CORE/csharp_standards.md |
 | 1049 | `project_glossary.md` | ../00_CORE/project_glossary.md |
-| 1050 | `PROFILES_MATRIX.md` | ../../_docs/PROFILES_MATRIX.md |
+| 1050 | `PROFILES_MATRIX.md` | ../../02-Areas/Documentation/PROFILES_MATRIX.md |
 
 ### 📄 ai_programming_tips.md
 
@@ -458,53 +417,53 @@
 |--------|-------|--------|
 | 53 | `.qwen/QWEN.md` | ./.qwen/QWEN.md |
 | 53 | `.qwen/QWEN.md` | ./.qwen/QWEN.md |
-| 53 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
+| 53 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
 | 53 | `OLD/README.md` | ./OLD/README.md |
 | 53 | `.qwen/QWEN.md` | ./.qwen/QWEN.md |
-| 53 | `00_CORE/project_glossary.md` | ./KNOWLEDGE_BASE/00_CORE/project_glossary.md |
-| 53 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
+| 53 | `00_CORE/project_glossary.md` | ./03-Resources/Knowledge/00_CORE/project_glossary.md |
+| 53 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
 | 53 | `reports/SESSION_COMPLETE_REPORT.md` | reports/SESSION_COMPLETE_REPORT.md |
 | 53 | `reports/SESSION_2026-03-02_06-34.md` | reports/SESSION_2026-03-02_06-34.md |
-| 53 | `_docs/FILE_CHANGE_RULE.md` | _docs/FILE_CHANGE_RULE.md |
-| 53 | `_docs/BACKUP_STRATEGY.md` | _docs/BACKUP_STRATEGY.md |
-| 53 | `_docs/DEDUP_GUIDE.md` | _docs/DEDUP_GUIDE.md |
-| 53 | `_docs/ANALYSIS_PROCESS.md` | _docs/ANALYSIS_PROCESS.md |
+| 53 | `02-Areas/Documentation/FILE_CHANGE_RULE.md` | 02-Areas/Documentation/FILE_CHANGE_RULE.md |
+| 53 | `02-Areas/Documentation/BACKUP_STRATEGY.md` | 02-Areas/Documentation/BACKUP_STRATEGY.md |
+| 53 | `02-Areas/Documentation/DEDUP_GUIDE.md` | 02-Areas/Documentation/DEDUP_GUIDE.md |
+| 53 | `02-Areas/Documentation/ANALYSIS_PROCESS.md` | 02-Areas/Documentation/ANALYSIS_PROCESS.md |
 | 53 | `RULES_AND_TASKS.md` | ./RULES_AND_TASKS.md |
-| 58 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 58 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 58 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 58 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 58 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 58 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 58 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 58 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 | 58 | `PROJECTS/DragRaceUnity/DEBUGGING_GUIDE.md` | ./PROJECTS/DragRaceUnity/DEBUGGING_GUIDE.md |
 | 58 | `PROJECTS/DragRaceUnity/DEBUG_CHECKLIST.md` | ./PROJECTS/DragRaceUnity/DEBUG_CHECKLIST.md |
-| 58 | `00_CORE/unity_fundamentals.md` | ./KNOWLEDGE_BASE/00_CORE/unity_fundamentals.md |
-| 58 | `02_TOOLS/powershell_scripts.md` | ./KNOWLEDGE_BASE/02_TOOLS/powershell_scripts.md |
-| 58 | `02_TOOLS/build_system.md` | ./KNOWLEDGE_BASE/02_TOOLS/build_system.md |
-| 58 | `02_TOOLS/test_framework.md` | ./KNOWLEDGE_BASE/02_TOOLS/test_framework.md |
-| 58 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 58 | `01_RULES/logging_standards.md` | ./KNOWLEDGE_BASE/01_RULES/logging_standards.md |
-| 58 | `01_RULES/performance_rules.md` | ./KNOWLEDGE_BASE/01_RULES/performance_rules.md |
-| 58 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 58 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 58 | `03_PATTERNS/menu_creation.md` | ./KNOWLEDGE_BASE/03_PATTERNS/menu_creation.md |
-| 58 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
-| 58 | `02_UNITY/UNITY_DEBUGGING_GUIDE.md` | ./KNOWLEDGE_BASE/02_UNITY/UNITY_DEBUGGING_GUIDE.md |
-| 58 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
-| 58 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
-| 58 | `_docs/LOG_GUIDE.md` | _docs/LOG_GUIDE.md |
+| 58 | `00_CORE/unity_fundamentals.md` | ./03-Resources/Knowledge/00_CORE/unity_fundamentals.md |
+| 58 | `02_TOOLS/powershell_scripts.md` | ./03-Resources/Knowledge/02_TOOLS/powershell_scripts.md |
+| 58 | `02_TOOLS/build_system.md` | ./03-Resources/Knowledge/02_TOOLS/build_system.md |
+| 58 | `02_TOOLS/test_framework.md` | ./03-Resources/Knowledge/02_TOOLS/test_framework.md |
+| 58 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 58 | `01_RULES/logging_standards.md` | ./03-Resources/Knowledge/01_RULES/logging_standards.md |
+| 58 | `01_RULES/performance_rules.md` | ./03-Resources/Knowledge/01_RULES/performance_rules.md |
+| 58 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 58 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 58 | `03_PATTERNS/menu_creation.md` | ./03-Resources/Knowledge/03_PATTERNS/menu_creation.md |
+| 58 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
+| 58 | `02_UNITY/UNITY_DEBUGGING_GUIDE.md` | ./03-Resources/Knowledge/02_UNITY/UNITY_DEBUGGING_GUIDE.md |
+| 58 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./03-Resources/Knowledge/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
+| 58 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
+| 58 | `02-Areas/Documentation/LOG_GUIDE.md` | 02-Areas/Documentation/LOG_GUIDE.md |
 | 58 | `OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
 
 ### 📄 ANALYSIS_EXAMPLES.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 85 | 01_RULES/ui_toolkit_rules.md | ../KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 86 | 03_PATTERNS/menu_creation.md | ../KNOWLEDGE_BASE/03_PATTERNS/menu_creation.md |
+| 85 | 01_RULES/ui_toolkit_rules.md | ../03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 86 | 03_PATTERNS/menu_creation.md | ../03-Resources/Knowledge/03_PATTERNS/menu_creation.md |
 | 100 | 01_RULES/ui_toolkit_rules.md | 01_RULES/ui_toolkit_rules.md |
-| 195 | _docs/PRE_OPERATION_BACKUP_GUIDE.md | _docs/PRE_OPERATION_BACKUP_GUIDE.md |
+| 195 | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md |
 | 196 | reports/OPERATION_LOG.md | reports/OPERATION_LOG.md |
-| 210 | _docs/PRE_OPERATION_BACKUP_GUIDE.md | _docs/PRE_OPERATION_BACKUP_GUIDE.md |
-| 314 | 03_PATTERNS/error_solutions.md | ../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
-| 315 | _docs/BACKUP_STRATEGY.md | _docs/BACKUP_STRATEGY.md |
+| 210 | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md |
+| 314 | 03_PATTERNS/error_solutions.md | ../03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
+| 315 | 02-Areas/Documentation/BACKUP_STRATEGY.md | 02-Areas/Documentation/BACKUP_STRATEGY.md |
 | 329 | 03_PATTERNS/error_solutions.md | 03_PATTERNS/error_solutions.md |
 
 ### 📄 BOOK_SUMMARIES_STATUS.md
@@ -513,16 +472,16 @@
 |--------|-------|--------|
 | 136 | `01_RULES/file_naming_rule.md` | ../01_RULES/file_naming_rule.md |
 | 242 | `BOOK/00_README.md` | ../BOOK/00_README.md |
-| 244 | `KNOWLEDGE_BASE/00_CORE/csharp_standards.md` | ../KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 245 | `KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md` | ../KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
+| 244 | `03-Resources/Knowledge/00_CORE/csharp_standards.md` | ../03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 245 | `03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md` | ../03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
 
 ### 📄 BRIDGE_COMPLETE_REPORT.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 199 | `.qwen/settings.json` | ./.qwen/settings.json |
-| 200 | `_docs/MCP_FILESYSTEM_SETUP.md` | ./_docs/MCP_FILESYSTEM_SETUP.md |
-| 201 | `_docs/BRIDGE_SETUP.md` | ./_docs/BRIDGE_SETUP.md |
+| 200 | `02-Areas/Documentation/MCP_FILESYSTEM_SETUP.md` | ./02-Areas/Documentation/MCP_FILESYSTEM_SETUP.md |
+| 201 | `02-Areas/Documentation/BRIDGE_SETUP.md` | ./02-Areas/Documentation/BRIDGE_SETUP.md |
 | 202 | `test-mcp.js` | ./test-mcp.js |
 | 203 | `create-bridge.bat` | ./create-bridge.bat |
 
@@ -530,15 +489,15 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 296 | `AI_FUNCTIONS.md` | ../_docs/AI_FUNCTIONS.md |
-| 297 | `error_solutions.md` | ../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 296 | `AI_FUNCTIONS.md` | ../02-Areas/Documentation/AI_FUNCTIONS.md |
+| 297 | `error_solutions.md` | ../03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 
 ### 📄 CODE_STYLE.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 564 | `../../KNOWLEDGE_BASE/00_CORE/csharp_standards.md` | ../00_CORE/csharp_standards.md |
-| 565 | `../../KNOWLEDGE_BASE/01_RULES/file_naming_rule.md` | ../01_RULES/file_naming_rule.md |
+| 564 | `../../03-Resources/Knowledge/00_CORE/csharp_standards.md` | ../00_CORE/csharp_standards.md |
+| 565 | `../../03-Resources/Knowledge/01_RULES/file_naming_rule.md` | ../01_RULES/file_naming_rule.md |
 
 ### 📄 csharp_fast_learning.md
 
@@ -557,7 +516,7 @@
 | 108 | `unity_silent_tests.md` | ../02_UNITY/unity_silent_tests.md |
 | 109 | `qwen_unity_testing.md` | ../03_PATTERNS/qwen_unity_testing.md |
 | 110 | `RULE_TEST_CASES.md` | ../../reports/RULE_TEST_CASES.md |
-| 112 | `PROFILES_MATRIX.md` | ../../_docs/PROFILES_MATRIX.md |
+| 112 | `PROFILES_MATRIX.md` | ../../02-Areas/Documentation/PROFILES_MATRIX.md |
 
 ### 📄 csharp_standards.md
 
@@ -569,15 +528,15 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 943 | `../../KNOWLEDGE_BASE/00_CORE/csharp_standards.md` | ../00_CORE/csharp_standards.md |
+| 943 | `../../03-Resources/Knowledge/00_CORE/csharp_standards.md` | ../00_CORE/csharp_standards.md |
 | 944 | `../../reports/GITHUB_REPOSITORIES_CATALOG.md` | ../reports/GITHUB_REPOSITORIES_CATALOG.md |
 
 ### 📄 EPISODIC_MEMORY.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 469 | `AI_FUNCTIONS.md` | ../_docs/AI_FUNCTIONS.md |
-| 470 | `logic_rules_for_ai.md` | ../_docs/logic_rules_for_ai.md |
+| 469 | `AI_FUNCTIONS.md` | ../02-Areas/Documentation/AI_FUNCTIONS.md |
+| 470 | `logic_rules_for_ai.md` | ../02-Areas/Documentation/logic_rules_for_ai.md |
 
 ### 📄 error_solutions.md
 
@@ -614,15 +573,15 @@
 |--------|-------|--------|
 | 340 | `BOOK/00_README.md` | ../BOOK/00_README.md |
 | 341 | `BOOK/UI_TOOLKIT_BOOK_DOWNLOAD.md` | ../BOOK/UI_TOOLKIT_BOOK_DOWNLOAD.md |
-| 342 | `KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md` | ../KNOWLEDGE_BASE/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md |
+| 342 | `03-Resources/Knowledge/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md` | ../03-Resources/Knowledge/02_UNITY/UI_TOOLKIT_UNITY6_BOOK.md |
 
 ### 📄 NAVIGATION_FOR_AI.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 173 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 174 | `scripts/auto-save-chat.ps1` | ./scripts/auto-save-chat.ps1 |
-| 175 | `_docs/PARA_GUIDE.md` | ./_docs/PARA_GUIDE.md |
+| 173 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 174 | `03-Resources/PowerShell/auto-save-chat.ps1` | ./03-Resources/PowerShell/auto-save-chat.ps1 |
+| 175 | `02-Areas/Documentation/PARA_GUIDE.md` | ./02-Areas/Documentation/PARA_GUIDE.md |
 | 178 | `Base/03-Resources/Knowledge/csharp_standards.md` | ./Base/03-Resources/Knowledge/csharp_standards.md |
 | 179 | `Base/03-Resources/PowerShell/auto-save-chat.ps1` | ./Base/03-Resources/PowerShell/auto-save-chat.ps1 |
 | 180 | `Base/02-Areas/Documentation/para-structure-guide.md` | ./Base/02-Areas/Documentation/para-structure-guide.md |
@@ -636,20 +595,20 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 218 | `_docs/RAMDISK_QUICK_SETUP.md` | ./_docs/RAMDISK_QUICK_SETUP.md |
+| 218 | `02-Areas/Documentation/RAMDISK_QUICK_SETUP.md` | ./02-Areas/Documentation/RAMDISK_QUICK_SETUP.md |
 
 ### 📄 PATTERNS_IMPLEMENTATION_GUIDE.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 14 | `KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md` | ../KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md |
-| 15 | `KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md` | ../KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md |
-| 16 | `KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md` | ../KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md |
-| 32 | `PROJECTS/DragRaceUnity/Assets/Scripts/Core/ObjectPool.cs` | ../PROJECTS/DragRaceUnity/Assets/Scripts/Core/ObjectPool.cs |
-| 64 | `PROJECTS/DragRaceUnity/Assets/Scripts/Core/EventBus.cs` | ../PROJECTS/DragRaceUnity/Assets/Scripts/Core/EventBus.cs |
-| 103 | `PROJECTS/DragRaceUnity/Assets/Scripts/Core/Commands.cs` | ../PROJECTS/DragRaceUnity/Assets/Scripts/Core/Commands.cs |
-| 429 | `KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md` | ../KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md |
-| 430 | `KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md` | ../KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md |
+| 14 | `03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md` | ../03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md |
+| 15 | `03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md` | ../03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md |
+| 16 | `03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md` | ../03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md |
+| 32 | `PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/ObjectPool.cs` | ../PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/ObjectPool.cs |
+| 64 | `PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/EventBus.cs` | ../PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/EventBus.cs |
+| 103 | `PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/Commands.cs` | ../PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/Commands.cs |
+| 429 | `03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md` | ../03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md |
+| 430 | `03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md` | ../03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md |
 | 431 | `PROJECTS/DragRaceUnity/README.md` | ../PROJECTS/DragRaceUnity/README.md |
 | 432 | `PROJECTS/DragRaceUnity/STATUS.md` | ../PROJECTS/DragRaceUnity/STATUS.md |
 
@@ -664,8 +623,8 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 294 | `STRUCTURE_GUIDE.md` | ../../_docs/STRUCTURE_GUIDE.md |
-| 297 | `RULES_INDEX.md` | ../../_docs/RULES_INDEX.md |
+| 294 | `STRUCTURE_GUIDE.md` | ../../02-Areas/Documentation/STRUCTURE_GUIDE.md |
+| 297 | `RULES_INDEX.md` | ../../02-Areas/Documentation/RULES_INDEX.md |
 
 ### 📄 qwen_cli.md
 
@@ -681,7 +640,7 @@
 | 141 | `qwen_vscode_setup.md` | ../02_TOOLS/qwen_vscode_setup.md |
 | 143 | `RULE_TEST_CASES.md` | ../../reports/RULE_TEST_CASES.md |
 | 145 | `csharp_standards.md` | ../00_CORE/csharp_standards.md |
-| 146 | `PROFILES_MATRIX.md` | ../../_docs/PROFILES_MATRIX.md |
+| 146 | `PROFILES_MATRIX.md` | ../../02-Areas/Documentation/PROFILES_MATRIX.md |
 
 ### 📄 qwen_unity_testing.md
 
@@ -703,7 +662,7 @@
 |--------|-------|--------|
 | 72 | `04_ARCHIVES/2025/old_rule.md` | 04_ARCHIVES/2025/old_rule.md |
 | 78 | `01_RULES/new_rule.md` | ../01_RULES/new_rule.md |
-| 179 | ANALYSIS_PROCESS.md | ../../_docs/ANALYSIS_PROCESS.md |
+| 179 | ANALYSIS_PROCESS.md | ../../02-Areas/Documentation/ANALYSIS_PROCESS.md |
 | 192 | `01_RULES/file_naming_rule.md` | ../../01_RULES/file_naming_rule.md |
 
 ### 📄 roslynator_cli.md
@@ -713,24 +672,24 @@
 | 203 | `unity_docker_builder.md` | ../02_UNITY/unity_docker_builder.md |
 | 207 | `ai_programming_tips.md` | ../05_METHODOLOGY/ai_programming_tips.md |
 | 208 | `RULE_TEST_CASES.md` | ../../reports/RULE_TEST_CASES.md |
-| 209 | `RULES_INDEX.md` | ../../_docs/RULES_INDEX.md |
+| 209 | `RULES_INDEX.md` | ../../02-Areas/Documentation/RULES_INDEX.md |
 
 ### 📄 SESSION_COMPLETE_REPORT.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 157 | `_docs/TASK_SCHEDULER_MANUAL_SETUP.md` | _docs/TASK_SCHEDULER_MANUAL_SETUP.md |
-| 190 | PRE_OPERATION_BACKUP_GUIDE.md | _docs/PRE_OPERATION_BACKUP_GUIDE.md |
-| 191 | SAFE_DELETE_GUIDE.md | _docs/SAFE_DELETE_GUIDE.md |
-| 192 | OLD_BACKUP_ANALYSIS_GUIDE.md | _docs/OLD_BACKUP_ANALYSIS_GUIDE.md |
-| 193 | TEST_ENV_GUIDE.md | _docs/TEST_ENV_GUIDE.md |
-| 194 | DEDUP_GUIDE.md | _docs/DEDUP_GUIDE.md |
-| 195 | BACKUP_STRATEGY.md | _docs/BACKUP_STRATEGY.md |
-| 196 | ANALYSIS_PROCESS.md | _docs/ANALYSIS_PROCESS.md |
-| 197 | STRUCTURE_GUIDE.md | _docs/STRUCTURE_GUIDE.md |
-| 198 | TASK_SCHEDULER_SETUP.md | _docs/TASK_SCHEDULER_SETUP.md |
-| 199 | KNOWLEDGE_BASE_GUIDE.md | _docs/KNOWLEDGE_BASE_GUIDE.md |
-| 207 | `_docs/TASK_SCHEDULER_MANUAL_SETUP.md` | _docs/TASK_SCHEDULER_MANUAL_SETUP.md |
+| 157 | `02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md` | 02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md |
+| 190 | PRE_OPERATION_BACKUP_GUIDE.md | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md |
+| 191 | SAFE_DELETE_GUIDE.md | 02-Areas/Documentation/SAFE_DELETE_GUIDE.md |
+| 192 | OLD_BACKUP_ANALYSIS_GUIDE.md | 02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md |
+| 193 | TEST_ENV_GUIDE.md | 02-Areas/Documentation/TEST_ENV_GUIDE.md |
+| 194 | DEDUP_GUIDE.md | 02-Areas/Documentation/DEDUP_GUIDE.md |
+| 195 | BACKUP_STRATEGY.md | 02-Areas/Documentation/BACKUP_STRATEGY.md |
+| 196 | ANALYSIS_PROCESS.md | 02-Areas/Documentation/ANALYSIS_PROCESS.md |
+| 197 | STRUCTURE_GUIDE.md | 02-Areas/Documentation/STRUCTURE_GUIDE.md |
+| 198 | TASK_SCHEDULER_SETUP.md | 02-Areas/Documentation/TASK_SCHEDULER_SETUP.md |
+| 199 | KNOWLEDGE_BASE_GUIDE.md | 02-Areas/Documentation/KNOWLEDGE_BASE_GUIDE.md |
+| 207 | `02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md` | 02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md |
 
 ### 📄 TASKS_2026-02-28.md
 
@@ -744,16 +703,16 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 277 | `scripts/AUDIT_ALL.ps1` | ./scripts/AUDIT_ALL.ps1 |
-| 278 | `scripts/organize-root.ps1` | ./scripts/organize-root.ps1 |
+| 277 | `03-Resources/PowerShell/AUDIT_ALL.ps1` | ./03-Resources/PowerShell/AUDIT_ALL.ps1 |
+| 278 | `03-Resources/PowerShell/organize-root.ps1` | ./03-Resources/PowerShell/organize-root.ps1 |
 | 279 | `reports/KB_DASHBOARD.html` | ./reports/KB_DASHBOARD.html |
-| 280 | `_docs/VS_CODE_SETUP_FOR_AI.md` | ./_docs/VS_CODE_SETUP_FOR_AI.md |
+| 280 | `02-Areas/Documentation/VS_CODE_SETUP_FOR_AI.md` | ./02-Areas/Documentation/VS_CODE_SETUP_FOR_AI.md |
 
 ### 📄 UnityCsReference_ANALYSIS.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 472 | `KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md` | ../KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md |
+| 472 | `03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md` | ../03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md |
 
 ### 📄 UNITYCSREFERENCE_FINAL_SUMMARY.md
 
@@ -762,7 +721,7 @@
 | 439 | `reports/UnityCsReference_ANALYSIS.md` | ./reports/UnityCsReference_ANALYSIS.md |
 | 440 | `reports/UNITYCSREFERENCE_FULL_ANALYSIS.md` | ./reports/UNITYCSREFERENCE_FULL_ANALYSIS.md |
 | 441 | `reports/UNITY_ATTRIBUTES_GUIDE.md` | ./reports/UNITY_ATTRIBUTES_GUIDE.md |
-| 444 | `KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md |
+| 444 | `03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md |
 | 447 | `TEMP/UnityCsReference/` | ./TEMP/UnityCsReference/ |
 
 ### 📄 UNITYCSREFERENCE_FULL_ANALYSIS.md
@@ -770,14 +729,14 @@
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 344 | `TEMP/UnityCsReference/` | ./TEMP/UnityCsReference/ |
-| 345 | `KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_THINKING_GUIDE.md |
+| 345 | `03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_THINKING_GUIDE.md |
 
 ### 📄 UNITY_CS_REFERENCE_ANALYSIS.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 410 | `../../reports/GITHUB_REPOSITORIES_CATALOG.md` | ../reports/GITHUB_REPOSITORIES_CATALOG.md |
-| 411 | `../../KNOWLEDGE_BASE/00_CORE/csharp_standards.md` | ../00_CORE/csharp_standards.md |
+| 411 | `../../03-Resources/Knowledge/00_CORE/csharp_standards.md` | ../00_CORE/csharp_standards.md |
 
 ### 📄 unity_docker_builder.md
 
@@ -1035,18 +994,18 @@
 |--------|-------|--------|
 | 11 | `AI_START_HERE.md` | ./AI_START_HERE.md |
 | 172 | `PATTERN_DRAFT.md` | ./PATTERN_DRAFT.md |
-| 296 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 308 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 322 | `02_TOOLS/build_system.md` | ./KNOWLEDGE_BASE/02_TOOLS/build_system.md |
-| 334 | `02_TOOLS/test_framework.md` | ./KNOWLEDGE_BASE/02_TOOLS/test_framework.md |
-| 345 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 296 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 308 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 322 | `02_TOOLS/build_system.md` | ./03-Resources/Knowledge/02_TOOLS/build_system.md |
+| 334 | `02_TOOLS/test_framework.md` | ./03-Resources/Knowledge/02_TOOLS/test_framework.md |
+| 345 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 | 387 | `AI_START_HERE.md` | ./AI_START_HERE.md |
-| 428 | `scripts/old-analysis.ps1` | ./scripts/old-analysis.ps1 |
+| 428 | `03-Resources/PowerShell/old-analysis.ps1` | ./03-Resources/PowerShell/old-analysis.ps1 |
 | 460 | `RELEASE/README.md` | ./RELEASE/README.md |
-| 485 | `scripts/auto-archive.ps1` | ./scripts/auto-archive.ps1 |
-| 498 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 485 | `03-Resources/PowerShell/auto-archive.ps1` | ./03-Resources/PowerShell/auto-archive.ps1 |
+| 498 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 | 508 | `ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md` | ./ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md |
-| 534 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 534 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 | 544 | `ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md` | ./ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md |
 | 545 | `ТЕКУЩАЯ_ЗАДАЧА.md` | ./ТЕКУЩАЯ_ЗАДАЧА.md |
 | 546 | `PROJECTS/DragRaceUnity/README.md` | ./PROJECTS/DragRaceUnity/README.md |
@@ -1075,8 +1034,8 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 284 | `scripts/debug-unity.ps1` | ./scripts/debug-unity.ps1 |
-| 285 | `scripts/debug-vs.ps1` | ./scripts/debug-vs.ps1 |
+| 284 | `03-Resources/PowerShell/debug-unity.ps1` | ./03-Resources/PowerShell/debug-unity.ps1 |
+| 285 | `03-Resources/PowerShell/debug-vs.ps1` | ./03-Resources/PowerShell/debug-vs.ps1 |
 | 286 | `VISUAL_STUDIO_DEBUGGING_ANALYSIS.md` | ./VISUAL_STUDIO_DEBUGGING_ANALYSIS.md |
 
 ### 📄 INSTALL_SONARLINT.md
@@ -1107,28 +1066,28 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 61 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 62 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 63 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 64 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 75 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 61 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 62 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 63 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 64 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 75 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 | 198 | `OLD/README.md` | ./OLD/README.md |
-| 346 | `00_CORE/project_glossary.md` | ./KNOWLEDGE_BASE/00_CORE/project_glossary.md |
-| 347 | `00_CORE/unity_fundamentals.md` | ./KNOWLEDGE_BASE/00_CORE/unity_fundamentals.md |
-| 348 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 354 | `02_TOOLS/powershell_scripts.md` | ./KNOWLEDGE_BASE/02_TOOLS/powershell_scripts.md |
-| 355 | `02_TOOLS/build_system.md` | ./KNOWLEDGE_BASE/02_TOOLS/build_system.md |
-| 356 | `02_TOOLS/test_framework.md` | ./KNOWLEDGE_BASE/02_TOOLS/test_framework.md |
-| 362 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 363 | `01_RULES/logging_standards.md` | ./KNOWLEDGE_BASE/01_RULES/logging_standards.md |
-| 364 | `01_RULES/performance_rules.md` | ./KNOWLEDGE_BASE/01_RULES/performance_rules.md |
-| 365 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 366 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 372 | `03_PATTERNS/menu_creation.md` | ./KNOWLEDGE_BASE/03_PATTERNS/menu_creation.md |
-| 373 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
-| 379 | `02_UNITY/UNITY_DEBUGGING_GUIDE.md` | ./KNOWLEDGE_BASE/02_UNITY/UNITY_DEBUGGING_GUIDE.md |
-| 380 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
-| 381 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
+| 346 | `00_CORE/project_glossary.md` | ./03-Resources/Knowledge/00_CORE/project_glossary.md |
+| 347 | `00_CORE/unity_fundamentals.md` | ./03-Resources/Knowledge/00_CORE/unity_fundamentals.md |
+| 348 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 354 | `02_TOOLS/powershell_scripts.md` | ./03-Resources/Knowledge/02_TOOLS/powershell_scripts.md |
+| 355 | `02_TOOLS/build_system.md` | ./03-Resources/Knowledge/02_TOOLS/build_system.md |
+| 356 | `02_TOOLS/test_framework.md` | ./03-Resources/Knowledge/02_TOOLS/test_framework.md |
+| 362 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 363 | `01_RULES/logging_standards.md` | ./03-Resources/Knowledge/01_RULES/logging_standards.md |
+| 364 | `01_RULES/performance_rules.md` | ./03-Resources/Knowledge/01_RULES/performance_rules.md |
+| 365 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 366 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 372 | `03_PATTERNS/menu_creation.md` | ./03-Resources/Knowledge/03_PATTERNS/menu_creation.md |
+| 373 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
+| 379 | `02_UNITY/UNITY_DEBUGGING_GUIDE.md` | ./03-Resources/Knowledge/02_UNITY/UNITY_DEBUGGING_GUIDE.md |
+| 380 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./03-Resources/Knowledge/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
+| 381 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
 | 679 | `OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
 | 680 | `AI_START_HERE_ANALYSIS.md` | ./AI_START_HERE_ANALYSIS.md |
 | 681 | `DEBUGGING_IMPLEMENTATION_COMPLETE.md` | ./DEBUGGING_IMPLEMENTATION_COMPLETE.md |
@@ -1140,31 +1099,31 @@
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 16 | `NOTES.md` | ./NOTES.md |
-| 26 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 27 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 28 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 34 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
-| 35 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
-| 45 | `scripts/old-analysis.ps1` | ./scripts/old-analysis.ps1 |
-| 46 | `scripts/old-cleanup.ps1` | ./scripts/old-cleanup.ps1 |
-| 47 | `scripts/move-to-old.ps1` | ./scripts/move-to-old.ps1 |
+| 26 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 27 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 28 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 34 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./03-Resources/Knowledge/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
+| 35 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
+| 45 | `03-Resources/PowerShell/old-analysis.ps1` | ./03-Resources/PowerShell/old-analysis.ps1 |
+| 46 | `03-Resources/PowerShell/old-cleanup.ps1` | ./03-Resources/PowerShell/old-cleanup.ps1 |
+| 47 | `03-Resources/PowerShell/move-to-old.ps1` | ./03-Resources/PowerShell/move-to-old.ps1 |
 | 48 | `reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
-| 57 | `scripts/auto-commit-daily.ps1` | ./scripts/auto-commit-daily.ps1 |
-| 58 | `scripts/check-duplicates.ps1` | ./scripts/check-duplicates.ps1 |
-| 59 | `scripts/organize-root.ps1` | ./scripts/organize-root.ps1 |
-| 60 | `scripts/update-ai-start-here.ps1` | ./scripts/update-ai-start-here.ps1 |
-| 69 | `scripts/tdd-verify-complete.ps1` | ./scripts/tdd-verify-complete.ps1 |
+| 57 | `03-Resources/PowerShell/auto-commit-daily.ps1` | ./03-Resources/PowerShell/auto-commit-daily.ps1 |
+| 58 | `03-Resources/PowerShell/check-duplicates.ps1` | ./03-Resources/PowerShell/check-duplicates.ps1 |
+| 59 | `03-Resources/PowerShell/organize-root.ps1` | ./03-Resources/PowerShell/organize-root.ps1 |
+| 60 | `03-Resources/PowerShell/update-ai-start-here.ps1` | ./03-Resources/PowerShell/update-ai-start-here.ps1 |
+| 69 | `03-Resources/PowerShell/tdd-verify-complete.ps1` | ./03-Resources/PowerShell/tdd-verify-complete.ps1 |
 | 78 | `reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
 | 79 | `reports/SAVE_COMPLETE_REPORT.md` | ./reports/SAVE_COMPLETE_REPORT.md |
 | 80 | `reports/FULL_AI_START_HERE_AUDIT.md` | ./reports/FULL_AI_START_HERE_AUDIT.md |
 | 81 | `reports/QWEN_INSIGHTS_IMPLEMENTATION.md` | ./reports/QWEN_INSIGHTS_IMPLEMENTATION.md |
 | 82 | `reports/ALL_TASKS_COMPLETED.md` | ./reports/ALL_TASKS_COMPLETED.md |
-| 90 | `_docs/CHEAT_SHEET.md` | ./_docs/CHEAT_SHEET.md |
-| 91 | `_docs/SCRIPTS_README.md` | ./_docs/SCRIPTS_README.md |
+| 90 | `02-Areas/Documentation/CHEAT_SHEET.md` | ./02-Areas/Documentation/CHEAT_SHEET.md |
+| 91 | `02-Areas/Documentation/SCRIPTS_README.md` | ./02-Areas/Documentation/SCRIPTS_README.md |
 | 92 | `_templates/ANSWER_TEMPLATE.md` | ./_templates/ANSWER_TEMPLATE.md |
 | 114 | `NOTES.md` | ./NOTES.md |
-| 115 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 116 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 115 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 116 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 
 ### 📄 tekushchaya_zadacha.md
 
@@ -1178,18 +1137,18 @@
 |--------|-------|--------|
 | 11 | `AI_START_HERE.md` | ./AI_START_HERE.md |
 | 172 | `PATTERN_DRAFT.md` | ./PATTERN_DRAFT.md |
-| 296 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 308 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 322 | `02_TOOLS/build_system.md` | ./KNOWLEDGE_BASE/02_TOOLS/build_system.md |
-| 334 | `02_TOOLS/test_framework.md` | ./KNOWLEDGE_BASE/02_TOOLS/test_framework.md |
-| 345 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 296 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 308 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 322 | `02_TOOLS/build_system.md` | ./03-Resources/Knowledge/02_TOOLS/build_system.md |
+| 334 | `02_TOOLS/test_framework.md` | ./03-Resources/Knowledge/02_TOOLS/test_framework.md |
+| 345 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 | 387 | `AI_START_HERE.md` | ./AI_START_HERE.md |
-| 428 | `scripts/old-analysis.ps1` | ./scripts/old-analysis.ps1 |
+| 428 | `03-Resources/PowerShell/old-analysis.ps1` | ./03-Resources/PowerShell/old-analysis.ps1 |
 | 460 | `RELEASE/README.md` | ./RELEASE/README.md |
-| 485 | `scripts/auto-archive.ps1` | ./scripts/auto-archive.ps1 |
-| 498 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 485 | `03-Resources/PowerShell/auto-archive.ps1` | ./03-Resources/PowerShell/auto-archive.ps1 |
+| 498 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 | 508 | `ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md` | ./ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md |
-| 534 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 534 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 | 544 | `ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md` | ./ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md |
 | 545 | `ТЕКУЩАЯ_ЗАДАЧА.md` | ./ТЕКУЩАЯ_ЗАДАЧА.md |
 | 546 | `PROJECTS/DragRaceUnity/README.md` | ./PROJECTS/DragRaceUnity/README.md |
@@ -1218,8 +1177,8 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 284 | `scripts/debug-unity.ps1` | ./scripts/debug-unity.ps1 |
-| 285 | `scripts/debug-vs.ps1` | ./scripts/debug-vs.ps1 |
+| 284 | `03-Resources/PowerShell/debug-unity.ps1` | ./03-Resources/PowerShell/debug-unity.ps1 |
+| 285 | `03-Resources/PowerShell/debug-vs.ps1` | ./03-Resources/PowerShell/debug-vs.ps1 |
 | 286 | `VISUAL_STUDIO_DEBUGGING_ANALYSIS.md` | ./VISUAL_STUDIO_DEBUGGING_ANALYSIS.md |
 
 ### 📄 INSTALL_SONARLINT.md
@@ -1250,28 +1209,28 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 61 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 62 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 63 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 64 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 75 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 61 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 62 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 63 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 64 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 75 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 | 198 | `OLD/README.md` | ./OLD/README.md |
-| 346 | `00_CORE/project_glossary.md` | ./KNOWLEDGE_BASE/00_CORE/project_glossary.md |
-| 347 | `00_CORE/unity_fundamentals.md` | ./KNOWLEDGE_BASE/00_CORE/unity_fundamentals.md |
-| 348 | `00_CORE/csharp_standards.md` | ./KNOWLEDGE_BASE/00_CORE/csharp_standards.md |
-| 354 | `02_TOOLS/powershell_scripts.md` | ./KNOWLEDGE_BASE/02_TOOLS/powershell_scripts.md |
-| 355 | `02_TOOLS/build_system.md` | ./KNOWLEDGE_BASE/02_TOOLS/build_system.md |
-| 356 | `02_TOOLS/test_framework.md` | ./KNOWLEDGE_BASE/02_TOOLS/test_framework.md |
-| 362 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 363 | `01_RULES/logging_standards.md` | ./KNOWLEDGE_BASE/01_RULES/logging_standards.md |
-| 364 | `01_RULES/performance_rules.md` | ./KNOWLEDGE_BASE/01_RULES/performance_rules.md |
-| 365 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 366 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 372 | `03_PATTERNS/menu_creation.md` | ./KNOWLEDGE_BASE/03_PATTERNS/menu_creation.md |
-| 373 | `03_PATTERNS/error_solutions.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
-| 379 | `02_UNITY/UNITY_DEBUGGING_GUIDE.md` | ./KNOWLEDGE_BASE/02_UNITY/UNITY_DEBUGGING_GUIDE.md |
-| 380 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
-| 381 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
+| 346 | `00_CORE/project_glossary.md` | ./03-Resources/Knowledge/00_CORE/project_glossary.md |
+| 347 | `00_CORE/unity_fundamentals.md` | ./03-Resources/Knowledge/00_CORE/unity_fundamentals.md |
+| 348 | `00_CORE/csharp_standards.md` | ./03-Resources/Knowledge/00_CORE/csharp_standards.md |
+| 354 | `02_TOOLS/powershell_scripts.md` | ./03-Resources/Knowledge/02_TOOLS/powershell_scripts.md |
+| 355 | `02_TOOLS/build_system.md` | ./03-Resources/Knowledge/02_TOOLS/build_system.md |
+| 356 | `02_TOOLS/test_framework.md` | ./03-Resources/Knowledge/02_TOOLS/test_framework.md |
+| 362 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 363 | `01_RULES/logging_standards.md` | ./03-Resources/Knowledge/01_RULES/logging_standards.md |
+| 364 | `01_RULES/performance_rules.md` | ./03-Resources/Knowledge/01_RULES/performance_rules.md |
+| 365 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 366 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 372 | `03_PATTERNS/menu_creation.md` | ./03-Resources/Knowledge/03_PATTERNS/menu_creation.md |
+| 373 | `03_PATTERNS/error_solutions.md` | ./03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
+| 379 | `02_UNITY/UNITY_DEBUGGING_GUIDE.md` | ./03-Resources/Knowledge/02_UNITY/UNITY_DEBUGGING_GUIDE.md |
+| 380 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./03-Resources/Knowledge/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
+| 381 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
 | 679 | `OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
 | 680 | `AI_START_HERE_ANALYSIS.md` | ./AI_START_HERE_ANALYSIS.md |
 | 681 | `DEBUGGING_IMPLEMENTATION_COMPLETE.md` | ./DEBUGGING_IMPLEMENTATION_COMPLETE.md |
@@ -1283,31 +1242,31 @@
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 16 | `NOTES.md` | ./NOTES.md |
-| 26 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 27 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 28 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 34 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
-| 35 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
-| 45 | `scripts/old-analysis.ps1` | ./scripts/old-analysis.ps1 |
-| 46 | `scripts/old-cleanup.ps1` | ./scripts/old-cleanup.ps1 |
-| 47 | `scripts/move-to-old.ps1` | ./scripts/move-to-old.ps1 |
+| 26 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 27 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 28 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 34 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./03-Resources/Knowledge/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
+| 35 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
+| 45 | `03-Resources/PowerShell/old-analysis.ps1` | ./03-Resources/PowerShell/old-analysis.ps1 |
+| 46 | `03-Resources/PowerShell/old-cleanup.ps1` | ./03-Resources/PowerShell/old-cleanup.ps1 |
+| 47 | `03-Resources/PowerShell/move-to-old.ps1` | ./03-Resources/PowerShell/move-to-old.ps1 |
 | 48 | `reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
-| 57 | `scripts/auto-commit-daily.ps1` | ./scripts/auto-commit-daily.ps1 |
-| 58 | `scripts/check-duplicates.ps1` | ./scripts/check-duplicates.ps1 |
-| 59 | `scripts/organize-root.ps1` | ./scripts/organize-root.ps1 |
-| 60 | `scripts/update-ai-start-here.ps1` | ./scripts/update-ai-start-here.ps1 |
-| 69 | `scripts/tdd-verify-complete.ps1` | ./scripts/tdd-verify-complete.ps1 |
+| 57 | `03-Resources/PowerShell/auto-commit-daily.ps1` | ./03-Resources/PowerShell/auto-commit-daily.ps1 |
+| 58 | `03-Resources/PowerShell/check-duplicates.ps1` | ./03-Resources/PowerShell/check-duplicates.ps1 |
+| 59 | `03-Resources/PowerShell/organize-root.ps1` | ./03-Resources/PowerShell/organize-root.ps1 |
+| 60 | `03-Resources/PowerShell/update-ai-start-here.ps1` | ./03-Resources/PowerShell/update-ai-start-here.ps1 |
+| 69 | `03-Resources/PowerShell/tdd-verify-complete.ps1` | ./03-Resources/PowerShell/tdd-verify-complete.ps1 |
 | 78 | `reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
 | 79 | `reports/SAVE_COMPLETE_REPORT.md` | ./reports/SAVE_COMPLETE_REPORT.md |
 | 80 | `reports/FULL_AI_START_HERE_AUDIT.md` | ./reports/FULL_AI_START_HERE_AUDIT.md |
 | 81 | `reports/QWEN_INSIGHTS_IMPLEMENTATION.md` | ./reports/QWEN_INSIGHTS_IMPLEMENTATION.md |
 | 82 | `reports/ALL_TASKS_COMPLETED.md` | ./reports/ALL_TASKS_COMPLETED.md |
-| 90 | `_docs/CHEAT_SHEET.md` | ./_docs/CHEAT_SHEET.md |
-| 91 | `_docs/SCRIPTS_README.md` | ./_docs/SCRIPTS_README.md |
+| 90 | `02-Areas/Documentation/CHEAT_SHEET.md` | ./02-Areas/Documentation/CHEAT_SHEET.md |
+| 91 | `02-Areas/Documentation/SCRIPTS_README.md` | ./02-Areas/Documentation/SCRIPTS_README.md |
 | 92 | `_templates/ANSWER_TEMPLATE.md` | ./_templates/ANSWER_TEMPLATE.md |
 | 114 | `NOTES.md` | ./NOTES.md |
-| 115 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 116 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 115 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 116 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 
 ### 📄 tekushchaya_zadacha.md
 
@@ -1337,7 +1296,7 @@
 |--------|-------|--------|
 | 196 | `.qwen/QWEN.md` | ./.qwen/QWEN.md |
 | 197 | `ANSWER_TEMPLATE.md` | ./ANSWER_TEMPLATE.md |
-| 198 | `KNOWLEDGE_BASE/03_PATTERNS/` | ./KNOWLEDGE_BASE/03_PATTERNS/ |
+| 198 | `03-Resources/Knowledge/03_PATTERNS/` | ./03-Resources/Knowledge/03_PATTERNS/ |
 
 ### 📄 README.md
 
@@ -1359,8 +1318,8 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 284 | `scripts/debug-unity.ps1` | ./scripts/debug-unity.ps1 |
-| 285 | `scripts/debug-vs.ps1` | ./scripts/debug-vs.ps1 |
+| 284 | `03-Resources/PowerShell/debug-unity.ps1` | ./03-Resources/PowerShell/debug-unity.ps1 |
+| 285 | `03-Resources/PowerShell/debug-vs.ps1` | ./03-Resources/PowerShell/debug-vs.ps1 |
 | 286 | `VISUAL_STUDIO_DEBUGGING_ANALYSIS.md` | ./VISUAL_STUDIO_DEBUGGING_ANALYSIS.md |
 
 ### 📄 INSTALL_SONARLINT.md
@@ -1387,7 +1346,7 @@
 |--------|-------|--------|
 | 124 | 01_RULES/ui_toolkit_rules.md | путь |
 | 125 | 03_PATTERNS/error_solutions.md | путь |
-| 126 | scripts/pre-operation-backup.ps1 | путь |
+| 126 | 03-Resources/PowerShell/pre-operation-backup.ps1 | путь |
 | 148 | Файл1 | путь |
 | 149 | Файл2 | путь |
 | 176 | Ссылка1 | путь |
@@ -1413,9 +1372,9 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 60 | 00_CORE/unity_fundamentals.md | ../KNOWLEDGE_BASE/00_CORE/unity_fundamentals.md |
-| 61 | 01_RULES/ui_toolkit_rules.md | ../KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 62 | 03_PATTERNS/error_solutions.md | ../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
+| 60 | 00_CORE/unity_fundamentals.md | ../03-Resources/Knowledge/00_CORE/unity_fundamentals.md |
+| 61 | 01_RULES/ui_toolkit_rules.md | ../03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 62 | 03_PATTERNS/error_solutions.md | ../03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
 | 65 | Официальная документация | URL |
 | 66 | GitHub репозиторий | URL |
 | 115 | Ссылка1 | путь |
@@ -1437,9 +1396,9 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 124 | 03_PATTERNS/error_solutions.md | ../KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md |
-| 125 | scripts/debug-unity.ps1 | ../scripts/debug-unity.ps1 |
-| 126 | _docs/DEBUGGING_GUIDE.md | _docs/DEBUGGING_GUIDE.md |
+| 124 | 03_PATTERNS/error_solutions.md | ../03-Resources/Knowledge/03_PATTERNS/error_solutions.md |
+| 125 | 03-Resources/PowerShell/debug-unity.ps1 | ../03-Resources/PowerShell/debug-unity.ps1 |
+| 126 | 02-Areas/Documentation/DEBUGGING_GUIDE.md | 02-Areas/Documentation/DEBUGGING_GUIDE.md |
 | 129 | Stack Overflow | URL |
 | 130 | GitHub Issue | URL |
 | 131 | Unity Forum | URL |
@@ -1504,8 +1463,8 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 88 | scripts/pre-operation-backup.ps1 | ../scripts/pre-operation-backup.ps1 |
-| 89 | _docs/PRE_OPERATION_BACKUP_GUIDE.md | _docs/PRE_OPERATION_BACKUP_GUIDE.md |
+| 88 | 03-Resources/PowerShell/pre-operation-backup.ps1 | ../03-Resources/PowerShell/pre-operation-backup.ps1 |
+| 89 | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md |
 | 93 | GitHub Gist | URL |
 | 140 | Ссылка1 | путь |
 | 140 | Ссылка2 | путь |
@@ -1527,7 +1486,7 @@
 | 108 | `unity_silent_tests.md` | ../02_UNITY/unity_silent_tests.md |
 | 109 | `qwen_unity_testing.md` | ../03_PATTERNS/qwen_unity_testing.md |
 | 110 | `RULE_TEST_CASES.md` | ../../reports/RULE_TEST_CASES.md |
-| 112 | `PROFILES_MATRIX.md` | ../../_docs/PROFILES_MATRIX.md |
+| 112 | `PROFILES_MATRIX.md` | ../../02-Areas/Documentation/PROFILES_MATRIX.md |
 
 ### 📄 csharp_standards.md
 
@@ -1549,8 +1508,8 @@
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 293 | `AI_START_HERE.md` | ../../AI_START_HERE.md |
-| 294 | `STRUCTURE_GUIDE.md` | ../../_docs/STRUCTURE_GUIDE.md |
-| 297 | `RULES_INDEX.md` | ../../_docs/RULES_INDEX.md |
+| 294 | `STRUCTURE_GUIDE.md` | ../../02-Areas/Documentation/STRUCTURE_GUIDE.md |
+| 297 | `RULES_INDEX.md` | ../../02-Areas/Documentation/RULES_INDEX.md |
 
 ### 📄 roslynator_cli.md
 
@@ -1559,14 +1518,14 @@
 | 203 | `unity_docker_builder.md` | ../02_UNITY/unity_docker_builder.md |
 | 207 | `ai_programming_tips.md` | ../05_METHODOLOGY/ai_programming_tips.md |
 | 208 | `RULE_TEST_CASES.md` | ../../reports/RULE_TEST_CASES.md |
-| 209 | `RULES_INDEX.md` | ../../_docs/RULES_INDEX.md |
+| 209 | `RULES_INDEX.md` | ../../02-Areas/Documentation/RULES_INDEX.md |
 
 ### 📄 UNITY_CS_REFERENCE_ANALYSIS.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 410 | `../../reports/GITHUB_REPOSITORIES_CATALOG.md` | ../reports/GITHUB_REPOSITORIES_CATALOG.md |
-| 412 | `../../KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md` | ./CODE_STYLE.md |
+| 412 | `../../03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md` | ./CODE_STYLE.md |
 
 ### 📄 AGENTS.md
 
@@ -1578,16 +1537,14 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 34 | `reports/SESSION_HANDOVER.md` | ./reports/SESSION_HANDOVER.md |
-| 100 | `reports/SESSION_HANDOVER.md` | ./reports/SESSION_HANDOVER.md |
-| 102 | `KNOWLEDGE_BASE/00_README.md` | ./KNOWLEDGE_BASE/00_README.md |
+| 99 | `KNOWLEDGE_BASE/00_README.md` | ./KNOWLEDGE_BASE/00_README.md |
 
 ### 📄 ANTI_PATTERNS.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 97 | `scripts/safe-delete.ps1` | ./scripts/safe-delete.ps1 |
-| 234 | `scripts/check-duplicates.ps1` | ./scripts/check-duplicates.ps1 |
+| 97 | `03-Resources/PowerShell/safe-delete.ps1` | ./03-Resources/PowerShell/safe-delete.ps1 |
+| 234 | `03-Resources/PowerShell/check-duplicates.ps1` | ./03-Resources/PowerShell/check-duplicates.ps1 |
 | 255 | `reports/SESSION_HANDOVER.md` | ./reports/SESSION_HANDOVER.md |
 
 ### 📄 ERROR_LOG.md
@@ -1595,42 +1552,42 @@
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
 | 48 | `путь/к/файлу.md` | путь/к/файлу.md |
-| 155 | `scripts/backup-before-change.ps1` | ./scripts/backup-before-change.ps1 |
+| 155 | `03-Resources/PowerShell/backup-before-change.ps1` | ./03-Resources/PowerShell/backup-before-change.ps1 |
 
 ### 📄 LINKS.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 26 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
-| 27 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 28 | `01_RULES/ui_toolkit_rules.md` | ./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md |
-| 34 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
-| 35 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./KNOWLEDGE_BASE/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
-| 45 | `scripts/old-analysis.ps1` | ./scripts/old-analysis.ps1 |
-| 46 | `scripts/old-cleanup.ps1` | ./scripts/old-cleanup.ps1 |
-| 47 | `scripts/move-to-old.ps1` | ./scripts/move-to-old.ps1 |
+| 26 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
+| 27 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 28 | `01_RULES/ui_toolkit_rules.md` | ./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md |
+| 34 | `05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md` | ./03-Resources/Knowledge/05_METHODOLOGY/META_RULES_FOR_KNOWLEDGE_ANALYSIS.md |
+| 35 | `05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md` | ./03-Resources/Knowledge/05_METHODOLOGY/AI_SELF_LEARNING_METHODOLOGY.md |
+| 45 | `03-Resources/PowerShell/old-analysis.ps1` | ./03-Resources/PowerShell/old-analysis.ps1 |
+| 46 | `03-Resources/PowerShell/old-cleanup.ps1` | ./03-Resources/PowerShell/old-cleanup.ps1 |
+| 47 | `03-Resources/PowerShell/move-to-old.ps1` | ./03-Resources/PowerShell/move-to-old.ps1 |
 | 48 | `reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
-| 57 | `scripts/auto-commit-daily.ps1` | ./scripts/auto-commit-daily.ps1 |
-| 58 | `scripts/check-duplicates.ps1` | ./scripts/check-duplicates.ps1 |
-| 59 | `scripts/organize-root.ps1` | ./scripts/organize-root.ps1 |
-| 60 | `scripts/update-ai-start-here.ps1` | ./scripts/update-ai-start-here.ps1 |
-| 69 | `scripts/tdd-verify-complete.ps1` | ./scripts/tdd-verify-complete.ps1 |
+| 57 | `03-Resources/PowerShell/auto-commit-daily.ps1` | ./03-Resources/PowerShell/auto-commit-daily.ps1 |
+| 58 | `03-Resources/PowerShell/check-duplicates.ps1` | ./03-Resources/PowerShell/check-duplicates.ps1 |
+| 59 | `03-Resources/PowerShell/organize-root.ps1` | ./03-Resources/PowerShell/organize-root.ps1 |
+| 60 | `03-Resources/PowerShell/update-ai-start-here.ps1` | ./03-Resources/PowerShell/update-ai-start-here.ps1 |
+| 69 | `03-Resources/PowerShell/tdd-verify-complete.ps1` | ./03-Resources/PowerShell/tdd-verify-complete.ps1 |
 | 78 | `reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md` | ./reports/OLD_RELEASE_ARCHIVE_IMPLEMENTATION.md |
 | 79 | `reports/SAVE_COMPLETE_REPORT.md` | ./reports/SAVE_COMPLETE_REPORT.md |
 | 80 | `reports/FULL_AI_START_HERE_AUDIT.md` | ./reports/FULL_AI_START_HERE_AUDIT.md |
 | 81 | `reports/QWEN_INSIGHTS_IMPLEMENTATION.md` | ./reports/QWEN_INSIGHTS_IMPLEMENTATION.md |
 | 82 | `reports/ALL_TASKS_COMPLETED.md` | ./reports/ALL_TASKS_COMPLETED.md |
-| 90 | `_docs/CHEAT_SHEET.md` | ./_docs/CHEAT_SHEET.md |
-| 91 | `_docs/SCRIPTS_README.md` | ./_docs/SCRIPTS_README.md |
-| 115 | `01_RULES/file_naming_rule.md` | ./KNOWLEDGE_BASE/01_RULES/file_naming_rule.md |
-| 116 | `01_RULES/before_change_rule.md` | ./KNOWLEDGE_BASE/01_RULES/before_change_rule.md |
+| 90 | `02-Areas/Documentation/CHEAT_SHEET.md` | ./02-Areas/Documentation/CHEAT_SHEET.md |
+| 91 | `02-Areas/Documentation/SCRIPTS_README.md` | ./02-Areas/Documentation/SCRIPTS_README.md |
+| 115 | `01_RULES/file_naming_rule.md` | ./03-Resources/Knowledge/01_RULES/file_naming_rule.md |
+| 116 | `01_RULES/before_change_rule.md` | ./03-Resources/Knowledge/01_RULES/before_change_rule.md |
 
 ### 📄 NOTES.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 112 | `01_RULES/material_processing_rule.md` | ./KNOWLEDGE_BASE/01_RULES/material_processing_rule.md |
-| 113 | `03_PATTERNS/error_log.md` | ./KNOWLEDGE_BASE/03_PATTERNS/error_log.md |
+| 112 | `01_RULES/material_processing_rule.md` | ./03-Resources/Knowledge/01_RULES/material_processing_rule.md |
+| 113 | `03_PATTERNS/error_log.md` | ./03-Resources/Knowledge/03_PATTERNS/error_log.md |
 
 ### 📄 POST_MORTEM_TEMPLATE.md
 
@@ -1652,23 +1609,23 @@
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 62 | _docs/TEST_ENV_GUIDE.md | _docs/TEST_ENV_GUIDE.md |
-| 63 | _docs/PRE_OPERATION_BACKUP_GUIDE.md | _docs/PRE_OPERATION_BACKUP_GUIDE.md |
-| 64 | _docs/SAFE_DELETE_GUIDE.md | _docs/SAFE_DELETE_GUIDE.md |
-| 65 | _docs/OLD_BACKUP_ANALYSIS_GUIDE.md | _docs/OLD_BACKUP_ANALYSIS_GUIDE.md |
+| 62 | 02-Areas/Documentation/TEST_ENV_GUIDE.md | 02-Areas/Documentation/TEST_ENV_GUIDE.md |
+| 63 | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md |
+| 64 | 02-Areas/Documentation/SAFE_DELETE_GUIDE.md | 02-Areas/Documentation/SAFE_DELETE_GUIDE.md |
+| 65 | 02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md | 02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md |
 
 ### 📄 _TEST_ENV_START_HERE.md
 
 | Строка | Текст | Ссылка |
 |--------|-------|--------|
-| 55 | TEST_ENV_GUIDE.md | _docs/TEST_ENV_GUIDE.md |
-| 56 | PRE_OPERATION_BACKUP_GUIDE.md | _docs/PRE_OPERATION_BACKUP_GUIDE.md |
-| 57 | SAFE_DELETE_GUIDE.md | _docs/SAFE_DELETE_GUIDE.md |
-| 58 | OLD_BACKUP_ANALYSIS_GUIDE.md | _docs/OLD_BACKUP_ANALYSIS_GUIDE.md |
+| 55 | TEST_ENV_GUIDE.md | 02-Areas/Documentation/TEST_ENV_GUIDE.md |
+| 56 | PRE_OPERATION_BACKUP_GUIDE.md | 02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md |
+| 57 | SAFE_DELETE_GUIDE.md | 02-Areas/Documentation/SAFE_DELETE_GUIDE.md |
+| 58 | OLD_BACKUP_ANALYSIS_GUIDE.md | 02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md |
 | 64 | reports/TEST_LOG.md | reports/TEST_LOG.md |
 | 65 | reports/CREATE_TEST_ENV_REPORT.md | reports/CREATE_TEST_ENV_REPORT.md |
 | 66 | reports/BACKUP_ANALYSIS_REPORT.md | reports/BACKUP_ANALYSIS_REPORT.md |
-| 180 | _docs/ | ../_docs/ |
+| 180 | 02-Areas/Documentation/ | ../02-Areas/Documentation/ |
 | 181 | reports/ | ../reports/ |
 
 
@@ -1684,14 +1641,14 @@
 - ✅ **security-analyzer.md** — 0/0 ссылок
 - ✅ **test-writer.md** — 0/0 ссылок
 - ⚠️  **00-auto-context.md** — 2/3 ссылок
-- ⚠️  **01-core.md** — 3/4 ссылок
+- ✅ **01-core.md** — 4/4 ссылок
 - ⚠️  **02-workflow.md** — 3/1 ссылок
 - ⚠️  **03-git.md** — 0/3 ссылок
-- ⚠️  **04-safety.md** — 0/6 ссылок
-- ⚠️  **05-commands.md** — 3/7 ссылок
+- ✅ **04-safety.md** — 6/6 ссылок
+- ✅ **05-commands.md** — 4/4 ссылок
 - ⚠️  **06-resume.md** — 0/4 ссылок
 - ⚠️  **07-session-persistence.md** — 3/5 ссылок
-- ⚠️  **08-mass-operations.md** — 0/4 ссылок
+- ⚠️  **08-mass-operations.md** — 2/4 ссылок
 - ⚠️  **08-mcp-saver.md** — 3/2 ссылок
 - ✅ **09-logic-and-analysis.md** — 0/0 ссылок
 - ⚠️  **ai-structure-analysis.md** — 0/1 ссылок
@@ -1706,7 +1663,7 @@
 - ⚠️  **AI_FUNCTIONS.md** — 5/9 ссылок
 - ⚠️  **ALL_RULES_CATALOG.md** — 0/12 ссылок
 - ⚠️  **ANALYSIS_PROCESS.md** — 0/17 ссылок
-- ⚠️  **BACKUP_STRATEGY.md** — 5/8 ссылок
+- ⚠️  **BACKUP_STRATEGY.md** — 5/7 ссылок
 - ✅ **BRIDGE_SETUP.md** — 3/3 ссылок
 - ✅ **bystryy_start.md** — 0/0 ссылок
 - ⚠️  **CHEAT_SHEET.md** — 0/3 ссылок
@@ -1714,10 +1671,10 @@
 - ✅ **CONFLICT_RESOLUTION.md** — 0/0 ссылок
 - ⚠️  **DEBUGGING_GUIDE.md** — 0/3 ссылок
 - ✅ **DEBUG_CHECKLIST.md** — 0/0 ссылок
-- ✅ **DEDUP_GUIDE.md** — 3/3 ссылок
+- ✅ **DEDUP_GUIDE.md** — 2/2 ссылок
 - ⚠️  **END_SESSION_COMMAND.md** — 0/3 ссылок
 - ⚠️  **FILE_CHANGE_RULE.md** — 3/8 ссылок
-- ⚠️  **FILE_PID_SYSTEM.md** — 0/2 ссылок
+- ⚠️  **FILE_PID_SYSTEM.md** — 3/2 ссылок
 - ✅ **FIX_BUTTONS_URGENT.md** — 0/0 ссылок
 - ⚠️  **folder-access-investigation.md** — 0/3 ссылок
 - ✅ **INCREDIBUILD_SETUP.md** — 0/0 ссылок
@@ -1729,6 +1686,7 @@
 - ⚠️  **INSTALL_SONARLINT.md** — 0/1 ссылок
 - ⚠️  **KB_AUDIT_GUIDE.md** — 3/4 ссылок
 - ⚠️  **KNOWLEDGE_BASE_GUIDE.md** — 2/10 ссылок
+- ⚠️  **LINK_GRAPH_GUIDE.md** — 0/3 ссылок
 - ✅ **LOGIC_METRICS.md** — 0/0 ссылок
 - ⚠️  **logic_rules_for_ai.md** — 3/6 ссылок
 - ⚠️  **MCP_FILESYSTEM_SETUP.md** — 2/3 ссылок
@@ -1761,7 +1719,7 @@
 - ✅ **TASK_DAG_GUIDE.md** — 3/3 ссылок
 - ⚠️  **TASK_SCHEDULER_COMPLETE.md** — 0/1 ссылок
 - ✅ **TASK_SCHEDULER_MANUAL_SETUP.md** — 0/0 ссылок
-- ✅ **TASK_SCHEDULER_SETUP.md** — 3/3 ссылок
+- ⚠️  **TASK_SCHEDULER_SETUP.md** — 3/2 ссылок
 - ✅ **TESTING_FULL_GUIDE.md** — 0/0 ссылок
 - ✅ **TESTING_GUIDE.md** — 0/0 ссылок
 - ✅ **TEST_ENV_GUIDE.md** — 0/0 ссылок
@@ -2011,6 +1969,7 @@
 - ⚠️  **CONTEXT_USAGE_ANALYSIS.md** — 0/3 ссылок
 - ✅ **DEEP_SYSTEM_ANALYSIS.md** — 0/0 ссылок
 - ✅ **FILE_PID_REGISTRY.md** — 0/0 ссылок
+- ✅ **LINK_CHECK_REPORT.md** — 0/0 ссылок
 - ✅ **MCP_TEST_REPORT.md** — 0/0 ссылок
 - ✅ **MODE_ANALYSIS.md** — 0/0 ссылок
 - ✅ **SCHEDULE_BACKUP_TASKS_AUDIT.md** — 0/0 ссылок
@@ -2439,7 +2398,7 @@
 - ✅ **logic_rules_for_ai.md** — 0/0 ссылок
 - ✅ **TEST_LOG.md** — 0/0 ссылок
 - ⚠️  **AGENTS.md** — 13/14 ссылок
-- ⚠️  **AI_START_HERE.md** — 12/15 ссылок
+- ⚠️  **AI_START_HERE.md** — 12/13 ссылок
 - ⚠️  **ANTI_PATTERNS.md** — 12/15 ссылок
 - ⚠️  **ERROR_LOG.md** — 14/16 ссылок
 - ⚠️  **LINKS.md** — 15/38 ссылок
@@ -2454,5 +2413,6 @@
 
 ---
 
-**Отчёт сгенерирован:** 2026-03-03 20:19:12
+**Отчёт сгенерирован:** 2026-03-03 20:56:07
 **Скрипт:** check-links.ps1
+

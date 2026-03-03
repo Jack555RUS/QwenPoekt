@@ -1,4 +1,4 @@
-# Настройка Task Scheduler
+﻿# Настройка Task Scheduler
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -237,7 +237,7 @@ Get-ScheduledTaskInfo -TaskName "QwenPoekt-Weekly-Dedup-Audit" |
 | Файл | Описание |
 |------|----------|
 | [BACKUP_STRATEGY.md](BACKUP_STRATEGY.md) | Стратегия резервирования |
-| [schedule-backup-tasks.ps1](../../scripts/schedule-backup-tasks.ps1) | Скрипт настройки |
+| [schedule-backup-tasks.ps1](../../03-Resources/PowerShell/schedule-backup-tasks.ps1) | Скрипт настройки |
 
 ---
 
@@ -277,3 +277,4 @@ Register-ScheduledTask -Xml (Get-Content "QwenPoekt-Daily-Git-Commit.xml" | Out-
 ---
 
 **Настройте расписание и забудьте о рутине!** 🚀
+

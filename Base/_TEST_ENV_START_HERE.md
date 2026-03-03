@@ -1,4 +1,4 @@
-# 🚀 НАЧНИТЕ ЗДЕСЬ — Тестирование в _TEST_ENV
+﻿# 🚀 НАЧНИТЕ ЗДЕСЬ — Тестирование в _TEST_ENV
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -52,10 +52,10 @@
 
 | Файл | Что читать | Когда |
 |------|------------|-------|
-| **[TEST_ENV_GUIDE.md](_docs/TEST_ENV_GUIDE.md)** | Полная инструкция по _TEST_ENV | Перед началом |
-| **[PRE_OPERATION_BACKUP_GUIDE.md](_docs/PRE_OPERATION_BACKUP_GUIDE.md)** | Как работает бэкап | Перед тестом бэкапа |
-| **[SAFE_DELETE_GUIDE.md](_docs/SAFE_DELETE_GUIDE.md)** | Как работает удаление | Перед тестом удаления |
-| **[OLD_BACKUP_ANALYSIS_GUIDE.md](_docs/OLD_BACKUP_ANALYSIS_GUIDE.md)** | Как работает анализ | Перед тестом анализа |
+| **[TEST_ENV_GUIDE.md](02-Areas/Documentation/TEST_ENV_GUIDE.md)** | Полная инструкция по _TEST_ENV | Перед началом |
+| **[PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md)** | Как работает бэкап | Перед тестом бэкапа |
+| **[SAFE_DELETE_GUIDE.md](02-Areas/Documentation/SAFE_DELETE_GUIDE.md)** | Как работает удаление | Перед тестом удаления |
+| **[OLD_BACKUP_ANALYSIS_GUIDE.md](02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md)** | Как работает анализ | Перед тестом анализа |
 
 ### 📊 Журналы
 
@@ -69,11 +69,11 @@
 
 | Файл | Назначение | Команда |
 |------|------------|---------|
-| **scripts/create-test-env.ps1** | Создание среды | `.\scripts\create-test-env.ps1` |
-| **scripts/cleanup-test-env.ps1** | Очистка после тестов | `.\scripts\cleanup-test-env.ps1` |
-| **scripts/test-pre-operation-backup.ps1** | Тест бэкапа | `.\test-pre-operation-backup.ps1 -OperationType "Test"` |
-| **scripts/test-safe-delete.ps1** | Тест удаления | `.\test-safe-delete.ps1 -Path "_drafts"` |
-| **scripts/test-old-backup-analysis.ps1** | Тест анализа | `.\test-old-backup-analysis.ps1` |
+| **03-Resources/PowerShell/create-test-env.ps1** | Создание среды | `.\scripts\create-test-env.ps1` |
+| **03-Resources/PowerShell/cleanup-test-env.ps1** | Очистка после тестов | `.\scripts\cleanup-test-env.ps1` |
+| **03-Resources/PowerShell/test-pre-operation-backup.ps1** | Тест бэкапа | `.\test-pre-operation-backup.ps1 -OperationType "Test"` |
+| **03-Resources/PowerShell/test-safe-delete.ps1** | Тест удаления | `.\test-safe-delete.ps1 -Path "_drafts"` |
+| **03-Resources/PowerShell/test-old-backup-analysis.ps1** | Тест анализа | `.\test-old-backup-analysis.ps1` |
 
 ---
 
@@ -177,7 +177,7 @@
 **Основной проект:**
 
 - 📁 [Base/](../Base/) — Оригинал (не трогать!)
-- 📚 [_docs/](../_docs/) — Все инструкции
+- 📚 [02-Areas/Documentation/](../02-Areas/Documentation/) — Все инструкции
 - 📝 [reports/](../reports/) — Отчёты проекта
 
 **Тестовая среда:**
@@ -205,3 +205,4 @@
 ---
 
 **Прочитал? Приступай к тестам!** 🚀
+

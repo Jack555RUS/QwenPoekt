@@ -1,4 +1,4 @@
-# 🔍 ПРОВЕРКА: schedule-backup-tasks.ps1
+﻿# 🔍 ПРОВЕРКА: schedule-backup-tasks.ps1
 
 **Дата:** 2026-03-03 18:15
 **Тип:** Полная инспекция кода, функционала, соответствия правилам
@@ -137,7 +137,7 @@ if (Test-Script-Exists -ScriptPath $TaskConfig.MonthlyCleanup.Script) {
 
 **Статус:**
 ```
-❌ scripts/old-backup-cleanup.ps1 — НЕ СУЩЕСТВУЕТ
+❌ 03-Resources/PowerShell/old-backup-cleanup.ps1 — НЕ СУЩЕСТВУЕТ
 ❌ 03-Resources/PowerShell/old-backup-cleanup.ps1 — НЕ СУЩЕСТВУЕТ
 ```
 
@@ -359,3 +359,4 @@ $settings = New-ScheduledTaskSettingsSet `
 ---
 
 **Проверка завершена!** ✅
+

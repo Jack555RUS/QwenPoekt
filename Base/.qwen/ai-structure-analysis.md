@@ -1,4 +1,4 @@
-# 📚 СТРУКТУРА БАЗЫ ЗНАНИЙ ДЛЯ ИИ — АНАЛИЗ И РЕКОМЕНДАЦИИ
+﻿# 📚 СТРУКТУРА БАЗЫ ЗНАНИЙ ДЛЯ ИИ — АНАЛИЗ И РЕКОМЕНДАЦИИ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -27,7 +27,7 @@ PARA/
 │   └── Error-Handling-Patterns/
 └── 04-Archives/          # Архив (завершённое)
     ├── 2025-Completed/
-    └── Deprecated-Scripts/
+    └── Deprecated-03-Resources/PowerShell/
 ```
 
 **Принципы:**
@@ -290,7 +290,7 @@ D:\QwenPoekt\Base\
 ├── 📁 04-Archives/                   # АРХИВ (завершённое)
 │   ├── 2026-02/
 │   │   ├── completed-projects/
-│   │   └── deprecated-scripts/
+│   │   └── deprecated-03-Resources/PowerShell/
 │   └── 2026-01/
 │       └── ...
 │
@@ -437,13 +437,13 @@ D:\QwenPoekt\Base\
 
 ```
 Base/
-├── scripts/           # ✅ Ок
+├── 03-Resources/PowerShell/           # ✅ Ок
 ├── .qwen/            # ✅ Ок
 ├── KNOWLEDGE_BASE/   # ❌ Свалка (740 файлов без структуры)
 ├── OLD/              # ❌ Проекты в базе
 ├── BOOK/             # ❌ Чужие книги
 ├── reports/          # ⚠️ Нет структуры
-└── _docs/            # ⚠️ Нет структуры
+└── 02-Areas/Documentation/            # ⚠️ Нет структуры
 ```
 
 **Проблемы:**
@@ -492,12 +492,12 @@ New-Item -ItemType Directory -Path "01-Projects,02-Areas,03-Resources,04-Archive
 
 | Откуда | Куда | Что |
 |--------|------|-----|
-| `scripts/` | `03-Resources/PowerShell/` | Справочники |
-| `scripts/` | `01-Projects/` | Активные скрипты |
+| `03-Resources/PowerShell/` | `03-Resources/PowerShell/` | Справочники |
+| `03-Resources/PowerShell/` | `01-Projects/` | Активные скрипты |
 | `.qwen/rules/` | `02-Areas/` | Стандарты |
 | `KNOWLEDGE_BASE/` | `03-Resources/` | Только важное (~50 файлов) |
 | `reports/` | `04-Archives/` | Завершённые отчёты |
-| `_docs/` | `03-Resources/` | Документация |
+| `02-Areas/Documentation/` | `03-Resources/` | Документация |
 
 ### **Шаг 4: OLD и BOOK**
 ```
@@ -566,3 +566,4 @@ BOOK/ → D:\QwenPoekt\BOOK\       # Переместить (книги)
 - CLAUDE.md: builder.io
 - Diataxis: gitbook.com/docs
 - File Naming: renamer.ai
+

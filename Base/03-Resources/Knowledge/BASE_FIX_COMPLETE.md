@@ -1,4 +1,4 @@
-# ✅ ИСПРАВЛЕНИЕ БАЗЫ — ФИНАЛЬНЫЙ ОТЧЁТ
+﻿# ✅ ИСПРАВЛЕНИЕ БАЗЫ — ФИНАЛЬНЫЙ ОТЧЁТ
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -84,8 +84,8 @@
 
 **Файлы:**
 - `.qwen/settings.json`
-- `_docs/MCP_FILESYSTEM_SETUP.md`
-- `_docs/BRIDGE_SETUP.md`
+- `02-Areas/Documentation/MCP_FILESYSTEM_SETUP.md`
+- `02-Areas/Documentation/BRIDGE_SETUP.md`
 - `test-mcp.js`
 
 ---
@@ -98,10 +98,10 @@
 - Внедрены паттерны в DragRaceUnity
 
 **Файлы:**
-- `KNOWLEDGE_BASE/03_CSHARP/CODE_STYLE.md`
-- `KNOWLEDGE_BASE/03_CSHARP/DESIGN_PATTERNS_UNITY.md`
-- `KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`
-- `PROJECTS/DragRaceUnity/Assets/Scripts/Core/*.cs`
+- `03-Resources/Knowledge/03_CSHARP/CODE_STYLE.md`
+- `03-Resources/Knowledge/03_CSHARP/DESIGN_PATTERNS_UNITY.md`
+- `03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`
+- `PROJECTS/DragRaceUnity/Assets/03-Resources/PowerShell/Core/*.cs`
 
 ---
 
@@ -212,13 +212,13 @@ ef2330349 — Fix: Очистка корня от мусора
 ### 🟡 Приоритет 2: Автоматизация
 
 1. **Скрипты:**
-   - `scripts/weekly-knowledge-audit.ps1`
-   - `scripts/check-knowledge-stats.ps1`
-   - `scripts/organize-root.ps1` (исправить)
+   - `03-Resources/PowerShell/weekly-knowledge-audit.ps1`
+   - `03-Resources/PowerShell/check-knowledge-stats.ps1`
+   - `03-Resources/PowerShell/organize-root.ps1` (исправить)
 
 2. **Документация:**
    - `reports/KNOWLEDGE_BASE_EXPANSION_PLAN.md`
-   - `_docs/SCRIPTS_CATALOG.md`
+   - `02-Areas/Documentation/SCRIPTS_CATALOG.md`
 
 ---
 
@@ -270,3 +270,4 @@ ef2330349 — Fix: Очистка корня от мусора
 
 **Файл создан:** 2 марта 2026 г.  
 **Сессия завершена:** ✅
+

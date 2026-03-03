@@ -1,4 +1,4 @@
-# ✅ PRE-CHANGE CHECKLIST — ЧЕК-ЛИСТ ПЕРЕД ИЗМЕНЕНИЯМИ ЯДРА
+﻿# ✅ PRE-CHANGE CHECKLIST — ЧЕК-ЛИСТ ПЕРЕД ИЗМЕНЕНИЯМИ ЯДРА
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -211,8 +211,8 @@
 ```
 
 **Связанные файлы:** 
-- [`scripts/check-kernel-integrity.ps1`](./scripts/check-kernel-integrity.ps1)
-- [`scripts/test-seamless-launch.ps1`](./scripts/test-seamless-launch.ps1)
+- [`03-Resources/PowerShell/check-kernel-integrity.ps1`](./03-Resources/PowerShell/check-kernel-integrity.ps1)
+- [`03-Resources/PowerShell/test-seamless-launch.ps1`](./03-Resources/PowerShell/test-seamless-launch.ps1)
 
 ---
 
@@ -298,8 +298,8 @@
 | [`ERROR_LOG.md`](./ERROR_LOG.md) | Журнал ошибок |
 | [`ANTI_PATTERNS.md`](./ANTI_PATTERNS.md) | Анти-паттерны |
 | [`08-mass-operations.md`](./.qwen/rules/08-mass-operations.md) | Массовые операции |
-| [`scripts/check-kernel-integrity.ps1`](./scripts/check-kernel-integrity.ps1) | Проверка Ядра |
-| [`scripts/test-seamless-launch.ps1`](./scripts/test-seamless-launch.ps1) | Тест запуска |
+| [`03-Resources/PowerShell/check-kernel-integrity.ps1`](./03-Resources/PowerShell/check-kernel-integrity.ps1) | Проверка Ядра |
+| [`03-Resources/PowerShell/test-seamless-launch.ps1`](./03-Resources/PowerShell/test-seamless-launch.ps1) | Тест запуска |
 
 ---
 
@@ -323,3 +323,4 @@
 ---
 
 **Чек-лист обязателен к выполнению для всех изменений в Ядре!** ✅
+

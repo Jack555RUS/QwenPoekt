@@ -1,4 +1,4 @@
-# ✅ ОЧИСТКА БАЗЫ — ФИНАЛЬНЫЙ ОТЧЁТ
+﻿# ✅ ОЧИСТКА БАЗЫ — ФИНАЛЬНЫЙ ОТЧЁТ
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -169,10 +169,10 @@ if (-not (Test-Path $path)) {
 ### 1. Проверить критичные скрипты
 
 **Файлы:**
-- `scripts/organize-root.ps1`
-- `scripts/move-to-old.ps1`
-- `scripts/safe-delete.ps1`
-- `scripts/create-test-env.ps1`
+- `03-Resources/PowerShell/organize-root.ps1`
+- `03-Resources/PowerShell/move-to-old.ps1`
+- `03-Resources/PowerShell/safe-delete.ps1`
+- `03-Resources/PowerShell/create-test-env.ps1`
 
 **Задача:** Найти и исправить места создания мусорных папок.
 
@@ -181,7 +181,7 @@ if (-not (Test-Path $path)) {
 ### 2. Обновить документацию
 
 **Файлы:**
-- `_docs/SCRIPTS_README.md` — добавить правила
+- `02-Areas/Documentation/SCRIPTS_README.md` — добавить правила
 - `reports/LESSONS_LEARNED.md` — добавить урок
 
 ---
@@ -234,3 +234,4 @@ ef2330349 — Fix: Очистка корня от мусора (13 папок + 
 
 **Файл создан:** 2 марта 2026 г.  
 **Сессия:** Очистка Базы
+

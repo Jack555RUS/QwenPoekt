@@ -1,4 +1,4 @@
-# 📋 ИНСТРУКЦИЯ ДЛЯ СЕССИИ 2
+﻿# 📋 ИНСТРУКЦИЯ ДЛЯ СЕССИИ 2
 
 **Версия:** 1.0  
 **Дата:** 1 марта 2026 г.  
@@ -27,15 +27,15 @@
 _TEST_ENV/
 ├── Base/
 │   ├── .qwen/QWEN.md
-│   ├── KNOWLEDGE_BASE/00_CORE/
-│   ├── scripts/
+│   ├── 03-Resources/Knowledge/00_CORE/
+│   ├── 03-Resources/PowerShell/
 │   └── AI_START_HERE.md
 │
 ├── Projects/
 │   └── DragRaceUnity/
 │       ├── README.md
 │       ├── STATUS.md
-│       └── Assets/Scripts/
+│       └── Assets/03-Resources/PowerShell/
 │
 ├── WORKSPACE_TEST.code-workspace  ← Multi-Root
 ├── README_TEST.md                  ← Описание теста
@@ -240,3 +240,4 @@ git status  # Должно быть чисто
 **Готов к продолжению!** 🚀
 
 **Последнее обновление:** 1 марта 2026 г. (Конец Сессии 1)
+

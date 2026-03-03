@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "session-saver": {
+      "command": "node",
+      "args": ["mcp-session-saver.js"],
+      "cwd": "D:\\QwenPoekt\\Base",
+      "env": {},
+      "description": "MCP сервер для сохранения сессий Qwen Code"
+    }
+  }
+}

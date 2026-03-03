@@ -1,4 +1,4 @@
-# 🎉 ИТОГИ СЕССИИ: Полная система управления Базой Знаний
+﻿# 🎉 ИТОГИ СЕССИИ: Полная система управления Базой Знаний
 
 **Дата сессии:** 2 марта 2026 г.  
 **Длительность:** ~6 часов  
@@ -154,7 +154,7 @@
 
 **Причина:** Требуется подтверждение UAC (администратор)
 
-**Инструкция:** [`_docs/TASK_SCHEDULER_MANUAL_SETUP.md`](_docs/TASK_SCHEDULER_MANUAL_SETUP.md)
+**Инструкция:** [`02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md`](02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md)
 
 **Когда настроить:**
 - При следующей необходимости
@@ -187,16 +187,16 @@
 
 | Файл | Назначение |
 |------|------------|
-| [PRE_OPERATION_BACKUP_GUIDE.md](_docs/PRE_OPERATION_BACKUP_GUIDE.md) | Бэкап перед операциями |
-| [SAFE_DELETE_GUIDE.md](_docs/SAFE_DELETE_GUIDE.md) | Безопасное удаление |
-| [OLD_BACKUP_ANALYSIS_GUIDE.md](_docs/OLD_BACKUP_ANALYSIS_GUIDE.md) | Анализ старых бэкапов |
-| [TEST_ENV_GUIDE.md](_docs/TEST_ENV_GUIDE.md) | Тестовая среда |
-| [DEDUP_GUIDE.md](_docs/DEDUP_GUIDE.md) | Дедупликация |
-| [BACKUP_STRATEGY.md](_docs/BACKUP_STRATEGY.md) | Стратегия 3-2-1 |
-| [ANALYSIS_PROCESS.md](_docs/ANALYSIS_PROCESS.md) | Процесс анализа |
-| [STRUCTURE_GUIDE.md](_docs/STRUCTURE_GUIDE.md) | Структура проекта |
-| [TASK_SCHEDULER_SETUP.md](_docs/TASK_SCHEDULER_SETUP.md) | Настройка Task Scheduler |
-| [KNOWLEDGE_BASE_GUIDE.md](_docs/KNOWLEDGE_BASE_GUIDE.md) | Управление БЗ |
+| [PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md) | Бэкап перед операциями |
+| [SAFE_DELETE_GUIDE.md](02-Areas/Documentation/SAFE_DELETE_GUIDE.md) | Безопасное удаление |
+| [OLD_BACKUP_ANALYSIS_GUIDE.md](02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md) | Анализ старых бэкапов |
+| [TEST_ENV_GUIDE.md](02-Areas/Documentation/TEST_ENV_GUIDE.md) | Тестовая среда |
+| [DEDUP_GUIDE.md](02-Areas/Documentation/DEDUP_GUIDE.md) | Дедупликация |
+| [BACKUP_STRATEGY.md](02-Areas/Documentation/BACKUP_STRATEGY.md) | Стратегия 3-2-1 |
+| [ANALYSIS_PROCESS.md](02-Areas/Documentation/ANALYSIS_PROCESS.md) | Процесс анализа |
+| [STRUCTURE_GUIDE.md](02-Areas/Documentation/STRUCTURE_GUIDE.md) | Структура проекта |
+| [TASK_SCHEDULER_SETUP.md](02-Areas/Documentation/TASK_SCHEDULER_SETUP.md) | Настройка Task Scheduler |
+| [KNOWLEDGE_BASE_GUIDE.md](02-Areas/Documentation/KNOWLEDGE_BASE_GUIDE.md) | Управление БЗ |
 
 ---
 
@@ -204,7 +204,7 @@
 
 ### 1. Настроить Task Scheduler (10 минут)
 
-**Инструкция:** [`_docs/TASK_SCHEDULER_MANUAL_SETUP.md`](_docs/TASK_SCHEDULER_MANUAL_SETUP.md)
+**Инструкция:** [`02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md`](02-Areas/Documentation/TASK_SCHEDULER_MANUAL_SETUP.md)
 
 **Команда:**
 ```powershell
@@ -294,3 +294,4 @@ git push -u origin master
 **Дата завершения:** 2 марта 2026 г.  
 **Время завершения:** 05:30  
 **Статус:** ✅ **УСПЕШНО**
+

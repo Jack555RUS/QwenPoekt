@@ -1,4 +1,4 @@
-# ⚙️ VS CODE НАСТРОЙКА ДЛЯ ИИ-АССИСТЕНТА
+﻿# ⚙️ VS CODE НАСТРОЙКА ДЛЯ ИИ-АССИСТЕНТА
 
 **Версия:** 1.0  
 **Дата:** 2 марта 2026 г.  
@@ -339,7 +339,7 @@ curl -fsSL https://code.visualstudio.com/remote/install.sh | sh
 - [`QwenPoekt.code-workspace`](./QwenPoekt.code-workspace) — Multi-Root Workspace конфигурация
 - [`.vscode/settings.json`](./.vscode/settings.json) — Настройки VS Code
 - [`reports/GITHUB_REPOSITORIES_CATALOG.md`](./reports/GITHUB_REPOSITORIES_CATALOG.md) — GitHub репозитории
-- [`KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`](./KNOWLEDGE_BASE/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md) — Unity Cs Reference
+- [`03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md`](./03-Resources/Knowledge/00_CORE/UNITY_CS_REFERENCE_ANALYSIS.md) — Unity Cs Reference
 
 ---
 
@@ -365,3 +365,4 @@ curl -fsSL https://code.visualstudio.com/remote/install.sh | sh
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** После тестирования настроек
+

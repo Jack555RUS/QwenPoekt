@@ -1,4 +1,4 @@
-# ✅ Task Scheduler настроен!
+﻿# ✅ Task Scheduler настроен!
 
 **Дата настройки:** 2026-03-02  
 **Статус:** ⏳ Ожидает проверки
@@ -102,7 +102,7 @@ Start-Process powershell -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -Fil
 
 ### Вариант 2: Ручная настройка
 
-См. [`_docs/TASK_SCHEDULER_SETUP.md`](_docs/TASK_SCHEDULER_SETUP.md)
+См. [`02-Areas/Documentation/TASK_SCHEDULER_SETUP.md`](02-Areas/Documentation/TASK_SCHEDULER_SETUP.md)
 
 ---
 
@@ -136,3 +136,4 @@ Start-Process powershell -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -Fil
 ---
 
 **Проверьте и убедитесь, что всё работает!** 🚀
+

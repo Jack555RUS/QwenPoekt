@@ -1,4 +1,4 @@
-# Заметки для Qwen
+﻿# Заметки для Qwen
 
 Пиши сюда сообщения перед отправкой в чат. Code Spell Checker проверит орфографию.
 
@@ -22,8 +22,8 @@
 - ⏳ Задачи отложены (URP Introduction, DOTS Introduction)
 
 #### 4. Долгосрочные улучшения
-- ✅ scripts/check-duplicates.ps1
-- ✅ scripts/pre-commit.ps1
+- ✅ 03-Resources/PowerShell/check-duplicates.ps1
+- ✅ 03-Resources/PowerShell/pre-commit.ps1
 - ✅ LINKS.md (перекрёстные ссылки)
 - ✅ GitHub/Stack Overflow лучшие практики в QWEN.md
 
@@ -109,8 +109,8 @@
 **Правила перенесены в:** [`RULES_AND_TASKS.md`](./RULES_AND_TASKS.md)
 
 **Новые правила:**
-- [`01_RULES/material_processing_rule.md`](./KNOWLEDGE_BASE/01_RULES/material_processing_rule.md)
-- [`03_PATTERNS/error_log.md`](./KNOWLEDGE_BASE/03_PATTERNS/error_log.md)
+- [`01_RULES/material_processing_rule.md`](./03-Resources/Knowledge/01_RULES/material_processing_rule.md)
+- [`03_PATTERNS/error_log.md`](./03-Resources/Knowledge/03_PATTERNS/error_log.md)
 
 ---
 
@@ -209,3 +209,4 @@
 ---
 
 ## Черновик:
+

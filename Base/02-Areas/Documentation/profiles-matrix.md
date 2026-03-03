@@ -1,4 +1,4 @@
-# 📊 МАТРИЦА ПРОФИЛЕЙ ПРАВИЛ
+﻿# 📊 МАТРИЦА ПРОФИЛЕЙ ПРАВИЛ
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -50,7 +50,7 @@
 
 ### 2. Методологии
 
-**Файл:** [`AI_DEVELOPER_INSTRUCTION.md`](KNOWLEDGE_BASE/05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md)
+**Файл:** [`AI_DEVELOPER_INSTRUCTION.md`](03-Resources/Knowledge/05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md)
 
 **Требования:**
 - ✅ Следование принципам ИИ-разработчика
@@ -61,14 +61,14 @@
 **Проверка:**
 ```powershell
 # Ручная проверка соответствия
-code KNOWLEDGE_BASE/05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md
+code 03-Resources/Knowledge/05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md
 ```
 
 ---
 
 ### 3. Руководства
 
-**Файл:** [`STRUCTURE_GUIDE.md`](_docs/STRUCTURE_GUIDE.md)
+**Файл:** [`STRUCTURE_GUIDE.md`](02-Areas/Documentation/STRUCTURE_GUIDE.md)
 
 **Требования:**
 - ✅ Расположение в правильной папке
@@ -177,10 +177,11 @@ git commit -m "Update: матрица профилей (квартал YYYY-QN)"
 - [`RULE_TEMPLATE.md`](_templates/RULE_TEMPLATE.md) — Шаблон правила
 - [`PROFILE_TEMPLATE.md`](_templates/PROFILE_TEMPLATE.md) — Шаблон профиля
 - [`RULE_TEST_CASES.md`](reports/RULE_TEST_CASES.md) — Тест-кейсы
-- [`check-rule-profiles.ps1`](scripts/check-rule-profiles.ps1) — Скрипт проверки
+- [`check-rule-profiles.ps1`](03-Resources/PowerShell/check-rule-profiles.ps1) — Скрипт проверки
 
 ---
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово к использованию
+

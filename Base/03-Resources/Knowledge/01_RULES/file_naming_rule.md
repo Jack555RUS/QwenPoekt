@@ -1,4 +1,4 @@
-# 📝 FILE NAMING RULE — ПРАВИЛА ИМЕНОВАНИЯ ФАЙЛОВ
+﻿# 📝 FILE NAMING RULE — ПРАВИЛА ИМЕНОВАНИЯ ФАЙЛОВ
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -298,7 +298,7 @@ status: active
 ### **Скрипт проверки:**
 
 ```powershell
-# scripts/check-file-naming.ps1
+# 03-Resources/PowerShell/check-file-naming.ps1
 .\scripts\check-file-naming.ps1 -Path "Base/" -Recursive
 ```
 
@@ -332,7 +332,7 @@ status: active
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`scripts/check-file-naming.ps1`](../scripts/check-file-naming.ps1) — Скрипт проверки
+- [`03-Resources/PowerShell/check-file-naming.ps1`](../03-Resources/PowerShell/check-file-naming.ps1) — Скрипт проверки
 - [`PRE_ACTION_CHECKLIST.md`](../PRE_ACTION_CHECKLIST.md) — Чек-лист перед действиями
 - [`08-mass-operations.md`](../.qwen/rules/08-mass-operations.md) — Массовые операции
 
@@ -347,3 +347,4 @@ status: active
 ---
 
 **Правило обязательно к выполнению для всех новых файлов!** ✅
+

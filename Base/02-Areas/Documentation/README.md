@@ -1,4 +1,4 @@
-# 🎮 DragRaceUnity
+﻿# 🎮 DragRaceUnity
 
 **Drag Racing Game на Unity**  
 **Версия:** 2.0 (Чистый старт)  
@@ -56,7 +56,7 @@ Drag Racing — игра про гонки на дистанции 1/4 мили.
 DragRaceUnity/
 ├── Assets/
 │   ├── Scenes/              # Сцены Unity
-│   ├── Scripts/             # Скрипты C#
+│   ├── 03-Resources/PowerShell/             # Скрипты C#
 │   │   ├── UI/              # Интерфейсы
 │   │   ├── Core/            # Ядро
 │   │   ├── Data/            # Модели данных
@@ -156,3 +156,4 @@ _Пока нет_
 ---
 
 **Последнее обновление:** 28 февраля 2026 г.
+

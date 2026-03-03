@@ -1,4 +1,4 @@
-# 🚀 QwenPoekt\Base — База Знаний Unity Проекта
+﻿# 🚀 QwenPoekt\Base — База Знаний Unity Проекта
 
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
@@ -59,10 +59,10 @@ code ТЕКУЩАЯ_ЗАДАЧА.md
 |------|------------|--------------|
 | **[AI_START_HERE.md](AI_START_HERE.md)** | Главная инструкция проекта | Перед началом работы |
 | **[.qwen/QWEN.md](.qwen/QWEN.md)** | Мастер-конфиг ИИ (правила) | Обязательно! |
-| **[_docs/TEST_ENV_GUIDE.md](_docs/TEST_ENV_GUIDE.md)** | Тестовая среда (_TEST_ENV) | Перед тестированием |
-| **[_docs/PRE_OPERATION_BACKUP_GUIDE.md](_docs/PRE_OPERATION_BACKUP_GUIDE.md)** | Бэкап перед операциями | Перед удалением/перемещением |
-| **[_docs/SAFE_DELETE_GUIDE.md](_docs/SAFE_DELETE_GUIDE.md)** | Безопасное удаление | Перед удалением папок |
-| **[_docs/OLD_BACKUP_ANALYSIS_GUIDE.md](_docs/OLD_BACKUP_ANALYSIS_GUIDE.md)** | Анализ старых бэкапов | Раз в месяц (очистка) |
+| **[02-Areas/Documentation/TEST_ENV_GUIDE.md](02-Areas/Documentation/TEST_ENV_GUIDE.md)** | Тестовая среда (_TEST_ENV) | Перед тестированием |
+| **[02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md)** | Бэкап перед операциями | Перед удалением/перемещением |
+| **[02-Areas/Documentation/SAFE_DELETE_GUIDE.md](02-Areas/Documentation/SAFE_DELETE_GUIDE.md)** | Безопасное удаление | Перед удалением папок |
+| **[02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md](02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md)** | Анализ старых бэкапов | Раз в месяц (очистка) |
 
 ---
 
@@ -83,14 +83,14 @@ Base/
 │   ├── 03_PATTERNS/              ← Паттерны
 │   └── 05_METHODOLOGY/           ← Методологии
 │
-├── scripts/                      ← Скрипты автоматизации
+├── 03-Resources/PowerShell/                      ← Скрипты автоматизации
 │   ├── pre-operation-backup.ps1  ← Бэкап перед операцией
 │   ├── safe-delete.ps1           ← Безопасное удаление
 │   ├── old-backup-analysis.ps1   ← Анализ бэкапов
 │   ├── create-test-env.ps1       ← Создание тестовой среды
 │   └── ...
 │
-├── _docs/                        ← Документация
+├── 02-Areas/Documentation/                        ← Документация
 │   ├── TEST_ENV_GUIDE.md         ← Тестовая среда
 │   ├── PRE_OPERATION_BACKUP_GUIDE.md
 │   ├── SAFE_DELETE_GUIDE.md
@@ -271,3 +271,4 @@ git status
 ---
 
 **Прочитал? Приступай к работе!** 🚀
+

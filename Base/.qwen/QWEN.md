@@ -1,4 +1,4 @@
-# 🤖 QWEN CODE — МАСТЕР-КОНТЕКСТ
+﻿# 🤖 QWEN CODE — МАСТЕР-КОНТЕКСТ
 
 **Версия:** 3.0 (Чистая структура)  
 **Дата:** 28 февраля 2026 г.  
@@ -295,7 +295,7 @@ Add: [Название файла] — [Описание]
   ✅ Проверка структуры → ✅
 
 Уровень 3 (Внедрение):
-  ✅ Перемещено: Base/_docs/
+  ✅ Перемещено: Base/02-Areas/Documentation/
   ✅ Коммит: "Add: Полная система логики"
   ✅ Очистка: _drafts/, _TEST_ENV
 ```
@@ -739,7 +739,7 @@ GameObject → UI → EventSystem
 
 6. **Закоммитить** (git add → commit → push)
 
-**Файл:** [`00_CORE/csharp_standards.md`](./KNOWLEDGE_BASE/00_CORE/csharp_standards.md)
+**Файл:** [`00_CORE/csharp_standards.md`](./03-Resources/Knowledge/00_CORE/csharp_standards.md)
 
 ---
 
@@ -751,7 +751,7 @@ GameObject → UI → EventSystem
 4. **Интеграция** (Canvas, UI Document)
 5. **Тест** (клик, навигация, клавиатура)
 
-**Файл:** [`01_RULES/ui_toolkit_rules.md`](./KNOWLEDGE_BASE/01_RULES/ui_toolkit_rules.md)
+**Файл:** [`01_RULES/ui_toolkit_rules.md`](./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md)
 
 ---
 
@@ -765,7 +765,7 @@ GameObject → UI → EventSystem
 5. **Повтор** (сборка, если были ошибки)
 6. **Результат** (готовый EXE для тестирования)
 
-**Файл:** [`02_TOOLS/build_system.md`](./KNOWLEDGE_BASE/02_TOOLS/build_system.md)
+**Файл:** [`02_TOOLS/build_system.md`](./03-Resources/Knowledge/02_TOOLS/build_system.md)
 
 ---
 
@@ -777,7 +777,7 @@ GameObject → UI → EventSystem
 
 **Правило:** Не завершать задачу без `/verify-complete`!
 
-**Файл:** [`02_TOOLS/test_framework.md`](./KNOWLEDGE_BASE/02_TOOLS/test_framework.md)
+**Файл:** [`02_TOOLS/test_framework.md`](./03-Resources/Knowledge/02_TOOLS/test_framework.md)
 
 ---
 
@@ -788,7 +788,7 @@ GameObject → UI → EventSystem
 3. **Решение** (применить паттерн)
 4. **Проверка** (запустить, проверить)
 
-**Файл:** [`03_PATTERNS/error_solutions.md`](./KNOWLEDGE_BASE/03_PATTERNS/error_solutions.md)
+**Файл:** [`03_PATTERNS/error_solutions.md`](./03-Resources/Knowledge/03_PATTERNS/error_solutions.md)
 
 ---
 
@@ -871,7 +871,7 @@ git status
 - 1-е число месяца: Анализ `OLD/_INBOX/`
 - 1-е число месяца: Очистка `OLD/_ARCHIVE_60D/`
 
-**Файл:** [`scripts/old-analysis.ps1`](./scripts/old-analysis.ps1)
+**Файл:** [`03-Resources/PowerShell/old-analysis.ps1`](./03-Resources/PowerShell/old-analysis.ps1)
 
 ---
 
@@ -928,7 +928,7 @@ _LOCAL_ARCHIVE/
 │       └── ...
 ```
 
-**Файл:** [`scripts/auto-archive.ps1`](./scripts/auto-archive.ps1)
+**Файл:** [`03-Resources/PowerShell/auto-archive.ps1`](./03-Resources/PowerShell/auto-archive.ps1)
 
 ---
 
@@ -941,7 +941,7 @@ _LOCAL_ARCHIVE/
 
 **Правило:** Если действие безопасное и частое → автоматизируй!
 
-**Файл:** [`01_RULES/before_change_rule.md`](./KNOWLEDGE_BASE/01_RULES/before_change_rule.md)
+**Файл:** [`01_RULES/before_change_rule.md`](./03-Resources/Knowledge/01_RULES/before_change_rule.md)
 
 ---
 
@@ -977,7 +977,7 @@ _LOCAL_ARCHIVE/
 
 **Частота:** 3+ раза за сессию → предложить в исключения!
 
-**Файл:** [`01_RULES/before_change_rule.md`](./KNOWLEDGE_BASE/01_RULES/before_change_rule.md)
+**Файл:** [`01_RULES/before_change_rule.md`](./03-Resources/Knowledge/01_RULES/before_change_rule.md)
 
 ---
 
@@ -1097,3 +1097,4 @@ _LOCAL_ARCHIVE/
 ---
 
 **Прочитал? Иди в [`ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md`](./ДЛЯ_ИИ_ЧИТАТЬ_СЮДА.md)!** 🚀
+

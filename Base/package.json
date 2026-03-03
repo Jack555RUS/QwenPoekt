@@ -1,0 +1,23 @@
+{
+  "name": "mcp-session-saver",
+  "version": "1.0.0",
+  "description": "MCP сервер для сохранения сессий Qwen Code",
+  "type": "module",
+  "main": "mcp-session-saver.js",
+  "scripts": {
+    "start": "node mcp-session-saver.js",
+    "test": "node --test mcp-session-saver.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "session",
+    "save",
+    "qwen"
+  ],
+  "author": "Jackal",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^4.3.6"
+  }
+}

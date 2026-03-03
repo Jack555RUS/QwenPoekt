@@ -1,4 +1,4 @@
-# 📘 ИНСТРУКЦИЯ ДЛЯ ИИ-РАЗРАБОТЧИКА
+﻿# 📘 ИНСТРУКЦИЯ ДЛЯ ИИ-РАЗРАБОТЧИКА
 
 **Версия:** 2.0
 **Дата создания:** 2026-02-27
@@ -94,7 +94,7 @@ ProjectName/
 ```
 UnityProject/
 ├── Assets/
-│   ├── Scripts/
+│   ├── 03-Resources/PowerShell/
 │   │   ├── Core/           # Ядро (GameManager, Logger)
 │   │   ├── UI/             # Контроллеры меню
 │   │   ├── Data/           # Модели данных
@@ -1047,7 +1047,7 @@ grep "& 1400000001" Assets/Scenes/MainMenu.unity
 - [`RULE_TEST_CASES.md`](../../reports/RULE_TEST_CASES.md) — Тест-кейсы для правил
 - [`csharp_standards.md`](../00_CORE/csharp_standards.md) — Стандарты кода C#
 - [`project_glossary.md`](../00_CORE/project_glossary.md) — Терминология проекта
-- [`PROFILES_MATRIX.md`](../../_docs/PROFILES_MATRIX.md) — Матрица профилей
+- [`PROFILES_MATRIX.md`](../../02-Areas/Documentation/PROFILES_MATRIX.md) — Матрица профилей
 
 ---
 
@@ -1059,3 +1059,4 @@ grep "& 1400000001" Assets/Scenes/MainMenu.unity
 *«Код — это литература. Пиши так, чтобы другие хотели читать.»*
 
 *«Unity UI требует внимания к деталям. Проверяй навигацию, цвета, тексты!»*
+
