@@ -18,6 +18,7 @@
 |--------|------------|--------|
 | **Ежедневный Git коммит** | 18:00 ежедневно | `auto-commit-daily.ps1` |
 | **Еженедельный аудит** | 09:00 воскресенье | `weekly-dedup-audit.ps1` |
+| **Еженедельный аудит Базы** | 18:00 пятница | `weekly-knowledge-audit.ps1` |
 | **Ежемесячная очистка** | 10:00 1-е число | `old-backup-cleanup.ps1` |
 
 ---
@@ -30,13 +31,13 @@
 
 ```powershell
 # Запустить от имени администратора
-.\scripts\schedule-backup-tasks.ps1
+Start-Process powershell -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -File "03-Resources/PowerShell/schedule-backup-tasks.ps1"'
 ```
 
 **Или через .bat файл:**
 
 ```cmd
-.\scripts\run-schedule-backup.bat
+# Скрипт не найден — используйте команду выше
 ```
 
 ---
