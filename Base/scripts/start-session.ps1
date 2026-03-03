@@ -187,11 +187,11 @@ if ($HasResumeMarker -and -not $Resume) {
     Write-Info "📌 Рекомендации:"
     Write-Host ""
     Write-Info "  Для восстановления контекста:"
-    Write-Info "  1. Используйте команду \`/resume\`"
+    Write-Info "  1. Используйте команду /resume"
     Write-Info "  2. Или прочитайте SESSION_HANDOVER.md вручную"
     Write-Host ""
 } elseif ($HasResumeMarker -and $Resume) {
-    Write-Success "  ✅ Контекст восстановлен! Готов к работе."
+    Write-Success "  Контекст восстановлен! Готов к работе."
     Write-Host ""
 } else {
     Write-Info "📌 Рекомендации:"
