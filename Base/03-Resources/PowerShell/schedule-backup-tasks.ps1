@@ -22,7 +22,7 @@ $TaskConfig = @{
     DailyCommit = @{
         Name = "QwenPoekt-Daily-Git-Commit"
         Time = "18:00"
-        Script = "D:\QwenPoekt\Base\scripts\auto-commit-daily.ps1"
+        Script = "D:\QwenPoekt\Base\03-Resources\PowerShell\auto-commit-daily.ps1"
         Description = "Ежедневный Git коммит в 18:00"
     }
 
@@ -111,7 +111,9 @@ function Install-Task {
         [string]$Name,
         [string]$Script,
         [string]$Description,
-        [string]$Trigger
+        [string]$TriggerType,  # "Daily" или "Weekly"
+        [string]$Time,
+        [string]$DayOfWeek    # Для weekly
     )
     
     Write-Info-Log "Установка задачи: $Name"
@@ -143,8 +145,11 @@ function Install-Task {
         -ExecutionTimeLimit (New-TimeSpan -Hours 2)
     
     # Создать триггер
-    $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1)
-    $trigger.Repetition.Interval = $Trigger
+    if ($TriggerType -eq "Daily") {
+        $trigger = New-ScheduledTaskTrigger -Daily -At $Time -DaysInterval 1
+    } elseif ($TriggerType -eq "Weekly") {
+        $trigger = New-ScheduledTaskTrigger -Weekly -At $Time -DaysOfWeek $DayOfWeek
+    }
     
     # Зарегистрировать задачу
     Register-ScheduledTask `
@@ -297,7 +302,8 @@ try {
         -Name $TaskConfig.DailyCommit.Name `
         -Script $TaskConfig.DailyCommit.Script `
         -Description $TaskConfig.DailyCommit.Description `
-        -Trigger (New-TimeSpan -Days 1)
+        -TriggerType "Daily" `
+        -Time $TaskConfig.DailyCommit.Time
     
     $results += @{
         Name = "Ежедневный Git коммит"
@@ -307,51 +313,23 @@ try {
         TaskInfo = (Get-TaskStatus -TaskName $TaskConfig.DailyCommit.Name)
     }
     
-    # Weekly Dedup Audit (еженедельно)
+    # Weekly Audit (еженедельно)
     Write-Host ""
-    Write-Log "Задача 2: Еженедельный аудит дубликатов (воскресенье 09:00)" -Color "White"
+    Write-Log "Задача 2: Еженедельный аудит Базы (пятница 18:00)" -Color "White"
     $weeklyResult = Install-Task `
-        -Name $TaskConfig.WeeklyDedup.Name `
-        -Script $TaskConfig.WeeklyDedup.Script `
-        -Description $TaskConfig.WeeklyDedup.Description `
-        -Trigger (New-TimeSpan -Days 7)
+        -Name $TaskConfig.WeeklyAudit.Name `
+        -Script $TaskConfig.WeeklyAudit.Script `
+        -Description $TaskConfig.WeeklyAudit.Description `
+        -TriggerType "Weekly" `
+        -Time $TaskConfig.WeeklyAudit.Time `
+        -DayOfWeek "Friday"
     
     $results += @{
-        Name = "Еженедельный аудит"
+        Name = "Еженедельный аудит Базы"
         Success = $weeklyResult
-        Description = $TaskConfig.WeeklyDedup.Description
-        Script = $TaskConfig.WeeklyDedup.Script
-        TaskInfo = (Get-TaskStatus -TaskName $TaskConfig.WeeklyDedup.Name)
-    }
-    
-    # Monthly Cleanup (ежемесячно)
-    Write-Host ""
-    Write-Log "Задача 3: Ежемесячная очистка бэкапов (1-е число 10:00)" -Color "White"
-    
-    # Проверка существования скрипта
-    if (Test-Script-Exists -ScriptPath $TaskConfig.MonthlyCleanup.Script) {
-        $monthlyResult = Install-Task `
-            -Name $TaskConfig.MonthlyCleanup.Name `
-            -Script $TaskConfig.MonthlyCleanup.Script `
-            -Description $TaskConfig.MonthlyCleanup.Description `
-            -Trigger (New-TimeSpan -Days 30)
-        
-        $results += @{
-            Name = "Ежемесячная очистка"
-            Success = $monthlyResult
-            Description = $TaskConfig.MonthlyCleanup.Description
-            Script = $TaskConfig.MonthlyCleanup.Script
-            TaskInfo = (Get-TaskStatus -TaskName $TaskConfig.MonthlyCleanup.Name)
-        }
-    } else {
-        Write-Warning-Log "Скрипт old-backup-cleanup.ps1 не найден, пропускаем"
-        $results += @{
-            Name = "Ежемесячная очистка"
-            Success = $false
-            Description = $TaskConfig.MonthlyCleanup.Description
-            Script = $TaskConfig.MonthlyCleanup.Script
-            TaskInfo = $null
-        }
+        Description = $TaskConfig.WeeklyAudit.Description
+        Script = $TaskConfig.WeeklyAudit.Script
+        TaskInfo = (Get-TaskStatus -TaskName $TaskConfig.WeeklyAudit.Name)
     }
     
     # ------------------------------------------------------------------------
