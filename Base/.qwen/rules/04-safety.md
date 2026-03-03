@@ -119,9 +119,9 @@ git commit -m "Backup: Перед [причина]"
 
 **Действие:**
 1. Остановиться
-2. Записать в [`ERROR_LOG.md`](../ERROR_LOG.md)
+2. Записать в [`ERROR_LOG.md`](../../ERROR_LOG.md)
 3. Спросить подтверждения
-4. Создать правило в [`ANTI_PATTERNS.md`](../ANTI_PATTERNS.md)
+4. Создать правило в [`ANTI_PATTERNS.md`](../../ANTI_PATTERNS.md)
 
 ---
 
@@ -139,7 +139,7 @@ git commit -m "Backup: Перед [причина]"
 
 ### Pre-Action Checklist:
 
-Перед любыми действиями проверять [`PRE_ACTION_CHECKLIST.md`](../PRE_ACTION_CHECKLIST.md)
+Перед любыми действиями проверять [`PRE_ACTION_CHECKLIST.md`](../../PRE_ACTION_CHECKLIST.md)
 
 ---
 
@@ -210,9 +210,9 @@ git commit -m "Backup: Перед очисткой _TEMP/"
 | **`05-commands.md`** | Быстрые команды |
 
 **Файлы безопасности:**
-- [`PRE_ACTION_CHECKLIST.md`](../PRE_ACTION_CHECKLIST.md)
-- [`ANTI_PATTERNS.md`](../ANTI_PATTERNS.md)
-- [`ERROR_LOG.md`](../ERROR_LOG.md)
+- [`PRE_ACTION_CHECKLIST.md`](../../PRE_ACTION_CHECKLIST.md)
+- [`ANTI_PATTERNS.md`](../../ANTI_PATTERNS.md)
+- [`ERROR_LOG.md`](../../ERROR_LOG.md)
 
 ---
 

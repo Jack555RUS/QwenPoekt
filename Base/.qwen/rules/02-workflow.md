@@ -226,7 +226,7 @@ Add: [Название файла] — [Описание]
 | **`04-safety.md`** | Безопасность, encoding, workspace |
 | **`05-commands.md`** | Быстрые команды |
 
-**Полный конфиг:** [`.qwen/QWEN.md`](../QWEN.md)
+**Полный конфиг:** [`.qwen/QWEN.md`](../../.qwen/QWEN.md)
 
 ---
 

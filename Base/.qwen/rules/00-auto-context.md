@@ -167,8 +167,8 @@ def start_session():
 
 ## 📚 СВЯЗАННЫЕ ФАЙЛЫ:
 
-- [`CURRENT_CONTEXT.md`](../CURRENT_CONTEXT.md) — Контекст сессии
-- [`AI_START_HERE.md`](../AI_START_HERE.md) — Точка входа
+- [`CURRENT_CONTEXT.md`](../../CURRENT_CONTEXT.md) — Контекст сессии
+- [`AI_START_HERE.md`](../../AI_START_HERE.md) — Точка входа
 - [`09-logic-and-analysis.md`](./09-logic-and-analysis.md) — Логика перед действием
 
 ---

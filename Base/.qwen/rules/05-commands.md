@@ -120,10 +120,6 @@
 | `debug-vs.ps1` | Открытие Visual Studio с отладкой |
 | `unity-get-logs.ps1` | Получение логов Unity |
 
-**Руководства:**
-- [`PROJECTS/DragRaceUnity/DEBUGGING_GUIDE.md`](../PROJECTS/DragRaceUnity/DEBUGGING_GUIDE.md)
-- [`PROJECTS/DragRaceUnity/DEBUG_CHECKLIST.md`](../PROJECTS/DragRaceUnity/DEBUG_CHECKLIST.md)
-
 ---
 
 ## 📊 МЕТРИКИ И ОТЧЁТЫ
@@ -135,10 +131,9 @@
 | `check-knowledge-stats.ps1` | Проверка статистики |
 
 **Отчёты:**
-- [`reports/UnityCsReference_ANALYSIS.md`](../reports/UnityCsReference_ANALYSIS.md)
-- [`reports/AI_START_HERE_AUDIT.md`](../reports/AI_START_HERE_AUDIT.md)
-- [`reports/BROKEN_LINKS_ANALYSIS.md`](../reports/BROKEN_LINKS_ANALYSIS.md)
-- [`reports/SESSION_HANDOVER.md`](../reports/SESSION_HANDOVER.md)
+- [`reports/SESSION_SYSTEM_ANALYSIS.md`](../../reports/SESSION_SYSTEM_ANALYSIS.md)
+- [`reports/MCP_TEST_REPORT.md`](../../reports/MCP_TEST_REPORT.md)
+- [`reports/CONTEXT_USAGE_ANALYSIS.md`](../../reports/CONTEXT_USAGE_ANALYSIS.md)
 
 ---
 
@@ -207,7 +202,7 @@
 | **`03-git.md`** | Git, OLD, RELEASE, бэкап |
 | **`04-safety.md`** | Безопасность, encoding, workspace |
 
-**Полный конфиг:** [`.qwen/QWEN.md`](../QWEN.md)
+**Полный конфиг:** [`.qwen/QWEN.md`](../../.qwen/QWEN.md)
 
 ---
 

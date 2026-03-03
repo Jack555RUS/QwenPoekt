@@ -173,9 +173,9 @@ _LOCAL_ARCHIVE/
 | **`05-commands.md`** | Быстрые команды |
 
 **Скрипты:**
-- [`scripts/auto-commit-daily.ps1`](../scripts/auto-commit-daily.ps1)
-- [`scripts/github-backup.ps1`](../scripts/github-backup.ps1)
-- [`scripts/old-analysis.ps1`](../scripts/old-analysis.ps1)
+- [`scripts/auto-commit-daily.ps1`](../../scripts/auto-commit-daily.ps1)
+- [`scripts/github-backup.ps1`](../../scripts/github-backup.ps1)
+- [`scripts/old-analysis.ps1`](../../scripts/old-analysis.ps1)
 
 ---
 

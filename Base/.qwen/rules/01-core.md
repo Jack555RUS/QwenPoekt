@@ -153,11 +153,11 @@
 
 ## 🛡️ БЕЗОПАСНОСТЬ
 
-**Перед действиями:** Проверить [`PRE_ACTION_CHECKLIST.md`](../PRE_ACTION_CHECKLIST.md)
+**Перед действиями:** Проверить [`PRE_ACTION_CHECKLIST.md`](../../PRE_ACTION_CHECKLIST.md)
 
-**Анти-паттерны:** См. [`ANTI_PATTERNS.md`](../ANTI_PATTERNS.md)
+**Анти-паттерны:** См. [`ANTI_PATTERNS.md`](../../ANTI_PATTERNS.md)
 
-**Ошибки:** Записывать в [`ERROR_LOG.md`](../ERROR_LOG.md)
+**Ошибки:** Записывать в [`ERROR_LOG.md`](../../ERROR_LOG.md)
 
 ---
 
@@ -170,7 +170,7 @@
 | **`04-safety.md`** | Безопасность, encoding, workspace |
 | **`05-commands.md`** | Быстрые команды |
 
-**Полный конфиг:** [`.qwen/QWEN.md`](../QWEN.md)
+**Полный конфиг:** [`.qwen/QWEN.md`](../../.qwen/QWEN.md)
 
 ---
 
