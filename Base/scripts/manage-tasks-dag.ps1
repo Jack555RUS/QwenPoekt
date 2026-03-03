@@ -1,7 +1,7 @@
 # manage-tasks-dag.ps1 — Управление DAG задач
 # Версия: 1.0
 # Дата: 2026-03-03
-# Назначение: Управление зависимостями задач
+# Назначение: Управление зависимостями между задачами
 
 param(
     [string]$Action = "list",  # list, add, update, check, visualize
@@ -73,57 +73,6 @@ function List-Tasks {
     }
 }
 
-function Add-Task {
-    param(
-        [object]$Dag,
-        [string]$Name,
-        [string]$Title,
-        [string]$Status,
-        [string[]]$DependsOn,
-        [int]$Order
-    )
-    
-    if ($Dag.tasks.$Name) {
-        Write-Log "⚠️  Задача уже существует: $Name" -Color "Yellow"
-        return
-    }
-    
-    $Dag.tasks | Add-Member -MemberType NoteProperty -Name $Name -Value @{
-        title = $Title
-        status = $Status
-        depends_on = $DependsOn
-        order = $Order
-        created_at = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
-    }
-    
-    Save-Dag -Dag $Dag
-    Write-Log "✅ Задача добавлена: $Name" -Color "Green"
-}
-
-function Update-TaskStatus {
-    param(
-        [object]$Dag,
-        [string]$Name,
-        [string]$Status
-    )
-    
-    if (-not $Dag.tasks.$Name) {
-        Write-Log "❌ Задача не найдена: $Name" -Color "Red"
-        return
-    }
-    
-    $Dag.tasks.$Name.status = $Status
-    
-    if ($Status -eq "completed") {
-        $Dag.tasks.$Name.completed_at = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
-    } elseif ($Status -eq "in_progress") {
-        $Dag.tasks.$Name.started_at = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
-    }
-    
-    Save-Dag -Dag $Dag
-    Write-Log "✅ Статус обновлён: $Name → $Status" -Color "Green"
-}
-
 function Check-Dependencies {
     param([object]$Dag)
     
@@ -182,7 +131,7 @@ function Check-Dependencies {
     }
     
     Write-Log ""
-    Write-Log "📊 Итого:"
+    Write-Log "📊 Итого:" -Color "Cyan"
     Write-Log "  • Ошибки: $($errors.Count)"
     Write-Log "  • Предупреждения: $($warnings.Count)"
 }
@@ -220,7 +169,7 @@ function Visualize-Dag {
     }
     
     Write-Log ""
-    Write-Log "Формат GraphViz (для визуализации):"
+    Write-Log "Формат GraphViz (для визуализации):" -Color "Yellow"
     Write-Log ""
     Write-Log "digraph DAG {" -Color "Gray"
     Write-Log "  rankdir=LR;" -Color "Gray"
@@ -261,23 +210,6 @@ try {
         "list" {
             List-Tasks -Dag $Dag
         }
-        "add" {
-            if (-not $TaskName) { throw "Укажите имя задачи" }
-            if (-not $Status) { $Status = "pending" }
-            
-            $maxOrder = ($Dag.tasks.PSObject.Properties | Measure-Object { $_.Value.order } -Maximum).Maximum
-            $newOrder = $maxOrder + 1
-            
-            Add-Task -Dag $Dag -Name $TaskName -Title $TaskName -Status $Status -DependsOn $DependsOn -Order $newOrder
-            List-Tasks -Dag $Dag
-        }
-        "update" {
-            if (-not $TaskName) { throw "Укажите имя задачи" }
-            if (-not $Status) { throw "Укажите статус" }
-            
-            Update-TaskStatus -Dag $Dag -Name $TaskName -Status $Status
-            List-Tasks -Dag $Dag
-        }
         "check" {
             Check-Dependencies -Dag $Dag
         }
@@ -289,8 +221,6 @@ try {
             Write-Log ""
             Write-Log "Доступные действия:" -Color "Cyan"
             Write-Log "  list       — Показать все задачи" -Color "Gray"
-            Write-Log "  add        — Добавить задачу" -Color "Gray"
-            Write-Log "  update     — Обновить статус" -Color "Gray"
             Write-Log "  check      — Проверить зависимости" -Color "Gray"
             Write-Log "  visualize  — Визуализировать граф" -Color "Gray"
         }

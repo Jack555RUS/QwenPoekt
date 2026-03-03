@@ -1,169 +1,138 @@
-# build-link-graph.ps1 — Построение графа ссылок
+# build-link-graph.ps1 — Граф ссылок и валидация
 # Версия: 1.0
 # Дата: 2026-03-03
-# Назначение: Визуализация связей между файлами
+# Назначение: Построение графа ссылок и проверка битых
 
 param(
     [string]$Path = ".",
-    [switch]$Recursive,
-    [string]$OutputFormat = "markdown"  # markdown, graphviz, json
+    [switch]$Validate,
+    [string]$OutputPath = "reports\LINK_GRAPH.md"
 )
 
 $ErrorActionPreference = "Stop"
-
-# Пути
-$ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
-$BasePath = Split-Path -Parent $ScriptPath
-$outputPath = Join-Path $BasePath "reports\LINK_GRAPH.md"
-
-# ----------------------------------------------------------------------------
-# ФУНКЦИИ
-# ----------------------------------------------------------------------------
 
 function Write-Log {
     param([string]$Message, [string]$Color = "Cyan")
     Write-Host $Message -ForegroundColor $Color
 }
 
-function Get-MarkdownLinks {
-    param([string]$FilePath)
+Write-Log "╔══════════════════════════════════════════════════════════╗"
+Write-Log "║         ГРАФ ССЫЛОК И ВАЛИДАЦИЯ $(Get-Date -Format 'HH:mm:ss')          ║"
+Write-Log "╚══════════════════════════════════════════════════════════╝"
+Write-Log ""
+
+# Сбор файлов
+$files = Get-ChildItem -Path $Path -Filter "*.md" -Recurse
+Write-Log "Найдено Markdown файлов: $($files.Count)"
+Write-Log ""
+
+# Извлечение ссылок
+Write-Log "Извлечение ссылок..."
+$graph = @{}
+$broken = @()
+
+foreach ($file in $files) {
+    $content = Get-Content $file.FullName -Raw
+    $links = [regex]::Matches($content, '\[([^\]]+)\]\(([^)]+)\)')
     
-    $content = Get-Content $FilePath -Raw -Encoding UTF8
-    $links = @()
-    
-    $pattern = '\[([^\]]+)\]\(([^)]+)\)'
-    $matches = [regex]::Matches($content, $pattern)
-    
-    foreach ($match in $matches) {
-        $url = $match.Groups[2].Value
-        
-        if ($url -match '^https?://' -or $url -match '^#' -or $url -match '^mailto:') {
-            continue
-        }
-        
-        $linkPath = ($url -split '#')[0]
-        
-        if ($linkPath) {
-            $links += $linkPath
+    $fileLinks = @()
+    foreach ($link in $links) {
+        $url = $link.Groups[2].Value
+        if ($url -notmatch '^https?://|^#|^mailto:') {
+            $linkPath = ($url -split '#')[0]
+            if ($linkPath) {
+                $fileLinks += $linkPath
+                
+                # Проверка существования
+                if ($Validate -and $linkPath) {
+                    $resolved = Resolve-Path (Join-Path $file.DirectoryName $linkPath) -ErrorAction SilentlyContinue
+                    if (-not $resolved) {
+                        $broken += @{
+                            File = $file.FullName
+                            Link = $url
+                            Line = $content.Substring(0, $link.Index).Split("`n").Count
+                        }
+                    }
+                }
+            }
         }
     }
     
-    return $links
+    $graph[$file.Name] = $fileLinks
 }
 
-function Build-LinkGraph {
-    param([string]$SearchPath, [switch]$Recursive)
-    
-    $getParams = @{
-        Path = $SearchPath
-        Include = "*.md"
-        ErrorAction = "SilentlyContinue"
-    }
-    
-    if ($Recursive) {
-        $getParams.Recurse = $true
-    }
-    
-    $files = Get-ChildItem @getParams
-    $graph = @{}
-    
-    foreach ($file in $files) {
-        $links = Get-MarkdownLinks -FilePath $file.FullName
-        
-        if ($links.Count -gt 0) {
-            $graph[$file.FullName] = $links
-        }
-    }
-    
-    return $graph
-}
+$totalLinks = ($graph.Values | ForEach-Object { $_.Count } | Measure-Object -Sum).Sum
+Write-Log "  Всего ссылок: $totalLinks"
+Write-Log ""
 
-function Generate-MarkdownGraph {
-    param([object]$Graph)
-    
-    $report = @"
-# 🕸️ GRAPH ССЫЛОК
+# Отчёт
+Write-Log "Генерация отчёта..."
+$report = @"
+# 🕸️ LINK GRAPH — ГРАФ ССЫЛОК
 
 **Дата:** $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
-**Файлов:** $($Graph.Count)
+**Файлов:** $($graph.Count)
 
 ---
 
-## 📊 УЗЛЫ (файлы со ссылками)
+## 📊 СТАТИСТИКА
+
+| Метрика | Значение |
+|---------|----------|
+| **Файлов** | $($graph.Count) |
+| **Ссылок** | $totalLinks |
+| **Битых** | $($broken.Count) |
+
+---
+
+## 🔗 ГРАФ
 
 "@
-    
-    $sortedGraph = $graph.GetEnumerator() | Sort-Object { $_.Value.Count } -Descending
-    
-    foreach ($entry in $sortedGraph) {
-        $fileName = Split-Path $entry.Key -Leaf
-        $linkCount = $entry.Value.Count
-        
-        $report += "### 📄 $fileName ($linkCount ссылок)`n`n"
-        
-        foreach ($link in $entry.Value) {
-            $linkName = Split-Path $link -Leaf
-            $report += "- → $linkName`n"
-        }
-        
-        $report += "`n"
+
+foreach ($entry in $graph.GetEnumerator() | Select-Object -First 20) {
+    $report += "### $($entry.Key)`n`n"
+    foreach ($link in $entry.Value | Select-Object -First 10) {
+        $report += "- → $link`n"
     }
-    
+    $report += "`n"
+}
+
+if ($Validate) {
     $report += @"
 
 ---
 
-## 📈 СТАТИСТИКА
+## ❌ БИТЫЕ ССЫЛКИ
 
-| Метрика | Значение |
-|---------|----------|
-| **Всего файлов** | $($Graph.Count) |
-| **Всего ссылок** | $($graph.Values | Measure-Object -Sum).Sum |
-| **Среднее ссылок** | $([Math]::Round(($graph.Values | Measure-Object -Sum).Sum / $Graph.Count, 2)) |
-
----
-
-**Отчёт сгенерирован:** $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
-**Скрипт:** build-link-graph.ps1
 "@
     
-    return $report
+    if ($broken.Count -eq 0) {
+        $report += "**Битых ссылок не найдено!** ✅`n"
+    } else {
+        foreach ($item in $broken) {
+            $report += "- **$($item.File)** (строка $($item.Line)): ``$($item.Link)```n"
+        }
+    }
 }
 
-# ----------------------------------------------------------------------------
-# ОСНОВНАЯ ЛОГИКА
-# ----------------------------------------------------------------------------
+$report | Out-File -FilePath $OutputPath -Encoding UTF8
+Write-Log "  ✅ Отчёт сохранён: $OutputPath"
+Write-Log ""
 
-try {
-    Write-Log "╔══════════════════════════════════════════════════════════╗"
-    Write-Log "║         ПОСТРОЕНИЕ ГРАФА ССЫЛОК $(Get-Date -Format 'HH:mm:ss')          ║"
-    Write-Log "╚══════════════════════════════════════════════════════════╝"
-    Write-Log ""
-    
-    $searchPath = if ($Path -eq ".") { $BasePath } else { $Path }
-    
-    Write-Log "📁 Путь: $searchPath" -Color "Cyan"
-    Write-Log "🔍 Формат: $OutputFormat" -Color "Cyan"
-    Write-Log ""
-    
-    Write-Log "🔨 Построение графа..." -Color "Cyan"
-    $graph = Build-LinkGraph -SearchPath $searchPath -Recursive:$Recursive
-    
-    Write-Log "  ✅ Найдено узлов: $($graph.Count)" -Color "Green"
-    Write-Log ""
-    
-    Write-Log "📝 Генерация отчёта..." -Color "Cyan"
-    $report = Generate-MarkdownGraph -Graph $graph
-    
-    $report | Out-File -FilePath $outputPath -Encoding UTF8
-    Write-Log "  ✅ Отчёт сохранён: $outputPath" -Color "Green"
-    Write-Log ""
-    
-    Write-Log "╔══════════════════════════════════════════════════════════╗"
-    Write-Log "║           ГРАФ ПОСТРОЕН ✅                               ║"
-    Write-Log "╚══════════════════════════════════════════════════════════╝"
-    
-} catch {
-    Write-Log "❌ ОШИБКА: $($_.Exception.Message)" -Color "Red"
-    exit 1
+# Итог
+Write-Log "╔══════════════════════════════════════════════════════════╗"
+Write-Log "║                    ИТОГИ                                 ║"
+Write-Log "╚══════════════════════════════════════════════════════════╝"
+Write-Log ""
+Write-Log "Файлов: $($graph.Count)" -Color "Cyan"
+Write-Log "Ссылок: $totalLinks" -Color "Cyan"
+
+if ($Validate) {
+    if ($broken.Count -eq 0) {
+        Write-Log "Битых ссылок: 0 ✅" -Color "Green"
+    } else {
+        Write-Log "Битых ссылок: $($broken.Count) ❌" -Color "Red"
+    }
 }
+
+Write-Log ""

@@ -1,57 +1,50 @@
 {
   "version": "1.0",
-  "updated": "2026-03-03T20:15:00Z",
+  "updated": "2026-03-03T23:40:00Z",
   "tasks": {
-    "MCP_Session_Saver": {
-      "title": "MCP Session Saver — реализация",
-      "status": "completed",
-      "depends_on": [],
-      "order": 1,
-      "completed_at": "2026-03-03T19:00:00Z"
-    },
     "PID_Files": {
       "title": "PID для файлов",
       "status": "completed",
       "depends_on": [],
-      "order": 2,
-      "completed_at": "2026-03-03T20:10:00Z"
+      "order": 1,
+      "completed_at": "2026-03-03T23:40:00Z"
     },
     "DAG_Tasks": {
       "title": "DAG задач",
       "status": "in_progress",
       "depends_on": ["PID_Files"],
-      "order": 3,
-      "started_at": "2026-03-03T20:15:00Z"
+      "order": 2,
+      "started_at": "2026-03-03T23:40:00Z"
     },
     "Link_Graph": {
       "title": "Граф ссылок + валидация",
       "status": "pending",
       "depends_on": ["DAG_Tasks"],
-      "order": 4
+      "order": 3
     },
     "Unity_Dialog": {
       "title": "Диалог подтверждения выхода",
       "status": "pending",
       "depends_on": [],
-      "order": 5
+      "order": 4
     },
     "Unity_Race_Scene": {
       "title": "Сцена гонки",
       "status": "pending",
       "depends_on": ["Unity_Dialog"],
-      "order": 6
+      "order": 5
     },
     "Unity_Transmissions": {
       "title": "Управление передачами (1-2-3-4)",
       "status": "pending",
       "depends_on": ["Unity_Race_Scene"],
-      "order": 7
+      "order": 6
     },
     "Unity_AI_Opponent": {
       "title": "ИИ соперника",
       "status": "pending",
       "depends_on": ["Unity_Transmissions"],
-      "order": 8
+      "order": 7
     }
   }
 }
