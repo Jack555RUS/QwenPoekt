@@ -25,21 +25,13 @@ $TaskConfig = @{
         Script = "D:\QwenPoekt\Base\scripts\auto-commit-daily.ps1"
         Description = "Ежедневный Git коммит в 18:00"
     }
-    
-    WeeklyDedup = @{
-        Name = "QwenPoekt-Weekly-Dedup-Audit"
-        Day = "Sunday"
-        Time = "09:00"
-        Script = "D:\QwenPoekt\Base\scripts\weekly-dedup-audit.ps1"
-        Description = "Еженедельный аудит дубликатов (воскресенье в 09:00)"
-    }
-    
-    MonthlyCleanup = @{
-        Name = "QwenPoekt-Monthly-Backup-Cleanup"
-        Day = 1  # 1-е число месяца
-        Time = "10:00"
-        Script = "D:\QwenPoekt\Base\scripts\old-backup-cleanup.ps1"
-        Description = "Ежемесячная очистка старых бэкапов (1-е число в 10:00)"
+
+    WeeklyAudit = @{
+        Name = "QwenPoekt-Weekly-Knowledge-Audit"
+        Day = "Friday"
+        Time = "18:00"
+        Script = "D:\QwenPoekt\Base\scripts\weekly-knowledge-audit.ps1"
+        Description = "Еженедельный аудит Базы Знаний (пятница 18:00)"
     }
 }
 
