@@ -1,3 +1,9 @@
+﻿---
+title: Building A Second Brain Summary
+version: 1.0
+date: 2026-03-04
+status: draft
+---
 # 📚 BUILDING A SECOND BRAIN — ПОЛНЫЙ КОНСПЕКТ
 
 **Автор:** Tiago Forte
@@ -217,3 +223,5 @@ Inbox → PARA (Projects/Areas/Resources) → Active Work → Complete → Archi
 - theweekendreads.com/second-brain-summary
 - smartremotegigs.com/para-method-complete-guide
 - sloww.co/building-a-second-brain-book
+
+

@@ -1,4 +1,10 @@
-﻿# 📦 GITHUB РЕПОЗИТОРИИ — КАТАЛОГ
+﻿---
+title: GITHUB REPOSITORIES CATALOG
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# 📦 GITHUB РЕПОЗИТОРИИ — КАТАЛОГ
 
 **Версия:** 1.0  
 **Дата создания:** 2 марта 2026 г.  
@@ -364,4 +370,6 @@ git clone https://github.com/Unity-Technologies/UnityCsReference
 
 **Файл создан:** 2 марта 2026 г.  
 **Следующее обновление:** По мере анализа репозиториев
+
+
 

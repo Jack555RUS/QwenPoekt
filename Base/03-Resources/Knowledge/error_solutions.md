@@ -1,4 +1,10 @@
-﻿# 📖 БАЗА РЕШЁННЫХ ОШИБОК (Error Solutions)
+﻿---
+title: Error Solutions
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# 📖 БАЗА РЕШЁННЫХ ОШИБОК (Error Solutions)
 
 **Версия:** 1.0
 **Дата:** 3 марта 2026 г.
@@ -180,4 +186,6 @@
 
 **Восстановлено:** 3 марта 2026 г.
 **Источник:** `ERROR_LOG.md` + `_templates/ERROR_SOLUTION.md`
+
+
 

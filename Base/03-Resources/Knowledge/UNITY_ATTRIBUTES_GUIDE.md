@@ -1,3 +1,9 @@
+﻿---
+title: UNITY ATTRIBUTES GUIDE
+version: 1.0
+date: 2026-03-04
+status: draft
+---
 # 📚 UNITY ATTRIBUTES — ПОЛНЫЙ СПРАВОЧНИК
 
 **Дата:** 2 марта 2026 г.  
@@ -490,3 +496,5 @@ public static class ReflectionHelper
 
 **Справочник создан:** 2 марта 2026 г.  
 **Следующее действие:** Применить атрибуты в DragRaceUnity
+
+

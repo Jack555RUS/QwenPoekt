@@ -1,4 +1,10 @@
-﻿# 🧠 UNITYCSREFERENCE — ГЛУБОКИЙ АНАЛИЗ
+﻿---
+title: Unitycsreference ANALYSIS
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# 🧠 UNITYCSREFERENCE — ГЛУБОКИЙ АНАЛИЗ
 
 **Дата анализа:** 2 марта 2026 г.  
 **Репозиторий:** https://github.com/Unity-Technologies/UnityCsReference  
@@ -476,4 +482,6 @@ public async Task LoadAsync()
 
 **Анализ завершён:** 2 марта 2026 г.  
 **Следующее действие:** Исправить AI_START_HERE.md
+
+
 

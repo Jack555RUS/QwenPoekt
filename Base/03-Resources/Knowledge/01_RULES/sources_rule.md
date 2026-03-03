@@ -1,3 +1,9 @@
+﻿---
+title: Sources Rule
+version: 1.0
+date: 2026-03-04
+status: draft
+---
 # 📚 SOURCES RULE — ПРАВИЛО ССЫЛОК НА ИСТОЧНИКИ
 
 **Версия:** 1.0
@@ -181,7 +187,7 @@
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
 - [`file_naming_rule.md`](./file_naming_rule.md) — Именование файлов
-- [`test-documentation.ps1`](../../scripts/test-documentation.ps1) — Тест документации
+- [`test-documentation.ps1`](../../03-Resources/PowerShell/test-documentation.ps1) — Тест документации
 - [`ERROR_LOG.md`](../../ERROR_LOG.md) — Журнал ошибок (ERR-007)
 
 ---
@@ -192,3 +198,6 @@
 ---
 
 **Правило обязательно для всех новых файлов!** ✅
+
+
+

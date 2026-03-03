@@ -1,3 +1,9 @@
+﻿---
+title: Unity Docker Builder
+version: 1.0
+date: 2026-03-04
+status: draft
+---
 # Unity Builder в Docker для Unity 6000
 
 **Версия:** 1.0  
@@ -98,3 +104,5 @@ docker run --rm \
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+
+

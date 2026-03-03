@@ -1,4 +1,10 @@
-﻿# 🧠 UNITYCSREFERENCE — ПОЛНЫЙ АНАЛИЗ
+﻿---
+title: UNITYCSREFERENCE FULL ANALYSIS
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# 🧠 UNITYCSREFERENCE — ПОЛНЫЙ АНАЛИЗ
 
 **Дата:** 2 марта 2026 г.  
 **Репозиторий:** UnityCsReference (Unity 6000.2.0b4)  
@@ -348,4 +354,6 @@ public async Task LoadSceneAsync(string sceneName)
 
 **Анализ завершён:** 2 марта 2026 г.  
 **Следующее действие:** Применить знания в DragRaceUnity
+
+
 

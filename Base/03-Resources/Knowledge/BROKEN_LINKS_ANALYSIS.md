@@ -1,4 +1,10 @@
-﻿# 🔍 АНАЛИЗ БИТЫХ ССЫЛОК AI_START_HERE.MD
+﻿---
+title: BROKEN LINKS ANALYSIS
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# 🔍 АНАЛИЗ БИТЫХ ССЫЛОК AI_START_HERE.MD
 
 **Дата:** 2 марта 2026 г.  
 **Статус:** ✅ **АНАЛИЗ ЗАВЕРШЁН**
@@ -369,4 +375,6 @@ git checkout <commit-hash> -- 03-Resources/Knowledge/01_RULES/file_naming_rule.m
 
 **Файл создан:** 2 марта 2026 г.  
 **Анализ завершён:** ✅
+
+
 

@@ -1,3 +1,9 @@
+﻿---
+title: Unity Silent Tests
+version: 1.0
+date: 2026-03-04
+status: draft
+---
 # Unity тесты тихий режим запуск
 
 **Версия:** 1.0  
@@ -59,3 +65,5 @@ Unity -batchmode -runTests -testFilter "MyNamespace.MyTests" -logFile results.xm
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+
+

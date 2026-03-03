@@ -1,4 +1,10 @@
-﻿# 📘 Контекст проекта для ИИ-ассистента
+﻿---
+title: FOR AI READ HERE
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# 📘 Контекст проекта для ИИ-ассистента
 
 **Версия:** 2.0
 **Дата создания:** 2026-02-27
@@ -331,4 +337,6 @@ unity-build.ps1
 - [`README.md`](../../README.md) — Навигатор по проекту
 - [`AI_DEVELOPER_INSTRUCTION.md`](../05_METHODOLOGY/AI_DEVELOPER_INSTRUCTION.md) — Инструкция ИИ-разработчика
 - [`project_glossary.md`](project_glossary.md) — Терминология проекта
+
+
 

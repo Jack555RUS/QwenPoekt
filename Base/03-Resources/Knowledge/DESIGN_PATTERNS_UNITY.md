@@ -1,4 +1,10 @@
 ﻿---
+title: DESIGN PATTERNS UNITY
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+---
 status: draft
 created: 2026-03-02
 last_reviewed: 2026-03-02
@@ -948,4 +954,6 @@ public class DamagedState : IOpponentState
 **Статус:** ⏳ Черновик  
 **Последнее обновление:** 2026-03-02  
 **Следующее действие:** Применить паттерны к PROJECTS/DragRaceUnity
+
+
 

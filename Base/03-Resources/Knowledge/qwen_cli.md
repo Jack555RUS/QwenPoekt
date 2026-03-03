@@ -1,3 +1,9 @@
+﻿---
+title: Qwen Cli
+version: 1.0
+date: 2026-03-04
+status: draft
+---
 # CLI версии Qwen 3.5
 
 **Версия:** 1.0  
@@ -70,3 +76,5 @@ qwen fix MainMenu.cs
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+
+

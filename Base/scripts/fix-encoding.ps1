@@ -38,7 +38,8 @@ Write-Log "Путь: $Path"
 Write-Log "Фильтр: $Filter"
 $recursiveText = if ($Recursive) { "Да" } else { "Нет" }
 Write-Log "Рекурсивно: $recursiveText"
-Write-Log "Исправление: $($Fix ? 'Да' : 'Нет')"
+$fixText = if ($Fix) { "Да" } else { "Нет" }
+Write-Log "Исправление: $fixText"
 Write-Log ""
 
 # Сбор файлов

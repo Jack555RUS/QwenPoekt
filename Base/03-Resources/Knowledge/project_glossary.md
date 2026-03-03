@@ -1,4 +1,10 @@
 ﻿---
+title: Project Glossary
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+---
 status: stable
 created: 2026-02-28
 last_reviewed: 2026-03-02
@@ -301,4 +307,6 @@ Logger.Error("Критическая ошибка", exception);
 **Правило:** Используй термины из этого файла! ✅
 
 **Последнее обновление:** 28 февраля 2026 г.
+
+
 

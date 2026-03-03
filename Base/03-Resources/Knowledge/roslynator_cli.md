@@ -1,4 +1,10 @@
-﻿# Roslynator CLI — Анализ C# кода
+﻿---
+title: Roslynator Cli
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# Roslynator CLI — Анализ C# кода
 
 **Версия:** 1.0
 **Дата создания:** 2026-03-02
@@ -213,4 +219,6 @@ dotnet add package Roslynator.Analyzers
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+
+
 

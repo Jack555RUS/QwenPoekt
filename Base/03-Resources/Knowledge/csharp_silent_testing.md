@@ -1,4 +1,10 @@
-﻿# Инструменты тихой проверки C#
+﻿---
+title: Csharp Silent Testing
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+# Инструменты тихой проверки C#
 
 **Версия:** 1.0
 **Дата создания:** 2026-03-02
@@ -116,4 +122,6 @@ dotnet test --logger trx --results-directory TestResults --verbosity quiet
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+
+
 

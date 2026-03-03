@@ -1,4 +1,10 @@
 ﻿---
+title: CODE STYLE
+version: 1.0
+date: 2026-03-04
+status: draft
+---
+---
 status: draft
 created: 2026-03-02
 last_reviewed: 2026-03-02
@@ -570,4 +576,6 @@ private void FixedUpdate()
 **Статус:** ⏳ Черновик  
 **Последнее обновление:** 2026-03-02  
 **Следующее действие:** Применить к PROJECTS/DragRaceUnity
+
+
 

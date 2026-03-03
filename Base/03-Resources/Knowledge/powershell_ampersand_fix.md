@@ -1,3 +1,9 @@
+﻿---
+title: Powershell Ampersand Fix
+version: 1.0
+date: 2026-03-04
+status: draft
+---
 # PowerShell ampersand error fix
 
 **Версия:** 1.0  
@@ -90,3 +96,5 @@ python "script.py" -arg1 "value"
 **Версия:** 1.0  
 **Дата:** 2026-03-02  
 **Статус:** ✅ Готово
+
+
