@@ -52,18 +52,18 @@
 
 | Файл | Что читать | Когда |
 |------|------------|-------|
-| **[TEST_ENV_GUIDE.md](02-Areas/Documentation/TEST_ENV_GUIDE.md)** | Полная инструкция по _TEST_ENV | Перед началом |
-| **[PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/PRE_OPERATION_BACKUP_GUIDE.md)** | Как работает бэкап | Перед тестом бэкапа |
-| **[SAFE_DELETE_GUIDE.md](02-Areas/Documentation/SAFE_DELETE_GUIDE.md)** | Как работает удаление | Перед тестом удаления |
-| **[OLD_BACKUP_ANALYSIS_GUIDE.md](02-Areas/Documentation/OLD_BACKUP_ANALYSIS_GUIDE.md)** | Как работает анализ | Перед тестом анализа |
+| **[TEST_ENV_GUIDE.md](02-Areas/Documentation/test-env-guide.md)** | Полная инструкция по _TEST_ENV | Перед началом |
+| **[PRE_OPERATION_BACKUP_GUIDE.md](02-Areas/Documentation/pre-operation-backup-guide.md)** | Как работает бэкап | Перед тестом бэкапа |
+| **[SAFE_DELETE_GUIDE.md](02-Areas/Documentation/safe-delete-guide.md)** | Как работает удаление | Перед тестом удаления |
+| **[OLD_BACKUP_ANALYSIS_GUIDE.md](02-Areas/Documentation/old-backup-analysis-guide.md)** | Как работает анализ | Перед тестом анализа |
 
 ### 📊 Журналы
 
 | Файл | Что содержит |
 |------|--------------|
-| **[reports/TEST_LOG.md](reports/TEST_LOG.md)** | Логи всех тестов |
-| **[reports/CREATE_TEST_ENV_REPORT.md](reports/CREATE_TEST_ENV_REPORT.md)** | Отчёт о создании среды |
-| **[reports/BACKUP_ANALYSIS_REPORT.md](reports/BACKUP_ANALYSIS_REPORT.md)** | Отчёт анализа бэкапов |
+| **OPERATION_LOG.md** | Логи всех операций |
+| **reports/CREATE_TEST_ENV_REPORT.md** | Отчёт о создании среды (создаётся при тесте) |
+| **reports/BACKUP_ANALYSIS_REPORT.md** | Отчёт анализа бэкапов (создаётся при тесте) |
 
 ### 🔧 Скрипты
 

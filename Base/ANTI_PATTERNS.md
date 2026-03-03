@@ -119,7 +119,7 @@ rm important_file.md
 .\scripts\check-encoding.ps1 -Path "file.ps1"
 ```
 
-**Связанное правило:** [`PRE_ACTION_CHECKLIST.md`](./PRE_ACTION_CHECKLIST.md) — Пункт 4
+**Связанное правило:** [`PRE_ACTION_CHECKLIST.md`](./PRE_ACTION_CHECKLIST.md) — Пункт 10
 
 ---
 
@@ -252,7 +252,7 @@ rm important_file.md
 ✅ Закрыть сессию
 ```
 
-**Связанное правило:** [`reports/SESSION_HANDOVER.md`](./reports/SESSION_HANDOVER.md)
+**Связанное правило:** [`reports/SESSION_HANDOVER.md`](./reports/SESSION_HANDOVER.md) — создаётся при завершении сессии
 
 ---
 

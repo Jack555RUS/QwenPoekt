@@ -19,7 +19,7 @@
 
 ### 2. Проверь продолжение сессии
 
-- **`reports/SESSION_HANDOVER.md`** — есть ли незавершённые задачи?
+- **`reports/SESSION_HANDOVER.md`** — создаётся при завершении сессии (проверить наличие)
 - **`.resume_marker.json`** — маркер восстановления (корень Base/)
 - **Команда `/resume`** — автоматическое восстановление
 
@@ -172,7 +172,7 @@ KNOWLEDGE_BASE/
 └── 05_METHODOLOGY/    # Методологии (5 файлов)
 ```
 
-**Навигация:** [`KNOWLEDGE_BASE/00_README.md`](./KNOWLEDGE_BASE/00_README.md)
+**Навигация:** [`03-Resources/Knowledge/00_README.md`](./03-Resources/Knowledge/00_README.md)
 
 ---
 
