@@ -133,7 +133,6 @@
 
 **Создано:**
 - ✅ `schedule-backup-tasks.ps1` — автоматическая настройка
-- ✅ `create-tasks-manual.ps1` — создание задач вручную
 - ✅ `check-scheduled-tasks.ps1` — проверка задач
 - ✅ `run-schedule-backup.bat` — быстрый запуск
 - ✅ `TASK_SCHEDULER_SETUP.md` — полная инструкция
