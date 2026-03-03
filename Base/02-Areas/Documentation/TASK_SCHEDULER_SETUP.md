@@ -238,8 +238,7 @@ Get-ScheduledTaskInfo -TaskName "QwenPoekt-Weekly-Dedup-Audit" |
 | Файл | Описание |
 |------|----------|
 | [BACKUP_STRATEGY.md](BACKUP_STRATEGY.md) | Стратегия резервирования |
-| [schedule-backup-tasks.ps1](../scripts/schedule-backup-tasks.ps1) | Скрипт настройки |
-| [OPERATION_LOG.md](../reports/OPERATION_LOG.md) | Журнал операций |
+| [schedule-backup-tasks.ps1](../../scripts/schedule-backup-tasks.ps1) | Скрипт настройки |
 
 ---
 

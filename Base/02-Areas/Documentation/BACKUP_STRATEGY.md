@@ -68,7 +68,7 @@
 
 **Когда:** Ежедневно в 18:00
 
-**Скрипт:** [`auto-commit-daily.ps1`](../scripts/auto-commit-daily.ps1)
+**Скрипт:** [`auto-commit-daily.ps1`](../../scripts/auto-commit-daily.ps1)
 
 **Команда:**
 ```powershell
@@ -121,7 +121,7 @@
 
 ### Автоматическое (Task Scheduler)
 
-**Скрипт:** [`schedule-backup-tasks.ps1`](../scripts/schedule-backup-tasks.ps1)
+**Скрипт:** [`schedule-backup-tasks.ps1`](../../scripts/schedule-backup-tasks.ps1)
 
 **Задачи:**
 
@@ -329,7 +329,6 @@ Copy-Item "D:\QwenPoekt\Restore\Base\KNOWLEDGE_BASE" `
 | [PRE_OPERATION_BACKUP_GUIDE.md](PRE_OPERATION_BACKUP_GUIDE.md) | Предоперационный бэкап |
 | [TEST_ENV_GUIDE.md](TEST_ENV_GUIDE.md) | Тестовая среда |
 | [DEDUP_GUIDE.md](DEDUP_GUIDE.md) | Дедупликация |
-| [OPERATION_LOG.md](../reports/OPERATION_LOG.md) | Журнал операций |
 
 ---
 

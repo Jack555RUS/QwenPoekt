@@ -156,8 +156,8 @@
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`tasks-dag.json`](../tasks-dag.json) — Граф задач
-- [`scripts/manage-tasks-dag.ps1`](../scripts/manage-tasks-dag.ps1) — Скрипт
+- [`tasks-dag.json`](../../tasks-dag.json) — Граф задач
+- [`scripts/manage-tasks-dag.ps1`](../../scripts/manage-tasks-dag.ps1) — Скрипт
 - [`FILE_PID_SYSTEM.md`](./FILE_PID_SYSTEM.md) — PID система
 
 ---

@@ -359,8 +359,7 @@ Write-Host "Аудит завершён. Отчёт: reports\DEDUP_MONTHLY_AUDIT
 | Файл | Описание |
 |------|----------|
 | [ANALYSIS_PROCESS.md](ANALYSIS_PROCESS.md) | Процесс анализа информации |
-| [AI_ANALYSIS_PROMPT.md](../_templates/AI_ANALYSIS_PROMPT.md) | Промпт для ИИ-аналитика |
-| [OPERATION_LOG.md](../reports/OPERATION_LOG.md) | Журнал операций |
+| [AI_ANALYSIS_PROMPT.md](../../_templates/AI_ANALYSIS_PROMPT.md) | Промпт для ИИ-аналитика |
 
 ---
 

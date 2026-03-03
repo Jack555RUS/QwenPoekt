@@ -185,7 +185,7 @@ Get-Content "mcp.json.pid" | ConvertFrom-Json
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`scripts/generate-file-pid.ps1`](../scripts/generate-file-pid.ps1) — Скрипт генерации
+- [`scripts/generate-file-pid.ps1`](../../scripts/generate-file-pid.ps1) — Скрипт генерации
 - [`reports/FILE_PID_REGISTRY.md`](./FILE_PID_REGISTRY.md) — Реестр PID
 
 ---
