@@ -35,7 +35,9 @@
 1. ✅ CURRENT_CONTEXT.md создан
 2. ✅ Проверка целостности Base/ ЗАВЕРШЕНА
 3. ✅ Docker тест бесшовного запуска ✅
-4. ⏳ Обновить workspace (Вариант C — параллельный)
+4. ✅ Workspace тестовый создан ✅
+5. ⏳ Открыть QwenPoekt_TEST.code-workspace в VS Code
+6. ⏳ Если ВСЕ ✅ → Обновить основной workspace
 
 ---
 
