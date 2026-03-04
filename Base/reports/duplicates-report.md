@@ -1,6 +1,6 @@
 ﻿# 📊 ОТЧЁТ: ДУБЛИКАТЫ ФАЙЛОВ
 
-**Дата:** 2026-03-04 15:34:52  
+**Дата:** 2026-03-04 15:41:00  
 **Путь:** D:\QwenPoekt\Base  
 **Статус:** ✅ Завершено
 
@@ -312,8 +312,8 @@
 | 288 | git_00_readme.md | D:\QwenPoekt\Base\_TEST_ENV |
 | 289 | test-file-delete.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
 | 290 | test-file-rename.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 291 | test-rename-dep1.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 292 | test-rename-original.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 291 | file1.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports\test-move-folder |
+| 292 | file2.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports\test-move-folder |
 | 293 | 00_README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE |
 | 294 | csharp_standards.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
 | 295 | project_glossary.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
@@ -362,6 +362,6 @@ Find-HashDuplicates -SearchPath "D:\QwenPoekt\Base"
 
 ---
 
-**Отчёт создан:** 2026-03-04 15:34:52  
+**Отчёт создан:** 2026-03-04 15:41:00  
 **Следующий шаг:** Проанализировать дубликаты, принять решение
 
