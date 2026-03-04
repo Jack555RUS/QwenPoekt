@@ -1,7 +1,7 @@
 # before-action-checklist-v2.ps1 — Проверка перед действием (Версия 2)
-# Версия: 2.0
+# Версия: 2.1
 # Дата: 4 марта 2026 г.
-# Назначение: Улучшенная проверка с 3 уровнями, оценкой риска, журналом ошибок
+# Назначение: Улучшенная проверка с 3 уровнями, оценкой риска, журналом ошибок, анализом дубликатов
 
 param(
     [string]$Action,                    # delete, move, create, modify
@@ -11,7 +11,8 @@ param(
     [string]$Level = 'Medium',          # Уровень проверки
     [switch]$Verbose,
     [switch]$Log,
-    [switch]$Force                      # Пропустить подтверждения (для тестов)
+    [switch]$Force,                     # Пропустить подтверждения (для тестов)
+    [switch]$CheckDuplicates            # Проверить на дубликаты
 )
 
 $ErrorActionPreference = "Stop"
@@ -23,10 +24,20 @@ $LogsPath = Join-Path $BasePath "logs"
 $ReportsPath = Join-Path $BasePath "reports"
 $LogPath = Join-Path $LogsPath "before-action-v2-$(Get-Date -Format 'yyyyMMdd-HHmmss').log"
 $PreventedErrorsPath = Join-Path $ReportsPath "PREVENTED_ERRORS.md"
+$AnalysisFunctionsPath = Join-Path $ScriptPath "analysis-functions.ps1"
+$FindDuplicatesPath = Join-Path $ScriptPath "find-duplicates.ps1"
 
 # Инициализация логов
 if (-not (Test-Path $LogsPath)) { New-Item -ItemType Directory -Path $LogsPath -Force | Out-Null }
 if (-not (Test-Path $ReportsPath)) { New-Item -ItemType Directory -Path $ReportsPath -Force | Out-Null }
+
+# Загрузка функций анализа (если есть)
+if (Test-Path $AnalysisFunctionsPath) {
+    . $AnalysisFunctionsPath
+}
+if (Test-Path $FindDuplicatesPath) {
+    . $FindDuplicatesPath
+}
 
 # Цвета
 $Green = "Green"
@@ -316,6 +327,43 @@ if ($Verbose -and $depGraph.Count -gt 0) {
 
 Write-Log "Риск: $($risk.Score)/$($risk.MaxScore) ($($risk.Level))"
 Write-Log "Зависимости: $($depGraph.Count)"
+
+# ============================================
+# ШАГ 2.5: ГЛУБОКИЙ АНАЛИЗ (если CheckDuplicates)
+# ============================================
+
+if ($CheckDuplicates) {
+    Write-Host "`n[2.5/7] Глубокий анализ (дубликаты, функция)..." -ForegroundColor Cyan
+    
+    # Анализ функции файла
+    if (Get-Command Analyze-FileFunction -ErrorAction SilentlyContinue) {
+        $fileAnalysis = Analyze-FileFunction -FilePath $Target
+        Write-Host "  📄 Функция: $($fileAnalysis.Function)" -ForegroundColor Gray
+        Write-Log "Функция файла: $($fileAnalysis.Function)"
+    }
+    
+    # Проверка на дубликаты
+    if (Get-Command Find-FunctionalDuplicates -ErrorAction SilentlyContinue) {
+        $targetDir = Split-Path $Target -Parent
+        $duplicates = Find-FunctionalDuplicates -SearchPath $targetDir
+        
+        if ($duplicates.Count -gt 0) {
+            Write-Host "  ⚠️ Найдено дубликатов: $($duplicates.Count) групп" -ForegroundColor Yellow
+            Write-Log "Дубликаты: $($duplicates.Count) групп"
+            
+            if ($Verbose) {
+                foreach ($group in $duplicates | Select-Object -First 3) {
+                    Write-Host "    • Функция: $($group.Name)" -ForegroundColor Gray
+                    foreach ($file in $group.Group | Select-Object -First 2) {
+                        Write-Host "      - $($file.FileName)" -ForegroundColor Gray
+                    }
+                }
+            }
+        } else {
+            Write-Host "  ✅ Дубликатов не найдено" -ForegroundColor Green
+        }
+    }
+}
 
 # ============================================
 # ШАГ 3: ИЗУЧЕНИЕ ДОКУМЕНТАЦИИ
