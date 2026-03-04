@@ -422,10 +422,185 @@ git commit -m "Backup: BASE_INDEX перед обновлением"
 
 ---
 
+## ⚡ БЫСТРЫЕ КОМАНДЫ (ПОВСЕДНЕВНЫЕ)
+
+**Перед действием:**
+```powershell
+.\scripts\before-action-checklist-v2.ps1 -Action "create" -Target "file.md"
+```
+
+**Проверка ссылок:**
+```powershell
+.\scripts\check-links.ps1 -Recursive
+```
+
+**Поиск дубликатов:**
+```powershell
+.\scripts\find-duplicates.ps1 -Path "."
+```
+
+**Суммаризация контекста:**
+```powershell
+.\scripts\summarize-context.ps1 -Verbose
+```
+
+**Аудит после действия:**
+```powershell
+.\scripts\after-action-audit.ps1 -Verbose
+```
+
+**Проверка внешних ссылок:**
+```powershell
+.\scripts\check-external-links.ps1 -Recursive -Verbose
+```
+
+**Тестирование документации:**
+```powershell
+.\scripts\test-documentation.ps1 -Path "."
+```
+
+**Полный аудит базы:**
+```powershell
+.\scripts\full-kb-audit.ps1 -Verbose
+```
+
+---
+
+## 📚 КЛЮЧЕВЫЕ ЗНАНИЯ (КРИТИЧНЫЕ)
+
+**При работе с кодом:**
+
+| Файл | Назначение | Когда читать |
+|------|------------|--------------|
+| [03-Resources/Knowledge/00_CORE/csharp_standards.md](./03-Resources/Knowledge/00_CORE/csharp_standards.md) | Стандарты C# | При написании кода |
+| [03-Resources/Knowledge/00_CORE/unity_fundamentals.md](./03-Resources/Knowledge/00_CORE/unity_fundamentals.md) | Основы Unity | При работе с Unity |
+| [03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md](./03-Resources/Knowledge/01_RULES/ui_toolkit_rules.md) | UI Toolkit правила | При создании UI |
+| [03-Resources/Knowledge/03_PATTERNS/error_solutions.md](./03-Resources/Knowledge/03_PATTERNS/error_solutions.md) | Решения ошибок | При проблемах |
+
+**При работе с PowerShell:**
+
+| Файл | Назначение | Когда читать |
+|------|------------|--------------|
+| [03-Resources/PowerShell/](./03-Resources/PowerShell/) | Скрипты (~80 файлов) | При автоматизации |
+| [03-Resources/AI/program-notes/](./03-Resources/AI/program-notes/) | Заметки о программах | При работе с ПО |
+
+---
+
+## 📊 ОТЧЁТЫ (КРИТИЧНЫЕ)
+
+| Файл | Назначение | Когда читать |
+|------|------------|--------------|
+| [reports/DEEP_ANALYSIS_GUIDE.md](./reports/DEEP_ANALYSIS_GUIDE.md) | Глубокий анализ | При сложном анализе |
+| [reports/ERROR_LEARNING_GUIDE.md](./reports/ERROR_LEARNING_GUIDE.md) | Обучение на ошибках | При проблемах |
+| [reports/ERROR_METRICS_DASHBOARD.md](./reports/ERROR_METRICS_DASHBOARD.md) | Метрики ошибок | При аудите |
+| [reports/KB_TESTING_GUIDE.md](./reports/KB_TESTING_GUIDE.md) | Тестирование БЗ | При создании тестов |
+| [reports/TEST_REPORT.md](./reports/TEST_REPORT.md) | Отчёт о тестах | После тестирования |
+| [reports/SESSION_SAVE_GUIDE.md](./reports/SESSION_SAVE_GUIDE.md) | Сохранение сессий | При настройке автосохранения |
+
+---
+
+## 📖 СТРУКТУРА БАЗЫ (ПРИНЦИПЫ)
+
+**Иерархия папок:**
+
+```
+D:\QwenPoekt\Base/
+├── 01-Projects/     — Текущие проекты (активные)
+├── 02-Areas/        — Области знаний (стандарты, документация)
+├── 03-Resources/    — Ресурсы (знания, скрипты, книги)
+├── 04-Archives/     — Архивы (завершённые проекты)
+├── _drafts/         — Черновики (WIP, 7 дней)
+├── _TEST_ENV/       — Тестирование (копии для тестов)
+├── _BACKUP/         — Бэкапы (автоматические)
+└── reports/         — Отчёты (аудит, тесты, анализ)
+```
+
+**Принципы размещения:**
+
+| Тип файла | Куда класть | Пример |
+|-----------|-------------|--------|
+| **Правила** | `.qwen/rules/` | `15-base-index-auto-update.md` |
+| **Скрипты** | `scripts/` | `summarize-context.ps1` |
+| **Знания** | `03-Resources/Knowledge/` | `csharp_standards.md` |
+| **Отчёты** | `reports/` | `TEST_REPORT.md` |
+| **Задачи** | Корень `Base/` | `tasks-dag.json` |
+| **Черновики** | `_drafts/` | `WIP_feature.md` |
+
+**Именование файлов:**
+
+- ✅ **kebab-case** (латиница): `backup-strategy.md`
+- ✅ **snake_case** (для скриптов): `check_links.ps1`
+- ❌ **НЕ кириллица**: `резервное-копирование.md`
+- ❌ **НЕ пробелы**: `backup strategy.md`
+
+---
+
+## 📖 КАК ЧИТАТЬ (МЕТОДОЛОГИЯ)
+
+**Правило 20 минут:**
+```
+20 минут на изучение > 2 часа исправлений
+```
+
+**Порядок чтения:**
+
+1. **Сначала индекс:** [000-BASE_INDEX.md](./000-BASE_INDEX.md) (2 мин)
+2. **Потом контекст:** [.qwen/QWEN.md](.qwen/QWEN.md) (5 мин)
+3. **Затем правила:** [.qwen/rules/01-core.md](.qwen/rules/01-core.md) (2 мин)
+4. **Потом задача:** [ТЕКУЩАЯ_ЗАДАЧА.md](./ТЕКУЩАЯ_ЗАДАЧА.md) (1 мин)
+5. **По нужде:** Остальные файлы (по контексту)
+
+**Методы чтения:**
+
+| Метод | Когда | Как |
+|-------|-------|-----|
+| **Сканирование** | Поиск информации | Заголовки, таблицы, ссылки |
+| **Глубокое чтение** | Изучение нового | Полностью, с заметками |
+| **Справочное** | По контексту | Только нужный раздел |
+
+---
+
+## 🌱 САМОРАЗВИТИЕ (НЕПРЕРЫВНОЕ ОБУЧЕНИЕ)
+
+**Принципы:**
+
+1. **Обучение на ошибках:**
+   - Записать в [ERROR_LOG.md](./ERROR_LOG.md)
+   - Проанализировать (5 Почему)
+   - Создать правило/скрипт
+   - Протестировать
+
+2. **Еженедельный обзор:**
+   - Воскресенье 18:00
+   - Проверить [ERROR_LOG.md](./ERROR_LOG.md)
+   - Проверить [tasks-dag.json](./tasks-dag.json)
+   - Обновить [ТЕКУЩАЯ_ЗАДАЧА.md](./ТЕКУЩАЯ_ЗАДАЧА.md)
+
+3. **Чтение книг:**
+   - [03-Resources/BOOKS/](./03-Resources/BOOKS/) — Библиография
+   - [03-Resources/AI/ai-complete-analysis.md](./03-Resources/AI/ai-complete-analysis.md) — Анализ ИИ
+   - [03-Resources/AI/ai-learning-development-analysis.md](./03-Resources/AI/ai-learning-development-analysis.md) — Обучение ИИ
+
+4. **Развитие навыков:**
+   - [03-Resources/Knowledge/](./03-Resources/Knowledge/) — База знаний
+   - [scripts/](./scripts/) — Скрипты для автоматизации
+   - [reports/](./reports/) — Отчёты для обучения
+
+**Ресурсы для развития:**
+
+| Ресурс | Назначение | Ссылка |
+|--------|------------|--------|
+| **Книги** | Библиография (50+ книг) | [03-Resources/BOOKS/](./03-Resources/BOOKS/) |
+| **Анализ ИИ** | Обучение, развитие, мышление | [ai-complete-analysis.md](./03-Resources/AI/ai-complete-analysis.md) |
+| **Методологии** | PARA, Zettelkasten, Evergreen | [03-Resources/Knowledge/05_METHODOLOGY/](./03-Resources/Knowledge/05_METHODOLOGY/) |
+
+---
+
 ## 📝 ИСТОРИЯ ИЗМЕНЕНИЙ
 
 | Дата | Версия | Изменения |
 |------|--------|-----------|
+| 2026-03-04 | 1.4 | Добавлены разделы: Быстрые команды, Ключевые знания, Отчёты, Структура базы, Как читать, Саморазвитие |
 | 2026-03-04 | 1.3 | Добавлены разделы: Бесшовная загрузка (29 файлов), Восстановление сессии, Безопасность |
 | 2026-03-04 | 1.2 | Добавлено правило 15 (Auto-Update) |
 | 2026-03-04 | 1.1 | Удалён мусор (all_rule.md, 99-test) |
