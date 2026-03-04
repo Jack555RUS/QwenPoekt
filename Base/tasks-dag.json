@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "updated": "2026-03-04T18:45:00Z",
+  "version": "1.2",
+  "updated": "2026-03-04T19:00:00Z",
   "tasks": {
     "PID_Files": {
       "title": "PID для файлов",
@@ -52,6 +52,66 @@
       "source": "ERROR_LOG.md §9.8",
       "estimate": "2 часа",
       "priority": "🟢 Низкий"
+    },
+    "Rule_14_Report_Format": {
+      "title": "Правило 14 — Формат отчёта (консолидация 3 форматов)",
+      "status": "pending",
+      "depends_on": [],
+      "order": 11,
+      "source": "Анализ инцидента 2026-03-04",
+      "estimate": "1 час",
+      "priority": "🟡 Средний",
+      "category": "Backlog"
+    },
+    "AI_Start_Here_Update": {
+      "title": "AI_START_HERE.md — добавить 'Правило 13 — обязательно'",
+      "status": "pending",
+      "depends_on": [],
+      "order": 12,
+      "source": "Анализ инцидента 2026-03-04",
+      "estimate": "15 мин",
+      "priority": "🟢 Низкий",
+      "category": "Backlog"
+    },
+    "Checklist_V2_Update": {
+      "title": "before-action-checklist-v2.ps1 — вопрос 'Какое правило применяем?'",
+      "status": "pending",
+      "depends_on": ["Rule_14_Report_Format"],
+      "order": 13,
+      "source": "Анализ инцидента 2026-03-04",
+      "estimate": "30 мин",
+      "priority": "🟢 Низкий",
+      "category": "Backlog"
+    },
+    "Auto_Load_Rules": {
+      "title": "Авто-загрузка правил при старте сессии (01-core, 02-workflow, 13-user-alignment)",
+      "status": "pending",
+      "depends_on": [],
+      "order": 14,
+      "source": "Анализ инцидента 2026-03-04",
+      "estimate": "2 часа",
+      "priority": "🟢 Низкий",
+      "category": "Backlog"
+    },
+    "Pre_Commit_Hook": {
+      "title": "Пре-коммит хук — проверка 'Было ли _TEST_ENV?'",
+      "status": "pending",
+      "depends_on": [],
+      "order": 15,
+      "source": "Анализ инцидента 2026-03-04",
+      "estimate": "1.5 часа",
+      "priority": "🟢 Низкий",
+      "category": "Backlog"
+    },
+    "Unified_Report_Format": {
+      "title": "Единый формат отчётов — consolidate 3 формата в 1 правило",
+      "status": "pending",
+      "depends_on": ["Rule_14_Report_Format"],
+      "order": 16,
+      "source": "Анализ инцидента 2026-03-04",
+      "estimate": "1 час",
+      "priority": "🟢 Низкий",
+      "category": "Backlog"
     },
     "Unity_Dialog": {
       "title": "Диалог подтверждения выхода",
