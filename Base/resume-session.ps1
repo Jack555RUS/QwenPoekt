@@ -1,16 +1,72 @@
 # resume-session.ps1 — Восстановление контекста сессии
-# Версия: 1.0
+# Версия: 1.1
 # Дата: 4 марта 2026 г.
 # Назначение: Автоматическое восстановление контекста для Qwen Code
+# Обновление: Query Refinement (переформулирование запросов)
 
 $ErrorActionPreference = "Stop"
+
+# ----------------------------------------------------------------------------
+# ФУНКЦИИ
+# ----------------------------------------------------------------------------
+
+function Invoke-QueryRefinement {
+    param(
+        [string]$UserQuery,
+        [string]$Context,
+        [string[]]$History
+    )
+    
+    # Словарь местоимений
+    $pronouns = @{
+        "там" = "location"
+        "он" = "person"
+        "она" = "person"
+        "это" = "object"
+        "тот" = "object"
+        "тех" = "object"
+        "туда" = "location"
+        "оттуда" = "location"
+    }
+    
+    # Замена местоимений (простая эвристика)
+    $refinedQuery = $UserQuery
+    
+    # Извлечение сущностей из контекста
+    if ($Context) {
+        # Поиск имён собственных (INDEX.md, PowerShell, etc.)
+        $entityPattern = '[A-Z][a-zA-Z0-9_-]+\s*(\.md|\.ps1|\.json|\.js|\.ts|\.cs)?'
+        $entities = [regex]::Matches($Context, $entityPattern)
+        
+        foreach ($pronoun in $pronouns.Keys) {
+            if ($UserQuery -match $pronoun) {
+                if ($entities.Count -gt 0) {
+                    $entity = $entities[0].Value
+                    $refinedQuery = $refinedQuery -replace $pronoun, "в $entity"
+                }
+            }
+        }
+    }
+    
+    # Добавление контекста
+    if ($Context -and $refinedQuery -eq $UserQuery) {
+        $shortContext = if ($Context.Length -gt 100) { $Context.Substring(0, 100) + "..." } else { $Context }
+        $refinedQuery = "$refinedQuery (контекст: $shortContext)"
+    }
+    
+    return $refinedQuery
+}
+
+# ----------------------------------------------------------------------------
+# ОСНОВНАЯ ЛОГИКА
+# ----------------------------------------------------------------------------
 
 Write-Host "`n╔══════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
 Write-Host "║         ВОССТАНОВЛЕНИЕ КОНТЕКСТА СЕССИИ                 ║" -ForegroundColor Cyan
 Write-Host "╚══════════════════════════════════════════════════════════╝`n" -ForegroundColor Cyan
 
 # 1. Проверка .resume_marker.json
-Write-Host "[1/3] Проверка контекста..." -ForegroundColor Cyan
+Write-Host "[1/4] Проверка контекста..." -ForegroundColor Cyan
 
 if (-not (Test-Path ".resume_marker.json")) {
     Write-Host "  ❌ .resume_marker.json НЕ найден" -ForegroundColor Red
@@ -26,7 +82,7 @@ if (-not (Test-Path ".resume_marker.json")) {
 Write-Host "  ✅ .resume_marker.json найден" -ForegroundColor Green
 
 # 2. Чтение контекста
-Write-Host "`n[2/3] Чтение контекста..." -ForegroundColor Cyan
+Write-Host "`n[2/4] Чтение контекста..." -ForegroundColor Cyan
 
 $context = Get-Content ".resume_marker.json" -Raw
 $contextObj = $context | ConvertFrom-Json
@@ -35,10 +91,43 @@ Write-Host "  📅 Дата: $($contextObj.Date)" -ForegroundColor Gray
 Write-Host "  📋 Задача: $($contextObj.CurrentTask)" -ForegroundColor Gray
 Write-Host "  📍 Следующий шаг: $($contextObj.NextStep)" -ForegroundColor Gray
 
-# 3. Копирование в буфер
-Write-Host "`n[3/3] Копирование в буфер..." -ForegroundColor Cyan
+# Проверка суммаризации
+if ($contextObj.ContextSummary) {
+    Write-Host "  📝 Суммаризация: найдена" -ForegroundColor Gray
+    Write-Host "     $($contextObj.ContextSummary.Substring(0, [Math]::Min(80, $contextObj.ContextSummary.Length)))..." -ForegroundColor Gray
+}
 
-$context | Set-Clipboard
+# 3. Query Refinement (переформулирование запроса)
+Write-Host "`n[3/4] Query Refinement..." -ForegroundColor Cyan
+
+$userQuery = Read-Host "  Введите ваш запрос (или нажмите Enter для пропуска)"
+
+if ($userQuery -and $userQuery.Trim().Length -gt 0) {
+    $history = @($contextObj.CurrentTask, $contextObj.NextStep)
+    $refinedQuery = Invoke-QueryRefinement -UserQuery $userQuery -Context $contextObj.CurrentTask -History $history
+    
+    Write-Host "  🔍 Уточнённый запрос:" -ForegroundColor Cyan
+    Write-Host "     $refinedQuery" -ForegroundColor White
+} else {
+    $refinedQuery = $contextObj.NextStep
+    Write-Host "  ℹ️  Запрос не введён, используем следующий шаг:" -ForegroundColor Gray
+    Write-Host "     $refinedQuery" -ForegroundColor White
+}
+
+# 4. Копирование в буфер
+Write-Host "`n[4/4] Копирование в буфер..." -ForegroundColor Cyan
+
+# Формирование контекста для вставки
+$contextForClipboard = @"
+$context
+
+====================================
+ЗАПРОС ПОЛЬЗОВАТЕЛЯ:
+$refinedQuery
+====================================
+"@
+
+$contextForClipboard | Set-Clipboard
 
 Write-Host "  ✅ Контекст скопирован в буфер!" -ForegroundColor Green
 
