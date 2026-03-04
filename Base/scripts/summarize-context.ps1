@@ -262,9 +262,15 @@ if ($result) {
         $result.KeyFacts | ConvertTo-Json | Out-File -FilePath $factsPath -Encoding UTF8 -NoBOM
         Write-Log "   Key Facts: $factsPath" -ForegroundColor Gray
         
-        # Обновление .resume_marker.json
+        # Обновление .resume_marker.json (с бэкапом!)
         $markerPath = Join-Path $BasePath ".resume_marker.json"
         if (Test-Path $markerPath) {
+            # БЭКАП ПЕРЕД ИЗМЕНЕНИЕМ!
+            $backupPath = Join-Path $BasePath "_BACKUP\Pre_Change\.resume_marker_$(Get-Date -Format 'yyyy-MM-dd_HH-mm-ss').json"
+            Copy-Item $markerPath $backupPath -Force
+            Write-Log "   Бэкап: $backupPath" -ForegroundColor Green
+            
+            # Обновление маркера
             $marker = Get-Content $markerPath | ConvertFrom-Json
             $marker.ContextSummary = $result.Summary
             $marker.ContextSummaryDate = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
