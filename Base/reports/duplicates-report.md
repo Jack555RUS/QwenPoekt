@@ -1,6 +1,6 @@
 ﻿# 📊 ОТЧЁТ: ДУБЛИКАТЫ ФАЙЛОВ
 
-**Дата:** 2026-03-04 14:27:09  
+**Дата:** 2026-03-04 14:53:44  
 **Путь:** D:\QwenPoekt\Base  
 **Статус:** ✅ Завершено
 
@@ -10,7 +10,7 @@
 
 | Тип дубликатов | Найдено |
 |----------------|---------|
-| **Функциональные** | 290 групп |
+| **Функциональные** | 291 групп |
 | **По хэшу** | 0 групп |
 
 ---
@@ -308,10 +308,11 @@
 | 284 | RULE_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
 | 285 | SCRIPT_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
 | 286 | git_00_readme.md | D:\QwenPoekt\Base\_TEST_ENV |
-| 287 | 00_README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE |
-| 288 | csharp_standards.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
-| 289 | project_glossary.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
-| 290 | README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES |
+| 287 | test-file-delete.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 288 | 00_README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE |
+| 289 | csharp_standards.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
+| 290 | project_glossary.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
+| 291 | README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES |
 
 
 ---
@@ -356,6 +357,6 @@ Find-HashDuplicates -SearchPath "D:\QwenPoekt\Base"
 
 ---
 
-**Отчёт создан:** 2026-03-04 14:27:09  
+**Отчёт создан:** 2026-03-04 14:53:44  
 **Следующий шаг:** Проанализировать дубликаты, принять решение
 
