@@ -14,8 +14,8 @@ except ImportError as e:
     sys.exit(1)
 
 # Пути
-BASE_PATH = Path(__file__).parent.parent
-VECTORS_PATH = BASE_PATH / "03-Resources" / "AI" / "vectors_cache.pkl"
+BASE_PATH = Path(__file__).parent  # D:\QwenPoekt\Base\03-Resources\AI
+VECTORS_PATH = BASE_PATH / "vectors_cache.pkl"
 
 # Загрузка кэша
 print("Загрузка векторов...")
