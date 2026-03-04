@@ -1,6 +1,6 @@
 ﻿# 📊 ОТЧЁТ: ДУБЛИКАТЫ ФАЙЛОВ
 
-**Дата:** 2026-03-04 15:28:13  
+**Дата:** 2026-03-04 15:34:52  
 **Путь:** D:\QwenPoekt\Base  
 **Статус:** ✅ Завершено
 
@@ -10,7 +10,7 @@
 
 | Тип дубликатов | Найдено |
 |----------------|---------|
-| **Функциональные** | 297 групп |
+| **Функциональные** | 296 групп |
 | **По хэшу** | 0 групп |
 
 ---
@@ -310,15 +310,14 @@
 | 286 | RULE_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
 | 287 | SCRIPT_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
 | 288 | git_00_readme.md | D:\QwenPoekt\Base\_TEST_ENV |
-| 289 | test-delete-dep1.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 290 | test-delete-dep2.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 291 | test-delete-target.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 292 | test-file-delete.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 293 | test-file-rename.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 294 | 00_README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE |
-| 295 | csharp_standards.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
-| 296 | project_glossary.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
-| 297 | README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES |
+| 289 | test-file-delete.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 290 | test-file-rename.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 291 | test-rename-dep1.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 292 | test-rename-original.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 293 | 00_README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE |
+| 294 | csharp_standards.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
+| 295 | project_glossary.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
+| 296 | README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES |
 
 
 ---
@@ -363,6 +362,6 @@ Find-HashDuplicates -SearchPath "D:\QwenPoekt\Base"
 
 ---
 
-**Отчёт создан:** 2026-03-04 15:28:13  
+**Отчёт создан:** 2026-03-04 15:34:52  
 **Следующий шаг:** Проанализировать дубликаты, принять решение
 
