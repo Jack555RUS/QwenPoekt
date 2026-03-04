@@ -110,12 +110,24 @@ function Get-DependencyGraph {
     if (Test-Path $BasePath) {
         $files = Get-ChildItem $BasePath -Recurse -Include "*.md","*.ps1","*.json" -ErrorAction SilentlyContinue
         foreach ($file in $files) {
-            $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
-            if ($content -match [regex]::Escape($Path)) {
-                $dependencies += @{
-                    Path = $file.FullName
-                    Line = ($content -split "`n" | Select-String -Pattern [regex]::Escape($Path) | Select-Object -First 1).LineNumber
+            try {
+                $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
+                if ($content -match [regex]::Escape($Path)) {
+                    $lines = $content -split "`n"
+                    $lineNum = 0
+                    for ($i = 0; $i -lt $lines.Count; $i++) {
+                        if ($lines[$i] -match [regex]::Escape($Path)) {
+                            $lineNum = $i + 1
+                            break
+                        }
+                    }
+                    $dependencies += @{
+                        Path = $file.FullName
+                        Line = $lineNum
+                    }
                 }
+            } catch {
+                # Игнорировать ошибки чтения
             }
         }
     }
@@ -132,7 +144,10 @@ function Write-PreventedError {
     
     $date = Get-Date -Format "yyyy-MM-dd"
     $time = Get-Date -Format "HH:mm:ss"
-    
+
+    $preventedText = if ($Dependencies.Count -gt 0) { "Поломка $($Dependencies.Count) ссылок/файлов" } else { "Потенциальная ошибка" }
+    $solutionText = if ($Dependencies.Count -gt 0) { "Обновить зависимости перед $Action" } else { "Продолжить с осторожностью" }
+
     $entry = @"
 
 ### $date $time — $Action
@@ -140,8 +155,8 @@ function Write-PreventedError {
 **Цель:** $Target
 **Риск:** $($Risk.Level) ($($Risk.Score)/$($Risk.MaxScore))
 **Зависимостей найдено:** $($Dependencies.Count)
-**Предотвращено:** $((if ($Dependencies.Count -gt 0) { "Поломка $($Dependencies.Count) ссылок/файлов" } else { "Потенциальная ошибка" }))
-**Решение:** $((if ($Dependencies.Count -gt 0) { "Обновить зависимости перед $Action" } else { "Продолжить с осторожностью" }))
+**Предотвращено:** $preventedText
+**Решение:** $solutionText
 
 "@
     
@@ -345,8 +360,9 @@ if ($Level -ne 'Fast') {
         Write-Host "  ⚠️ _TEST_ENV/ не найдена" -ForegroundColor Yellow
         Write-Host "  ℹ️  Рекомендуется создать для тестирования" -ForegroundColor Gray
     }
-    
-    Write-Log "Тестовая среда: $((Test-Path $testEnvPath) ? 'готова' : 'не готова')"
+
+    $testEnvStatus = if (Test-Path $testEnvPath) { 'готова' } else { 'не готова' }
+    Write-Log "Тестовая среда: $testEnvStatus"
 } else {
     Write-Host "[5/7] Пропущено (Fast уровень)`n" -ForegroundColor Gray
 }
