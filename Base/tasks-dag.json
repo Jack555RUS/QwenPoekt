@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "updated": "2026-03-03T23:40:00Z",
+  "version": "1.1",
+  "updated": "2026-03-04T18:45:00Z",
   "tasks": {
     "PID_Files": {
       "title": "PID для файлов",
@@ -24,6 +24,34 @@
       "order": 3,
       "started_at": "2026-03-04T00:41:00Z",
       "completed_at": "2026-03-04T00:45:00Z"
+    },
+    "Error_Metrics_Dashboard": {
+      "title": "Метрики обучения на ошибках (дашборд)",
+      "status": "pending",
+      "depends_on": [],
+      "order": 8,
+      "source": "ERROR_LOG.md §9.5",
+      "estimate": "1 час",
+      "priority": "🟡 Средний"
+    },
+    "Weekly_Error_Review": {
+      "title": "Еженедельный обзор ошибок (воскресенье 18:00)",
+      "status": "pending",
+      "depends_on": [],
+      "order": 9,
+      "source": "ERROR_LOG.md §9.6",
+      "estimate": "30 мин",
+      "priority": "🟡 Средний",
+      "recurring": "weekly_sunday_18:00"
+    },
+    "Auto_Task_From_Errors": {
+      "title": "Авто-создание задач при битых ссылках",
+      "status": "pending",
+      "depends_on": ["Error_Metrics_Dashboard"],
+      "order": 10,
+      "source": "ERROR_LOG.md §9.8",
+      "estimate": "2 часа",
+      "priority": "🟢 Низкий"
     },
     "Unity_Dialog": {
       "title": "Диалог подтверждения выхода",
