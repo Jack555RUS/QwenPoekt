@@ -1,6 +1,6 @@
 {
-  "version": "1.3",
-  "updated": "2026-03-04T19:30:00Z",
+  "version": "1.4",
+  "updated": "2026-03-04T20:00:00Z",
   "tasks": {
     "PID_Files": {
       "title": "PID для файлов",
@@ -24,6 +24,16 @@
       "order": 3,
       "started_at": "2026-03-04T00:41:00Z",
       "completed_at": "2026-03-04T00:45:00Z"
+    },
+    "INDEX_Creation": {
+      "title": "INDEX.md — единый индекс структуры базы (8 разделов: Карта, Файлы, Библиотека, Процессы, Стандарты, Инструменты, Обновление, Связи)",
+      "status": "pending",
+      "depends_on": [],
+      "order": 18,
+      "source": "Анализ инцидента 2026-03-04",
+      "estimate": "1 час",
+      "priority": "🔴 Высокий",
+      "category": "Backlog"
     },
     "Process_Compliance": {
       "title": "Соблюдение процесса (DO/DOING/DONE — before-action-checklist-v2.ps1 + after-action-audit.ps1)",

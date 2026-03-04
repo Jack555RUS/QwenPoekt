@@ -1,13 +1,13 @@
 ﻿{
-  "GitCommit": "d11bd6605",
+  "GitCommit": "ccafeae84",
   "AutoSave": true,
-  "CurrentTask": "Неделя 1: v2 использование (День 1/7)",
-  "NextStep": "Использовать before-action-checklist-v2.ps1 перед каждым действием",
-  "Date": "2026-03-04 18:30",
-  "Reason": "Сессия завершена, все этапы выполнены, контекст сохранён",
+  "CurrentTask": "INDEX.md — единый индекс структуры базы (сохранение контекста)",
+  "NextStep": "Создать INDEX.md (8 разделов: Карта, Файлы, Библиотека, Процессы, Стандарты, Инструменты, Обновление, Связи)",
+  "Date": "2026-03-04 20:00",
+  "Reason": "Контекст сохранён перед переключением на другую задачу",
   "SessionFile": "sessions/2026-03-04_18-00/chat.md",
-  "Stage": "Сессия 3 дня завершена",
-  "NextStage": "Продолжить с Неделя 1 (v2 использование)",
+  "Stage": "Сохранение контекста INDEX.md",
+  "NextStage": "Вернуться к INDEX.md или другая задача",
   "Settings": {
     "EditMode": "Обычный (по умолчанию)",
     "ContextMonitoring": true,
@@ -47,10 +47,13 @@
     "✅ ERROR_METRICS_DASHBOARD.md (5 метрик)",
     "✅ DEEP_ANALYSIS_GUIDE.md (500+ строк)",
     "✅ KB_TESTING_GUIDE.md (руководство по тестированию)",
-    "✅ cleanup-unnecessary-files.ps1 (очистка)"
+    "✅ cleanup-unnecessary-files.ps1 (очистка)",
+    "✅ Сохранение контекста INDEX.md (tasks-dag.json, ТЕКУЩАЯ_ЗАДАЧА.md, .resume_marker.json)"
   ],
   "PendingTasks": [
+    "🔴 INDEX.md (единый индекс структуры) — 1 час",
     "🔴 Неделя 1: v2 использование (1/7 дней, 30%) — before-action-checklist-v2.ps1 перед действиями",
+    "🔴 Соблюдение процесса (DO/DOING/DONE) — 30 мин",
     "🟡 Аудит базы (Backlog, 2-4 часа)",
     "🟡 Саморазвитие БЗ (Backlog, 8-12 часов)",
     "🟢 Индикатор токенов (Backlog, 1-8 часов)",
