@@ -127,8 +127,9 @@ tasks-dag.json
 | 11 | Знания | [11-knowledge-sufficiency.md](.qwen/rules/11-knowledge-sufficiency.md) | Проверка знаний |
 | 12 | Работа с ПО | [12-software-best-practices.md](.qwen/rules/12-software-best-practices.md) | Программы |
 | 14 | Контекст | [14-context-management.md](.qwen/rules/14-context-management.md) | Summarization |
+| 15 | Auto-Update | [15-base-index-auto-update.md](.qwen/rules/15-base-index-auto-update.md) | Обновление BASE_INDEX |
 
-**ВСЕГО:** 16 правил (без тестовых)
+**ВСЕГО:** 17 правил (без тестовых)
 
 ---
 
@@ -191,7 +192,7 @@ D:\QwenPoekt\Base/
 │
 ├── 🤖 КОНФИГУРАЦИЯ ИИ (.qwen/)
 │   ├── QWEN.md — Мастер-контекст (1100+ строк)
-│   ├── rules/ — Правила (16 файлов)
+│   ├── rules/ — Правила (17 файлов)
 │   │   ├── 00-auto-context.md
 │   │   ├── 01-core.md
 │   │   ├── 02-workflow.md
@@ -207,7 +208,8 @@ D:\QwenPoekt\Base/
 │   │   ├── 11-knowledge-sufficiency.md
 │   │   ├── 12-software-best-practices.md
 │   │   ├── 13-user-alignment.md
-│   │   └── 14-context-management.md
+│   │   ├── 14-context-management.md
+│   │   └── 15-base-index-auto-update.md
 │   ├── agents/ — Агенты (8 файлов)
 │   ├── session-rules.json — Конфигурация сессий
 │   ├── settings.json — Настройки Qwen Code
@@ -303,6 +305,7 @@ git commit -m "Backup: BASE_INDEX перед обновлением"
 
 | Дата | Версия | Изменения |
 |------|--------|-----------|
+| 2026-03-04 | 1.2 | Добавлено правило 15 (Auto-Update) |
 | 2026-03-04 | 1.1 | Удалён мусор (all_rule.md, 99-test) |
 | 2026-03-04 | 1.0 | Создан (000-BASE_INDEX.md) |
 
