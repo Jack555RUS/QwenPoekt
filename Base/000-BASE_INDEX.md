@@ -53,7 +53,8 @@
 ✅ БАЗА ЗАГРУЖЕНА!
 
 📋 Прочитано из BASE_INDEX.md:
-   - 16 правил (.qwen/rules/)
+   - 17 правил (.qwen/rules/)
+   - 29 файлов для бесшовной загрузки
    - Задачи (tasks-dag.json, ТЕКУЩАЯ_ЗАДАЧА.md)
    - Карта знаний (03-Resources/)
 
@@ -130,6 +131,126 @@ tasks-dag.json
 | 15 | Auto-Update | [15-base-index-auto-update.md](.qwen/rules/15-base-index-auto-update.md) | Обновление BASE_INDEX |
 
 **ВСЕГО:** 17 правил (без тестовых)
+
+---
+
+## 🚀 БЕСШОВНАЯ ЗАГРУЗКА (7 УРОВНЕЙ)
+
+**При старте КАЖДОЙ сессии:**
+
+### 🔴 Уровень 1: Критичные (5 файлов, 13 мин)
+
+| # | Файл | Время | Назначение |
+|---|------|-------|------------|
+| 1 | [000-BASE_INDEX.md](./000-BASE_INDEX.md) | 2 мин | Главный индекс |
+| 2 | [.qwen/QWEN.md](.qwen/QWEN.md) | 5 мин | System Prompt |
+| 3 | [ТЕКУЩАЯ_ЗАДАЧА.md](./ТЕКУЩАЯ_ЗАДАЧА.md) | 1 мин | Активные задачи |
+| 4 | [tasks-dag.json](./tasks-dag.json) | 1 мин | Список задач |
+| 5 | [.resume_marker.json](./.resume_marker.json) | 1 мин | Маркер сессии |
+
+### 🟡 Уровень 2: Обязательные (5 файлов, 10 мин)
+
+| # | Файл | Время | Назначение |
+|---|------|-------|------------|
+| 6 | [AI_START_HERE.md](./AI_START_HERE.md) | 2 мин | Запуск Qwen Code |
+| 7 | [AGENTS.md](./AGENTS.md) | 3 мин | Точка входа для ИИ |
+| 8 | [PRE_ACTION_CHECKLIST.md](./PRE_ACTION_CHECKLIST.md) | 2 мин | Чек-лист перед действиями |
+| 9 | [ANTI_PATTERNS.md](./ANTI_PATTERNS.md) | 3 мин | Запрещённые паттерны |
+| 10 | [ERROR_LOG.md](./ERROR_LOG.md) | 5 мин | Журнал ошибок |
+
+### 🟢 Уровень 3: Безопасность (5 файлов, 15 мин)
+
+| # | Файл | Время | Назначение |
+|---|------|-------|------------|
+| 11 | [.qwen/rules/04-safety.md](.qwen/rules/04-safety.md) | 3 мин | Безопасность |
+| 12 | [.qwen/rules/11-knowledge-sufficiency.md](.qwen/rules/11-knowledge-sufficiency.md) | 3 мин | Проверка знаний |
+| 13 | [scripts/before-action-checklist-v2.ps1](./scripts/before-action-checklist-v2.ps1) | 3 мин | Проверка перед действием |
+| 14 | [scripts/check-links.ps1](./scripts/check-links.ps1) | 3 мин | Проверка ссылок |
+| 15 | [scripts/find-duplicates.ps1](./scripts/find-duplicates.ps1) | 3 мин | Поиск дубликатов |
+
+### 🔵 Уровень 4: Восстановление сессии (5 файлов, 8 мин)
+
+| # | Файл | Время | Назначение |
+|---|------|-------|------------|
+| 16 | [resume-session.ps1](./resume-session.ps1) | 1 мин | Скрипт восстановления |
+| 17 | [.qwen/rules/06-resume.md](.qwen/rules/06-resume.md) | 2 мин | Восстановление сессии |
+| 18 | [.qwen/rules/07-session-persistence.md](.qwen/rules/07-session-persistence.md) | 3 мин | Автосохранение |
+| 19 | [.qwen/session-rules.json](.qwen/session-rules.json) | 1 мин | Конфигурация сессий |
+| 20 | [mcp.json](./mcp.json) | 1 мин | MCP конфигурация |
+
+### 🟣 Уровень 5: Инструменты (5 файлов, 5 мин)
+
+| # | Файл | Назначение |
+|---|------|------------|
+| 21 | [scripts/summarize-context.ps1](./scripts/summarize-context.ps1) | Суммаризация контекста |
+| 22 | [scripts/after-action-audit.ps1](./scripts/after-action-audit.ps1) | Аудит после действия |
+| 23 | [scripts/check-external-links.ps1](./scripts/check-external-links.ps1) | Проверка внешних ссылок |
+| 24 | [scripts/test-documentation.ps1](./scripts/test-documentation.ps1) | Тестирование документации |
+| 25 | [scripts/full-kb-audit.ps1](./scripts/full-kb-audit.ps1) | Полный аудит базы |
+
+### 🟤 Уровень 6: Точки входа (4 файла, 5 мин)
+
+| # | Файл | Для кого |
+|---|------|----------|
+| 26 | [AI_START_HERE.md](./AI_START_HERE.md) | Пользователь |
+| 27 | [AGENTS.md](./AGENTS.md) | ИИ |
+| 28 | [ЗАПУСК_QWEN_CODE.md](./ЗАПУСК_QWEN_CODE.md) | Пользователь |
+| 29 | [000-BASE_INDEX.md](./000-BASE_INDEX.md) | Все |
+
+### ⚫ Уровень 7: Правила (по контексту, 20 мин)
+
+**Все 17 правил:** [см. выше](#-все-правиласо-ссылками-по-порядку)
+
+---
+
+## 🔄 ВОССТАНОВЛЕНИЕ СЕССИИ
+
+**При потере контекста:**
+
+### Скрипты:
+
+| Скрипт | Назначение | Команда |
+|--------|------------|---------|
+| [resume-session.ps1](./resume-session.ps1) | Восстановление контекста | `.\resume-session.ps1` |
+| [scripts/start-session.ps1](./scripts/start-session.ps1) | Проверка при старте | `.\scripts\start-session.ps1` |
+| [scripts/summarize-context.ps1](./scripts/summarize-context.ps1) | Суммаризация контекста | `.\scripts\summarize-context.ps1` |
+
+### Правила:
+
+| Правило | Назначение |
+|---------|------------|
+| [.qwen/rules/06-resume.md](.qwen/rules/06-resume.md) | Восстановление сессии |
+| [.qwen/rules/07-session-persistence.md](.qwen/rules/07-session-persistence.md) | Автосохранение |
+
+### Конфигурация:
+
+| Файл | Назначение |
+|------|------------|
+| [.qwen/session-rules.json](.qwen/session-rules.json) | Конфигурация сессий |
+| [mcp.json](./mcp.json) | MCP серверы (Filesystem) |
+| [.qwen/settings.json](.qwen/settings.json) | Настройки Qwen Code |
+
+---
+
+## 🛡️ БЕЗОПАСНОСТЬ (ПЕРЕД ДЕЙСТВИЯМИ)
+
+### Обязательные файлы:
+
+| Файл | Назначение | Когда читать |
+|------|------------|--------------|
+| [PRE_ACTION_CHECKLIST.md](./PRE_ACTION_CHECKLIST.md) | Чек-лист перед действиями | Перед любыми изменениями |
+| [ANTI_PATTERNS.md](./ANTI_PATTERNS.md) | Запрещённые паттерны | Перед действиями |
+| [ERROR_LOG.md](./ERROR_LOG.md) | Журнал ошибок | При проблемах |
+
+### Скрипты проверок:
+
+| Скрипт | Назначение |
+|--------|------------|
+| [scripts/before-action-checklist-v2.ps1](./scripts/before-action-checklist-v2.ps1) | Проверка перед действием |
+| [scripts/check-links.ps1](./scripts/check-links.ps1) | Проверка ссылок |
+| [scripts/find-duplicates.ps1](./scripts/find-duplicates.ps1) | Поиск дубликатов |
+| [scripts/after-action-audit.ps1](./scripts/after-action-audit.ps1) | Аудит после действия |
+| [scripts/safe-kernel-change.ps1](./scripts/safe-kernel-change.ps1) | Безопасные изменения ядра |
 
 ---
 
@@ -305,6 +426,7 @@ git commit -m "Backup: BASE_INDEX перед обновлением"
 
 | Дата | Версия | Изменения |
 |------|--------|-----------|
+| 2026-03-04 | 1.3 | Добавлены разделы: Бесшовная загрузка (29 файлов), Восстановление сессии, Безопасность |
 | 2026-03-04 | 1.2 | Добавлено правило 15 (Auto-Update) |
 | 2026-03-04 | 1.1 | Удалён мусор (all_rule.md, 99-test) |
 | 2026-03-04 | 1.0 | Создан (000-BASE_INDEX.md) |
