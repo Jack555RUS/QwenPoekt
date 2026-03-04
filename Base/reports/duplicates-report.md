@@ -1,6 +1,6 @@
 ﻿# 📊 ОТЧЁТ: ДУБЛИКАТЫ ФАЙЛОВ
 
-**Дата:** 2026-03-04 14:57:23  
+**Дата:** 2026-03-04 15:28:13  
 **Путь:** D:\QwenPoekt\Base  
 **Статус:** ✅ Завершено
 
@@ -10,7 +10,7 @@
 
 | Тип дубликатов | Найдено |
 |----------------|---------|
-| **Функциональные** | 292 групп |
+| **Функциональные** | 297 групп |
 | **По хэшу** | 0 групп |
 
 ---
@@ -246,74 +246,79 @@
 | 222 | FILE_PID_REGISTRY.md | D:\QwenPoekt\Base\reports |
 | 223 | FULL_RULES_INVESTIGATION.md | D:\QwenPoekt\Base\reports |
 | 224 | KB_AUDIT_FULL_2026-03-04.md | D:\QwenPoekt\Base\reports |
-| 225 | KNOWLEDGE_BASE_ACTUALIZATION_PLAN.md | D:\QwenPoekt\Base\reports |
-| 226 | KNOWLEDGE_BASE_ANALYSIS.md | D:\QwenPoekt\Base\reports |
-| 227 | KNOWLEDGE_BASE_FIX_COMPLETE.md | D:\QwenPoekt\Base\reports |
-| 228 | LINK_CHECK_REPORT.md | D:\QwenPoekt\Base\reports |
-| 229 | LINK_GRAPH.md | D:\QwenPoekt\Base\reports |
-| 230 | LOGS_ANALYSIS_REPORT.md | D:\QwenPoekt\Base\reports |
-| 231 | MCP_TEST_REPORT.md | D:\QwenPoekt\Base\reports |
-| 232 | MODE_ANALYSIS.md | D:\QwenPoekt\Base\reports |
-| 233 | OPERATION_LOG.md | D:\QwenPoekt\Base\reports |
-| 234 | PREVENTED_ERRORS.md | D:\QwenPoekt\Base\reports |
-| 235 | RAG_SEARCH_TEST_REPORT.md | D:\QwenPoekt\Base\reports |
-| 236 | RAMDISK_INCREASE_GUIDE.md | D:\QwenPoekt\Base\reports |
-| 237 | RAMDISK_STATUS_CHECK.md | D:\QwenPoekt\Base\reports |
-| 238 | RULES_DEEP_ANALYSIS_REPORT.md | D:\QwenPoekt\Base\reports |
-| 239 | SCHEDULE_BACKUP_TASKS_AUDIT.md | D:\QwenPoekt\Base\reports |
-| 240 | SCHEDULE_LOG.md | D:\QwenPoekt\Base\reports |
-| 241 | SESSION_SAVE_AUDIT_REPORT.md | D:\QwenPoekt\Base\reports |
-| 242 | SESSION_SAVE_GUIDE.md | D:\QwenPoekt\Base\reports |
-| 243 | SESSION_SYSTEM_ANALYSIS.md | D:\QwenPoekt\Base\reports |
-| 244 | TASK_FLOW.md | D:\QwenPoekt\Base\reports |
-| 245 | THINKING_SYSTEM_JOURNAL.md | D:\QwenPoekt\Base\reports |
-| 246 | TOKEN_INDICATOR_TASK.md | D:\QwenPoekt\Base\reports |
-| 247 | VECTOR_DB_RAG_IMPLEMENTATION_PLAN.md | D:\QwenPoekt\Base\reports |
-| 248 | WEEKLY_REVIEW.md | D:\QwenPoekt\Base\reports |
-| 249 | 2026-03-04.md | D:\QwenPoekt\Base\reports\DAILY_CHECKIN |
-| 250 | SESSION_HANDOVER.md | D:\QwenPoekt\Base\scripts\reports |
-| 251 | chat.md | D:\QwenPoekt\Base\sessions\2026-03-03_17-00 |
-| 252 | DRAG_RACING_STATUS_2026-02-27.md | D:\QwenPoekt\Base\_archive |
-| 253 | KNOWLEDGE_UPDATE_2026_02_28.md | D:\QwenPoekt\Base\_archive |
-| 254 | KNOWLEDGE_UPDATE_2026_02_28_AI_LEARNING.md | D:\QwenPoekt\Base\_archive |
-| 255 | KNOWLEDGE_UPDATE_2026_02_28_EVENING.md | D:\QwenPoekt\Base\_archive |
-| 256 | KNOWLEDGE_UPDATE_2026_02_28_INPUT_URP.md | D:\QwenPoekt\Base\_archive |
-| 257 | KNOWLEDGE_UPDATE_2026_02_28_INSTALL.md | D:\QwenPoekt\Base\_archive |
-| 258 | KNOWLEDGE_UPDATE_2026_02_28_LEARNING_AGENT.md | D:\QwenPoekt\Base\_archive |
-| 259 | KNOWLEDGE_UPDATE_2026_02_28_LEARNING_IMPROVEMENTS.md | D:\QwenPoekt\Base\_archive |
-| 260 | KNOWLEDGE_UPDATE_2026_02_28_LEARNING_RESOURCES.md | D:\QwenPoekt\Base\_archive |
-| 261 | KNOWLEDGE_UPDATE_2026_02_28_LOG_ANALYSIS.md | D:\QwenPoekt\Base\_archive |
-| 262 | KNOWLEDGE_UPDATE_2026_02_28_PROMOTION.md | D:\QwenPoekt\Base\_archive |
-| 263 | KNOWLEDGE_UPDATE_2026_02_28_SUBAGENTS.md | D:\QwenPoekt\Base\_archive |
-| 264 | KNOWLEDGE_UPDATE_2026_02_28_UNITY_DOCS.md | D:\QwenPoekt\Base\_archive |
-| 265 | KNOWLEDGE_UPDATE_2026_02_28_UNITY_SETTINGS.md | D:\QwenPoekt\Base\_archive |
-| 266 | documentation-testing-guide.md | D:\QwenPoekt\Base\_drafts |
-| 267 | INTEGRATION_REPORT_UI_TOOLKIT_LISTVIEW.md | D:\QwenPoekt\Base\_drafts |
-| 268 | mcp-setup-guide.md | D:\QwenPoekt\Base\_drafts |
-| 269 | mcp-test-guide.md | D:\QwenPoekt\Base\_drafts |
-| 270 | PATTERN_DRAFT.md | D:\QwenPoekt\Base\_drafts |
-| 271 | vscode-extension-session-save.md | D:\QwenPoekt\Base\_drafts |
-| 272 | AI_ANALYSIS_PROMPT.md | D:\QwenPoekt\Base\_templates |
-| 273 | ANSWER_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 274 | ARTICLE_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
-| 275 | BOOK_SUMMARY_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 276 | DEFAULT_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 277 | ERROR_SOLUTION.md | D:\QwenPoekt\Base\_templates |
-| 278 | ERROR_SOLUTION_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 279 | FULL_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
-| 280 | IMPLEMENTATION_REPORT_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 281 | INTEGRATION_REPORT_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 282 | PROFILE_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 283 | QUICK_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
-| 284 | RULE_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
-| 285 | SCRIPT_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
-| 286 | git_00_readme.md | D:\QwenPoekt\Base\_TEST_ENV |
-| 287 | test-file-delete.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 288 | test-file-rename.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
-| 289 | 00_README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE |
-| 290 | csharp_standards.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
-| 291 | project_glossary.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
-| 292 | README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES |
+| 225 | KB_TESTING_GUIDE.md | D:\QwenPoekt\Base\reports |
+| 226 | KNOWLEDGE_BASE_ACTUALIZATION_PLAN.md | D:\QwenPoekt\Base\reports |
+| 227 | KNOWLEDGE_BASE_ANALYSIS.md | D:\QwenPoekt\Base\reports |
+| 228 | KNOWLEDGE_BASE_FIX_COMPLETE.md | D:\QwenPoekt\Base\reports |
+| 229 | LINK_CHECK_REPORT.md | D:\QwenPoekt\Base\reports |
+| 230 | LINK_GRAPH.md | D:\QwenPoekt\Base\reports |
+| 231 | LOGS_ANALYSIS_REPORT.md | D:\QwenPoekt\Base\reports |
+| 232 | MCP_TEST_REPORT.md | D:\QwenPoekt\Base\reports |
+| 233 | MODE_ANALYSIS.md | D:\QwenPoekt\Base\reports |
+| 234 | OPERATION_LOG.md | D:\QwenPoekt\Base\reports |
+| 235 | PREVENTED_ERRORS.md | D:\QwenPoekt\Base\reports |
+| 236 | RAG_SEARCH_TEST_REPORT.md | D:\QwenPoekt\Base\reports |
+| 237 | RAMDISK_INCREASE_GUIDE.md | D:\QwenPoekt\Base\reports |
+| 238 | RAMDISK_STATUS_CHECK.md | D:\QwenPoekt\Base\reports |
+| 239 | RULES_DEEP_ANALYSIS_REPORT.md | D:\QwenPoekt\Base\reports |
+| 240 | SCHEDULE_BACKUP_TASKS_AUDIT.md | D:\QwenPoekt\Base\reports |
+| 241 | SCHEDULE_LOG.md | D:\QwenPoekt\Base\reports |
+| 242 | SESSION_SAVE_AUDIT_REPORT.md | D:\QwenPoekt\Base\reports |
+| 243 | SESSION_SAVE_GUIDE.md | D:\QwenPoekt\Base\reports |
+| 244 | SESSION_SYSTEM_ANALYSIS.md | D:\QwenPoekt\Base\reports |
+| 245 | TASK_FLOW.md | D:\QwenPoekt\Base\reports |
+| 246 | TEST_REPORT.md | D:\QwenPoekt\Base\reports |
+| 247 | THINKING_SYSTEM_JOURNAL.md | D:\QwenPoekt\Base\reports |
+| 248 | TOKEN_INDICATOR_TASK.md | D:\QwenPoekt\Base\reports |
+| 249 | VECTOR_DB_RAG_IMPLEMENTATION_PLAN.md | D:\QwenPoekt\Base\reports |
+| 250 | WEEKLY_REVIEW.md | D:\QwenPoekt\Base\reports |
+| 251 | 2026-03-04.md | D:\QwenPoekt\Base\reports\DAILY_CHECKIN |
+| 252 | SESSION_HANDOVER.md | D:\QwenPoekt\Base\scripts\reports |
+| 253 | chat.md | D:\QwenPoekt\Base\sessions\2026-03-03_17-00 |
+| 254 | DRAG_RACING_STATUS_2026-02-27.md | D:\QwenPoekt\Base\_archive |
+| 255 | KNOWLEDGE_UPDATE_2026_02_28.md | D:\QwenPoekt\Base\_archive |
+| 256 | KNOWLEDGE_UPDATE_2026_02_28_AI_LEARNING.md | D:\QwenPoekt\Base\_archive |
+| 257 | KNOWLEDGE_UPDATE_2026_02_28_EVENING.md | D:\QwenPoekt\Base\_archive |
+| 258 | KNOWLEDGE_UPDATE_2026_02_28_INPUT_URP.md | D:\QwenPoekt\Base\_archive |
+| 259 | KNOWLEDGE_UPDATE_2026_02_28_INSTALL.md | D:\QwenPoekt\Base\_archive |
+| 260 | KNOWLEDGE_UPDATE_2026_02_28_LEARNING_AGENT.md | D:\QwenPoekt\Base\_archive |
+| 261 | KNOWLEDGE_UPDATE_2026_02_28_LEARNING_IMPROVEMENTS.md | D:\QwenPoekt\Base\_archive |
+| 262 | KNOWLEDGE_UPDATE_2026_02_28_LEARNING_RESOURCES.md | D:\QwenPoekt\Base\_archive |
+| 263 | KNOWLEDGE_UPDATE_2026_02_28_LOG_ANALYSIS.md | D:\QwenPoekt\Base\_archive |
+| 264 | KNOWLEDGE_UPDATE_2026_02_28_PROMOTION.md | D:\QwenPoekt\Base\_archive |
+| 265 | KNOWLEDGE_UPDATE_2026_02_28_SUBAGENTS.md | D:\QwenPoekt\Base\_archive |
+| 266 | KNOWLEDGE_UPDATE_2026_02_28_UNITY_DOCS.md | D:\QwenPoekt\Base\_archive |
+| 267 | KNOWLEDGE_UPDATE_2026_02_28_UNITY_SETTINGS.md | D:\QwenPoekt\Base\_archive |
+| 268 | documentation-testing-guide.md | D:\QwenPoekt\Base\_drafts |
+| 269 | INTEGRATION_REPORT_UI_TOOLKIT_LISTVIEW.md | D:\QwenPoekt\Base\_drafts |
+| 270 | mcp-setup-guide.md | D:\QwenPoekt\Base\_drafts |
+| 271 | mcp-test-guide.md | D:\QwenPoekt\Base\_drafts |
+| 272 | PATTERN_DRAFT.md | D:\QwenPoekt\Base\_drafts |
+| 273 | vscode-extension-session-save.md | D:\QwenPoekt\Base\_drafts |
+| 274 | AI_ANALYSIS_PROMPT.md | D:\QwenPoekt\Base\_templates |
+| 275 | ANSWER_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 276 | ARTICLE_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
+| 277 | BOOK_SUMMARY_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 278 | DEFAULT_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 279 | ERROR_SOLUTION.md | D:\QwenPoekt\Base\_templates |
+| 280 | ERROR_SOLUTION_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 281 | FULL_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
+| 282 | IMPLEMENTATION_REPORT_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 283 | INTEGRATION_REPORT_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 284 | PROFILE_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 285 | QUICK_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
+| 286 | RULE_TEMPLATE.md | D:\QwenPoekt\Base\_templates |
+| 287 | SCRIPT_ANALYSIS.md | D:\QwenPoekt\Base\_templates |
+| 288 | git_00_readme.md | D:\QwenPoekt\Base\_TEST_ENV |
+| 289 | test-delete-dep1.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 290 | test-delete-dep2.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 291 | test-delete-target.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 292 | test-file-delete.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 293 | test-file-rename.md | D:\QwenPoekt\Base\_TEST_ENV\Base\reports |
+| 294 | 00_README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE |
+| 295 | csharp_standards.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
+| 296 | project_glossary.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\00_CORE |
+| 297 | README.md | D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES |
 
 
 ---
@@ -358,6 +363,6 @@ Find-HashDuplicates -SearchPath "D:\QwenPoekt\Base"
 
 ---
 
-**Отчёт создан:** 2026-03-04 14:57:23  
+**Отчёт создан:** 2026-03-04 15:28:13  
 **Следующий шаг:** Проанализировать дубликаты, принять решение
 
