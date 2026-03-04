@@ -106,12 +106,15 @@
 2. Прочитай changelog (последние 3 версии)
 3. Изучи документацию (Quick start, API, Best practices)
 4. Пойми "язык" программы (синтаксис, конвенции, ограничения)
-5. Создай заметку (program-notes.md)
+5. **Проверь настройки** (критичные настройки, конфигурация)
+6. Создай заметку (program-notes.md)
 
-**Источники (приоритет):**
-1. 🔴 Официальный сайт, GitHub Releases, docs
-2. 🟡 GitHub Issues, Discussions, Stack Overflow
-3. 🟢 Официальные примеры, шаблоны, Awesome-*
+**Критичные настройки (примеры):**
+- VS Code: `files.encoding=utf8`, `files.eol=\n`
+- PowerShell: `ExecutionPolicy=RemoteSigned`
+- Git: `core.autocrlf=false`
+- Python: `PYTHONIOENCODING=utf-8`
+- Node.js: `NODE_OPTIONS=--max-old-space-size=32768`
 
 **Полное правило:** [`12-software-best-practices.md`](./12-software-best-practices.md)
 
