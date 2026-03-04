@@ -47,15 +47,13 @@
 - "Прочти индекс"
 - "BASE_INDEX"
 - "base-index"
-- "all-rule"
-- "99-test"
 
 **Ответ:**
 ```
 ✅ БАЗА ЗАГРУЖЕНА!
 
 📋 Прочитано из BASE_INDEX.md:
-   - 17 правил (.qwen/rules/)
+   - 16 правил (.qwen/rules/)
    - Задачи (tasks-dag.json, ТЕКУЩАЯ_ЗАДАЧА.md)
    - Карта знаний (03-Resources/)
 
@@ -102,7 +100,7 @@ tasks-dag.json
 
 ---
 
-## 📋 ВСЕ ПРАВИЛА (со ссылками)
+## 📋 ВСЕ ПРАВИЛА (со ссылками, по порядку)
 
 ### 🔴 КРИТИЧНЫЕ (читать всегда):
 
@@ -110,9 +108,9 @@ tasks-dag.json
 |---|---------|------|------------|
 | 00 | Авто-контекст | [00-auto-context.md](.qwen/rules/00-auto-context.md) | Авто-чтение контекста |
 | 01 | Ядро | [01-core.md](.qwen/rules/01-core.md) | Идентификация, иерархия |
-| 13 | Согласование | [13-user-alignment.md](.qwen/rules/13-user-alignment.md) | 5 шагов ответа |
-| 10 | 7 шагов | [10-think-before-action.md](.qwen/rules/10-think-before-action.md) | Мышление перед действием |
 | 02 | 3 уровня | [02-workflow.md](.qwen/rules/02-workflow.md) | Процесс внедрения |
+| 10 | 7 шагов | [10-think-before-action.md](.qwen/rules/10-think-before-action.md) | Мышление перед действием |
+| 13 | Согласование | [13-user-alignment.md](.qwen/rules/13-user-alignment.md) | 5 шагов ответа |
 
 ### 🟡 СРЕДНИЕ (по контексту):
 
@@ -124,17 +122,13 @@ tasks-dag.json
 | 06 | Восстановление | [06-resume.md](.qwen/rules/06-resume.md) | Сессии |
 | 07 | Сохранение | [07-session-persistence.md](.qwen/rules/07-session-persistence.md) | Автосохранение |
 | 08 | Массовые операции | [08-mass-operations.md](.qwen/rules/08-mass-operations.md) | >100 файлов |
-| 09 | MCP | [08-mcp-saver.md](.qwen/rules/08-mcp-saver.md) | MCP сервер |
-| 11 | Логика | [09-logic-and-analysis.md](.qwen/rules/09-logic-and-analysis.md) | 10 уровней анализа |
-| 12 | Знания | [11-knowledge-sufficiency.md](.qwen/rules/11-knowledge-sufficiency.md) | Проверка знаний |
-| 13 | Работа с ПО | [12-software-best-practices.md](.qwen/rules/12-software-best-practices.md) | Программы |
+| 08-MCP | MCP сервер | [08-mcp-saver.md](.qwen/rules/08-mcp-saver.md) | MCP Session Saver |
+| 09 | Логика | [09-logic-and-analysis.md](.qwen/rules/09-logic-and-analysis.md) | 10 уровней анализа |
+| 11 | Знания | [11-knowledge-sufficiency.md](.qwen/rules/11-knowledge-sufficiency.md) | Проверка знаний |
+| 12 | Работа с ПО | [12-software-best-practices.md](.qwen/rules/12-software-best-practices.md) | Программы |
 | 14 | Контекст | [14-context-management.md](.qwen/rules/14-context-management.md) | Summarization |
 
-### 🟢 ТЕСТОВОЕ:
-
-| # | Правило | Файл | Назначение |
-|---|---------|------|------------|
-| 99 | ALL_RULE | [all_rule.md](.qwen/rules/all_rule.md) | Тест System Prompt |
+**ВСЕГО:** 16 правил (без тестовых)
 
 ---
 
@@ -197,7 +191,7 @@ D:\QwenPoekt\Base/
 │
 ├── 🤖 КОНФИГУРАЦИЯ ИИ (.qwen/)
 │   ├── QWEN.md — Мастер-контекст (1100+ строк)
-│   ├── rules/ — Правила (17 файлов)
+│   ├── rules/ — Правила (16 файлов)
 │   │   ├── 00-auto-context.md
 │   │   ├── 01-core.md
 │   │   ├── 02-workflow.md
@@ -213,8 +207,7 @@ D:\QwenPoekt\Base/
 │   │   ├── 11-knowledge-sufficiency.md
 │   │   ├── 12-software-best-practices.md
 │   │   ├── 13-user-alignment.md
-│   │   ├── 14-context-management.md
-│   │   └── all_rule.md (тестовое)
+│   │   └── 14-context-management.md
 │   ├── agents/ — Агенты (8 файлов)
 │   ├── session-rules.json — Конфигурация сессий
 │   ├── settings.json — Настройки Qwen Code
@@ -310,6 +303,7 @@ git commit -m "Backup: BASE_INDEX перед обновлением"
 
 | Дата | Версия | Изменения |
 |------|--------|-----------|
+| 2026-03-04 | 1.1 | Удалён мусор (all_rule.md, 99-test) |
 | 2026-03-04 | 1.0 | Создан (000-BASE_INDEX.md) |
 
 ---
