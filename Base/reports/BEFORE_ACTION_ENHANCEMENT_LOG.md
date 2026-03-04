@@ -295,7 +295,7 @@ function Get-FileDependencyGraph {
 ## ✅ ДОПОЛНИТЕЛЬНО: Правило работы с программами
 
 **Дата:** 2026-03-04  
-**Статус:** ✅ Завершено
+**Статус:** ✅ Завершено (обновлено)
 
 **Созданные файлы:**
 - `.qwen/rules/12-software-best-practices.md` — развёрнутое правило (500+ строк)
@@ -307,7 +307,15 @@ function Get-FileDependencyGraph {
 2. Прочитать changelog (последние 3 версии)
 3. Изучить документацию (Quick start, API, Best practices)
 4. Понять "язык" программы (синтаксис, конвенции, ограничения)
-5. Создать заметку (program-notes.md)
+5. **Проверить настройки** (критичные настройки, конфигурация) ← НОВОЕ
+6. Создать заметку (program-notes.md)
+
+**Критичные настройки (примеры):**
+- VS Code: `files.encoding=utf8`, `files.eol=\n`
+- PowerShell: `ExecutionPolicy=RemoteSigned`
+- Git: `core.autocrlf=false`
+- Python: `PYTHONIOENCODING=utf-8`
+- Node.js: `NODE_OPTIONS=--max-old-space-size=32768`
 
 **Источники (приоритет):**
 1. 🔴 Официальный сайт, GitHub Releases, docs
@@ -317,7 +325,7 @@ function Get-FileDependencyGraph {
 **Интеграция:**
 - ✅ 01-core.md (мета-правило)
 - ✅ 12-software-best-practices.md (полное правило)
-- ✅ program-notes/_TEMPLATE.md (шаблон)
+- ✅ program-notes/_TEMPLATE.md (шаблон с разделом настроек)
 
 **Автоматизация (на будущее):**
 - ⏳ Автоматическая проверка версий (не критично)
