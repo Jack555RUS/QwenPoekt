@@ -21,12 +21,17 @@ except ImportError as e:
 # КОНФИГУРАЦИЯ
 # ============================================
 
-BASE_PATH = Path(__file__).parent.parent
+BASE_PATH = Path(r"D:\QwenPoekt\Base")  # Абсолютный путь
 KB_PATH = BASE_PATH / "03-Resources" / "Knowledge"
-VECTORS_PATH = BASE_PATH / "03-Resources" / "AI" / "vectors_cache.pkl"
+VECTORS_PATH = Path(__file__).parent / "vectors_cache.pkl"
 
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
+
+print(f"  BASE_PATH: {BASE_PATH}")
+print(f"  KB_PATH: {KB_PATH}")
+print(f"  VECTORS_PATH: {VECTORS_PATH}")
+print()
 
 print("╔══════════════════════════════════════════════════════════╗")
 print("║         ВЕКТОРИЗАЦИЯ БАЗЫ ЗНАНИЙ (Lite)                  ║")

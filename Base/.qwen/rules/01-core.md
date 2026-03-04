@@ -161,6 +161,12 @@
 
 **Ошибки:** Записывать в [`ERROR_LOG.md`](../../ERROR_LOG.md)
 
+**Система мышления:** Обязательно к применению [`10-think-before-action.md`](./10-think-before-action.md)
+
+**Скрипты проверки:**
+- `before-action-checklist.ps1` — проверка перед действием
+- `after-action-audit.ps1` — аудит после действия
+
 ---
 
 ## 🔗 СВЯЗАННЫЕ МОДУЛИ
