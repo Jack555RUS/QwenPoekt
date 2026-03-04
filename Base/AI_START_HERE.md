@@ -102,6 +102,42 @@ Get-Content .resume_marker.json | Set-Clipboard
 
 ---
 
+## 📚 ОБУЧЕНИЕ НА ОШИБКАХ
+
+**Если произошла ошибка:**
+
+1. ✅ Записать в [`ERROR_LOG.md`](./ERROR_LOG.md)
+2. ✅ Анализ: «5 почему» (почему это случилось?)
+3. ✅ Проверить [`ANTI_PATTERNS.md`](./ANTI_PATTERNS.md) (чего НЕ делать)
+4. ✅ Использовать [`PRE_ACTION_CHECKLIST.md`](./PRE_ACTION_CHECKLIST.md)
+
+**Метрики (цели):**
+- **Повторные ошибки:** < 5%
+- **Время исправления:** < 30 мин
+- **Предотвращение:** 100%
+
+**Файлы:**
+- [`ERROR_LOG.md`](./ERROR_LOG.md) — журнал ошибок
+- [`ANTI_PATTERNS.md`](./ANTI_PATTERNS.md) — запрещённые паттерны
+- [`reports/ERROR_LEARNING_GUIDE.md`](./reports/ERROR_LEARNING_GUIDE.md) — руководство
+- [`reports/ERROR_METRICS_DASHBOARD.md`](./reports/ERROR_METRICS_DASHBOARD.md) — метрики
+
+---
+
+## 📅 ЕЖЕНЕДЕЛЬНЫЙ ОБЗОР
+
+**Когда:** Воскресенье, 18:00
+
+**Чек-лист:**
+- [ ] Ошибки за неделю (ERROR_LOG.md)
+- [ ] Метрики обучения (ERROR_METRICS_DASHBOARD.md)
+- [ ] Обновление правил (.qwen/rules/)
+- [ ] План на следующую неделю
+
+**Автоматически:** Task Scheduler (воскресенье 18:00)
+
+---
+
 ## 🔗 НАВИГАЦИЯ
 
 | Файл | Назначение |
@@ -111,9 +147,13 @@ Get-Content .resume_marker.json | Set-Clipboard
 | [ТЕКУЩАЯ_ЗАДАЧА.md](./ТЕКУЩАЯ_ЗАДАЧА.md) | Активная задача |
 | [reports/SESSION_SAVE_GUIDE.md](./reports/SESSION_SAVE_GUIDE.md) | Руководство по сохранению |
 | [.qwen/QWEN.md](./.qwen/QWEN.md) | Мастер-контекст |
+| [ERROR_LOG.md](./ERROR_LOG.md) | Журнал ошибок |
+| [ANTI_PATTERNS.md](./ANTI_PATTERNS.md) | Чего НЕ делать |
+| [reports/ERROR_LEARNING_GUIDE.md](./reports/ERROR_LEARNING_GUIDE.md) | Обучение на ошибках |
+| [reports/ERROR_METRICS_DASHBOARD.md](./reports/ERROR_METRICS_DASHBOARD.md) | Метрики качества |
 
 ---
 
 **Прочитал? Запустил? Приступай к работе!** 🚀
 
-**Последнее обновление:** 4 марта 2026 г.
+**Версия:** 6.1 (Обновлено 4 марта 2026 — обучение на ошибках)
