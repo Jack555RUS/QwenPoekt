@@ -1,0 +1,20 @@
+# Vector DB + RAG — Зависимости
+# Версия: 1.0
+# Дата: 4 марта 2026 г.
+
+# Chroma DB — векторное хранилище
+chromadb==0.4.22
+
+# Sentence Transformers — векторизация
+sentence-transformers==2.3.1
+
+# PyTorch — основа для embeddings
+torch==2.2.0
+
+# Для обработки текста
+markdown==3.5.2
+chardet==5.2.0
+
+# HTTP сервер для интеграции
+fastapi==0.109.0
+uvicorn==0.27.0
