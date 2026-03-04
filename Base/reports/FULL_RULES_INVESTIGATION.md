@@ -1,4 +1,4 @@
-# 🔍 ПОЛНОЕ РАССЛЕДОВАНИЕ: ПОЧЕМУ ПРАВИЛА НЕ РАБОТАЮТ
+﻿# 🔍 ПОЛНОЕ РАССЛЕДОВАНИЕ: ПОЧЕМУ ПРАВИЛА НЕ РАБОТАЮТ
 
 **Дата:** 2026-03-04
 **Статус:** ✅ ЗАВЕРШЕНО
@@ -31,14 +31,14 @@
 
 ```
 ✅ Git: Скрипты закоммичены (сохранены в репозитории)
-❌ Диск: Скрипты отсутствуют в папке scripts/
+❌ Диск: Скрипты отсутствуют в папке 03-Resources/PowerShell/
 ❓ Причина: Неизвестно (возможно, очистка _TEST_ENV/ или cleanup-скрипт)
 ```
 
 ### **Почему я не заметил сразу:**
 
 ```
-❌ Я проверил: Test-Path "scripts/check-kernel-integrity.ps1" → False
+❌ Я проверил: Test-Path "03-Resources/PowerShell/check-kernel-integrity.ps1" → False
 ❌ Я сделал: Восстановил из Git → True
 ✅ Я должен был: Проверить Git статус → Уже в Git!
 ```
@@ -153,7 +153,7 @@
 
 ### **УРОВЕНЬ 1: Валидатор действий (Pre-Action Validator)**
 
-**Скрипт:** `scripts/before-action-validator.ps1`
+**Скрипт:** `03-Resources/PowerShell/before-action-validator.ps1`
 
 **Назначение:** Проверка ПЕРЕД каждым действием (delete, move, rename, create, modify).
 
@@ -167,7 +167,7 @@
 **Пример использования:**
 ```powershell
 # Перед удалением
-.\scripts\before-action-validator.ps1 -Action delete -Target "scripts/old.ps1" -DryRun
+.\scripts\before-action-validator.ps1 -Action delete -Target "03-Resources/PowerShell/old.ps1" -DryRun
 
 # Перед перемещением
 .\scripts\before-action-validator.ps1 -Action move -Target "03-Resources/file.md"
@@ -177,7 +177,7 @@
 
 ### **УРОВЕНЬ 2: Аудит после действия (Post-Action Audit)**
 
-**Скрипт:** `scripts/after-action-audit.ps1` (требует создания)
+**Скрипт:** `03-Resources/PowerShell/after-action-audit.ps1` (требует создания)
 
 **Назначение:** Сравнение ДО/ПОСЛЕ, поиск непредвиденных изменений.
 
@@ -191,7 +191,7 @@
 
 ### **УРОВЕНЬ 3: Еженедельный аудит (Weekly Memory Audit)**
 
-**Скрипт:** `scripts/weekly-memory-audit.ps1` ✅ СОЗДАН
+**Скрипт:** `03-Resources/PowerShell/weekly-memory-audit.ps1` ✅ СОЗДАН
 
 **Назначение:** Автоматический анализ состояния базы знаний.
 
@@ -226,7 +226,7 @@
 │  УРОВЕНЬ 2: ЧАСТОТНАЯ (Frequent Memory)                │
 │  • .qwen/rules/ (11 правил)                            │
 │  • AGENTS.md (точка входа)                             │
-│  • scripts/ (критичные скрипты)                        │
+│  • 03-Resources/PowerShell/ (критичные скрипты)                        │
 │  Время жизни: постоянная, кэшируется                   │
 ├─────────────────────────────────────────────────────────┤
 │  УРОВЕНЬ 3: АРХИВНАЯ (Archived Memory)                 │
@@ -243,9 +243,9 @@
 
 | # | Задача | Файл | Время | Статус |
 |---|--------|------|-------|--------|
-| **1** | Валидатор действий | `scripts/before-action-validator.ps1` | 1 час | ✅ СОЗДАН |
-| **2** | Еженедельный аудит | `scripts/weekly-memory-audit.ps1` | 1 час | ✅ СОЗДАН |
-| **3** | Аудит после действия | `scripts/after-action-audit.ps1` | 45 мин | ⏳ Запланировано |
+| **1** | Валидатор действий | `03-Resources/PowerShell/before-action-validator.ps1` | 1 час | ✅ СОЗДАН |
+| **2** | Еженедельный аудит | `03-Resources/PowerShell/weekly-memory-audit.ps1` | 1 час | ✅ СОЗДАН |
+| **3** | Аудит после действия | `03-Resources/PowerShell/after-action-audit.ps1` | 45 мин | ⏳ Запланировано |
 | **4** | Интеграция в процесс (хуки) | `.qwen/rules/10-automation.md` | 30 мин | ⏳ Запланировано |
 | **5** | Расследование исчезновения | Этот файл | 1 час | ✅ ЗАВЕРШЕНО |
 | **6** | Тестирование системы | `_TEST_ENV/` | 30 мин | ⏳ Запланировано |
@@ -255,8 +255,8 @@
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`scripts/before-action-validator.ps1`](./scripts/before-action-validator.ps1) — Валидатор действий
-- [`scripts/weekly-memory-audit.ps1`](./scripts/weekly-memory-audit.ps1) — Еженедельный аудит
+- [`03-Resources/PowerShell/before-action-validator.ps1`](./03-Resources/PowerShell/before-action-validator.ps1) — Валидатор действий
+- [`03-Resources/PowerShell/weekly-memory-audit.ps1`](./03-Resources/PowerShell/weekly-memory-audit.ps1) — Еженедельный аудит
 - [`.qwen/rules/02-workflow.md`](./.qwen/rules/02-workflow.md) — 3-уровневый процесс
 - [`.qwen/rules/04-safety.md`](./.qwen/rules/04-safety.md) — Безопасность
 - [`ANTI_PATTERNS.md`](./ANTI_PATTERNS.md) — Анти-паттерны
@@ -294,3 +294,4 @@
 ---
 
 **Следующий шаг:** Обсудить план, выбрать приоритеты, внедрить.
+

@@ -684,8 +684,8 @@
 - **D:\QwenPoekt\Base\reports\RAMDISK_STATUS_CHECK.md** (строка 95): `./02-Areas/Documentation/ramdisk-setup.md`
 - **D:\QwenPoekt\Base\reports\RAMDISK_STATUS_CHECK.md** (строка 96): `./02-Areas/Documentation/ramdisk-quick-setup.md`
 - **D:\QwenPoekt\Base\reports\RAMDISK_STATUS_CHECK.md** (строка 97): `./03-Resources/Knowledge/OPTIMIZATION_COMPLETE.md`
-- **D:\QwenPoekt\Base\reports\RAMDISK_STATUS_CHECK.md** (строка 98): `./scripts/install-ramdisk.ps1`
-- **D:\QwenPoekt\Base\reports\RAMDISK_STATUS_CHECK.md** (строка 99): `./scripts/cleanup-ramdisk.ps1`
+- **D:\QwenPoekt\Base\reports\RAMDISK_STATUS_CHECK.md** (строка 98): `./03-Resources/PowerShell/install-ramdisk.ps1`
+- **D:\QwenPoekt\Base\reports\RAMDISK_STATUS_CHECK.md** (строка 99): `./03-Resources/PowerShell/cleanup-ramdisk.ps1`
 - **D:\QwenPoekt\Base\reports\SESSION_SYSTEM_ANALYSIS.md** (строка 226): `./.qwen/session-rules.json`
 - **D:\QwenPoekt\Base\reports\SESSION_SYSTEM_ANALYSIS.md** (строка 227): `./mcp.json`
 - **D:\QwenPoekt\Base\reports\SESSION_SYSTEM_ANALYSIS.md** (строка 228): `./.resume_marker.json`
@@ -775,4 +775,5 @@
 - **D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES\README.md** (строка 178): `../../_drafts/`
 - **D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES\README.md** (строка 179): `../../02-Areas/Documentation/ANALYSIS_PROCESS.md`
 - **D:\QwenPoekt\Base\_TEST_ENV\KNOWLEDGE_BASE_RESTORE\04_ARCHIVES\README.md** (строка 192): `../../01_RULES/file_naming_rule.md`
+
 

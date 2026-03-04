@@ -82,7 +82,7 @@
 ✅ **Правило:** Тесты ДО завершения задачи
 
 #### Связанные файлы
-- [`scripts/test-documentation.ps1`](./scripts/test-documentation.ps1)
+- [`03-Resources/PowerShell/test-documentation.ps1`](./03-Resources/PowerShell/test-documentation.ps1)
 - [`02-workflow.md`](./.qwen/rules/02-workflow.md) — раздел TDD
 
 ---
@@ -139,7 +139,7 @@
 2. ✅ Автоматическое удаление BOM
 
 #### Предотвращение (Prevention)
-✅ **Скрипт:** `scripts/fix-encoding.ps1`
+✅ **Скрипт:** `03-Resources/PowerShell/fix-encoding.ps1`
 
 ---
 
@@ -157,8 +157,8 @@
 2. ✅ Интеграция в test-documentation.ps1
 
 #### Предотвращение (Prevention)
-✅ **Скрипт:** `scripts/fix-encoding.ps1`
-✅ **Скрипт:** `scripts/test-documentation.ps1`
+✅ **Скрипт:** `03-Resources/PowerShell/fix-encoding.ps1`
+✅ **Скрипт:** `03-Resources/PowerShell/test-documentation.ps1`
 
 ---
 ```
@@ -406,4 +406,5 @@ graph TD
 
 **Последнее обновление:** 2 марта 2026 г.  
 **Следующий пересмотр:** 9 марта 2026 г. (еженедельно)
+
 

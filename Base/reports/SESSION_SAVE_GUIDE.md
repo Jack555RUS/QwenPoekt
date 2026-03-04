@@ -1,4 +1,4 @@
-# 📖 РУКОВОДСТВО ПО СОХРАНЕНИЮ СЕССИЙ
+﻿# 📖 РУКОВОДСТВО ПО СОХРАНЕНИЮ СЕССИЙ
 
 **Версия:** 1.0  
 **Дата:** 4 марта 2026 г.  
@@ -85,8 +85,8 @@
 | `03-Resources/PowerShell/auto-save-chat.ps1` | Автосохранение каждые 2 мин |
 | `03-Resources/PowerShell/auto-save-session.ps1` | Сохранение при выходе |
 | `03-Resources/PowerShell/save-chat-log.ps1` | Ручное сохранение |
-| `scripts/cleanup-empty-sessions.ps1` | Очистка пустых сессий |
-| `scripts/audit-session-save.ps1` | Аудит системы |
+| `03-Resources/PowerShell/cleanup-empty-sessions.ps1` | Очистка пустых сессий |
+| `03-Resources/PowerShell/audit-session-save.ps1` | Аудит системы |
 
 ### MCP сервер
 
@@ -246,7 +246,7 @@ Get-ScheduledTask -TaskName "QwenSessionAutoSave"
 
 ## 🧹 ОЧИСТКА ПУСТЫХ СЕССИЙ
 
-**Скрипт:** `scripts/cleanup-empty-sessions.ps1`
+**Скрипт:** `03-Resources/PowerShell/cleanup-empty-sessions.ps1`
 
 **Проверка:**
 ```powershell
@@ -311,3 +311,4 @@ Get-ScheduledTask -TaskName "QwenSessionAutoSave"
 ---
 
 **Используйте `/save-session` перед завершением сессии!** 📖
+

@@ -1,4 +1,4 @@
-# ✅ RAM ДИСК — ПРОВЕРКА СТАТУСА
+﻿# ✅ RAM ДИСК — ПРОВЕРКА СТАТУСА
 
 **Дата:** 2026-03-04 00:05
 **Статус:** ✅ **РАБОТАЕТ КОРРЕКТНО**
@@ -95,9 +95,10 @@
 - [`02-Areas/Documentation/ramdisk-setup.md`](./02-Areas/Documentation/ramdisk-setup.md) — Полное руководство
 - [`02-Areas/Documentation/ramdisk-quick-setup.md`](./02-Areas/Documentation/ramdisk-quick-setup.md) — Быстрая установка
 - [`03-Resources/Knowledge/OPTIMIZATION_COMPLETE.md`](./03-Resources/Knowledge/OPTIMIZATION_COMPLETE.md) — Итоговый отчёт
-- [`scripts/install-ramdisk.ps1`](./scripts/install-ramdisk.ps1) — Скрипт установки
-- [`scripts/cleanup-ramdisk.ps1`](./scripts/cleanup-ramdisk.ps1) — Скрипт очистки
+- [`03-Resources/PowerShell/install-ramdisk.ps1`](./03-Resources/PowerShell/install-ramdisk.ps1) — Скрипт установки
+- [`03-Resources/PowerShell/cleanup-ramdisk.ps1`](./03-Resources/PowerShell/cleanup-ramdisk.ps1) — Скрипт очистки
 
 ---
 
 **ПРОВЕРКА ЗАВЕРШЕНА:** ✅ **ВСЁ РАБОТАЕТ КОРРЕКТНО!**
+

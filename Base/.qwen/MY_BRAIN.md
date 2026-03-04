@@ -1,4 +1,4 @@
-# 🧠 МОЙ МОЗГ — БЕСШОВНАЯ ЗАГРУЗКА ИИ
+﻿# 🧠 МОЙ МОЗГ — БЕСШОВНАЯ ЗАГРУЗКА ИИ
 
 **Версия:** 1.0
 **Дата:** 4 марта 2026 г.
@@ -398,7 +398,7 @@ Get-Content reports/SESSION_HANDOVER.md
 ### Этап 2: Критичные исправления (4 часа)
 
 ```
-1. ⏳ Создать Post-Action Audit (scripts/after-action-audit.ps1)
+1. ⏳ Создать Post-Action Audit (03-Resources/PowerShell/after-action-audit.ps1)
 2. ⏳ Интегрировать валидатор в процесс (хуки)
 3. ⏳ Исправить 113 коммитов (git push)
 4. ⏳ Удалить дубликаты (create-tasks-manual.ps1)
@@ -500,3 +500,4 @@ Get-Content reports/SESSION_HANDOVER.md
 ---
 
 **ПОМНИ: Это твой мозг. Без него ты начинаешь с нуля. С ним — продолжаешь с того места, где остановился.** 🧠
+

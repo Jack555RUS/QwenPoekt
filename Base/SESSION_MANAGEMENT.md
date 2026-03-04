@@ -1,4 +1,4 @@
-# 🔄 УПРАВЛЕНИЕ СЕССИЯМИ — Полное Руководство
+﻿# 🔄 УПРАВЛЕНИЕ СЕССИЯМИ — Полное Руководство
 
 **Версия:** 1.0
 **Дата:** 2026-03-04
@@ -349,8 +349,8 @@ git stash
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- [`scripts/end-session.ps1`](./scripts/end-session.ps1) — Завершение сессии
-- [`scripts/start-session.ps1`](./scripts/start-session.ps1) — Восстановление сессии
+- [`03-Resources/PowerShell/end-session.ps1`](./03-Resources/PowerShell/end-session.ps1) — Завершение сессии
+- [`03-Resources/PowerShell/start-session.ps1`](./03-Resources/PowerShell/start-session.ps1) — Восстановление сессии
 - [`reports/SESSION_HANDOVER.md`](./reports/SESSION_HANDOVER.md) — Контекст сессии
 - [`.resume_marker.json`](./.resume_marker.json) — Маркер восстановления
 - [`.qwen/rules/06-resume.md`](./.qwen/rules/06-resume.md) — Правило восстановления
@@ -364,3 +364,4 @@ git stash
 ---
 
 **Прочитал? Сохрани в избранное!** 🚀
+

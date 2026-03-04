@@ -1,4 +1,4 @@
-# 🚀 ЗАПУСК QWEN CODE — ПОЛНАЯ ИНСТРУКЦИЯ
+﻿# 🚀 ЗАПУСК QWEN CODE — ПОЛНАЯ ИНСТРУКЦИЯ
 
 **Версия:** 1.0  
 **Дата:** 4 марта 2026 г.  
@@ -264,7 +264,7 @@ D:\QwenPoekt\Base/
 │       └── ...
 │
 ├── 🔧 СКРИПТЫ
-│   └── scripts/
+│   └── 03-Resources/PowerShell/
 │       ├── audit-session-save.ps1
 │       ├── cleanup-empty-sessions.ps1
 │       └── ...
@@ -379,3 +379,4 @@ D:\QwenPoekt\Base/
 ---
 
 **Готово к работе! Откройте VS Code и начните диалог.** 🚀
+

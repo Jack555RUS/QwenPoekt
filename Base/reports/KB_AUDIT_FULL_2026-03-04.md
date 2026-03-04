@@ -1,7 +1,7 @@
-# 📊 АУДИТ БАЗЫ ЗНАНИЙ — ПОЛНЫЙ ОТЧЁТ
+﻿# 📊 АУДИТ БАЗЫ ЗНАНИЙ — ПОЛНЫЙ ОТЧЁТ
 
 **Дата:** 4 марта 2026 г.  
-**Скрипт:** `scripts/full-kb-audit.ps1`  
+**Скрипт:** `03-Resources/PowerShell/full-kb-audit.ps1`  
 **Статус:** ✅ ЗАВЕРШЕНО
 
 ---
@@ -161,17 +161,17 @@
 
 | Файл | Назначение | Статус |
 |------|------------|--------|
-| `scripts/full-kb-audit.ps1` | Скрипт полного аудита | ✅ Создан |
+| `03-Resources/PowerShell/full-kb-audit.ps1` | Скрипт полного аудита | ✅ Создан |
 | `reports/KB_AUDIT_FULL_2026-03-04.md` | Этот отчёт | ✅ Создан |
 
 ---
 
 ## 🔗 СВЯЗАННЫЕ ФАЙЛЫ
 
-- `scripts/check-links.ps1` — Проверка ссылок
-- `scripts/fix-broken-links.ps1` — Исправление битых ссылок
-- `scripts/check-duplicates.ps1` — Проверка дубликатов
-- `scripts/check-encoding.ps1` — Проверка кодировки
+- `03-Resources/PowerShell/check-links.ps1` — Проверка ссылок
+- `03-Resources/PowerShell/fix-broken-links.ps1` — Исправление битых ссылок
+- `03-Resources/PowerShell/check-duplicates.ps1` — Проверка дубликатов
+- `03-Resources/PowerShell/check-encoding.ps1` — Проверка кодировки
 - `reports/SESSION_SAVE_AUDIT_REPORT.md` — Аудит сессий
 
 ---
@@ -181,3 +181,4 @@
 **Дата:** 4 марта 2026 г.  
 **Время аудита:** ~5 минут  
 **Следующий аудит:** 11 марта 2026 г.
+

@@ -1,4 +1,4 @@
-# 📚 БИБЛИОТЕКА — ИТОГОВЫЙ ОТЧЁТ
+﻿# 📚 БИБЛИОТЕКА — ИТОГОВЫЙ ОТЧЁТ
 
 **Дата:** 2026-03-04 00:25
 **Статус:** ✅ **ИСПРАВЛЕНИЕ ЗАВЕРШЕНО**
@@ -56,9 +56,9 @@ status: draft
 - ✅ Все ссылки обновлены
 
 **Заменено:**
-- `_docs/` → `02-Areas/Documentation/`
+- `02-Areas/Documentation/` → `02-Areas/Documentation/`
 - `KNOWLEDGE_BASE/` → `03-Resources/Knowledge/`
-- `scripts/` → `03-Resources/PowerShell/`
+- `03-Resources/PowerShell/` → `03-Resources/PowerShell/`
 
 ---
 
@@ -156,3 +156,4 @@ status: draft
 ---
 
 **БИБЛИОТЕКА ГОТОВА К ИСПОЛЬЗОВАНИЮ!** ✅
+
