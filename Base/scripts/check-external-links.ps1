@@ -5,7 +5,9 @@
 
 param(
     [string]$Path = ".",       # Путь для сканирования
-    [string]$Pattern = "*.md", # Шаблон файлов
+    [string]$Pattern = "*.md", # Шаблон файлов (по умолчанию *.md)
+    [switch]$IncludeJson,      # Включить *.json файлы
+    [switch]$IncludeAll,       # Включить все файлы (*.md, *.json, *.yaml, *.yml)
     [switch]$Recursive,        # Рекурсивно
     [int]$Timeout = 10000,     # Таймаут в мс (10 сек)
     [int]$Retries = 3,         # Количество попыток
@@ -19,6 +21,15 @@ $ErrorActionPreference = "Continue"
 $ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 $BasePath = Split-Path -Parent $ScriptPath
 $ReportPath = Join-Path $BasePath "reports\EXTERNAL_LINKS_REPORT.md"
+
+# Определение шаблона
+if ($IncludeAll) {
+    $Patterns = @("*.md", "*.json", "*.yaml", "*.yml")
+} elseif ($IncludeJson) {
+    $Patterns = @("*.md", "*.json")
+} else {
+    $Patterns = @($Pattern)
+}
 
 # ----------------------------------------------------------------------------
 # ФУНКЦИИ
@@ -180,23 +191,30 @@ function Check-Url {
 function Check-External-Links {
     param(
         [string]$SearchPath,
+        [string[]]$Patterns,
         [int]$Timeout,
         [int]$Retries,
         [int]$RetryDelay,
         [switch]$Recursive
     )
 
-    $getParams = @{
-        Path = $SearchPath
-        Include = $Pattern
-        ErrorAction = "SilentlyContinue"
+    $files = @()
+    foreach ($pattern in $Patterns) {
+        $getParams = @{
+            Path = $SearchPath
+            Include = $pattern
+            ErrorAction = "SilentlyContinue"
+        }
+
+        if ($Recursive) {
+            $getParams.Recurse = $true
+        }
+
+        $files += Get-ChildItem @getParams
     }
 
-    if ($Recursive) {
-        $getParams.Recurse = $true
-    }
-
-    $files = Get-ChildItem @getParams
+    # Удаление дубликатов
+    $files = $files | Sort-Object -Unique
     Write-Log "📊 Найдено файлов: $($files.Count)" -Color "Cyan"
     Write-Log ""
 
@@ -380,7 +398,7 @@ Write-Log "╚══════════════════════
 Write-Log ""
 Write-Log "Параметры:" -ForegroundColor Yellow
 Write-Log "  Путь: $Path" -ForegroundColor Gray
-Write-Log "  Шаблон: $Pattern" -ForegroundColor Gray
+Write-Log "  Шаблоны: $($Patterns -join ', ')" -ForegroundColor Gray
 Write-Log "  Рекурсивно: $(if ($Recursive) { 'Да' } else { 'Нет' })" -ForegroundColor Gray
 Write-Log "  Таймаут: $($Timeout/1000) сек" -ForegroundColor Gray
 Write-Log "  Попыток: $Retries" -ForegroundColor Gray
@@ -388,14 +406,14 @@ Write-Log "  Задержка: $($RetryDelay/1000) сек" -ForegroundColor Gray
 Write-Log ""
 
 # Проверка внешних ссылок
-$results = Check-External-Links -SearchPath $Path -Timeout $Timeout -Retries $Retries -RetryDelay $RetryDelay -Recursive:$Recursive
+$results = Check-External-Links -SearchPath $Path -Patterns $Patterns -Timeout $Timeout -Retries $Retries -RetryDelay $RetryDelay -Recursive:$Recursive
 
-# Генерация отчёта
+# Сохранение отчёта (UTF8 без BOM)
 Write-Log "📊 Генерация отчёта..." -Color "Cyan"
 $report = Generate-Report -Results $results
 
-# Сохранение отчёта
-$report | Out-File -FilePath $ReportPath -Encoding UTF8 -NoBOM
+# Запись UTF8 без BOM (совместимость со всеми версиями PowerShell)
+[System.IO.File]::WriteAllText($ReportPath, $report, [System.Text.UTF8Encoding]::new($false))
 Write-Log "✅ Отчёт сохранён: $ReportPath" -Color "Green"
 Write-Log ""
 
