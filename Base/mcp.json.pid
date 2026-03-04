@@ -1,6 +1,11 @@
-﻿{
-    "OriginalPath":  "D:\\QwenPoekt\\Base\\mcp.json",
-    "PID":  "FILE_e3b0c442_20260303200833",
-    "GeneratedAt":  "2026-03-03 20:08:33",
-    "Type":  "FILE"
-}
+﻿	{
+  "servers": {
+    "session-saver": {
+       "command": "node",
+       "args": ["mcp-session-saver.js"],
+       "cwd": "D:\\QwenPoekt\\Base",
+       "env": {},
+       "description": "MCP сервер для сохранения и восстановления сессий"
+     }
+   }
+ }
