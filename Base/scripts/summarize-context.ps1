@@ -197,9 +197,15 @@ $($Result.KeyFacts | ForEach-Object { "- $_" } | Out-String)
 
 Write-Log ""
 Write-Log "╔══════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-Write-Log "║         СУММАРИЗАЦИЯ КОНТЕКСТА СЕССИИ                    ║" -ForegroundColor Cyan
+Write-Host "║         СУММАРИЗАЦИЯ КОНТЕКСТА СЕССИИ                    ║" -ForegroundColor Cyan
 Write-Log "╚══════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
 Write-Log ""
+
+# Преобразование в абсолютный путь (ДО вывода параметров!)
+if (-not [System.IO.Path]::IsPathRooted($SessionPath)) {
+    $SessionPath = Join-Path $BasePath $SessionPath
+}
+
 Write-Log "Параметры:" -ForegroundColor Yellow
 Write-Log "  Путь: $SessionPath" -ForegroundColor Gray
 Write-Log "  Порог: $($Threshold * 100)%" -ForegroundColor Gray
@@ -211,12 +217,17 @@ Write-Log ""
 # Поиск последней сессии
 Write-Log "📊 Поиск последней сессии..." -Color "Cyan"
 
+Write-Log "  Путь: $SessionPath" -ForegroundColor Gray
+Write-Log "  Существует: $(Test-Path $SessionPath)" -ForegroundColor Gray
+
 if (Test-Path $SessionPath) {
     $latestSession = Get-ChildItem $SessionPath | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 } else {
     Write-Log "❌ Папка сессий не найдена: $SessionPath" -Color "Red"
     exit 1
 }
+
+Write-Log "  Найдено сессий: $(Get-ChildItem $SessionPath | Measure-Object | Select-Object -ExpandProperty Count)" -ForegroundColor Gray
 
 if (-not $latestSession) {
     Write-Log "❌ Сессии не найдены!" -ForegroundColor Red

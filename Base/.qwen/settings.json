@@ -31,7 +31,7 @@
     "maxFileSize": "100MB",
     "maxContextFiles": 1000,
     "cacheEnabled": true,
-    "cacheSizeMB": 8192
+    "cacheSizeMB": 16384
   },
   "$version": 3
 }
